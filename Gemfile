@@ -24,12 +24,14 @@ gem 'jbuilder', '~> 2.5'
 # App dependencies
 gem 'govuk_frontend_toolkit'
 gem 'govuk_template'
+gem 'haml-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'haml-lint', require: false
   gem 'rubocop'
   gem 'selenium-webdriver'
 end
