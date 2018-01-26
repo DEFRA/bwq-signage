@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/DEFRA/bwq-signage.svg?branch=master)](https://travis-ci.org/DEFRA/bwq-signage)
+[![Build Status](https://travis-ci.org/DEFRA/bwq-signage.svg?branch=develop)](https://travis-ci.org/DEFRA/bwq-signage)
+[![Coverage Status](https://coveralls.io/repos/github/DEFRA/bwq-signage/badge.svg?branch=develop)](https://coveralls.io/github/DEFRA/bwq-signage?branch=task%2Fapp)
+
 # BWQ Signage project
 
 This tool is being developed by Epimorphics on behalf of EA and Defra. We will

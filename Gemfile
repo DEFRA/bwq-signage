@@ -32,7 +32,7 @@ group :development, :test do
   gem 'capybara-selenium'
   gem 'capybara_minitest_spec'
   gem 'chromedriver-helper'
-  gem 'coveralls'
+  gem 'coveralls', require: false
   gem 'haml-lint', require: false
   gem 'm'
   gem 'minitest-rails-capybara'
