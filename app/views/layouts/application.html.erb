@@ -1,3 +1,15 @@
+<% content_for(:page_title) do %>
+  <%= t(:global_proposition_header) %>
+<% end %>
 
-<%-# LAST: RENDER main GDS template -%>
-<%= render template: "layouts/govuk_template" %>
+<% content_for :header_class, 'with-proposition' %>
+<% content_for(:proposition_header) do %>
+  <div class='header-proposition'>
+    <div class='content'>
+      <span id='proposition-name'><%= t(:global_proposition_header) %></span>
+    </div>
+  </div>
+<% end %>
+
+<%-# LAST: render main GDS template -%>
+<%= render template: 'layouts/govuk_template' %>
