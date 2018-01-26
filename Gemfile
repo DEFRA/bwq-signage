@@ -27,13 +27,19 @@ gem 'govuk_template'
 gem 'haml-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'capybara-selenium'
+  gem 'capybara_minitest_spec'
+  gem 'chromedriver-helper'
   gem 'haml-lint', require: false
-  gem 'rubocop'
-  gem 'selenium-webdriver'
+  gem 'm'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+  gem 'minitest-spec-rails'
+  gem 'mocha'
+  gem 'rubocop', require: false
+  gem 'simplecov', require: false
 end
 
 group :development do
