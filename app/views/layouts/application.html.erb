@@ -2,6 +2,10 @@
   <%= t(:global_proposition_header) %>
 <% end %>
 
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'application' %>
+<% end %>
+
 <% content_for :header_class, 'with-proposition' %>
 <% content_for(:proposition_header) do %>
   <div class='header-proposition'>
