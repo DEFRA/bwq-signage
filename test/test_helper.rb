@@ -6,6 +6,13 @@ require File.expand_path('../../config/environment', __FILE__)
 
 # Basic coverage statistics from [SimpleCov](https://github.com/colszowka/simplecov)
 require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+
 SimpleCov.start('rails') do
   add_filter '/test/'
 end
