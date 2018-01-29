@@ -64,3 +64,10 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.ignore_localhost = true
 end
+
+module ActiveSupport
+  # Set up fixtures and such
+  class TestCase
+    self.file_fixture_path = 'test/fixtures/files'
+  end
+end
