@@ -11,5 +11,12 @@ class BathingWaterTest < ActiveSupport::TestCase
         bw.api_url.must_equal('http://environment.data.gov.uk/doc/bathing-water/ukk1202-36000.json')
       end
     end
+
+    describe '#name' do
+      it 'should return the name of the bathing water on demand' do
+        bw = BathingWater.new('ukk1202-36000')
+        bw.name.must_equal('Clevedon')
+      end
+    end
   end
 end
