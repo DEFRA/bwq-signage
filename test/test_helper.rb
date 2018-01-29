@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Test helpers
-
+ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
 
 # Basic coverage statistics from [SimpleCov](https://github.com/colszowka/simplecov)
@@ -20,6 +20,7 @@ SimpleCov.start('rails') do
 end
 
 require 'rails/test_help'
+require 'minitest/rails'
 
 require 'logger'
 require 'minitest/reporters'
