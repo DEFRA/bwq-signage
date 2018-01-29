@@ -79,12 +79,13 @@ class LdaApi
     conn = Faraday.new(url: url) do |faraday|
       faraday.request :url_encoded
       faraday.use FaradayMiddleware::FollowRedirects
-      faraday.adapter :net_http
       if defined?(Rails) # && Rails.env.development?
         faraday.response :logger, Rails.logger
       else
         faraday.response :logger
       end
+
+      faraday.adapter :net_http
     end
 
     begin
