@@ -16,3 +16,4 @@
 
 .byebug_history
 coverage
+test/fixtures/vcr_cassettes/

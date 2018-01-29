@@ -58,8 +58,9 @@ driver = see_visible_window_while_test_run ? :chrome : :headless_chrome
 Capybara.default_driver    = driver
 Capybara.javascript_driver = driver
 
-module ActiveSupport
-  class TestCase
-    # Add more helper methods to be used by all tests here...
-  end
+# VCR Setup
+VCR.configure do |config|
+  config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.ignore_localhost = true
 end

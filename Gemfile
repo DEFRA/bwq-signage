@@ -22,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 
 # App dependencies
+gem 'faraday_middleware'
 gem 'govuk_elements_rails'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_template'
@@ -42,6 +43,8 @@ group :development, :test do
   gem 'mocha'
   gem 'rubocop', require: false
   gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
