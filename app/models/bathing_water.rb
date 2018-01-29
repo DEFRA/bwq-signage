@@ -2,24 +2,18 @@
 
 # Encapsulates a single bathing water, with access to the profile data from
 # the bathing water API.
-class BathingWater
-  attr_reader :eubwid
+class BathingWater < LdaResource
+  RDFS_CLASS = 'http://environment.data.gov.uk/def/bathing-water/BathingWater'
 
-  include LdaApi
-
-  def initialize(eubwid)
-    @eubwid = eubwid
+  def self.endpoint_all
+    '/doc/bathing-water'
   end
 
-  def api_url
-    "http://environment.data.gov.uk/doc/bathing-water/#{eubwid}.json"
+  def self.endpoint_bw(bwid)
+    "#{BathingWater.endpoint_all}/#{bwid}"
   end
 
-  def name
-    
-  end
-
-  def json
-    @json ||= api_get_json(api_url)
+  def eubwid
+    self['eubwidNotation']
   end
 end
