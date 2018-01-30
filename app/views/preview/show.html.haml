@@ -1,21 +1,48 @@
+.o-page-container
+  .o-grid-row
+    .o-grid-column__two-thirds
+      %h1.heading-large
+        Preview
+
+      %p
+        See a preview of the sign below. You can also:
+      %ul
+        %li
+          %a{href:'#'}
+            switch to portrait orientation
+        %li
+          Download this sign as a PDF file:
+          %a{ href: '#' }
+            A4 page
+          or
+          %a{ href: '#' }
+            A3 page
+
 #development-container
   .row.head-title
-    %h1 Clevedon Beach
+    %h1
+      = @view_state.bathing_water.name
 
   .row.head-designation
     .designation
       %img{:alt => "good water quality", :src => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.svg"}/
   .row.row1
     .block.description
-      %h2 Synopsis
-      %p Clevedon Beach is on the Somerset coast overlooking the Bristol Channel. It is a sand and pebble beach, approximately 850 metres wide, backed by the promenade and the town. There is a marine lake at the beach which is filled by sea water on high tides.
+      %h2
+        About
+        = @view_state.bathing_water.name
+      %p Bathing water quality is influenced by the Kirkham stream and may reduce during or after periods of heavy rainfall due to run off from the surrounding urban area, and occasional discharges from a storm overflow.
     .block.prf
       %h2 Pollution Risk Forecast
-      %p This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams. At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. The Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies. 24 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Clevedon Beach bathing water. These warnings were issued because of the effects of heavy rain on the water quality.
+      %p This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs, enabling bathers to avoid periods when bathing water quality may be reduced. This can last between one and three days. In 2017 warnings were issued at this bathing water on XX days.
   .row.row2
     .block.qr
-      %h2 Web
-      %img{:src => "https://environment.data.gov.uk/bwq/profiles/images/qr/ukk1202-36000-250x250.png"}/
+      %h2 More information
+      %p
+        The full details for this bathing water, its catchment, information on all potential pollution sources and how they are managed can be viewed on the Environment Agency website:
+        %a{ href: 'http://bit.ly/2FsWuYe' }
+          http://bit.ly/2FsWuYe
+      %img.qrcode{:src => "http://environment.data.gov.uk/bwq/profiles/images/qr/ukk4200-24000-150x150.png"}/
     .block.historical
       %h2 Historical classifications
       %span
@@ -38,10 +65,13 @@
       %h2 Sampling Point Location
       %img.classification{:src => "map.png"}/
   .row.foot
+    .block.manager
+      %img{:src => "tc-logo-white.png"}/
+      %p
+        This beach is managed by Torbay Council
+      %p
+        Phone: 01803 207975
+      %p
+        Email: beaches@torbay.gov.uk
     .block.ea-logo
       %img{:src => "https://environment.data.gov.uk/bwq/profiles/images/logo/banner_logo-en.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/logo/ea-logo-master-dark-plain.svg"}/
-    .block.manager
-      %img{:src => "https://www.totaralms.com/sites/default/files/logo/4815402-large_0.jpg"}/
-      %h2 Bathing Water Manager
-      %h3 Keris Peters
-      %p keris.peters@somerset.gov.uk

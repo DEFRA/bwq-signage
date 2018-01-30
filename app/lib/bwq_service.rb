@@ -61,7 +61,7 @@ class BwqService < LdaApi
   end
 
   # Return the description of a bathing water, given its eubwid
-  def bw_by_id(bwid)
+  def bathing_water_by_id(bwid)
     unless bws_by_id[bwid]
       options = { _properties: DETAILED_BW_PROPERTIES }
       bws_by_id[bwid] = api_get_resources(BathingWater.endpoint_bw(bwid), :item,
