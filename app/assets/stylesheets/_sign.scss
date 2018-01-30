@@ -1,0 +1,112 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+
+.designation {
+  width: 100%;
+  text-align: center;
+}
+
+.designation img {
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.row .block {
+  width: 50%;
+  align-self: stretch;
+}
+
+.block {
+    border-radius: 10pt;
+    border: 1pt solid #000;
+    margin: 5pt;
+    padding: 10pt;
+    overflow: hidden;
+}
+
+.block h2 {
+    margin-top: 0;
+}
+
+@media print {
+  #development-container {
+    background: #FFF !important;
+  }
+}
+
+#development-container {
+  border: 1px dashed #F00;
+  box-sizing: border-box;
+  height: 1050px;
+  overflow: hidden;
+  background: #DDD;
+  padding: 10pt;
+}
+
+#development-container.a4 {
+  height: 841pt;
+}
+
+#development-container.a4.landscape {
+  height: 594pt;
+}
+
+#development-container.a3 {
+  height: 1187pt;
+}
+
+#development-container.a3.landscape {
+  height: 841pt;
+}
+
+.historical span {
+  float: left;
+  clear: left;
+}
+
+.qr img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.map img {
+  height: 250px;
+}
+
+.manager img {
+  max-height: 100%;
+  float: right;
+}
+
+/* - - - - - - - - - - - - - - Element heights - - - - - - - - */
+.head {
+  height: 25%;
+}
+
+.row1 {
+  height: 25%;
+}
+
+.row2 {
+  height: 35%;
+}
+
+.foot {
+  height: 15%;
+}
