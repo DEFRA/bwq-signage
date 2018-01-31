@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>BwqSignage</title>
-    <%= csrf_meta_tags %>
+<% content_for(:page_title) do %>
+  <%= t(:global_proposition_header) %>
+<% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'application' %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<% content_for :header_class, 'with-proposition' %>
+<% content_for(:proposition_header) do %>
+  <div class='header-proposition'>
+    <div class='content'>
+      <span id='proposition-name'><%= t(:global_proposition_header) %></span>
+    </div>
+  </div>
+<% end %>
+
+<%-# LAST: render main GDS template -%>
+<%= render template: 'layouts/govuk_template' %>

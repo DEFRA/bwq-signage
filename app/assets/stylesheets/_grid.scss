@@ -1,0 +1,17 @@
+/** Simple grid built from frontend-toolkit mixins */
+
+.o-page-container {
+  @extend %site-width-container;
+}
+
+.o-grid-row {
+  @extend %grid-row;
+
+  .o-grid-column__third {
+    @include grid-column( 1/3 );
+  }
+
+  .o-grid-column__two-thirds {
+    @include grid-column( 2/3 );
+  }
+}
