@@ -2,11 +2,15 @@
 
 # Presenter for view state for bathing water signs
 class BwqSign
-  def initialize(params)
-    @params = params
+  def initialize(options)
+    @options = options
   end
 
   def bathing_water
-    @params[:bathing_water]
+    @options[:bathing_water]
+  end
+
+  def params
+    @options[:params]
   end
 end
