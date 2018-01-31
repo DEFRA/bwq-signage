@@ -63,6 +63,9 @@ VCR.configure do |config|
   config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   config.hook_into :webmock
   config.ignore_localhost = true
+
+  # re-record every 7 days, but only if we're running in development not CI
+  c.default_cassette_options = { re_record_interval: 7.days } if Rails.env.development?
 end
 
 module ActiveSupport

@@ -1,0 +1,363 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&county.name=Somerset
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jan 2018 16:20:17 GMT
+      Etag:
+      - '"7bb59e0b31dda1ec-gzip"'
+      Expires:
+      - Wed, 31 Jan 2018 16:23:17 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '42'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0&county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&county.name=Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-34900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-34900:1", "label" : [{"_value" : "Map bounds for Porlock Weir", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-34900", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/34900/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-34900/2017:1", "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-34900_1-webres.jpg"}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/34900/date/20160921/time/103400/recordDate/20160921", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 18, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T10:34:00", "inXSDDateTime" : {"_value" : "2016-09-21T10:34:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Porlock Weir", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/porlock-weir", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/34900", "easting" : 286521.0, "lat" : 51.2190192938815, "long" : -3.6262649577776, "name" : {"_value" : "Sampling point at Porlock Weir", "_lang" : "en"}
+                , "northing" : 147903.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/shingle-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-34900:1", "name" : {"_value" : "Zone of influence at Porlock Weir", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35000:1", "label" : [{"_value" : "Map bounds for Minehead Terminus", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35000", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35000/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35000/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35000_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0128", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35000", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35000", "easting" : 297614.0, "lat" : 51.207581440661, "long" : -3.46705613745907, "name" : {"_value" : "Sampling point at Minehead Terminus", "_lang" : "en"}
+                  , "northing" : 146397.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35000/date/20160921/time/111600/recordDate/20160921", "escherichiaColiCount" : 55, "intestinalEnterococciCount" : 55, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T11:16:00", "inXSDDateTime" : {"_value" : "2016-09-21T11:16:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Minehead Terminus", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/minehead-terminus", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35000", "easting" : 297614.0, "lat" : 51.207581440661, "long" : -3.46705613745907, "name" : {"_value" : "Sampling point at Minehead Terminus", "_lang" : "en"}
+                , "northing" : 146397.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35000:1", "name" : {"_value" : "Zone of influence at Minehead Terminus", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35100", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35100:1", "label" : [{"_value" : "Map bounds for Dunster North West", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35100", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35100/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35100/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35100_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35100/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0129", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35100", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35100", "easting" : 299707.0, "lat" : 51.2012114263057, "long" : -3.43689503673983, "name" : {"_value" : "Sampling point at Dunster North West", "_lang" : "en"}
+                  , "northing" : 145647.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35100/date/20160921/time/113900/recordDate/20160921", "escherichiaColiCount" : 27, "intestinalEnterococciCount" : 36, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T11:39:00", "inXSDDateTime" : {"_value" : "2016-09-21T11:39:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Dunster North West", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/dunster-north-west", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35100", "easting" : 299707.0, "lat" : 51.2012114263057, "long" : -3.43689503673983, "name" : {"_value" : "Sampling point at Dunster North West", "_lang" : "en"}
+                , "northing" : 145647.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35100:1", "name" : {"_value" : "Zone of influence at Dunster North West", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35200", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35200:1", "label" : [{"_value" : "Map bounds for Blue Anchor West", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35200", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35200/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestOpenIncident" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/12345678-20170803-115000/recordDateTime/20170803115350", "incidentNotation" : "12345678-20170803-115000", "incidentType" : {"_about" : "http://environment.data.gov.uk/def/incident-type/020", "label" : [{"_value" : "other", "_lang" : "en"}
+                  ]}
+                , "nirsRef" : "12345678", "som_recordDateTime" : {"_value" : "2017-08-03T11:53:50", "_datatype" : "dateTime"}
+                , "startOfIncident" : {"_value" : "2017-08-03T11:50:00", "_datatype" : "dateTime"}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35200/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35200_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35200/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0130", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35200", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35200", "easting" : 302161.0, "lat" : 51.1824184866261, "long" : -3.40119891207819, "name" : {"_value" : "Sampling point at Blue Anchor West", "_lang" : "en"}
+                  , "northing" : 143509.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35200/date/20160921/time/120600/recordDate/20160921", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 36, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T12:06:00", "inXSDDateTime" : {"_value" : "2016-09-21T12:06:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Blue Anchor West", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/blue-anchor-west", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35200", "easting" : 302161.0, "lat" : 51.1824184866261, "long" : -3.40119891207819, "name" : {"_value" : "Sampling point at Blue Anchor West", "_lang" : "en"}
+                , "northing" : 143509.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35200:1", "name" : {"_value" : "Zone of influence at Blue Anchor West", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35300", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010575", "name" : {"_value" : "Sedgemoor", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000188"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2302-35300:1", "label" : [{"_value" : "Map bounds for Burnham Jetty North", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2302-35300", "latestActiveSuspension" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/suspension/point/35300/date/20170406/time/133700/recordDateTime/20170406133807", "description" : {"_value" : "drain or road runoff", "_lang" : "en"}
+                , "label" : [{"_value" : "35300-06042017-133700 - Burnham Jetty North", "_lang" : "en"}
+                ], "startOfSuspension" : {"_value" : "2017-04-06T13:37:00", "_datatype" : "dateTime"}
+              }
+              , "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35300/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/4", "name" : {"_value" : "Poor", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestOpenIncident" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/07000000-06042017-133700/recordDateTime/20170406133807", "incidentNotation" : "07000000-06042017-133700", "incidentType" : {"_about" : "http://environment.data.gov.uk/def/incident-type/019", "label" : [{"_value" : "drain or road runoff", "_lang" : "en"}
+                  ]}
+                , "nirsRef" : "07000000", "som_recordDateTime" : {"_value" : "2017-04-06T13:38:07", "_datatype" : "dateTime"}
+                , "startOfIncident" : {"_value" : "2017-04-06T13:37:00", "_datatype" : "dateTime"}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2302-35300/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2302-35300_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35300/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0131", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35300", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35300", "easting" : 330322.0, "lat" : 51.2357, "long" : -2.9994, "name" : {"_value" : "Sampling point at Burnham Jetty North", "_lang" : "en"}
+                  , "northing" : 148972.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35300/date/20160922/time/104200/recordDate/20161005", "escherichiaColiCount" : 164, "intestinalEnterococciCount" : 91, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T10:42:00", "inXSDDateTime" : {"_value" : "2016-09-22T10:42:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Burnham Jetty North", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/burnham-jetty-north", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35300", "easting" : 330322.0, "lat" : 51.2357, "long" : -2.9994, "name" : {"_value" : "Sampling point at Burnham Jetty North", "_lang" : "en"}
+                , "northing" : 148972.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/mud-sediment", "http://environment.data.gov.uk/def/bathing-water/sand-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2302-35300:1", "name" : {"_value" : "Zone of influence at Burnham Jetty North", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35500", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010575", "name" : {"_value" : "Sedgemoor", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000188"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2302-35500:1", "label" : [{"_value" : "Map bounds for Berrow North of Unity Farm", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2302-35500", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35500/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2302-35500/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2302-35500_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35500/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0132", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35500", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35500", "easting" : 329114.0, "lat" : 51.2817458565281, "long" : -3.01775519293808, "name" : {"_value" : "Sampling point at Berrow North of Unity Farm", "_lang" : "en"}
+                  , "northing" : 154114.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35500/date/20160922/time/111600/recordDate/20160922", "escherichiaColiCount" : 320, "intestinalEnterococciCount" : 155, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T11:16:00", "inXSDDateTime" : {"_value" : "2016-09-22T11:16:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Berrow North of Unity Farm", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/berrow-north-of-unity-farm", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35500", "easting" : 329114.0, "lat" : 51.2817458565281, "long" : -3.01775519293808, "name" : {"_value" : "Sampling point at Berrow North of Unity Farm", "_lang" : "en"}
+                , "northing" : 154114.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2302-35500:1", "name" : {"_value" : "Zone of influence at Berrow North of Unity Farm", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010575", "name" : {"_value" : "Sedgemoor", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000188"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2302-35600:1", "label" : [{"_value" : "Map bounds for Brean", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2302-35600", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35600/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2302-35600/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2302-35600_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35600/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0133", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2302-35600", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35600", "easting" : 329600.0, "lat" : 51.3212379812709, "long" : -3.0116549233975, "name" : {"_value" : "Sampling point at Brean", "_lang" : "en"}
+                  , "northing" : 158500.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35600/date/20160922/time/113700/recordDate/20160922", "escherichiaColiCount" : 36, "intestinalEnterococciCount" : 55, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T11:37:00", "inXSDDateTime" : {"_value" : "2016-09-22T11:37:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Brean", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/brean", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35600", "easting" : 329600.0, "lat" : 51.3212379812709, "long" : -3.0116549233975, "name" : {"_value" : "Sampling point at Brean", "_lang" : "en"}
+                , "northing" : 158500.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/mud-sediment", "http://environment.data.gov.uk/def/bathing-water/sand-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2302-35600:1", "name" : {"_value" : "Zone of influence at Brean", "_lang" : "en"}
+              }
+            }
+            ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 16:20:17 GMT
+recorded_with: VCR 4.0.0
