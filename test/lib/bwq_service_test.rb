@@ -28,20 +28,20 @@ class BwqServiceTest < Minitest::Test
     end
   end
 
-  def test_bw_by_id_1
-    VCR.use_cassette('test_bw_by_id_1') do
+  def test_bathing_water_by_id_1
+    VCR.use_cassette('test_bathing_water_by_id_1') do
       # without pre-caching
-      bw = @bws.bw_by_id('ukc2102-03600')
+      bw = @bws.bathing_water_by_id('ukc2102-03600')
       refute_nil bw
       assert_equal 'Spittal', bw.name
     end
   end
 
-  def test_bw_by_id_2
-    VCR.use_cassette('test_bw_by_id_2') do
+  def test_bathing_water_by_id_2
+    VCR.use_cassette('test_bathing_water_by_id_2') do
       # after caching
       @bws.all_bathing_waters
-      bw = @bws.bw_by_id('ukk2204-19900')
+      bw = @bws.bathing_water_by_id('ukk2204-19900')
       refute_nil bw
       assert_equal 'Kimmeridge Bay', bw.name
     end
