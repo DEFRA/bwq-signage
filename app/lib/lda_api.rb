@@ -96,8 +96,6 @@ class LdaApi
 
       raise "Failed to read from #{url}: #{r.status.inspect}" unless (200..207).cover?(r.status)
       JSON.parse(r.body)
-    rescue StandardError => e
-      raise(ApiRequestFailed, "API request to <#{url}> failed with: #{e.inspect}")
     end
   end
 end
