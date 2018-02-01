@@ -1,4 +1,4 @@
-<template>
+<template lang='html'>
   <div id="app">
     <p>{{ message }}</p>
   </div>
@@ -6,17 +6,11 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
-  }
-}
+  data: () => ({
+    message: 'Is this thing on?',
+  }),
+};
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+<style >
 </style>
