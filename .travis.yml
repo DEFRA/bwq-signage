@@ -4,3 +4,6 @@ addons:
 language: ruby
 rvm:
  - 2.4
+before_script:
+  - yarn install
+  - ruby ./bin/webpack

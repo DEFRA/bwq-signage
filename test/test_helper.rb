@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Test helpers
-
+ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
 
 # Basic coverage statistics from [SimpleCov](https://github.com/colszowka/simplecov)
@@ -20,6 +20,7 @@ SimpleCov.start('rails') do
 end
 
 require 'rails/test_help'
+require 'minitest/rails'
 
 require 'logger'
 require 'minitest/reporters'
@@ -57,8 +58,19 @@ driver = see_visible_window_while_test_run ? :chrome : :headless_chrome
 Capybara.default_driver    = driver
 Capybara.javascript_driver = driver
 
+# VCR Setup
+VCR.configure do |config|
+  config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.ignore_localhost = true
+
+  # re-record every 7 days, but only if we're running in development not CI
+  c.default_cassette_options = { re_record_interval: 7.days } if Rails.env.development?
+end
+
 module ActiveSupport
+  # Set up fixtures and such
   class TestCase
-    # Add more helper methods to be used by all tests here...
+    self.file_fixture_path = 'test/fixtures/files'
   end
 end

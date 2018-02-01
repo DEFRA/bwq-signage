@@ -1,0 +1,8 @@
+/* Hide element unless JavaScript is enabled */
+.u-no-js {
+  display: none;
+}
+
+.js .u-no-js {
+  display: block;
+}

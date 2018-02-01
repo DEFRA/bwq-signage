@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://environment.data.gov.uk/doc/bathing-water/ukc2106-04400.json?_properties=samplingPoint.*&_view=all
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - environment.data.gov.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://environment.data.gov.uk/doc/bathing-water/ukc2106-04400.json?_view=all&_properties=samplingPoint.*
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jan 2018 16:20:18 GMT
+      Etag:
+      - '"5499bb600cb7b0b2-gzip"'
+      Expires:
+      - Wed, 31 Jan 2018 16:23:17 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Response-Id:
+      - '62807'
+      Content-Length:
+      - '1228'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://environment.data.gov.uk/doc/bathing-water/ukc2106-04400.json?_view=all&_properties=samplingPoint.*", "definition" : "http://environment.data.gov.uk/meta/doc/bathing-water/_eubwid.json?_view=all&_properties=samplingPoint.*", "extendedMetadataVersion" : "http://environment.data.gov.uk/doc/bathing-water/ukc2106-04400.json?_view=all&_properties=samplingPoint.*&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2106-04400", "appointedSewerageUndertaker" : "http://business.data.gov.uk/id/company/02366703", "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "label" : [{"_value" : "England", "_lang" : "en"}
+                ]}
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000043674", "label" : [{"_value" : "Northumberland", "_lang" : "en"}
+                ]}
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000048"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukc2106-04400:1", "label" : [{"_value" : "Map bounds for Newbiggin North", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukc2106-04400", "label" : [{"_value" : "Newbiggin North", "_lang" : "en"}
+              ], "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/04400/year/2017", "label" : [{"_value" : "2017 compliance assessment for Newbiggin North", "_lang" : "en"}
+                ]}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukc2106-04400/2017:1", "label" : [{"_value" : "2017 Bathing Water Profile for Newbiggin North", "_lang" : "en"}
+                ]}
+              , "latestRiskPrediction" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/04400/date/20141002-083021", "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/04400/date/20170915/time/103500/recordDate/20170915", "label" : [{"_value" : "Newbiggin North sample assessment for 2017-W37", "_lang" : "en"}
+                ]}
+              , "name" : {"_value" : "Newbiggin North", "_lang" : "en"}
+              , "notation" : "ukc2106-04400", "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-east-north-east-office", "label" : [{"_value" : "North East", "_lang" : "en"}
+                , {"_value" : "North East - North East Office"}
+                ]}
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/newbiggin-north", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/04400", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukc2106-04400", "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000043674", "label" : [{"_value" : "Northumberland", "_lang" : "en"}
+                  ]}
+                , "http://statistics.data.gov.uk/id/statistical-geography/E06000048"], "easting" : 431280.0, "label" : [{"_value" : "Sampling point at Newbiggin North", "_lang" : "en"}
+                ], "lat" : 55.1844121199812, "long" : -1.51032560822061, "name" : {"_value" : "Sampling point at Newbiggin North", "_lang" : "en"}
+                , "northing" : 587900.0, "notation" : "04400", "samplePointNotation" : "04400", "type" : [{"_about" : "http://location.data.gov.uk/def/ef/SamplingPoint/SamplingPoint", "label" : [{"_value" : "SamplingPoint", "_lang" : "en"}
+                  ]}
+                ], "uriSet" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/", "label" : [{"_value" : "Environment Agency Bathing Water Quality Monitoring Sampling Points for England and Wales", "_lang" : "en"}
+                  ]}
+              }
+              , "sedimentTypesPresent" : {"_about" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "label" : [{"_value" : "sand", "_lang" : "en"}
+                ]}
+              , "type" : [{"_about" : "http://environment.data.gov.uk/def/bathing-water/BathingWater", "label" : [{"_value" : "BathingWater", "_lang" : "en"}
+                ]}
+              , {"_about" : "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater", "label" : [{"_value" : "CoastalBathingWater", "_lang" : "en"}
+                ]}
+              ], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : {"_about" : "http://reference.data.gov.uk/id/year/1988", "label" : [{"_value" : "British Year:1988", "_lang" : "en"}
+                ]}
+              , "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukc2106-04400:1", "label" : [{"_value" : "Zone of influence at Newbiggin North", "_lang" : "en"}
+                ]}
+            }
+            , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 16:20:18 GMT
+recorded_with: VCR 4.0.0

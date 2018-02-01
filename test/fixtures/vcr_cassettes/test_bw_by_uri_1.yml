@@ -1,0 +1,137 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/id/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jan 2018 16:20:17 GMT
+      Expires:
+      - Wed, 31 Jan 2018 17:20:17 GMT
+      Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Server:
+      - Server
+      X-Response-Id:
+      - '43'
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 16:20:17 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '2'
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jan 2018 16:20:17 GMT
+      Etag:
+      - '"d36405e5b567ec1f-gzip"'
+      Expires:
+      - Wed, 31 Jan 2018 16:23:16 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '41'
+      Content-Length:
+      - '1667'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366703", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366703", "label" : [{"_value" : "Companies House profile for Northumbrian Water Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Northumbrian Water Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000043674", "name" : {"_value" : "Northumberland", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000048"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukc2102-03600:1", "label" : [{"_value" : "Map bounds for Spittal", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukc2102-03600", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03600_1-webres.jpg"}
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/03600/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0156", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/03600", "easting" : 400800.0, "lat" : 55.7568683458198, "long" : -1.9888393795735, "name" : {"_value" : "Sampling point at Spittal", "_lang" : "en"}
+                  , "northing" : 651500.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/03600/date/20160919/time/100100/recordDate/20160919", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-19T10:01:00", "inXSDDateTime" : {"_value" : "2016-09-19T10:01:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Spittal", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/north-east-north-east-office", "name" : {"_value" : "North East", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/spittal", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/03600", "easting" : 400800.0, "lat" : 55.7568683458198, "long" : -1.9888393795735, "name" : {"_value" : "Sampling point at Spittal", "_lang" : "en"}
+                , "northing" : 651500.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukc2102-03600:1", "name" : {"_value" : "Zone of influence at Spittal", "_lang" : "en"}
+              }
+            }
+            , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 16:20:17 GMT
+recorded_with: VCR 4.0.0
