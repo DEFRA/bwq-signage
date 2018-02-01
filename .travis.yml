@@ -4,4 +4,4 @@ addons:
 language: ruby
 rvm:
  - 2.4
-before_script: ./bin/webpack
+before_script: ruby ./bin/webpack
