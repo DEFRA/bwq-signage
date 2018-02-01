@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600?_pageSize=3&_sort=-sampleYear.ordinalYear
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '3270'
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_sort=-sampleYear.ordinalYear
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jan 2018 16:20:15 GMT
+      Etag:
+      - '"c1d271b3596a8a9-gzip"'
+      Expires:
+      - Wed, 31 Jan 2018 16:25:45 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '28'
+      Content-Length:
+      - '1124'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2016", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "eubwidNotation" : "ukc2102-03600", "name" : {"_value" : "Spittal", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/03600", "easting" : 400800.0, "lat" : 55.7568683458198, "long" : -1.9888393795735, "name" : {"_value" : "Sampling point at Spittal", "_lang" : "en"}
+                , "northing" : 651500.0, "samplePointNotation" : "03600"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "complianceCodeNotation" : "3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2016/escherichiaColiStats", "finalSampleDate" : {"_value" : "2016-09-19", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2013-05-07", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2016/intestinalEnterococciStats", "label" : [{"_value" : "2016 compliance assessment for Spittal", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2016-2016-11-04_11-36-35_987-0233.csv#row=000002", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2015", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "eubwidNotation" : "ukc2102-03600", "name" : {"_value" : "Spittal", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/03600", "easting" : 400800.0, "lat" : 55.7568683458198, "long" : -1.9888393795735, "name" : {"_value" : "Sampling point at Spittal", "_lang" : "en"}
+                , "northing" : 651500.0, "samplePointNotation" : "03600"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/4", "complianceCodeNotation" : "4", "name" : {"_value" : "Poor", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2015/escherichiaColiStats", "finalSampleDate" : {"_value" : "2015-09-15", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2012-05-08", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2015/intestinalEnterococciStats", "label" : [{"_value" : "2015 compliance assessment for Spittal", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2015", "ordinalYear" : 2015}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2015_20160513-2016-05-13_15-59-54_301-0247.csv#row=000248", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2014", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/projected-assessment", "name" : {"_value" : "projected-assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "eubwidNotation" : "ukc2102-03600", "name" : {"_value" : "Spittal", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/03600", "easting" : 400800.0, "lat" : 55.7568683458198, "long" : -1.9888393795735, "name" : {"_value" : "Sampling point at Spittal", "_lang" : "en"}
+                , "northing" : 651500.0, "samplePointNotation" : "03600"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/4", "complianceCodeNotation" : "4", "name" : {"_value" : "Poor", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2014/escherichiaColiStats", "finalSampleDate" : {"_value" : "2014-09-18", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2011-05-05", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/03600/year/2014/intestinalEnterococciStats", "label" : [{"_value" : "2014 compliance assessment for Spittal", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2014", "ordinalYear" : 2014}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_proj_rBWD_pre_2015_v2-2016-01-13_15-01-01_699-0447.csv#row=000012", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 31 Jan 2018 16:20:15 GMT
+recorded_with: VCR 4.0.0

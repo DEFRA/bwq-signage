@@ -1,5 +1,53 @@
 {
   "name": "bwq-signage",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "caniuse-lite": "^1.0.30000697",
+    "raven-js": "^3.22.1",
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.8.0",
+    "babel-eslint": "^8.2.1",
+    "babel-polyfill": "^6.26.0",
+    "@rails/webpacker": "^3.2.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "jest": "^22.1.4",
+    "postcss-smart-import": "^0.7.6",
+    "vue-jest": "^2.0.0",
+    "vue-loader": "^14.0.3",
+    "vue-template-compiler": "^2.5.13",
+    "vue-test-utils": "^1.0.0-beta.11",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
+  },
+  "jest": {
+    "roots": [
+      "test/javascript"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascript"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "mapCoverage": true
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }

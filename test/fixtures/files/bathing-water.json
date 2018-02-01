@@ -1,0 +1,134 @@
+{
+  "format": "linked-data-api",
+  "version": "0.2",
+  "result": {
+    "_about": "http://environment.data.gov.uk/doc/bathing-water/ukk1202-36000.json",
+    "definition": "http://environment.data.gov.uk/meta/doc/bathing-water/_eubwid.json",
+    "extendedMetadataVersion": "http://environment.data.gov.uk/doc/bathing-water/ukk1202-36000.json?_metadata=all",
+    "primaryTopic": {
+      "_about": "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000",
+      "appointedSewerageUndertaker": {
+        "_about": "http://business.data.gov.uk/id/company/02366648",
+        "companyProfile": {
+          "_about": "http://business.data.gov.uk/companies/profile/02366648",
+          "label": [
+            {
+              "_value": "Companies House profile for Wessex Water Services Limited",
+              "_lang": "en"
+            }
+          ]
+        },
+        "name": {
+          "_value": "Wessex Water Services Limited",
+          "_lang": "en"
+        }
+      },
+      "country": {
+        "_about": "http://data.ordnancesurvey.co.uk/id/country/england",
+        "name": {
+          "_value": "England",
+          "_lang": "en"
+        }
+      },
+      "district": [
+        {
+          "_about": "http://data.ordnancesurvey.co.uk/id/7000000000025504",
+          "name": {
+            "_value": "North Somerset",
+            "_lang": "en"
+          }
+        },
+        "http://statistics.data.gov.uk/id/statistical-geography/E06000024"
+      ],
+      "envelope": {
+        "_about": "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-36000:1",
+        "label": [
+          {
+            "_value": "Map bounds for Clevedon Beach",
+            "_lang": "en"
+          }
+        ]
+      },
+      "eubwidNotation": "ukk1202-36000",
+      "latestComplianceAssessment": {
+        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2017",
+        "complianceClassification": {
+          "_about": "http://environment.data.gov.uk/def/bwq-cc-2015/2",
+          "name": {
+            "_value": "Good",
+            "_lang": "en"
+          }
+        }
+      },
+      "latestProfile": "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1",
+      "latestRiskPrediction": {
+        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20170930-084612",
+        "expiresAt": {
+          "_value": "2017-10-01T08:29:00",
+          "_datatype": "dateTime"
+        },
+        "riskLevel": {
+          "_about": "http://environment.data.gov.uk/def/bwq-stp/increased",
+          "name": {
+            "_value": "increased",
+            "_lang": "en"
+          }
+        }
+      },
+      "latestSampleAssessment": "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/36000/date/20170922/time/104000/recordDate/20170922",
+      "name": {
+        "_value": "Clevedon Beach",
+        "_lang": "en"
+      },
+      "regionalOrganization": {
+        "_about": "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office",
+        "name": {
+          "_value": "South West",
+          "_lang": "en"
+        }
+      },
+      "sameAs": "http://environment.data.gov.uk/id/bathing-water/clevedon-beach",
+      "samplingPoint": {
+        "_about": "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000",
+        "easting": 339914,
+        "lat": 51.4377009394295,
+        "long": -2.86583928659229,
+        "name": {
+          "_value": "Sampling point at Clevedon Beach",
+          "_lang": "en"
+        },
+        "northing": 171322
+      },
+      "sedimentTypesPresent": [
+        "http://environment.data.gov.uk/def/bathing-water/sand-sediment",
+        "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"
+      ],
+      "type": [
+        "http://environment.data.gov.uk/def/bathing-water/BathingWater",
+        "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"
+      ],
+      "uriSet": {
+        "_about": "http://environment.data.gov.uk/id/bathing-water/",
+        "label": [
+          {
+            "_value": "Bathing waters monitored by the Environment Agency for England and Wales.",
+            "_lang": "en"
+          }
+        ]
+      },
+      "waterQualityImpactedByHeavyRain": true,
+      "yearDesignated": "http://reference.data.gov.uk/id/year/1988",
+      "zoneOfInfluence": {
+        "_about": "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-36000:1",
+        "name": {
+          "_value": "Zone of influence at Clevedon Beach",
+          "_lang": "en"
+        }
+      }
+    },
+    "type": [
+      "http://purl.org/linked-data/api/vocab#ItemEndpoint",
+      "http://purl.org/linked-data/api/vocab#Page"
+    ]
+  }
+}

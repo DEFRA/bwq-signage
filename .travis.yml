@@ -1,0 +1,12 @@
+dist: trusty
+addons:
+  chrome: stable
+language: ruby
+rvm:
+ - 2.4
+before_script:
+  - yarn install
+  - ruby ./bin/webpack
+script:
+  - bundle exec rails test
+  - yarn test
