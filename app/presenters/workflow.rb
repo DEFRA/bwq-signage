@@ -25,6 +25,13 @@ class Workflow
     { has: [], missing: [], name: :preview }
   ].freeze
 
+  # Calculate all of the parameters that may be mentioned in the workflow
+  ALL_PARAMS = PRECONDITIONS.map { |precond| [precond[:has], precond[:missing]] }
+                            .flatten
+                            .uniq
+                            .sort
+                            .freeze
+
   class << self
     # @return A symbol denoting the next step in the workflow
     def next_step(params)

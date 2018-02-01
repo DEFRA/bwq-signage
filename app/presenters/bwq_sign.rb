@@ -13,4 +13,8 @@ class BwqSign
   def params
     @options[:params]
   end
+
+  def next_workflow_step
+    Workflow.next_step(params)
+  end
 end

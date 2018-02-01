@@ -1,18 +1,2 @@
 .o-page-container
-  .o-grid-row
-    .o-grid-column__two-thirds
-      %h1.heading-large
-        Create a bathing water sign
-      %p.lede
-        Use this application to create a sign for one or more bathing waters
-        that you manage. The sign will include up-to-date information from
-        the Environment Agency
-        %a{ href: 'https://environment.data.gov.uk/bwq/profiles' }
-          bathing water profiles.
-
-      %p
-        Once created, signage can then be downloaded in <code>.pdf</code>
-        format to be printed on paper or other media.
-
-      %p
-        = link_to('Start now', '#', class: 'button button-start')
+  = render partial: @view_state.next_workflow_step.to_s

@@ -57,5 +57,14 @@ class WorkflowTest < ActiveSupport::TestCase
                 .must_equal :preview
       end
     end
+
+    describe 'ALL_PARAMS' do
+      it 'should calculate a list of all of the parameters used in the workflow' do
+        Workflow::ALL_PARAMS.must_include :search
+        Workflow::ALL_PARAMS.must_include :'bwmgr-name'
+        Workflow::ALL_PARAMS.length.must_be :>=, 10
+        Workflow::ALL_PARAMS.wont_include :foobar
+      end
+    end
   end
 end

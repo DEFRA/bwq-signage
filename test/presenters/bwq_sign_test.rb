@@ -13,5 +13,14 @@ class BwqSignTest < ActiveSupport::TestCase
         bwq_sign.params.must_equal mock_params
       end
     end
+
+    describe '#next_workflow_step' do
+      it 'should calculate the next workflow step given the parameters' do
+        params = ActionController::Parameters.new(design: true).permit!
+        bwq_sign = BwqSign.new(params: params)
+
+        bwq_sign.next_workflow_step.must_equal :search
+      end
+    end
   end
 end
