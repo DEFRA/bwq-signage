@@ -2,15 +2,21 @@
   "name": "bwq-signage",
   "private": true,
   "dependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-polyfill": "^6.26.0",
     "caniuse-lite": "^1.0.30000697",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.8.0",
     "vue": "^2.5.13"
   },
   "devDependencies": {
-    "css-loader": "^0.28.9",
     "@rails/webpacker": "^3.2.1",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1",
+    "css-loader": "^0.28.9",
     "vue-loader": "^14.0.3",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
