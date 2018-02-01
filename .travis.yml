@@ -7,3 +7,6 @@ rvm:
 before_script:
   - yarn install
   - ruby ./bin/webpack
+script:
+  - bundle exec rails test
+  - yarn test
