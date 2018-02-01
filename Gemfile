@@ -45,6 +45,7 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'webpacker', '~> 3.0'
 end
 
 group :development do
