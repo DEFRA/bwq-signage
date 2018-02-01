@@ -250,6 +250,8 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    sentry-raven (2.7.1)
+      faraday (>= 0.7.6, < 1.0)
     sexp_processor (4.10.0)
     simplecov (0.15.1)
       docile (~> 1.1.0)
@@ -331,6 +333,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   rubocop
   sass-rails (~> 5.0)
+  sentry-raven
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)

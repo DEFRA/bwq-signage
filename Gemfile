@@ -27,6 +27,7 @@ gem 'govuk_elements_rails'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_template'
 gem 'haml-rails'
+gem 'sentry-raven'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

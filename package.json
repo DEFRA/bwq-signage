@@ -9,6 +9,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-import": "^2.8.0",
+    "raven-js": "^3.22.1",
     "vue": "^2.5.13",
     "webpack-merge": "^4.1.1"
   },
