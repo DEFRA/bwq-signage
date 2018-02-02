@@ -30,4 +30,10 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     find('.button-start')
       .must_have_content('Start now')
   end
+
+  it 'should navigate to the first step in the workflow' do
+    visit(root_path)
+    click_on(class: 'button-start')
+    page.must_have_current_path(root_path(design: true))
+  end
 end
