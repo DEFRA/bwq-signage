@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/DEFRA/bwq-signage.svg?branch=master)](https://travis-ci.org/DEFRA/bwq-signage)
 [![Build Status](https://travis-ci.org/DEFRA/bwq-signage.svg?branch=develop)](https://travis-ci.org/DEFRA/bwq-signage)
-[![Coverage Status](https://coveralls.io/repos/github/DEFRA/bwq-signage/badge.svg?branch=develop)](https://coveralls.io/github/DEFRA/bwq-signage?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/DEFRA/bwq-signage/badge.svg?branch=develop&service=github)](https://coveralls.io/github/DEFRA/bwq-signage?branch=develop)
 
 # BWQ Signage project
 
