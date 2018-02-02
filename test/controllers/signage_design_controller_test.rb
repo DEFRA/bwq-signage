@@ -43,4 +43,19 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     click_on('Search')
     page.must_have_content('Search results')
   end
+
+  it 'should reject an empty search term' do
+    visit(root_path(design: true))
+    click_on('Search')
+    page.wont_have_content('Search results')
+    find('.error-summary').must_have_content('Empty search input')
+  end
+
+  it 'should reject a search term with punctuation' do
+    visit(root_path(design: true))
+    fill_in('search', with: '; drop table')
+    click_on('Search')
+    page.wont_have_content('Search results')
+    find('.error-summary').must_have_content('Non-permitted characters in search input')
+  end
 end
