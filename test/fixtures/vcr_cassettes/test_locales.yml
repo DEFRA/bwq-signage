@@ -21,25 +21,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '1'
+      - '3'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 15:39:49 GMT
+      - Fri, 02 Feb 2018 17:21:32 GMT
       Etag:
       - '"ea2bf6b49f898e6-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 15:42:47 GMT
+      - Fri, 02 Feb 2018 17:24:28 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '114'
+      - '135'
       Content-Length:
-      - '57852'
+      - '58274'
       Connection:
       - keep-alive
     body:
@@ -10879,5 +10879,5 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 15:39:49 GMT
+  recorded_at: Fri, 02 Feb 2018 17:21:32 GMT
 recorded_with: VCR 4.0.0
