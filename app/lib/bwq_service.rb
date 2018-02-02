@@ -40,12 +40,11 @@ class BwqService < LdaApi
   end
 
   # Return a list of all known bathing waters. List is cached for future re-use
-  def all_bathing_waters(country = ENGLAND_URI)
+  def all_bathing_waters(options = {})
     if bws_by_uri.empty?
-      options = { _pageSize: 600 }
-      options[:country] = country unless country == :all
+      api_options = { _pageSize: 600 }.merge(options)
 
-      bws = api_get_resources(BathingWater.endpoint_all, ALL_PAGES, BathingWater, options)
+      bws = api_get_resources(BathingWater.endpoint_all, ALL_PAGES, BathingWater, api_options)
       bws.each do |bw|
         bws_by_uri[bw.uri] = bw
         bws_by_id[bw.id] = bw
@@ -56,8 +55,8 @@ class BwqService < LdaApi
   end
 
   # Perform block for each bathing water in the list of all bathing waters
-  def each_bathing_water(&block)
-    all_bathing_waters.each(&block)
+  def each_bathing_water(options = {}, &block)
+    all_bathing_waters(options).each(&block)
   end
 
   # Return the description of a bathing water, given its eubwid
