@@ -25,5 +25,12 @@ class BathingWaterTest < ActiveSupport::TestCase
         bw.name.must_equal('Clevedon Beach')
       end
     end
+
+    describe '#controller_name' do
+      it 'should return the name of the bw controller' do
+        bw = BathingWater.new(bw_fixture)
+        bw.controller_name.must_equal('North Somerset')
+      end
+    end
   end
 end
