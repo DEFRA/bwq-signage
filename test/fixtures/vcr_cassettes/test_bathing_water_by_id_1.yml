@@ -25,19 +25,19 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Jan 2018 16:20:15 GMT
+      - Fri, 02 Feb 2018 15:39:47 GMT
       Etag:
       - '"d36405e5b567ec1f-gzip"'
       Expires:
-      - Wed, 31 Jan 2018 16:23:16 GMT
+      - Fri, 02 Feb 2018 15:42:47 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '41'
-      Transfer-Encoding:
-      - chunked
+      - '113'
+      Content-Length:
+      - '1660'
       Connection:
       - keep-alive
     body:
@@ -88,5 +88,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 16:20:16 GMT
+  recorded_at: Fri, 02 Feb 2018 15:39:47 GMT
 recorded_with: VCR 4.0.0

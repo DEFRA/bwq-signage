@@ -25,15 +25,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Jan 2018 16:20:17 GMT
+      - Fri, 02 Feb 2018 15:39:50 GMT
       Expires:
-      - Wed, 31 Jan 2018 17:20:17 GMT
+      - Fri, 02 Feb 2018 16:39:50 GMT
       Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Server:
       - Server
       X-Response-Id:
-      - '43'
+      - '118'
       Content-Length:
       - '0'
       Connection:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 16:20:17 GMT
+  recorded_at: Fri, 02 Feb 2018 15:39:50 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
@@ -64,25 +64,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '2'
+      - '3'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Jan 2018 16:20:17 GMT
+      - Fri, 02 Feb 2018 15:39:50 GMT
       Etag:
       - '"d36405e5b567ec1f-gzip"'
       Expires:
-      - Wed, 31 Jan 2018 16:23:16 GMT
+      - Fri, 02 Feb 2018 15:42:47 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '41'
+      - '113'
       Content-Length:
-      - '1667'
+      - '1660'
       Connection:
       - keep-alive
     body:
@@ -133,5 +133,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 16:20:17 GMT
+  recorded_at: Fri, 02 Feb 2018 15:39:50 GMT
 recorded_with: VCR 4.0.0
