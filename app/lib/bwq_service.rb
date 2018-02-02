@@ -17,6 +17,7 @@ class BwqService < LdaApi
     latestProfile.pollutionRiskForecasting
     latestProfile.seasonStartDate
     latestProfile.seasonFinishDate
+    latestProfile.controllerName
     latestComplianceAssessment.sampleYear.ordinalYear
     latestRiskPrediction.*
   ].join(',')

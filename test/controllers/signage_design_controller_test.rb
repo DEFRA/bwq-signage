@@ -84,4 +84,18 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
       page.must_have_content('Sorry, there were no matching locations for that search.')
     end
   end
+
+  it 'should show the next step in the process when the user selects a bathing water' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000'))
+      page.must_have_content('Bathing water manager information for Clevedon Beach')
+    end
+  end
+
+  it 'select the name of the bathing water controller by default' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000'))
+      find('#bwmgr-name').value.must_equal('North Somerset')
+    end
+  end
 end
