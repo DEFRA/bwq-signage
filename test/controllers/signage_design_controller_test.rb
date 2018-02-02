@@ -36,4 +36,11 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     click_on(class: 'button-start')
     page.must_have_current_path(root_path(design: true))
   end
+
+  it 'should allow the user to enter a search term' do
+    visit(root_path(design: true))
+    fill_in('search', with: 'cleve')
+    click_on('Search')
+    page.must_have_content('Search results')
+  end
 end
