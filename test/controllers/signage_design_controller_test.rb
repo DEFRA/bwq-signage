@@ -92,7 +92,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it 'select the name of the bathing water controller by default' do
+  it 'selects the name of the bathing water controller by default' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000'))
       find('#bwmgr-name').value.must_equal('North Somerset')
