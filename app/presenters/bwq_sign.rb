@@ -27,4 +27,8 @@ class BwqSign
   def search_results
     @search_results ||= options[:search].search(search_term)
   end
+
+  def show_preview?
+    next_workflow_step == :preview
+  end
 end

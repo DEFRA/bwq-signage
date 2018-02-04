@@ -117,4 +117,19 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
       find(:radio_button, :'show-prf', checked: true).value.must_equal('no')
     end
   end
+
+  it 'should show the preview page once the user has selected all options' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+      page.must_have_content('Preview and download')
+      page.must_have_selector('#development-container')
+    end
+  end
+
+  it 'will not show the preview element before the options are known' do
+    visit(root_path(design: true))
+    page.wont_have_selector('#development-container')
+  end
 end
