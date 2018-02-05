@@ -1,7 +1,7 @@
-#development-container.c-sign-preview
+%article#development-container.c-sign-preview
   %div.c-sign-preview--landscape
-    .c-content-row__head
-      .head-title
+    %section.c-content-row__head
+      .o-content-unit__1-1
         %h1
           = @view_state.bathing_water.name
 
@@ -9,25 +9,27 @@
           .designation
             %img{:alt => "good water quality", :src => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.svg"}/
 
-    .c-content-row__about
-      .block.description
+    %section.c-content-row__about
+      .o-content-unit__1-2.o-content-unit__box
         %h2
           About
           = @view_state.bathing_water.name
         %p Bathing water quality is influenced by the Kirkham stream and may reduce during or after periods of heavy rainfall due to run off from the surrounding urban area, and occasional discharges from a storm overflow.
-      .block.prf
+
+      .o-content-unit__2-2.o-content-unit__box
         %h2 Pollution Risk Forecast
         %p This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs, enabling bathers to avoid periods when bathing water quality may be reduced. This can last between one and three days. In 2017 warnings were issued at this bathing water on XX days.
 
-    .c-content-row__info
-      .block.qr
+    %section.c-content-row__info
+      .o-content-unit__1-3.o-content-unit__box
         %h2 More information
         %p
           The full details for this bathing water, its catchment, information on all potential pollution sources and how they are managed can be viewed on the Environment Agency website:
           %a{ href: 'http://bit.ly/2FsWuYe' }
             http://bit.ly/2FsWuYe
         %img.qrcode{:src => "http://environment.data.gov.uk/bwq/profiles/images/qr/ukk4200-24000-150x150.png"}/
-      .block.historical
+
+      .o-content-unit__2-3.o-content-unit__box
         %h2 Historical classifications
         %span
           2017 classification
@@ -45,12 +47,13 @@
           2014 classification
           %img.designations{:src => "https://environment.data.gov.uk/bwq/profiles/images/2-stars.png"}/
           good
-      .block.map
+
+      .o-content-unit__3-3.o-content-unit__box
         %h2 Sampling Point Location
         %img.classification{:src => "map.png"}/
 
-    .c-content-row__foot
-      .block.manager
+    %section.c-content-row__foot
+      .o-content-unit__1-2
         %img{:src => "tc-logo-white.png"}/
         %p
           This beach is managed by Torbay Council
@@ -58,5 +61,5 @@
           Phone: 01803 207975
         %p
           Email: beaches@torbay.gov.uk
-      .block.ea-logo
+      .o-content-unit__2-2
         %img{:src => "https://environment.data.gov.uk/bwq/profiles/images/logo/banner_logo-en.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/logo/ea-logo-master-dark-plain.svg"}/
