@@ -1,0 +1,21 @@
+.o-workflow-unit.o-workflow-unit__landing
+  .o-grid-row
+    .o-grid-column__two-thirds
+
+      %h2.heading-medium
+        Which bathing water?
+      %p.lede
+        Search for a bathing water by name, by bathing-water ID or by the name
+        of the bathing water controller.
+
+      = render partial: 'warning_flash'
+
+      = form_tag(root_path(design: true), method: 'get', enforce_utf8: false) do
+        = hidden_field_tag(:design, true)
+
+        .form-group
+          = label_tag(:search, 'Bathing water name, EUBWID, or controller name', { class: 'form-label-bold' })
+          = search_field_tag(:search, nil, { class: 'form-control-2-3' })
+
+        .form-group
+          = submit_tag('Search', { class: 'button' })

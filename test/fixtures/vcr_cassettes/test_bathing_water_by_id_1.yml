@@ -20,24 +20,26 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '2'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Jan 2018 16:20:15 GMT
+      - Fri, 02 Feb 2018 17:21:32 GMT
       Etag:
       - '"d36405e5b567ec1f-gzip"'
       Expires:
-      - Wed, 31 Jan 2018 16:23:16 GMT
+      - Fri, 02 Feb 2018 17:24:31 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '41'
-      Transfer-Encoding:
-      - chunked
+      - '138'
+      Content-Length:
+      - '1660'
       Connection:
       - keep-alive
     body:
@@ -88,5 +90,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 16:20:16 GMT
+  recorded_at: Fri, 02 Feb 2018 17:21:32 GMT
 recorded_with: VCR 4.0.0

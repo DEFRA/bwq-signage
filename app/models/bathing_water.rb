@@ -16,4 +16,8 @@ class BathingWater < LdaResource
   def eubwid
     self['eubwidNotation']
   end
+
+  def controller_name
+    self['latestProfile.controllerName']
+  end
 end

@@ -2,9 +2,9 @@
   "format": "linked-data-api",
   "version": "0.2",
   "result": {
-    "_about": "http://environment.data.gov.uk/doc/bathing-water/ukk1202-36000.json",
-    "definition": "http://environment.data.gov.uk/meta/doc/bathing-water/_eubwid.json",
-    "extendedMetadataVersion": "http://environment.data.gov.uk/doc/bathing-water/ukk1202-36000.json?_metadata=all",
+    "_about": "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestProfile.controllerName",
+    "definition": "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestProfile.controllerName",
+    "extendedMetadataVersion": "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestProfile.controllerName&_metadata=all",
     "primaryTopic": {
       "_about": "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000",
       "appointedSewerageUndertaker": {
@@ -51,7 +51,7 @@
       },
       "eubwidNotation": "ukk1202-36000",
       "latestComplianceAssessment": {
-        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2017",
+        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016",
         "complianceClassification": {
           "_about": "http://environment.data.gov.uk/def/bwq-cc-2015/2",
           "name": {
@@ -60,22 +60,25 @@
           }
         }
       },
-      "latestProfile": "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1",
+      "latestProfile": {
+        "_about": "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1",
+        "controllerName": "North Somerset"
+      },
       "latestRiskPrediction": {
-        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20170930-084612",
+        "_about": "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20171006-144034",
         "expiresAt": {
-          "_value": "2017-10-01T08:29:00",
+          "_value": "2017-10-07T08:29:00",
           "_datatype": "dateTime"
         },
         "riskLevel": {
-          "_about": "http://environment.data.gov.uk/def/bwq-stp/increased",
+          "_about": "http://environment.data.gov.uk/def/bwq-stp/normal",
           "name": {
-            "_value": "increased",
+            "_value": "normal",
             "_lang": "en"
           }
         }
       },
-      "latestSampleAssessment": "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/36000/date/20170922/time/104000/recordDate/20170922",
+      "latestSampleAssessment": "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/36000/date/20160922/time/100400/recordDate/20160922",
       "name": {
         "_value": "Clevedon Beach",
         "_lang": "en"

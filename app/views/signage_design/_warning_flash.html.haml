@@ -1,0 +1,14 @@
+- if flash && !flash.empty?
+  #c-flash.error-summary{ role: 'alert', aria: { labelledby: 'error-summary-heading-example-1' }, tabindex: '-1' }
+    %h2.heading-medium.error-summary-heading
+      = flash[:title]
+
+    - if flash[:message]
+      %p
+        = flash[:message]
+
+    - if flash[:errors]
+      %ul.error-summary-list
+        - flash[:errors].each do |error|
+          %li
+            = error
