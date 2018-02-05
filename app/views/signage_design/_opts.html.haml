@@ -1,0 +1,26 @@
+.o-workflow-unit.o-workflow-unit__landing
+  .o-grid-row
+    .o-grid-column__two-thirds
+
+      %h2.heading-medium
+        Bathing water sign options
+      %p.lede
+        You can select which elements of the sign you would like to include.
+
+      = render partial: 'warning_flash'
+
+      = form_tag(root_path, method: 'get', enforce_utf8: false) do
+        = hidden_field_tag(:design, true)
+        = hidden_field_tag(:eubwid, @view_state.bathing_water.eubwid)
+
+        - %i[bwmgr-name bwmgr-phone bwmgr-email].each do |param|
+          = hidden_field_tag(param, @view_state.params[param])
+
+        = render partial: 'yes_no_option', locals: { option_heading: 'Include pollution risk forecast information?', option_var: 'show-prf', option_default: 'yes' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Show the history of previous annual classifications?', option_var: 'show-hist', option_default: 'yes' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Show a map of the sampling point location?', option_var: 'show-map', option_default: 'yes' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Include the Environment Agency logo?', option_var: 'show-logo', option_default: 'yes' }
+
+        .form-group
+          %p
+            = submit_tag('Next step', { class: 'button' })

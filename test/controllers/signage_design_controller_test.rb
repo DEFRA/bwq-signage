@@ -92,10 +92,29 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it 'select the name of the bathing water controller by default' do
+  it 'selects the name of the bathing water controller by default' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000'))
       find('#bwmgr-name').value.must_equal('North Somerset')
+    end
+  end
+
+  it 'shows the sign options with default values selected' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': ''))
+      page.must_have_content('Bathing water sign options')
+      find('legend', text: 'Include pollution risk forecast information?')
+      find(:radio_button, :'show-prf', checked: true).value.must_equal('yes')
+    end
+  end
+
+  it 'shows the sign options with a non-default value selected' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no'))
+      page.must_have_content('Bathing water sign options')
+      find(:radio_button, :'show-prf', checked: true).value.must_equal('no')
     end
   end
 end
