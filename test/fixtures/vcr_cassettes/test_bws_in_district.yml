@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&district.name=North%20Somerset
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestProfile.controllerName,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&district.name=North%20Somerset
     body:
       encoding: US-ASCII
       string: ''
@@ -21,29 +21,29 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 17:21:31 GMT
+      - Fri, 02 Feb 2018 21:36:25 GMT
       Etag:
-      - '"8f9679a4d9ddd00-gzip"'
+      - '"d3e57e00ed22d881-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 17:24:31 GMT
+      - Fri, 02 Feb 2018 21:39:25 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '141'
-      Transfer-Encoding:
-      - chunked
+      - '157'
+      Content-Length:
+      - '2682'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&district.name=North+Somerset&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
             , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35700", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
@@ -58,7 +58,7 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35700/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35700/2017:1", "controllerName" : "North Somerset", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
                 , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
                 , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35700_1-webres.jpg"}
@@ -100,7 +100,7 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35800/2017:1", "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35800/2017:1", "controllerName" : "North Somerset", "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
                 , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
                 , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35800_1-webres.jpg"}
@@ -148,7 +148,7 @@ http_interactions:
                 , "nirsRef" : "12341000", "som_recordDateTime" : {"_value" : "2017-08-03T09:22:01", "_datatype" : "dateTime"}
                 , "startOfIncident" : {"_value" : "2017-03-23T16:42:00", "_datatype" : "dateTime"}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35900/2017:1", "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35900/2017:1", "controllerName" : "North Somerset", "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
                 , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
                 , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35900_1-webres.jpg"}
@@ -180,7 +180,7 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "controllerName" : "North Somerset", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
                 , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
                 , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg"}
@@ -211,5 +211,5 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 17:21:32 GMT
+  recorded_at: Fri, 02 Feb 2018 21:36:25 GMT
 recorded_with: VCR 4.0.0

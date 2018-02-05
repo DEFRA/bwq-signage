@@ -1,0 +1,33 @@
+.o-workflow-unit.o-workflow-unit__landing
+  .o-grid-row
+    .o-grid-column__two-thirds
+
+      %h2.heading-medium
+        Bathing water manager information for #{@view_state.bathing_water.name}
+      %p.lede
+        The sign should tell members of the public who manages this bathing water,
+        and how they can get in touch if needed.
+
+      %p
+        You can add a logo or other identifying image on the next screen.
+
+      = render partial: 'warning_flash'
+
+      = form_tag(root_path, method: 'get', enforce_utf8: false) do
+        = hidden_field_tag(:design, true)
+        = hidden_field_tag(:eubwid, @view_state.bathing_water.eubwid)
+
+        .form-group
+          = label_tag(:'bwmgr-name', 'Bathing water is managed by', { class: 'form-label-bold' })
+          = text_field_tag(:'bwmgr-name', @view_state.bathing_water.controller_name, { class: 'form-control-2-3' })
+
+        .form-group
+          = label_tag(:'bwmgr-email', 'Contact email address', { class: 'form-label-bold' })
+          = email_field_tag(:'bwmgr-email', nil, { class: 'form-control-2-3' })
+
+        .form-group
+          = label_tag(:'bwmgr-name', 'Contact phone number', { class: 'form-label-bold' })
+          = telephone_field_tag(:'bwmgr-phone', nil, { class: 'form-control-2-3' })
+
+        .form-group
+          = submit_tag('Next step', { class: 'button' })

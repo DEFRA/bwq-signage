@@ -21,25 +21,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '1'
+      - '3'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 17:21:30 GMT
+      - Fri, 02 Feb 2018 21:36:26 GMT
       Etag:
       - '"ea2bf6b49f898e6-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 17:24:28 GMT
+      - Fri, 02 Feb 2018 21:39:23 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '135'
+      - '152'
       Content-Length:
-      - '58274'
+      - '57852'
       Connection:
       - keep-alive
     body:
@@ -10879,10 +10879,10 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 17:21:30 GMT
+  recorded_at: Fri, 02 Feb 2018 21:36:26 GMT
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestProfile.controllerName,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
     body:
       encoding: US-ASCII
       string: ''
@@ -10901,29 +10901,29 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 17:21:30 GMT
+      - Fri, 02 Feb 2018 21:36:26 GMT
       Etag:
-      - '"578a1ba60e56084e-gzip"'
+      - '"2773cbb646aa9f79-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 17:24:30 GMT
+      - Fri, 02 Feb 2018 21:39:26 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '136'
+      - '159'
       Content-Length:
-      - '1705'
+      - '1725'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
               }
@@ -10939,7 +10939,7 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1", "controllerName" : "Purbeck", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
                 , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
                 , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-19900_1-webres.jpg"}
@@ -10970,5 +10970,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 17:21:30 GMT
+  recorded_at: Fri, 02 Feb 2018 21:36:26 GMT
 recorded_with: VCR 4.0.0
