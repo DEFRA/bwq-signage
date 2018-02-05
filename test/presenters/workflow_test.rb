@@ -52,8 +52,8 @@ class WorkflowTest < ActiveSupport::TestCase
       it 'should select preview when all information is complete' do
         Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
-                                      'no-hist': true, 'no-map': false, 'no-prf': true,
-                                      'no-logo': false)
+                                      'show-hist': true, 'show-map': false, 'show-prf': true,
+                                      'show-logo': false)
                 .must_equal :preview
       end
     end

@@ -17,10 +17,10 @@ class Workflow
     { has: %i[design eubwid], missing: %i[bwmgr-name], name: :bwmgr },
     { has: %i[design eubwid], missing: %i[bwmgr-phone], name: :bwmgr },
     { has: %i[design eubwid], missing: %i[bwmgr-email], name: :bwmgr },
-    { has: %i[design eubwid bwmgr-name], missing: %i[no-hist], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[no-map], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[no-prf], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[no-logo], name: :opts },
+    { has: %i[design eubwid bwmgr-name], missing: %i[show-prf], name: :opts },
+    { has: %i[design eubwid bwmgr-name], missing: %i[show-map], name: :opts },
+    { has: %i[design eubwid bwmgr-name], missing: %i[show-hist], name: :opts },
+    { has: %i[design eubwid bwmgr-name], missing: %i[show-logo], name: :opts },
     { has: %i[], missing: %i[design], name: :landing },
     { has: [], missing: [], name: :preview }
   ].freeze

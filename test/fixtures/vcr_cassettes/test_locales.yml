@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&country=http://data.ordnancesurvey.co.uk/id/country/england
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600
     body:
       encoding: US-ASCII
       string: ''
@@ -20,30 +20,32 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '3'
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Jan 2018 16:20:15 GMT
+      - Fri, 02 Feb 2018 21:36:25 GMT
       Etag:
-      - '"fa2d5bebcad82a90-gzip"'
+      - '"ea2bf6b49f898e6-gzip"'
       Expires:
-      - Wed, 31 Jan 2018 16:23:14 GMT
+      - Fri, 02 Feb 2018 21:39:23 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '38'
-      Transfer-Encoding:
-      - chunked
+      - '152'
+      Content-Length:
+      - '57852'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland&_metadata=all", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland&_page=0", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&country=http%3A%2F%2Fdata.ordnancesurvey.co.uk%2Fid%2Fcountry%2Fengland", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_metadata=all", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
             , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366703", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366703", "label" : [{"_value" : "Companies House profile for Northumbrian Water Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Northumbrian Water Limited", "_lang" : "en"}
@@ -10877,5 +10879,5 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Wed, 31 Jan 2018 16:20:15 GMT
+  recorded_at: Fri, 02 Feb 2018 21:36:26 GMT
 recorded_with: VCR 4.0.0

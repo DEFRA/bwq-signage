@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 
 # App dependencies
 gem 'faraday_middleware'
+gem 'font-awesome-rails'
 gem 'govuk_elements_rails'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_template'

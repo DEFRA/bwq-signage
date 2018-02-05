@@ -1,0 +1,52 @@
+.o-workflow-unit.o-workflow-unit__search-results
+  .o-grid-row
+    .o-grid-column__two-thirds
+
+      %h2.heading-medium
+        Search results for &quot;#{@view_state.search_term}&quot;
+
+      %p
+        Select one of the results below, or
+        = link_to('search again', root_path(design: true))
+
+
+  .o-grid-row
+    - name_results = @view_state.search_results[:by_name]
+    - id_results = @view_state.search_results[:by_id]
+    - controller_results = @view_state.search_results[:by_controller]
+
+    - if name_results.empty? &&  id_results.empty? && controller_results.empty?
+      .o-grid-column__two-thirds
+        .error-summary{ role: 'alert', aria: { labelledby: 'error-summary-no-results' }, tabindex: '-1' }
+          %h3#error-summary-no-results
+            Sorry, there were no matching locations for that search.
+
+    - unless name_results.empty?
+      .o-grid-column__one-third
+        %h3.heading-small
+          Matching bathing water names
+
+        %ul.o-search-results
+          - name_results.each do |bw|
+            %li.o-search-results__result
+              = link_to(bw.name, root_path(design: true, eubwid: bw.eubwid))
+
+    - unless id_results.empty?
+      .o-grid-column__one-third
+        %h3.heading-small
+          Matching bathing water identifiers
+
+        %ul.o-search-results
+          - id_results.each do |bw|
+            %li.o-search-results__result
+              = link_to("#{bw.name} (#{bw.eubwid})", root_path(design: true, eubwid: bw.eubwid))
+
+    - unless controller_results.empty?
+      .o-grid-column__one-third
+        %h3.heading-small
+          Matching controller names
+
+        %ul.o-search-results
+          - controller_results.each do |bw|
+            %li.o-search-results__result
+              = link_to("#{bw.name} (#{bw.controller_name})", root_path(design: true, eubwid: bw.eubwid))

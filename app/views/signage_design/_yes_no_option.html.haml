@@ -1,0 +1,12 @@
+- value = params.key?(option_var) ? params[option_var] : option_default
+
+.fieldset
+  %legend
+    %h3.heading-small
+      = option_heading
+
+    .multiple-choice
+      = radio_button_tag(:"#{option_var}", 'yes', value == 'yes')
+      = label_tag(:"#{option_var}_yes", 'Yes')
+      = radio_button_tag(:"#{option_var}", 'no', value == 'no')
+      = label_tag(:"#{option_var}_no", 'No')
