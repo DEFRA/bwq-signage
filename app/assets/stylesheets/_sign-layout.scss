@@ -1,0 +1,61 @@
+$oneToRootTwoAspectRatio: 1 / 1.414;
+$oneToRootTwoAspectRatioMargin: 1 - (1 / 1.414);
+$oneToRootTwoAspectRatioMarginHalf: $oneToRootTwoAspectRatio / 2;
+
+// row heights
+$rowHeightHead: 25%;
+$rowHeightAbout: 30%;
+$rowHeightInfo: 25%;
+$rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
+
+#development-container.c-sign-preview {
+  width: 100vw;
+  height: 100vw;
+  background-color: $grey-3;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+
+  @mixin c-sign-preview__common {
+    background-color: white;
+    box-sizing: border-box;
+    border: 2px solid $black;
+  }
+
+  .c-sign-preview--landscape {
+    width: 98vw;
+    height: $oneToRootTwoAspectRatio * 98vw;
+    margin: auto 1vw;
+    @include c-sign-preview__common;
+  }
+
+  .c-sign-preview--portrait {
+    height: 98vw;
+    width: $oneToRootTwoAspectRatio * 98vw;
+    margin: 1vw auto;
+    @include c-sign-preview__common;
+  }
+
+  .c-content-row__head {
+    height: $rowHeightHead;
+    background-color: $purple-25;
+  }
+
+  .c-content-row__about {
+    height: $rowHeightAbout;
+    background-color: $baby-pink-25;
+  }
+
+  .c-content-row__info {
+    height: $rowHeightInfo;
+    background-color: $yellow-25;
+  }
+
+  .c-content-row__foot {
+    height: $rowHeightFoot;
+    background-color: $light-blue-25;
+  }
+
+}
