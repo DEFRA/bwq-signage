@@ -18,7 +18,11 @@ class SignageDesignController < ApplicationController
   end
 
   def permitted_params
-    params.permit(*Workflow::ALL_PARAMS)
+    params.permit(*all_permitted_param_names)
+  end
+
+  def all_permitted_param_names
+    %i[page_orientation].concat(Workflow::ALL_PARAMS)
   end
 
   def search

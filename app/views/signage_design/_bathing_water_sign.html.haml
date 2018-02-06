@@ -1,5 +1,5 @@
 %article#development-container.c-sign-preview
-  %div.c-sign-preview--landscape
+  %div.c-sign-preview{ class: "c-sign-preview--#{@view_state.page_orientation[:current]}" }
     %section.c-content-row__head
       .o-content-unit__1-1
         %h1
