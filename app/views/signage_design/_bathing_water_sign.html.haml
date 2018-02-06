@@ -23,8 +23,9 @@
 
       - if @view_state.show_prf?
         .o-content-unit__2-2.o-content-unit__box
-          %h2 Pollution Risk Forecast
-          %p This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs, enabling bathers to avoid periods when bathing water quality may be reduced. This can last between one and three days. In 2017 warnings were issued at this bathing water on XX days.
+          %h2 Short-term pollution
+          %p
+            = @view_state.bathing_water.prf_statement
 
     %section.c-content-row__info
       .o-content-unit__1-3.o-content-unit__box
