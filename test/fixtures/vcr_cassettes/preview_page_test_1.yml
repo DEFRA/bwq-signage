@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestProfile.controllerName,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
     body:
       encoding: US-ASCII
       string: ''
@@ -20,30 +20,32 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '11'
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 21:36:26 GMT
+      - Tue, 06 Feb 2018 17:52:48 GMT
       Etag:
-      - '"aca12b6eb0f4bada-gzip"'
+      - '"2cb6a0e3c86e70e8-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 21:39:26 GMT
+      - Tue, 06 Feb 2018 17:55:37 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '160'
-      Transfer-Encoding:
-      - chunked
+      - '249'
+      Content-Length:
+      - '3839'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
               }
@@ -57,10 +59,25 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "controllerName" : "North Somerset", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
-                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
-                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
-                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "bathingWaterDescription" : {"_value" : "Clevedon Beach is on the Somerset coast overlooking the Bristol Channel. It is a sand and pebble beach, approximately 850 metres wide, backed by the promenade and the town. There is a marine lake at the beach which is filled by sea water on high tides.", "_lang" : "en"}
+                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There are two emergency/storm overflows from the Clevedon Beach pumping station, that discharge to the sea 400m and 500m northeast of the Environment Agency monitoring point respectively. The operation of the overflows can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by sewage from the Kingston Seymour sewage treatment works (STW) that discharged primary treated effluent. The scheme for Kingston Seymour which provides secondary treatment and ultraviolet (UV) disinfection, was completed by Wessex Water in 2000.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-36000/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-36000-2017", "macroAlgaeStatement" : {"_value" : "The bathing water can become covered with large amounts of seaweed, depending on tides and the weather. This bathing water has a history of large amounts of seaweed.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n24 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Clevedon Beach bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 24 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality may reduce during or after periods of heavy rainfall due to occasional discharges from two storm overflows.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Clevedon Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was assessed as being sufficient to be objectionable for 2% of visits, with 92% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Clevedon Beach is approximately 22,600 hectares. It includes the rivers Banwell, Oldbridge, Yeo, Kenn, Blind Yeo and Land Yeo, as well as the Uphill Great Rhine, the Drove Rhine and the Portbury Ditch. These streams are characterised by having short upland reaches and long lowland reaches with very low gradients. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
+              }
               , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
                 , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
                 , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
@@ -88,5 +105,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 21:36:27 GMT
+  recorded_at: Tue, 06 Feb 2018 17:52:48 GMT
 recorded_with: VCR 4.0.0
