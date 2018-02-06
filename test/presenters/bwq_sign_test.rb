@@ -141,4 +141,14 @@ class BwqSignTest < ActiveSupport::TestCase
       refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
     end
   end
+
+  describe '#qr_code' do
+    it 'should return the correct QR code for the bathing water profile' do
+      mock_bw = mock('BathingWater')
+      mock_bw.expects(:eubwid).returns('paddington-bear')
+      BwqSign.new(bathing_water: mock_bw)
+             .qr_code_url
+             .must_equal('http://environment.data.gov.uk/bwq/profiles/images/qr/paddington-bear-100x100.png')
+    end
+  end
 end

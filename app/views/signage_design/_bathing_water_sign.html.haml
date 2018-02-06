@@ -28,13 +28,17 @@
             = @view_state.bathing_water.prf_statement
 
     %section.c-content-row__info
-      .o-content-unit__1-3.o-content-unit__box
-        %h2 More information
+      .o-content-unit__box{ class: 'o-content-unit__1-3' }
+        %h2 On the Internet
+        .c-content-info__qr-code
+          %img{ alt: '2d barcode for this bathing water', src: @view_state.qr_code_url }/
         %p
-          The full details for this bathing water, its catchment, information on all potential pollution sources and how they are managed can be viewed on the Environment Agency website:
-          %a{ href: 'http://bit.ly/2FsWuYe' }
-            http://bit.ly/2FsWuYe
-        %img.qrcode{:src => "http://environment.data.gov.uk/bwq/profiles/images/qr/ukk4200-24000-150x150.png"}/
+          The full details for this bathing water, its catchment, information
+          on all potential pollution sources and how they are managed can be
+          viewed on the Environment Agency website:
+          %br
+          %a{ href: 'https://environment.data.gov.uk/bwq/profiles' }
+            https://environment.data.gov.uk/bwq/profiles
 
       .o-content-unit__2-3.o-content-unit__box
         %h2 Historical classifications

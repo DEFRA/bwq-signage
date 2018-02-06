@@ -81,4 +81,8 @@ class BwqSign
     bathing_water['latestProfile.pollutionRiskForecasting'].val == 'true' &&
       params[:'show-prf'] == 'yes'
   end
+
+  def qr_code_url
+    "http://environment.data.gov.uk/bwq/profiles/images/qr/#{bathing_water.eubwid}-100x100.png"
+  end
 end

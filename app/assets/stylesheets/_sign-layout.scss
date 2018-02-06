@@ -184,3 +184,8 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     max-width: 100%;
   }
 }
+
+.c-content-info__qr-code {
+  display: inline;
+  float: right;
+}
