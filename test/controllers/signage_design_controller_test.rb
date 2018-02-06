@@ -132,4 +132,25 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     visit(root_path(design: true))
     page.wont_have_selector('#development-container')
   end
+
+  it 'should show the preview page in landscape mode by default' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+      page.must_have_content('change from landscape orientation')
+    end
+  end
+
+  it 'should show the switch to portrait orientation on demand' do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+      page.must_have_selector('.c-sign-preview--landscape')
+      click_on('portrait orientation')
+      page.must_have_content('change from portrait orientation')
+      page.must_have_selector('.c-sign-preview--portrait')
+    end
+  end
 end

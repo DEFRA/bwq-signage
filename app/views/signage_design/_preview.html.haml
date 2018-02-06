@@ -1,3 +1,4 @@
+- page_orientation = @view_state.page_orientation
 .o-page-container
   .o-grid-row
     .o-grid-column__two-thirds
@@ -8,9 +9,13 @@
         See a preview of your sign below. You can also:
       %ul
         %li
-          change from landscape orientation <i class='fa fa-picture-o'></i> to
-          %a{href:'#'}
-            portrait orientation <i class='fa fa-file-picture-o'></i>
+          change from #{page_orientation[:current]} orientation
+          %i.fa{ class: page_orientation[:current_icon] }
+          to
+          = link_to(@view_state.with_query_params(page_orientation: page_orientation[:alt])) do
+            #{page_orientation[:alt]} orientation
+            %i.fa{ class: page_orientation[:alt_icon] }
+
         %li
           %a{ href: '#' }
             select a different bathing water
