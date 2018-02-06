@@ -83,6 +83,6 @@ class BwqSign
   end
 
   def qr_code_url
-   'http://environment.data.gov.uk/bwq/profiles/images/qr/ukk4200-24000-100x100.png'
+    "http://environment.data.gov.uk/bwq/profiles/images/qr/#{bathing_water.eubwid}-100x100.png"
   end
 end
