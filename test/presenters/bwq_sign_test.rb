@@ -42,4 +42,20 @@ class BwqSignTest < ActiveSupport::TestCase
       bwq_sign.search_results.must_equal(['miss piggy'])
     end
   end
+
+  describe 'preview' do
+    it 'should return true when the preview is visible' do
+      # not all page params are present
+      base = {
+        design: true, eubwid: '123', 'bwmgr-email': 'foo',
+        'bwmgr-name': 'bar', 'bwmgr-phone': '',
+        'show-hist': true, 'show-map': false, 'show-prf': true
+      }
+      refute BwqSign.new(params: ActionController::Parameters.new(base).permit!).show_preview?
+
+      # add the missing param
+      base[:'show-logo'] = true
+      assert BwqSign.new(params: ActionController::Parameters.new(base).permit!).show_preview?
+    end
+  end
 end
