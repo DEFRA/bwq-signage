@@ -147,10 +147,10 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
-      page.must_have_selector('.c-sign-preview--landscape')
+      page.must_have_selector('.c-sign-layout--landscape')
       click_on('portrait orientation')
       page.must_have_content('change from portrait orientation')
-      page.must_have_selector('.c-sign-preview--portrait')
+      page.must_have_selector('.c-sign-layout--portrait')
     end
   end
 end

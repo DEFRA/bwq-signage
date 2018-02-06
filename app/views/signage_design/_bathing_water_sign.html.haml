@@ -1,13 +1,15 @@
 %article#development-container.c-sign-preview
-  %div.c-sign-preview{ class: "c-sign-preview--#{@view_state.page_orientation[:current]}" }
+  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]}" }
     %section.c-content-row__head
-      .o-content-unit__1-1
-        %h1
-          = @view_state.bathing_water.name
-
-        .row.head-designation
-          .designation
-            %img{:alt => "good water quality", :src => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.svg"}/
+      .o-content-unit__1-1.c-content-header
+        .c-content-header__title
+          %h1
+            = @view_state.bathing_water.name
+        .c-content-header__classification
+          %img{ @view_state.classification_image }/
+        .c-content-header__monitoring
+          %p
+            = @view_state.monitoring_statement
 
     %section.c-content-row__about
       .o-content-unit__1-2.o-content-unit__box
