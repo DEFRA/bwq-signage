@@ -86,4 +86,27 @@ class BwqSignTest < ActiveSupport::TestCase
              .must_equal('page_orientation' => 'landscape', 'design' => true, 'foo' => 'bar')
     end
   end
+
+  describe '#monitoring_statement' do
+    it 'should return the statement of when the season is open' do
+      mock_bw = mock('BathingWater')
+      mock_bw.expects(:season_dates).returns([Date.new(2018, 5, 1), Date.new(2018, 11, 30)])
+      BwqSign.new(bathing_water: mock_bw)
+             .monitoring_statement
+             .must_equal('Water quality is monitored from May to November')
+    end
+  end
+
+  describe '#classification_image' do
+    it 'should return the parameters for the classifiation image' do
+      mock_resource = mock('Resource')
+      mock_resource.expects(:uri).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
+      mock_bw = mock('BathingWater1')
+      mock_bw.expects(:latest_classification).returns(mock_resource)
+
+      BwqSign.new(bathing_water: mock_bw)
+             .classification_image[:alt]
+             .must_equal('good water quality')
+    end
+  end
 end
