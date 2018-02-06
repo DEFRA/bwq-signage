@@ -23,96 +23,156 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   max-width: 100%;
   font-size: 1.2vw;
 
-  @mixin c-sign-preview__common {
+  @mixin c-sign-layout__common {
     background-color: white;
     border: 2px solid $black;
   }
 
-  .c-sign-preview--landscape {
+  .c-sign-layout--landscape {
     width: 98vw;
     height: $oneToRootTwoAspectRatio * 98vw;
     margin: auto 1vw;
-    @include c-sign-preview__common;
+    @include c-sign-layout__common;
   }
 
-  .c-sign-preview--portrait {
+  .c-sign-layout--portrait {
     height: 98vw;
     width: $oneToRootTwoAspectRatio * 98vw;
     margin: 1vw auto;
-    @include c-sign-preview__common;
+    @include c-sign-layout__common;
+  }
+}
+
+@mixin row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  padding: 1em;
+}
+
+@mixin flexbox-fallback {
+  // will be overridden in flexbox layout
+  float: left;
+}
+
+.c-content-row__head {
+  @include row;
+  height: $rowHeightHead;
+  background-color: $purple-25;
+}
+
+.c-content-row__about {
+  @include row;
+  height: $rowHeightAbout;
+  background-color: $baby-pink-25;
+}
+
+.c-content-row__info {
+  @include row;
+  height: $rowHeightInfo;
+  background-color: $yellow-25;
+}
+
+.c-content-row__foot {
+  @include row;
+  height: $rowHeightFoot;
+  background-color: $light-blue-25;
+}
+
+// layout of content-units in a row
+
+/* one block on a row of one blocks */
+.o-content-unit__1-1 {
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* row of two blocks */
+.o-content-unit__1-2, .o-content-unit__2-2 {
+  max-height: 100%;
+  width: 50%;
+  margin: 0;
+  padding: 1em;
+  @include flexbox-fallback;
+}
+.o-content-unit__1-2 { margin-right: 0.5em; }
+.o-content-unit__2-2 { margin-left: 0.5em; }
+
+/** row of three blocks */
+.o-content-unit__1-3, .o-content-unit__2-3, .o-content-unit__3-3 {
+  max-height: 100%;
+  width: 33.3%;
+  margin: 0;
+  padding: 1em;
+  @include flexbox-fallback;
+}
+.o-content-unit__1-3, .o-content-unit__2-3 { margin-right: 0.5em; }
+.o-content-unit__2-3, .o-content-unit__3-3 { margin-left: 0.5em; }
+
+.o-content-unit__box {
+  border: 1px solid $grey-2;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/** Content specific styling - header grid */
+.c-content-header {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.c-sign-layout--landscape {
+  .c-content-header {
+    grid-template-columns: 1fr 1fr;
   }
 
-  @mixin row {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    padding: 1em;
+  .c-content-header__title {
+    grid-column: 1 / span 2;
+    grid-row: 1;
   }
 
-  @mixin flexbox-fallback {
-    // will be overridden in flexbox layout
-    float: left;
+  .c-content-header__classification {
+    grid-column: 2;
+    grid-row: 2;
   }
 
-  .c-content-row__head {
-    @include row;
-    height: $rowHeightHead;
-    background-color: $purple-25;
+  .c-content-header__monitoring {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.c-sign-layout--portrait {
+  .c-content-header {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .c-content-row__about {
-    @include row;
-    height: $rowHeightAbout;
-    background-color: $baby-pink-25;
+  .c-content-header__title {
+    grid-column: 1 / span 2;
+    grid-row: 1;
   }
 
-  .c-content-row__info {
-    @include row;
-    height: $rowHeightInfo;
-    background-color: $yellow-25;
+  .c-content-header__classification {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
   }
 
-  .c-content-row__foot {
-    @include row;
-    height: $rowHeightFoot;
-    background-color: $light-blue-25;
+  .c-content-header__monitoring {
+    grid-column: 1;
+    grid-row: 2;
   }
+}
 
-  // layout of content-units in a row
+.c-content-header__monitoring {
+  font-size: 2.5rem;
+}
 
-  /* one block on a row of one blocks */
-  .o-content-unit__1-1 {
-    max-height: 100%;
-    width: 66.6%;
-    margin: 0 auto;
-    padding: 1em;
-  }
-
-  /* row of two blocks */
-  .o-content-unit__1-2, .o-content-unit__2-2 {
-    max-height: 100%;
-    width: 50%;
-    margin: 0;
-    padding: 1em;
-    @include flexbox-fallback;
-  }
-  .o-content-unit__1-2 { margin-right: 0.5em; }
-  .o-content-unit__2-2 { margin-left: 0.5em; }
-
-  /** row of three blocks */
-  .o-content-unit__1-3, .o-content-unit__2-3, .o-content-unit__3-3 {
-    max-height: 100%;
-    width: 33.3%;
-    margin: 0;
-    padding: 1em;
-    @include flexbox-fallback;
-  }
-  .o-content-unit__1-3, .o-content-unit__2-3 { margin-right: 0.5em; }
-  .o-content-unit__2-3, .o-content-unit__3-3 { margin-left: 0.5em; }
-
-  .o-content-unit__box {
-    border: 1px solid $grey-2;
-    border-radius: 10px;
-    height: 100%;
+.c-content-header__classification {
+  img {
+    height: 4 vw;
+    max-width: 100%;
   }
 }

@@ -32,5 +32,23 @@ class BathingWaterTest < ActiveSupport::TestCase
         bw.controller_name.must_equal('North Somerset')
       end
     end
+
+    describe '#season_dates' do
+      it 'should return the start end end of the monitoring season' do
+        bw = BathingWater.new(bw_fixture)
+        bw.season_dates[0].must_be_kind_of(Date)
+        bw.season_dates[1].must_be_kind_of(Date)
+        bw.season_dates[0] < bw.season_dates[1]
+      end
+    end
+
+    describe '#latest_classification' do
+      it 'should return the latest classification as an LDA resource' do
+        BathingWater.new(bw_fixture)
+                    .latest_classification
+                    .uri
+                    .must_match(/^http:/)
+      end
+    end
   end
 end

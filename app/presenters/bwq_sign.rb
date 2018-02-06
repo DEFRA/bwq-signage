@@ -1,5 +1,16 @@
 # frozen-string-literal: true
 
+CLASSIFICATION_IMAGE_ROOTS = {
+  'http://environment.data.gov.uk/def/bwq-cc-2015/1' =>
+      { src: 'baignade-3-stars', alt: 'excellent water quality' },
+  'http://environment.data.gov.uk/def/bwq-cc-2015/2' =>
+      { src: 'baignade-2-stars', alt: 'good water quality' },
+  'http://environment.data.gov.uk/def/bwq-cc-2015/3' =>
+      { src: 'baignade-1-star', alt: 'sufficient water quality' },
+  'http://environment.data.gov.uk/def/bwq-cc-2015/4' =>
+      { src: 'baignade-no-stars-no-bathing', alt: 'poor water quality' }
+}.freeze
+
 # Presenter for view state for bathing water signs
 class BwqSign
   attr_reader :options
@@ -47,5 +58,21 @@ class BwqSign
 
   def with_query_params(options)
     params.to_h.merge(options)
+  end
+
+  def monitoring_statement
+    start_date, end_date = bathing_water.season_dates.map { |date| date.strftime('%B') }
+    "Water quality is monitored from #{start_date} to #{end_date}"
+  end
+
+  def classification_image
+    classification_uri = bathing_water.latest_classification.uri
+    image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
+
+    {
+      alt: image_root[:alt],
+      src: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.png",
+      srcset: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.svg"
+    }
   end
 end

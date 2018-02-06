@@ -20,4 +20,15 @@ class BathingWater < LdaResource
   def controller_name
     self['latestProfile.controllerName']
   end
+
+  def season_dates
+    [
+      Date.parse(val('latestProfile.seasonStartDate')),
+      Date.parse(val('latestProfile.seasonFinishDate'))
+    ]
+  end
+
+  def latest_classification
+    self['latestComplianceAssessment.complianceClassification']
+  end
 end
