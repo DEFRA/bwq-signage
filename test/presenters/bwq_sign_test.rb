@@ -58,4 +58,32 @@ class BwqSignTest < ActiveSupport::TestCase
       assert BwqSign.new(params: ActionController::Parameters.new(base).permit!).show_preview?
     end
   end
+
+  describe 'page orientation' do
+    it 'should return the default page orientation if not specified' do
+      po = BwqSign.new(params: ActionController::Parameters.new).page_orientation
+      po[:current].must_equal('landscape')
+      po[:alt].must_equal('portrait')
+      po[:current_icon].wont_be_nil
+      po[:alt_icon].wont_be_nil
+    end
+
+    it 'should return the page orientation if not specified' do
+      params = ActionController::Parameters.new(page_orientation: 'portrait').permit!
+      po = BwqSign.new(params: params).page_orientation
+      po[:current].must_equal('portrait')
+      po[:alt].must_equal('landscape')
+      po[:current_icon].wont_be_nil
+      po[:alt_icon].wont_be_nil
+    end
+  end
+
+  describe '#with_query_params' do
+    it 'should merge the given params with the current query params' do
+      params = ActionController::Parameters.new(page_orientation: 'portrait', design: true).permit!
+      BwqSign.new(params: params)
+             .with_query_params(page_orientation: 'landscape', foo: 'bar')
+             .must_equal('page_orientation' => 'landscape', 'design' => true, 'foo' => 'bar')
+    end
+  end
 end

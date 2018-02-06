@@ -31,4 +31,21 @@ class BwqSign
   def show_preview?
     next_workflow_step == :preview
   end
+
+  def landscape?
+    params[:page_orientation] != 'portrait'
+  end
+
+  def page_orientation
+    {
+      current: landscape? ? 'landscape' : 'portrait',
+      current_icon: landscape? ? 'fa-picture-o' : 'fa-file-picture-o',
+      alt: landscape? ? 'portrait' : 'landscape',
+      alt_icon: landscape? ? 'fa-file-picture-o' : 'fa-picture-o'
+    }
+  end
+
+  def with_query_params(options)
+    params.to_h.merge(options)
+  end
 end
