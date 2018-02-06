@@ -75,4 +75,10 @@ class BwqSign
       srcset: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.svg"
     }
   end
+
+  # Only show PRF summary if the BW is in PRF programmne, and user ticked 'yes'
+  def show_prf?
+    bathing_water['pollutionRiskForecasting'].val == 'true' &&
+      params[:'show-prf'] == 'yes'
+  end
 end
