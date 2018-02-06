@@ -1,0 +1,118 @@
+$oneToRootTwoAspectRatio: 1 / 1.414;
+$oneToRootTwoAspectRatioMargin: 1 - (1 / 1.414);
+$oneToRootTwoAspectRatioMarginHalf: $oneToRootTwoAspectRatio / 2;
+
+// row heights
+$rowHeightHead: 25%;
+$rowHeightAbout: 30%;
+$rowHeightInfo: 25%;
+$rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
+
+// apply border-box everywhere
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+#development-container.c-sign-preview {
+  width: 100vw;
+  height: 100vw;
+  background-color: $grey-3;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  max-width: 100%;
+  font-size: 1.2vw;
+
+  @mixin c-sign-preview__common {
+    background-color: white;
+    border: 2px solid $black;
+  }
+
+  .c-sign-preview--landscape {
+    width: 98vw;
+    height: $oneToRootTwoAspectRatio * 98vw;
+    margin: auto 1vw;
+    @include c-sign-preview__common;
+  }
+
+  .c-sign-preview--portrait {
+    height: 98vw;
+    width: $oneToRootTwoAspectRatio * 98vw;
+    margin: 1vw auto;
+    @include c-sign-preview__common;
+  }
+
+  @mixin row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding: 1em;
+  }
+
+  @mixin flexbox-fallback {
+    // will be overridden in flexbox layout
+    float: left;
+  }
+
+  .c-content-row__head {
+    @include row;
+    height: $rowHeightHead;
+    background-color: $purple-25;
+  }
+
+  .c-content-row__about {
+    @include row;
+    height: $rowHeightAbout;
+    background-color: $baby-pink-25;
+  }
+
+  .c-content-row__info {
+    @include row;
+    height: $rowHeightInfo;
+    background-color: $yellow-25;
+  }
+
+  .c-content-row__foot {
+    @include row;
+    height: $rowHeightFoot;
+    background-color: $light-blue-25;
+  }
+
+  // layout of content-units in a row
+
+  /* one block on a row of one blocks */
+  .o-content-unit__1-1 {
+    max-height: 100%;
+    width: 66.6%;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  /* row of two blocks */
+  .o-content-unit__1-2, .o-content-unit__2-2 {
+    max-height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 1em;
+    @include flexbox-fallback;
+  }
+  .o-content-unit__1-2 { margin-right: 0.5em; }
+  .o-content-unit__2-2 { margin-left: 0.5em; }
+
+  /** row of three blocks */
+  .o-content-unit__1-3, .o-content-unit__2-3, .o-content-unit__3-3 {
+    max-height: 100%;
+    width: 33.3%;
+    margin: 0;
+    padding: 1em;
+    @include flexbox-fallback;
+  }
+  .o-content-unit__1-3, .o-content-unit__2-3 { margin-right: 0.5em; }
+  .o-content-unit__2-3, .o-content-unit__3-3 { margin-left: 0.5em; }
+
+  .o-content-unit__box {
+    border: 1px solid $grey-2;
+    border-radius: 10px;
+    height: 100%;
+  }
+}
