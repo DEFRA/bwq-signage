@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/id/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestProfile.controllerName,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    uri: http://ea-rbwd-staging.epimorphics.net/id/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
     body:
       encoding: US-ASCII
       string: ''
@@ -25,15 +25,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 21:36:24 GMT
+      - Tue, 06 Feb 2018 17:52:49 GMT
       Expires:
-      - Fri, 02 Feb 2018 22:36:25 GMT
+      - Tue, 06 Feb 2018 18:52:50 GMT
       Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Server:
       - Server
       X-Response-Id:
-      - '155'
+      - '254'
       Content-Length:
       - '0'
       Connection:
@@ -42,10 +42,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 21:36:25 GMT
+  recorded_at: Tue, 06 Feb 2018 17:52:50 GMT
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.webResImage,latestProfile.pollutionRiskForecasting,latestProfile.seasonStartDate,latestProfile.seasonFinishDate,latestProfile.controllerName,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
     body:
       encoding: US-ASCII
       string: ''
@@ -64,21 +64,21 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 21:36:24 GMT
+      - Tue, 06 Feb 2018 17:52:49 GMT
       Etag:
-      - '"8b2a04a1746e23a3-gzip"'
+      - '"79ef82af052c9fa2-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 21:39:25 GMT
+      - Tue, 06 Feb 2018 17:55:50 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '156'
+      - '255'
       Transfer-Encoding:
       - chunked
       Connection:
@@ -86,7 +86,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.webResImage%2ClatestProfile.pollutionRiskForecasting%2ClatestProfile.seasonStartDate%2ClatestProfile.seasonFinishDate%2ClatestProfile.controllerName%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366703", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366703", "label" : [{"_value" : "Companies House profile for Northumbrian Water Limited", "_lang" : "en"}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366703", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366703", "label" : [{"_value" : "Companies House profile for Northumbrian Water Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Northumbrian Water Limited", "_lang" : "en"}
               }
@@ -100,10 +100,29 @@ http_interactions:
                 }
                 , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
               }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2017:1", "controllerName" : "Northumberland", "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
-                , "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
-                , "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
-                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03600_1-webres.jpg"}
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukc2102-03600", "bathingWaterDescription" : {"_value" : "Spittal Beach is a gently sloping resort beach approximately one kilometre long situated immediately south of the mouth of the River Tweed.", "_lang" : "en"}
+                , "controllerName" : "Northumberland", "countyName" : {"_value" : "Northumberland", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "A combined sewer overflow (CSO) which could discharge onto the beach during heavy rainfall was removed in early 2012.  Other CSOs discharge to the estuary and contribute to pollution at the bathing water when river flows are high during wet weather.", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "Since 1995, the Environment Agency have worked closely with Northumbrian Water to identify and deliver significant investment in the sewage infrastructure around this bathing water.  Most recently, an investigation by Northumbrian water into the effects of their systems on bathing water quality has led to improvements at 2 CSOs.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukc2102-03600/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "The Environment Agency's investigations have been aimed at identifying non water company sources of pollution that may be affecting the bathing water so that we can implement measures to address them.  We believe that agricultural sources in the Tweed catchment may be significant, particularly in wet weather, although we have not found evidence pointing to any particularly important source.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukc2102-03600/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Spittal", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000048-03600-2017", "macroAlgaeStatement" : {"_value" : "Environment Agency research suggests this bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "misconnectionsStatement" : {"_value" : "Modern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Spittal", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Environment Agency research suggests this bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n13 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Spittal bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signMeasuresSummary" : {"_value" : "Natural England's Catchment Sensitive Farming initiative and Scottish Environment Protection Agency (SEPA) are working to reduce diffuse pollution from agricultural sources.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 13 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "This bathing water may be affected by pollution in run off from agricultural land, urban areas, and occasional discharges from storm overflows carried by the River Tweed. During or after periods of heavy rainfall the impact from these sources of pollution can increase the risk of reduced bathing water quality.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0002", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-03600:1", "streamsRiversStatement" : {"_value" : "The Tweed Estuary discharges to the sea at the north end of the bathing water. Diffuse run off from agricultural land and upstream settlements affects the bacteriological quality of the river. After heavy rain, this can have a short-term impact on bathing water quality.  High river flows also shorten residence times in the estuary, exacerbating the impact of discharges from the sewerage system in and around Berwick.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "Sewage from Berwick, Spittal and Tweedmouth is treated at a sewage works that discharges to the Tweed estuary to the west of the town.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Spittal for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 1% of visits. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 95% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03600_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "The catchment of the River Tweed is largely agricultural with a mixture of arable and livestock farming. During and after periods of heavy rainfall, runoff from agricultural areas will be greatly increased. The quality of the bathing water may be adversely affected as a result of such events.  The limited data collected on sources of bacteria suggests that livestock may be a significant source, particularly when river flows are high. We have engaged with the local farming community but livestock numbers in the local catchment are low suggesting a more diffuse contribution from a wider catchment.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The River Tweed rises over 100km to the west and drains a catchment of approx 4000 sq km. The lower part of the catchment which influences bathing water quality is predominantly devoted to arable and livestock farming. The historic town of Berwick-upon-Tweed and its satellites, Spittal and Tweedmouth, lie at the mouth of the estuary.", "_lang" : "en"}
+              }
               , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/03600/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
                 , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
                 , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
@@ -131,5 +150,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 21:36:25 GMT
+  recorded_at: Tue, 06 Feb 2018 17:52:50 GMT
 recorded_with: VCR 4.0.0

@@ -31,4 +31,16 @@ class BathingWater < LdaResource
   def latest_classification
     self['latestComplianceAssessment.complianceClassification']
   end
+
+  def pollution_source_statements
+    stmts = []
+
+    sps_stmt = self['latestProfile.signPollutionSourcesStatement']
+    stmts << sps_stmt.val if sps_stmt
+
+    alg_stmt = self['latestProfile.signAlgaeStatement']
+    stmts << alg_stmt.val if alg_stmt
+
+    stmts
+  end
 end

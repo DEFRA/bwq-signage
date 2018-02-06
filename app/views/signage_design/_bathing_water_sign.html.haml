@@ -14,9 +14,11 @@
     %section.c-content-row__about
       .o-content-unit__1-2.o-content-unit__box
         %h2
-          About
+          Water quality at
           = @view_state.bathing_water.name
-        %p Bathing water quality is influenced by the Kirkham stream and may reduce during or after periods of heavy rainfall due to run off from the surrounding urban area, and occasional discharges from a storm overflow.
+        - @view_state.bathing_water.pollution_source_statements.each do |stmt|
+          %p
+            = stmt
 
       .o-content-unit__2-2.o-content-unit__box
         %h2 Pollution Risk Forecast

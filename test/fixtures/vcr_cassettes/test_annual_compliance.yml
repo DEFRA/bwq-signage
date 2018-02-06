@@ -25,17 +25,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 02 Feb 2018 21:36:25 GMT
+      - Tue, 06 Feb 2018 17:52:49 GMT
       Etag:
       - '"c1d271b3596a8a9-gzip"'
       Expires:
-      - Fri, 02 Feb 2018 22:36:26 GMT
+      - Tue, 06 Feb 2018 18:52:49 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '158'
+      - '252'
       Transfer-Encoding:
       - chunked
       Connection:
@@ -92,5 +92,5 @@ http_interactions:
             ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukc2102-03600.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 02 Feb 2018 21:36:26 GMT
+  recorded_at: Tue, 06 Feb 2018 17:52:49 GMT
 recorded_with: VCR 4.0.0

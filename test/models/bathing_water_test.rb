@@ -50,5 +50,14 @@ class BathingWaterTest < ActiveSupport::TestCase
                     .must_match(/^http:/)
       end
     end
+
+    describe '#pollution_source_statements' do
+      it 'should extract the pollution sources and algae statements from the profile' do
+        stmts = BathingWater.new(bw_fixture).pollution_source_statements
+        stmts.length.must_equal 2
+        stmts[0].must_match(/Bathing water quality may reduce during or after periods of heavy/)
+        stmts[1].must_match(/This bathing water beach often has patches of seaweed/)
+      end
+    end
   end
 end
