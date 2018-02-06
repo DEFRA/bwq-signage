@@ -59,5 +59,13 @@ class BathingWaterTest < ActiveSupport::TestCase
         stmts[1].must_match(/This bathing water beach often has patches of seaweed/)
       end
     end
+
+    describe '#prf_statement' do
+      it 'should get the text of the pre-prepared PRF statement' do
+        BathingWater.new(bw_fixture)
+                    .prf_statement
+                    .must_match(/This bathing water is subject to short term pollution./)
+      end
+    end
   end
 end

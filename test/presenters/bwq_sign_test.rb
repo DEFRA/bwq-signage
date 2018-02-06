@@ -109,4 +109,36 @@ class BwqSignTest < ActiveSupport::TestCase
              .must_equal('good water quality')
     end
   end
+
+  describe '#show_prf?' do
+    it 'should return true if the BW is in PRF, and the user ticked "yes" when asked' do
+      mock_flag = mock('Value')
+      mock_flag.expects(:val).returns('true')
+      mock_bw = mock('BathingWater')
+      mock_bw.expects(:[]).returns(mock_flag)
+      params = ActionController::Parameters.new('show-prf': 'yes')
+
+      assert BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
+    end
+
+    it 'should return false if the BW is not in PRF, even if the user ticked "yes" when asked' do
+      mock_flag = mock('Value')
+      mock_flag.expects(:val).returns('false')
+      mock_bw = mock('BathingWater')
+      mock_bw.expects(:[]).returns(mock_flag)
+      params = ActionController::Parameters.new('show-prf': 'yes')
+
+      refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
+    end
+
+    it 'should return false if the BW is in PRF, but the user ticked "no" when asked' do
+      mock_flag = mock('Value')
+      mock_flag.expects(:val).returns('true')
+      mock_bw = mock('BathingWater')
+      mock_bw.expects(:[]).returns(mock_flag)
+      params = ActionController::Parameters.new('show-prf': 'no')
+
+      refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
+    end
+  end
 end

@@ -43,4 +43,8 @@ class BathingWater < LdaResource
 
     stmts
   end
+
+  def prf_statement
+    self['latestProfile.signPRFSummary'].val
+  end
 end
