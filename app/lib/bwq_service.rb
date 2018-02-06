@@ -13,11 +13,7 @@ class BwqService < LdaApi
     latestSampleAssessment.sampleYear.ordinalYear
     latestSampleAssessment.escherichiaColiCount.*
     latestSampleAssessment.intestinalEnterococciCount.*
-    latestProfile.webResImage
-    latestProfile.pollutionRiskForecasting
-    latestProfile.seasonStartDate
-    latestProfile.seasonFinishDate
-    latestProfile.controllerName
+    latestProfile.*
     latestComplianceAssessment.sampleYear.ordinalYear
     latestRiskPrediction.*
   ].join(',')
