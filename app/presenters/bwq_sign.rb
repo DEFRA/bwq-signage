@@ -78,7 +78,7 @@ class BwqSign
 
   # Only show PRF summary if the BW is in PRF programmne, and user ticked 'yes'
   def show_prf?
-    bathing_water['pollutionRiskForecasting'].val == 'true' &&
+    bathing_water['latestProfile.pollutionRiskForecasting'].val == 'true' &&
       params[:'show-prf'] == 'yes'
   end
 end

@@ -89,6 +89,14 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   text-align: center;
 }
 
+/* one block on a row of one compact block */
+.o-content-unit__1-1c {
+  @extend .o-content-unit__1-1;
+  width: 66%;
+  text-align: left;
+  padding: 1em;
+}
+
 /* row of two blocks */
 .o-content-unit__1-2, .o-content-unit__2-2 {
   max-height: 100%;
