@@ -67,5 +67,16 @@ class BathingWaterTest < ActiveSupport::TestCase
                     .must_match(/This bathing water is subject to short term pollution./)
       end
     end
+
+    describe '#classification_history' do
+      it 'should get the prior classifications' do
+        VCR.use_cassette('bw_classifications') do
+          history = BathingWater.new(bw_fixture).classification_history
+          history.must_be_kind_of(Array)
+          history.length.must_be :<=, 3
+          history.first.uri.must_match(%r{^http://})
+        end
+      end
+    end
   end
 end
