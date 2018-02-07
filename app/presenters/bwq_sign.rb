@@ -65,7 +65,12 @@ class BwqSign
     "Water quality is monitored from #{start_date} to #{end_date}"
   end
 
-  def classification_image
+  # The Rails view context is passed in from the controller
+  def view_context
+    options[:view_context]
+  end
+
+  def classification_image_full
     classification_uri = bathing_water.latest_classification.uri
     image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
 
@@ -73,6 +78,17 @@ class BwqSign
       alt: image_root[:alt],
       src: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.png",
       srcset: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.svg"
+    }
+  end
+
+  def classification_image_compact
+    classification_uri = bathing_water.latest_classification.uri
+    image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
+    svg_image = "#{image_root[:src].gsub(/baignade-/)}.svg"
+
+    {
+      alt: image_root[:alt],
+      src: view_context.image_path(svg_image)
     }
   end
 
@@ -84,5 +100,13 @@ class BwqSign
 
   def qr_code_url
     "http://environment.data.gov.uk/bwq/profiles/images/qr/#{bathing_water.eubwid}-100x100.png"
+  end
+
+  def show_map?
+    params[:'show-map'] == 'yes'
+  end
+
+  def show_history?
+    params[:'show-hist'] == 'yes'
   end
 end

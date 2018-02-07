@@ -97,16 +97,24 @@ class BwqSignTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#classification_image' do
+  describe 'classification image' do
     it 'should return the parameters for the classifiation image' do
       mock_resource = mock('Resource')
-      mock_resource.expects(:uri).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
+      mock_resource.expects(:uri).times(2).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
       mock_bw = mock('BathingWater1')
-      mock_bw.expects(:latest_classification).returns(mock_resource)
+      mock_bw.expects(:latest_classification).times(2).returns(mock_resource)
+
+      mock_view_context = mock('ViewContext')
+      mock_view_context.expects(:image_path)
+                       .returns('path-to-2-stars.svg')
 
       BwqSign.new(bathing_water: mock_bw)
-             .classification_image[:alt]
+             .classification_image_full[:alt]
              .must_equal('good water quality')
+
+      BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context)
+             .classification_image_compact[:src]
+             .must_equal('path-to-2-stars.svg')
     end
   end
 
@@ -149,6 +157,20 @@ class BwqSignTest < ActiveSupport::TestCase
       BwqSign.new(bathing_water: mock_bw)
              .qr_code_url
              .must_equal('http://environment.data.gov.uk/bwq/profiles/images/qr/paddington-bear-100x100.png')
+    end
+  end
+
+  describe '#show_map?' do
+    it 'should return true if the user wants to include the map' do
+      assert BwqSign.new(params: ActionController::Parameters.new('show-map': 'yes')).show_map?
+      refute BwqSign.new(params: ActionController::Parameters.new('show-map': 'no')).show_map?
+    end
+  end
+
+  describe '#show_history?' do
+    it 'should return true if the user wants to include the map' do
+      assert BwqSign.new(params: ActionController::Parameters.new('show-hist': 'yes')).show_history?
+      refute BwqSign.new(params: ActionController::Parameters.new('show-hist': 'no')).show_history?
     end
   end
 end
