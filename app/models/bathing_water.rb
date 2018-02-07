@@ -3,6 +3,8 @@
 # Encapsulates a single bathing water, with access to the profile data from
 # the bathing water API.
 class BathingWater < LdaResource
+  MAX_HISTORY_YEARS = 3
+
   RDFS_CLASS = 'http://environment.data.gov.uk/def/bathing-water/BathingWater'
 
   def self.endpoint_all
@@ -46,5 +48,16 @@ class BathingWater < LdaResource
 
   def prf_statement
     self['latestProfile.signPRFSummary'].val
+  end
+
+  def classification_history
+    history = api.annual_compliance(eubwid, MAX_HISTORY_YEARS)
+    history.empty? ? [{ message: 'No prior classifications are available' }] : history
+  end
+
+  private
+
+  def api
+    @api ||= BwqService.new
   end
 end

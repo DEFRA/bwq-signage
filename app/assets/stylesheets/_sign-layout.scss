@@ -189,3 +189,12 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   display: inline;
   float: right;
 }
+
+.c-content-unit__compliance-history {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  img {
+    max-height: 1vw;
+  }
+}

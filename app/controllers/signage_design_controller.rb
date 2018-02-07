@@ -6,6 +6,7 @@ class SignageDesignController < ApplicationController
     options = { params: validate_params }
     options[:search] = search if params[:search]
     options[:bathing_water] = load_bathing_water(params[:eubwid]) if params[:eubwid]
+    options[:view_context] = view_context
 
     @view_state = BwqSign.new(options)
   end
