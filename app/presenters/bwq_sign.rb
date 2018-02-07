@@ -70,8 +70,8 @@ class BwqSign
     options[:view_context]
   end
 
-  def classification_image_full
-    classification_uri = bathing_water.latest_classification.uri
+  def classification_image_full(uri = nil)
+    classification_uri = uri || bathing_water.latest_classification.uri
     image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
 
     {
@@ -81,10 +81,10 @@ class BwqSign
     }
   end
 
-  def classification_image_compact
-    classification_uri = bathing_water.latest_classification.uri
+  def classification_image_compact(uri = nil)
+    classification_uri = uri || bathing_water.latest_classification.uri
     image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
-    svg_image = "#{image_root[:src].gsub(/baignade-/)}.svg"
+    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.svg"
 
     {
       alt: image_root[:alt],
