@@ -210,4 +210,252 @@ http_interactions:
         }
     http_version: 
   recorded_at: Tue, 06 Feb 2018 17:52:39 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=3&_sort=-sampleYear.ordinalYear
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '575'
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 07 Feb 2018 17:41:39 GMT
+      Etag:
+      - '"62fe700de0098084-gzip"'
+      Expires:
+      - Wed, 07 Feb 2018 18:32:04 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '275'
+      Content-Length:
+      - '1117'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/escherichiaColiStats", "finalSampleDate" : {"_value" : "2016-09-22", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2013-05-01", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/intestinalEnterococciStats", "label" : [{"_value" : "2016 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2016-2016-11-04_11-36-35_987-0233.csv#row=000384", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/escherichiaColiStats", "finalSampleDate" : {"_value" : "2015-09-17", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2012-05-10", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/intestinalEnterococciStats", "label" : [{"_value" : "2015 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2015", "ordinalYear" : 2015}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2015_20160513-2016-05-13_15-59-54_301-0247.csv#row=000215", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/projected-assessment", "name" : {"_value" : "projected-assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/escherichiaColiStats", "finalSampleDate" : {"_value" : "2014-09-26", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2011-05-06", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/intestinalEnterococciStats", "label" : [{"_value" : "2014 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2014", "ordinalYear" : 2014}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_proj_rBWD_pre_2015_v2-2016-01-13_15-01-01_699-0447.csv#row=004178", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 07 Feb 2018 17:41:39 GMT
+- request:
+    method: post
+    uri: https://sentry.io/api/281446/store/
+    body:
+      encoding: US-ASCII
+      string: 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
+    headers:
+      User-Agent:
+      - sentry-ruby/2.7.1
+      Content-Type:
+      - application/octet-stream
+      X-Sentry-Auth:
+      - Sentry sentry_version=5, sentry_client=raven-ruby/2.7.1, sentry_timestamp=1518025299,
+        sentry_key=a893b64b570a4af38a6d410c935a0bea, sentry_secret=f4562fe9d8d945519112744da428f139
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 07 Feb 2018 17:41:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '41'
+      Connection:
+      - keep-alive
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Language:
+      - en
+      Expires:
+      - Wed, 07 Feb 2018 17:41:40 GMT
+      Vary:
+      - Accept-Language, Cookie
+      Last-Modified:
+      - Wed, 07 Feb 2018 17:41:40 GMT
+      Cache-Control:
+      - max-age=0
+      X-Frame-Options:
+      - deny
+      X-Served-By:
+      - web-3d5bfb0f
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":"3a7606c5fb6b44ce86f6716425bfcd03"}'
+    http_version: 
+  recorded_at: Wed, 07 Feb 2018 17:41:40 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=3&_sort=-sampleYear.ordinalYear
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '849'
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 07 Feb 2018 17:46:13 GMT
+      Etag:
+      - '"62fe700de0098084-gzip"'
+      Expires:
+      - Wed, 07 Feb 2018 18:32:04 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '275'
+      Content-Length:
+      - '1117'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/escherichiaColiStats", "finalSampleDate" : {"_value" : "2016-09-22", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2013-05-01", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/intestinalEnterococciStats", "label" : [{"_value" : "2016 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2016-2016-11-04_11-36-35_987-0233.csv#row=000384", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/escherichiaColiStats", "finalSampleDate" : {"_value" : "2015-09-17", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2012-05-10", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/intestinalEnterococciStats", "label" : [{"_value" : "2015 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2015", "ordinalYear" : 2015}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2015_20160513-2016-05-13_15-59-54_301-0247.csv#row=000215", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/projected-assessment", "name" : {"_value" : "projected-assessment", "_lang" : "en"}
+              }
+              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
+              }
+              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              }
+              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0, "samplePointNotation" : "36000"}
+              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
+              }
+              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/escherichiaColiStats", "finalSampleDate" : {"_value" : "2014-09-26", "_datatype" : "date"}
+              , "firstSampleDate" : {"_value" : "2011-05-06", "_datatype" : "date"}
+              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/intestinalEnterococciStats", "label" : [{"_value" : "2014 compliance assessment for Clevedon Beach", "_lang" : "en"}
+              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2014", "ordinalYear" : 2014}
+              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_proj_rBWD_pre_2015_v2-2016-01-13_15-01-01_699-0447.csv#row=004178", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
+            ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 07 Feb 2018 17:46:13 GMT
 recorded_with: VCR 4.0.0
