@@ -31,17 +31,18 @@
       - web_info_cls = @view_state.show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
 
       .o-content-unit__box.c-content-unit__web-links{ class: web_info_cls }
-        %h2 Previous annual water-quality classifications
-        %ul.c-content-unit__compliance-history
-          - @view_state.bathing_water.classification_history.each do |classification|
-            %li
-              - if classification.respond_to?(:uri)
-                = classification.year
-                - image_description = @view_state.classification_image_compact(classification.complianceClassification&.uri)
-                = image_tag(image_description[:src], alt: image_description[:alt])
-                = classification.complianceClassification.name
-              - else
-                = classification[:message]
+        - if @view_state.show_history?
+          %h2 Previous annual water-quality classifications
+          %ul.c-content-unit__compliance-history
+            - @view_state.bathing_water.classification_history.each do |classification|
+              %li
+                - if classification.respond_to?(:uri)
+                  = classification.year
+                  - image_description = @view_state.classification_image_compact(classification.complianceClassification&.uri)
+                  = image_tag(image_description[:src], alt: image_description[:alt])
+                  = classification.complianceClassification.name
+                - else
+                  = classification[:message]
 
         %h2 For more information
         .c-content-info__qr-code
