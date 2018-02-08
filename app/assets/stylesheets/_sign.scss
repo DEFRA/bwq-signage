@@ -5,17 +5,17 @@
 }
 
 #development-container {
-  border: 1px dashed #F00;
-  box-sizing: border-box;
-  height: 1050px;
-  overflow: hidden;
-  background: #eee;
-  padding: 10pt;
+  // border: 1px dashed #F00;
+  // box-sizing: border-box;
+  // height: 1050px;
+  // overflow: hidden;
+  // background: #eee;
+  // padding: 10pt;
 
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    // max-width: 100%;
+    // max-height: 100%;
   }
 
   h1 {
@@ -32,9 +32,9 @@
     text-align: center;
   }
 
-  .designation img {
-    height: 100%;
-  }
+  // .designation img {
+  //   height: 100%;
+  // }
 
   .row {
     display: flex;
@@ -50,7 +50,7 @@
   .block {
       border-radius: 10pt;
       border: 1pt solid #000;
-      margin: 5pt;
+      // margin: 5pt;
       padding: 10pt;
       overflow: hidden;
   }

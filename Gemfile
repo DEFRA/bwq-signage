@@ -28,6 +28,7 @@ gem 'govuk_elements_rails'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_template'
 gem 'haml-rails'
+gem 'sassc-rails'
 gem 'sentry-raven'
 
 group :development, :test do

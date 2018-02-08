@@ -1,57 +1,92 @@
-#development-container
-  .row.head-title
-    %h1
-      = @view_state.bathing_water.name
+%article#development-container.c-sign-preview
+  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]}" }
+    %section.c-content-row__head
+      .o-content-unit__1-1.c-content-header
+        .c-content-header__title
+          %h1
+            = @view_state.bathing_water.name
+        .c-content-header__classification
+          %img{ @view_state.classification_image_full }/
+        .c-content-header__monitoring
+          %p
+            = @view_state.monitoring_statement
 
-  .row.head-designation
-    .designation
-      %img{:alt => "good water quality", :src => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/baignade-2-stars.svg"}/
-  .row.row1
-    .block.description
-      %h2
-        About
-        = @view_state.bathing_water.name
-      %p Bathing water quality is influenced by the Kirkham stream and may reduce during or after periods of heavy rainfall due to run off from the surrounding urban area, and occasional discharges from a storm overflow.
-    .block.prf
-      %h2 Pollution Risk Forecast
-      %p This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs, enabling bathers to avoid periods when bathing water quality may be reduced. This can last between one and three days. In 2017 warnings were issued at this bathing water on XX days.
-  .row.row2
-    .block.qr
-      %h2 More information
-      %p
-        The full details for this bathing water, its catchment, information on all potential pollution sources and how they are managed can be viewed on the Environment Agency website:
-        %a{ href: 'http://bit.ly/2FsWuYe' }
-          http://bit.ly/2FsWuYe
-      %img.qrcode{:src => "http://environment.data.gov.uk/bwq/profiles/images/qr/ukk4200-24000-150x150.png"}/
-    .block.historical
-      %h2 Historical classifications
-      %span
-        2017 classification
-        %img.designations{:src => "https://environment.data.gov.uk/bwq/profiles/images/2-stars.png"}/
-        good
-      %span
-        2016 classification
-        %img.designations{:src => "https://environment.data.gov.uk/bwq/profiles/images/2-stars.png"}/
-        good
-      %span
-        2015 classification
-        %img.designations{:src => "https://environment.data.gov.uk/bwq/profiles/images/2-stars.png"}/
-        good
-      %span
-        2014 classification
-        %img.designations{:src => "https://environment.data.gov.uk/bwq/profiles/images/2-stars.png"}/
-        good
-    .block.map
-      %h2 Sampling Point Location
-      %img.classification{:src => "map.png"}/
-  .row.foot
-    .block.manager
-      %img{:src => "tc-logo-white.png"}/
-      %p
-        This beach is managed by Torbay Council
-      %p
-        Phone: 01803 207975
-      %p
-        Email: beaches@torbay.gov.uk
-    .block.ea-logo
-      %img{:src => "https://environment.data.gov.uk/bwq/profiles/images/logo/banner_logo-en.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/logo/ea-logo-master-dark-plain.svg"}/
+    %section.c-content-row__about
+      - pollution_sources_cls = @view_state.show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
+      .o-content-unit__box{ class: pollution_sources_cls }
+        %h2
+          Water quality at
+          = @view_state.bathing_water.name
+        - @view_state.bathing_water.pollution_source_statements.each do |stmt|
+          %p
+            = stmt
+
+      - if @view_state.show_prf?
+        .o-content-unit__2-2.o-content-unit__box
+          %h2 Short-term pollution
+          %p
+            = @view_state.bathing_water.prf_statement
+
+    %section.c-content-row__info
+      - web_info_cls = @view_state.show_map? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
+
+      .o-content-unit__box.c-content-unit__web-links{ class: web_info_cls }
+        - if @view_state.show_history?
+          %h2 Previous annual water-quality classifications
+          %ul.c-content-unit__compliance-history
+            - @view_state.bathing_water.classification_history.each do |classification|
+              %li
+                - if classification.respond_to?(:uri)
+                  = classification.year
+                  - image_description = @view_state.classification_image_compact(classification.complianceClassification&.uri)
+                  = image_tag(image_description[:src], alt: image_description[:alt])
+                  = classification.complianceClassification.name
+                - else
+                  = classification[:message]
+
+        %h2 For more information
+        .c-content-info__qr-code
+          %img{ alt: '2d barcode for this bathing water', src: @view_state.qr_code_url }/
+        %p
+          The full details for this bathing water, its catchment, information
+          on all potential pollution sources and how they are managed can be
+          viewed on the Environment Agency website:
+          %br
+          %a{ href: 'https://environment.data.gov.uk/bwq/profiles' }
+            https://environment.data.gov.uk/bwq/profiles
+
+      - if @view_state.show_map?
+        .o-content-unit__box{ class: 'o-content-unit__2-2' }
+          %h2 Sampling Point Location
+          .c-content-info__map
+            Placeholder for sampling point map
+
+    %section.c-content-row__foot
+      - foot_col_1_class = "o-content-unit__1-#{@view_state.show_logo? ? 3 : 2}"
+      - foot_col_2_class = "o-content-unit__2-#{@view_state.show_logo? ? 3 : 2}"
+
+      .c-content-foot__bwmgr-contact{ class: foot_col_1_class }
+        .u-centered-block
+          %ul
+            %li
+              This bathing water is managed by
+              %br
+                %strong
+                  = @view_state.bw_manager[:name]
+            - unless @view_state.bw_manager[:phone].empty?
+              %li
+                Phone
+                = @view_state.bw_manager[:phone]
+            - unless @view_state.bw_manager[:email]
+              %li
+                Email
+                = @view_state.bw_manager[:email]
+
+      .c-content-foot__bwmgr-logo{ class: foot_col_1_class }
+        .u-centered-block
+          %img{:src => "tc-logo-white.png"}/
+
+      - if @view_state.show_logo?
+        .c-content-foot__ea-logo.o-content-unit__3-3
+          .u-centered-block
+            = image_tag('ea-logo_354cmyk.svg', alt: 'EA logo')
