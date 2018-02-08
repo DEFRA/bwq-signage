@@ -31,25 +31,26 @@ gem 'haml-rails'
 gem 'sassc-rails'
 gem 'sentry-raven'
 
-group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'capybara-selenium'
-  gem 'capybara_minitest_spec'
-  gem 'chromedriver-helper'
-  gem 'coveralls', require: false
-  gem 'haml-lint', require: false
-  gem 'm'
-  gem 'minitest-rails-capybara'
-  gem 'minitest-reporters'
-  gem 'minitest-spec-rails'
-  gem 'mocha'
-  gem 'rubocop', require: false
-  gem 'simplecov', require: false
-  gem 'vcr'
-  gem 'webmock'
-  gem 'webpacker', '~> 3.0'
-end
+# group :development, :test do
+# TODO: temporarily disable the development group because of deployment script issue
+gem 'byebug', platforms: %i[mri mingw x64_mingw]
+gem 'capybara', '~> 2.13'
+gem 'capybara-selenium'
+gem 'capybara_minitest_spec'
+gem 'chromedriver-helper'
+gem 'coveralls', require: false
+gem 'haml-lint', require: false
+gem 'm'
+gem 'minitest-rails-capybara'
+gem 'minitest-reporters'
+gem 'minitest-spec-rails'
+gem 'mocha'
+gem 'rubocop', require: false
+gem 'simplecov', require: false
+gem 'vcr'
+gem 'webmock'
+gem 'webpacker', '~> 3.0'
+# end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
