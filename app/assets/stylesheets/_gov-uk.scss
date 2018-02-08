@@ -38,3 +38,9 @@ $grey-8: #f0f0f0;
 @import 'elements/breadcrumbs';
 @import 'elements/phase-banner';
 @import 'elements/components';
+
+// overrides
+
+#global-header-bar {
+  background-color: $department-for-environment-food-rural-affairs;
+}
