@@ -109,4 +109,16 @@ class BwqSign
   def show_history?
     params[:'show-hist'] == 'yes'
   end
+
+  def show_logo?
+    params[:'show-logo'] == 'yes'
+  end
+
+  def bw_manager
+    {
+      name: params[:'bwmgr-name'],
+      email: params[:'bwmgr-email'],
+      phone: params[:'bwmgr-phone']
+    }
+  end
 end

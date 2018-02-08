@@ -185,4 +185,26 @@ class BwqSignTest < ActiveSupport::TestCase
       refute BwqSign.new(params: ActionController::Parameters.new('show-hist': 'no')).show_history?
     end
   end
+
+  describe '#show_logo?' do
+    it 'should return true if the user wants to include the EA logo' do
+      assert BwqSign.new(params: ActionController::Parameters.new('show-logo': 'yes')).show_logo?
+      refute BwqSign.new(params: ActionController::Parameters.new('show-logo': 'no')).show_logo?
+    end
+  end
+
+  describe '#bw_manager' do
+    it 'should collate the properties relating to the bathing water manager' do
+      params = {
+        'bwmgr-name': 'nnnn',
+        'bwmgr-phone': '1234-5678',
+        'bwmgr-email': 'foo@bar.com'
+      }
+
+      collated = BwqSign.new(params: ActionController::Parameters.new(params)).bw_manager
+      collated[:name].must_equal 'nnnn'
+      collated[:phone].must_equal '1234-5678'
+      collated[:email].must_equal 'foo@bar.com'
+    end
+  end
 end
