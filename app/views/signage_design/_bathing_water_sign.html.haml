@@ -70,7 +70,9 @@
           %ul
             %li
               This bathing water is managed by
-              = @view_state.bw_manager[:name]
+              %br
+                %strong
+                  = @view_state.bw_manager[:name]
             - unless @view_state.bw_manager[:phone].empty?
               %li
                 Phone

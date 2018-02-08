@@ -4,8 +4,8 @@ $oneToRootTwoAspectRatioMarginHalf: $oneToRootTwoAspectRatio / 2;
 
 // row heights
 $rowHeightHead: 25%;
-$rowHeightAbout: 30%;
-$rowHeightInfo: 25%;
+$rowHeightAbout: 35%;
+$rowHeightInfo: 27%;
 $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
 // apply border-box everywhere
@@ -58,25 +58,25 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-row__head {
   @include row;
   height: $rowHeightHead;
-  background-color: $purple-25;
+  // background-color: $purple-25;
 }
 
 .c-content-row__about {
   @include row;
   height: $rowHeightAbout;
-  background-color: $baby-pink-25;
+  // background-color: $baby-pink-25;
 }
 
 .c-content-row__info {
   @include row;
   height: $rowHeightInfo;
-  background-color: $yellow-25;
+  // background-color: $yellow-25;
 }
 
 .c-content-row__foot {
   @include row;
   height: $rowHeightFoot;
-  background-color: $light-blue-25;
+  // background-color: $light-blue-25;
 }
 
 // layout of content-units in a row
@@ -193,6 +193,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-unit__compliance-history {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1em;
 
   img {
     max-height: 1vw;
@@ -208,17 +209,19 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 }
 
 .c-content-row__foot {
+  padding-top: 0;
+
   .u-centered-block {
     display: flex;
     justify-content: center;
   }
 
   img {
-    max-height: 6vw;;
-    margin-top: 2vw;
+    max-height: 5vw;;
+    margin-top: 0.5vw;
   }
 }
 
 .c-content-foot__bwmgr-contact {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
