@@ -206,3 +206,19 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   text-align: center;
   padding-top: 4em;
 }
+
+.c-content-row__foot {
+  .u-centered-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    max-height: 6vw;;
+    margin-top: 2vw;
+  }
+}
+
+.c-content-foot__bwmgr-contact {
+  font-size: 1.2em;
+}

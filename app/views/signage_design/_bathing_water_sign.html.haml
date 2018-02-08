@@ -62,13 +62,29 @@
             Placeholder for sampling point map
 
     %section.c-content-row__foot
-      .o-content-unit__1-2
-        %img{:src => "tc-logo-white.png"}/
-        %p
-          This beach is managed by Torbay Council
-        %p
-          Phone: 01803 207975
-        %p
-          Email: beaches@torbay.gov.uk
-      .o-content-unit__2-2
-        %img{:src => "https://environment.data.gov.uk/bwq/profiles/images/logo/banner_logo-en.png", :srcset => "https://environment.data.gov.uk/bwq/profiles/images/logo/ea-logo-master-dark-plain.svg"}/
+      - foot_col_1_class = "o-content-unit__1-#{@view_state.show_logo? ? 3 : 2}"
+      - foot_col_2_class = "o-content-unit__2-#{@view_state.show_logo? ? 3 : 2}"
+
+      .c-content-foot__bwmgr-contact{ class: foot_col_1_class }
+        .u-centered-block
+          %ul
+            %li
+              This bathing water is managed by
+              = @view_state.bw_manager[:name]
+            - unless @view_state.bw_manager[:phone].empty?
+              %li
+                Phone
+                = @view_state.bw_manager[:phone]
+            - unless @view_state.bw_manager[:email]
+              %li
+                Email
+                = @view_state.bw_manager[:email]
+
+      .c-content-foot__bwmgr-logo{ class: foot_col_1_class }
+        .u-centered-block
+          %img{:src => "tc-logo-white.png"}/
+
+      - if @view_state.show_logo?
+        .c-content-foot__ea-logo.o-content-unit__3-3
+          .u-centered-block
+            = image_tag('ea-logo_354cmyk.svg', alt: 'EA logo')
