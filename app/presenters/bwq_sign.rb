@@ -121,4 +121,11 @@ class BwqSign
       phone: params[:'bwmgr-phone']
     }
   end
+
+  def hidden_params(omit)
+    params
+      .to_h
+      .to_a
+      .reject { |key, _value| omit.include?(key.to_sym) }
+  end
 end
