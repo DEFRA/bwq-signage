@@ -77,7 +77,7 @@
               %li
                 Phone
                 = @view_state.bw_manager[:phone]
-            - unless @view_state.bw_manager[:email]
+            - unless @view_state.bw_manager[:email].empty?
               %li
                 Email
                 = @view_state.bw_manager[:email]
