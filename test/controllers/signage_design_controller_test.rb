@@ -153,4 +153,30 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
       page.must_have_selector('.c-sign-layout--portrait')
     end
   end
+
+  it 'should navigate back to a previous step when requested' do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+      click_on('select a different bathing water')
+      page.must_have_content('Which bathing water?')
+    end
+  end
+
+  it 'should return to the preview after navigating back to an earlier point in the workflow' do
+    VCR.use_cassette('traverse_workflow', record: :new_episodes) do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+      click_on('select a different bathing water')
+      fill_in('search', with: 'blue anchor')
+      click_on('Search')
+
+      page.must_have_content('Search results')
+      click_on('Blue Anchor West')
+      page.must_have_content('Preview and download')
+      find('h1', text: 'Blue Anchor West')
+    end
+  end
 end

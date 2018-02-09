@@ -1,5 +1,7 @@
 # frozen-string-literal: true
 
+require 'test_helper'
+
 # Unit tests on BWQ sign presenter
 class BwqSignTest < ActiveSupport::TestCase
   describe 'BwqSign' do
@@ -205,6 +207,14 @@ class BwqSignTest < ActiveSupport::TestCase
       collated[:name].must_equal 'nnnn'
       collated[:phone].must_equal '1234-5678'
       collated[:email].must_equal 'foo@bar.com'
+    end
+  end
+
+  describe '#hidden_params' do
+    it 'should return an array of the params to be hidden in a form' do
+      BwqSign.new(params: ActionController::Parameters.new('show-hist': 'yes', design: true).permit!)
+             .hidden_params([:design])
+             .must_equal [['show-hist', 'yes']]
     end
   end
 end

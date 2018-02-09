@@ -14,20 +14,23 @@
       = render partial: 'warning_flash'
 
       = form_tag(root_path, method: 'get', enforce_utf8: false) do
-        = hidden_field_tag(:design, true)
-        = hidden_field_tag(:eubwid, @view_state.bathing_water.eubwid)
+        - hidden = @view_state.hidden_params(%i[bwmgr-name bwmgr-email bwmgr-phone step])
+        = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
         .form-group
+          - mgr_name = @view_state.params[:'bwmgr-name'] || @view_state.bathing_water.controller_name
           = label_tag(:'bwmgr-name', 'Bathing water is managed by', { class: 'form-label-bold' })
-          = text_field_tag(:'bwmgr-name', @view_state.bathing_water.controller_name, { class: 'form-control-2-3' })
+          = text_field_tag(:'bwmgr-name', mgr_name, { class: 'form-control-2-3' })
 
         .form-group
+          - mgr_email = @view_state.params[:'bwmgr-email']
           = label_tag(:'bwmgr-email', 'Contact email address', { class: 'form-label-bold' })
-          = email_field_tag(:'bwmgr-email', nil, { class: 'form-control-2-3' })
+          = email_field_tag(:'bwmgr-email', mgr_email, { class: 'form-control-2-3' })
 
         .form-group
-          = label_tag(:'bwmgr-name', 'Contact phone number', { class: 'form-label-bold' })
-          = telephone_field_tag(:'bwmgr-phone', nil, { class: 'form-control-2-3' })
+          - mgr_phone = @view_state.params[:'bwmgr-phone']
+          = label_tag(:'bwmgr-phone', 'Contact phone number', { class: 'form-label-bold' })
+          = telephone_field_tag(:'bwmgr-phone', mgr_phone, { class: 'form-control-2-3' })
 
         .form-group
           = submit_tag('Next step', { class: 'button' })

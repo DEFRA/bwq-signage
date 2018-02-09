@@ -10,8 +10,8 @@
       = render partial: 'warning_flash'
 
       = form_tag(root_path, method: 'get', enforce_utf8: false) do
-        = hidden_field_tag(:design, true)
-        = hidden_field_tag(:eubwid, @view_state.bathing_water.eubwid)
+        - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step])
+        = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
         - %i[bwmgr-name bwmgr-phone bwmgr-email].each do |param|
           = hidden_field_tag(param, @view_state.params[param])

@@ -17,14 +17,12 @@
             %i.fa{ class: page_orientation[:alt_icon] }
 
         %li
-          %a{ href: '#' }
-            select a different bathing water
+          = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
         %li
-          %a{ href: '#' }
-            change the bathing water manager details
+          = link_to('change the bathing water manager details', @view_state.with_query_params(step: :bwmgr))
+
         %li
-          %a{ href: '#' }
-            choose different sign options
+          = link_to('choose different sign options', @view_state.with_query_params(step: :opts))
 
       %p
         %a.button{ href: '#' }
