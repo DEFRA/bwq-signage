@@ -29,7 +29,7 @@
         %ul.o-search-results
           - name_results.each do |bw|
             %li.o-search-results__result
-              = link_to(bw.name, root_path(design: true, eubwid: bw.eubwid))
+              = link_to(bw.name, root_path(@view_state.with_query_params(eubwid: bw.eubwid)))
 
     - unless id_results.empty?
       .o-grid-column__one-third
@@ -39,7 +39,7 @@
         %ul.o-search-results
           - id_results.each do |bw|
             %li.o-search-results__result
-              = link_to("#{bw.name} (#{bw.eubwid})", root_path(design: true, eubwid: bw.eubwid))
+              = link_to("#{bw.name} (#{bw.eubwid})", root_path(@view_state.with_query_params(eubwid: bw.eubwid)))
 
     - unless controller_results.empty?
       .o-grid-column__one-third
@@ -49,4 +49,4 @@
         %ul.o-search-results
           - controller_results.each do |bw|
             %li.o-search-results__result
-              = link_to("#{bw.name} (#{bw.controller_name})", root_path(design: true, eubwid: bw.eubwid))
+              = link_to("#{bw.name} (#{bw.controller_name})", root_path(@view_state.with_query_params(eubwid: bw.eubwid)))

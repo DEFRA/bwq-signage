@@ -11,7 +11,8 @@
       = render partial: 'warning_flash'
 
       = form_tag(root_path(design: true), method: 'get', enforce_utf8: false) do
-        = hidden_field_tag(:design, true)
+        - hidden = @view_state.hidden_params(%i[search eubwid step])
+        = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
         .form-group
           = label_tag(:search, 'Bathing water name, EUBWID, or controller name', { class: 'form-label-bold' })
