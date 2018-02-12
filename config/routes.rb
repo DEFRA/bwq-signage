@@ -3,5 +3,6 @@
 Rails.application.routes.draw do
   root 'signage_design#show'
   get '/', to: 'signage_design#show'
+  get '/final', to: 'bwq_sign_final#show'
   get 'preview', to: 'preview#show'
 end

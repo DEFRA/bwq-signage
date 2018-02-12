@@ -1,0 +1,14 @@
+!!!
+%html.no-js{lang: ''}
+  %head
+    %meta{charset: 'utf-8'}/
+    %meta{content: 'ie=edge', 'http-equiv' => 'x-ua-compatible'}/
+    %meta{content: 'width=device-width, initial-scale=1, shrink-to-fit=no', :name => 'viewport'}/
+    = stylesheet_link_tag 'application', media: :all
+    = javascript_pack_tag 'application'
+    :javascript
+      document.querySelector('html').classList.add('js');
+    %title
+      Sign generator final
+  %body.c-bwq-sign-final
+    = yield
