@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "caniuse-lite": "^1.0.30000697",
-    "chrome-headless-render-pdf": "^1.5.0",
+    "puppeteer": "^1.0.0",
     "raven-js": "^3.22.1",
     "vue": "^2.5.13"
   },
