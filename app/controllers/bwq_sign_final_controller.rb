@@ -20,12 +20,12 @@ class BwqSignFinalController < ApplicationController
     file = Tempfile.new(['page-final', '.pdf'])
     command = "#{nodejs} ./bin/save-pdf.js '#{page_url}' #{page_size} #{orientation} '#{file.path}'"
     Rails.logger.debug("command: #{command.inspect}")
-    result = system(command)
+    failure_result = system(command)
 
-    if result
-      send_pdf_file(file)
-    else
+    if failure_result
       render plain: support_message
+    else
+      send_pdf_file(file)
     end
   end
 
@@ -73,11 +73,20 @@ class BwqSignFinalController < ApplicationController
   end
 
   def bathing_water_name_normalized
-    BwqService.new
-              .bathing_water_by_id(params[:eubwid])
-              .name
-              .tr("'", '')
-              .gsub(/\W+/, '-')
-              .downcase
+    api
+      .bathing_water_by_id(params[:eubwid])
+      .name
+      .tr("'", '')
+      .gsub(/\W+/, '-')
+      .gsub(/-+\Z/, '')
+      .downcase
+  end
+
+  def api
+    @bwq_service ||= BwqService.new
+  end
+
+  def api=(api_instance)
+    @bwq_service = api_instance
   end
 end

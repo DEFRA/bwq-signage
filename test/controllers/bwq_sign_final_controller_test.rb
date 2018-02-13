@@ -59,5 +59,53 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
         page.wont_have_content 'Preview'
       end
     end
+
+    it 'should normalize the bathing water name for inclusion in the file name' do
+      bathing_water = mock('BathingWater')
+      bathing_water.expects(:name).returns("foo bar'd (north)")
+      bwq_service = mock('BwqService')
+      bwq_service.expects(:bathing_water_by_id).with('1234-5678').returns(bathing_water)
+
+      controller = BwqSignFinalController.new
+      controller.api = bwq_service
+      controller.params = ActionController::Parameters.new(eubwid: '1234-5678')
+
+      controller.bathing_water_name_normalized.must_equal 'foo-bard-north'
+    end
+
+    it 'should create a descriptive file name for the download file' do
+      bathing_water = mock('BathingWater')
+      bathing_water.expects(:name).returns("foo bar'd (north)")
+      bwq_service = mock('BwqService')
+      bwq_service.expects(:bathing_water_by_id).with('1234-5678').returns(bathing_water)
+
+      controller = BwqSignFinalController.new
+      controller.api = bwq_service
+      controller.params = ActionController::Parameters.new(eubwid: '1234-5678')
+
+      controller.pdf_file_name.must_equal 'bwq-sign-foo-bard-north-a4-landscape.pdf'
+    end
+
+    it 'should download a pdf file' do
+      VCR.use_cassette('final_layout_1') do
+        driver = Capybara.current_driver
+        begin
+          Capybara.current_driver = :rack_test
+
+          visit(download_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                              'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
+                              'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+
+          page.response_headers['Content-Type'].must_equal('application/pdf')
+          # Ideally, we would also test the attachement file name, but reading the response
+          # headers is not permitted by Capybara/Chrome-headless
+          header = page.response_headers['Content-Disposition']
+          header.must_match(/^attachment/)
+          header.must_match(/filename=\"bwq-sign-clevedon-beach-a4-landscape.pdf\"$/)
+        ensure
+          Capybara.current_driver = driver
+        end
+      end
+    end
   end
 end
