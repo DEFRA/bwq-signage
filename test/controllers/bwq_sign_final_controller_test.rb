@@ -20,7 +20,7 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
         controller = BwqSignFinalController.new
         controller.params = ActionController::Parameters.new(eubwid: '1234-5678')
         controller.set_request!(request)
-        controller.page_url.must_equal 'http://localhost/final?eubwid=1234-5678'
+        controller.page_url.must_equal 'http://localhost:3000/final?eubwid=1234-5678'
       end
     end
 
@@ -87,23 +87,26 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'should download a pdf file' do
-      VCR.use_cassette('final_layout_1') do
-        driver = Capybara.current_driver
-        begin
-          Capybara.current_driver = :rack_test
+      # don't currently have a good way to do this in CI
+      unless ENV['TRAVIS']
+        VCR.use_cassette('final_layout_2', record: :new_episodes) do
+          driver = Capybara.current_driver
+          begin
+            Capybara.current_driver = :rack_test
 
-          visit(download_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
-                              'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                              'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+            visit(download_path(eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                                'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'yes',
+                                'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                                page_size: 'a4', page_orientation: 'landscape',
+                                port: 3000))
 
-          page.response_headers['Content-Type'].must_equal('application/pdf')
-          # Ideally, we would also test the attachement file name, but reading the response
-          # headers is not permitted by Capybara/Chrome-headless
-          header = page.response_headers['Content-Disposition']
-          header.must_match(/^attachment/)
-          header.must_match(/filename=\"bwq-sign-clevedon-beach-a4-landscape.pdf\"$/)
-        ensure
-          Capybara.current_driver = driver
+            page.response_headers['Content-Type'].must_equal('application/pdf')
+            header = page.response_headers['Content-Disposition']
+            header.must_match(/^attachment/)
+            header.must_match(/filename=\"bwq-sign-clevedon-beach-a4-landscape.pdf\"$/)
+          ensure
+            Capybara.current_driver = driver
+          end
         end
       end
     end

@@ -32,7 +32,7 @@ class BwqSignFinalController < ApplicationController
   # TODO: this may change, as we decide the right URL for the Chrome to-pdf
   # process to visit
   def bwq_sign_final_url(params)
-    port = Rails.env.development? ? 3000 : 80
+    port = Rails.env.production? ? 80 : 3000
     relative = Rails.application.config.relative_url_root || '/'
     final_url({ host: HOST, port: port, script_name: relative }.merge(params))
   end
