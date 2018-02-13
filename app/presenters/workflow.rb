@@ -15,7 +15,6 @@ class Workflow
     { has: %i[design], missing: %i[search eubwid], name: :search },
     { has: %i[design search], missing: %i[eubwid], name: :select },
 
-    { has: %i[design eubwid], missing: %i[show-prf], name: :opts },
     { has: %i[design eubwid], missing: %i[show-map], name: :opts },
     { has: %i[design eubwid], missing: %i[show-hist], name: :opts },
     { has: %i[design eubwid], missing: %i[show-logo], name: :opts },

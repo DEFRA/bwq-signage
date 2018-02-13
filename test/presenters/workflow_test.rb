@@ -36,25 +36,22 @@ class WorkflowTest < ActiveSupport::TestCase
       end
 
       it 'should select the options step unless all options info is known' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes')
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-hist': 'no')
                 .must_equal :opts
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes',
-                                      'show-hist': 'no')
-                .must_equal :opts
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes',
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
                                       'show-hist': 'no', 'show-map': 'no')
                 .must_equal :opts
       end
 
       it 'should select bw manager when the options information is complete' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes',
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes')
                 .must_equal :bwmgr
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes',
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
                                       'bwmgr-name': 'bar')
                 .must_equal :bwmgr
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-prf': 'yes',
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
                                       'bwmgr-name': 'bar', 'bwmgr-email': 'foo')
                 .must_equal :bwmgr
@@ -63,7 +60,7 @@ class WorkflowTest < ActiveSupport::TestCase
       it 'should select preview when all information is complete' do
         Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
-                                      'show-hist': true, 'show-map': false, 'show-prf': true,
+                                      'show-hist': true, 'show-map': false,
                                       'show-logo': false)
                 .must_equal :preview
       end
