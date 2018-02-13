@@ -10,11 +10,8 @@
       = render partial: 'warning_flash'
 
       = form_tag(root_path, method: 'get', enforce_utf8: false) do
-        - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step])
+        - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
         = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
-
-        - %i[bwmgr-name bwmgr-phone bwmgr-email].each do |param|
-          = hidden_field_tag(param, @view_state.params[param])
 
         = render partial: 'yes_no_option', locals: { option_heading: 'Include pollution risk forecast information?', option_var: 'show-prf', option_default: 'yes' }
         = render partial: 'yes_no_option', locals: { option_heading: 'Show the history of previous annual classifications?', option_var: 'show-hist', option_default: 'yes' }

@@ -14,13 +14,16 @@ class Workflow
   PRECONDITIONS = [
     { has: %i[design], missing: %i[search eubwid], name: :search },
     { has: %i[design search], missing: %i[eubwid], name: :select },
-    { has: %i[design eubwid], missing: %i[bwmgr-name], name: :bwmgr },
-    { has: %i[design eubwid], missing: %i[bwmgr-phone], name: :bwmgr },
-    { has: %i[design eubwid], missing: %i[bwmgr-email], name: :bwmgr },
-    { has: %i[design eubwid bwmgr-name], missing: %i[show-prf], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[show-map], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[show-hist], name: :opts },
-    { has: %i[design eubwid bwmgr-name], missing: %i[show-logo], name: :opts },
+
+    { has: %i[design eubwid], missing: %i[show-prf], name: :opts },
+    { has: %i[design eubwid], missing: %i[show-map], name: :opts },
+    { has: %i[design eubwid], missing: %i[show-hist], name: :opts },
+    { has: %i[design eubwid], missing: %i[show-logo], name: :opts },
+
+    { has: %i[design eubwid show-hist], missing: %i[bwmgr-name], name: :bwmgr },
+    { has: %i[design eubwid show-hist], missing: %i[bwmgr-phone], name: :bwmgr },
+    { has: %i[design eubwid show-hist], missing: %i[bwmgr-email], name: :bwmgr },
+
     { has: %i[], missing: %i[design], name: :landing },
     { has: [], missing: [], name: :preview }
   ].freeze
