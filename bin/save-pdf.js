@@ -25,4 +25,11 @@ const path = process.argv[5];
   });
 
   await browser.close();
-})();
+})()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((e) => {
+    console.log('Puppeteer failed with: ', e);
+    process.exit(1);
+  });

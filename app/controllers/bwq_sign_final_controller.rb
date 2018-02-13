@@ -17,12 +17,16 @@ class BwqSignFinalController < ApplicationController
   end
 
   def new
-    file = Tempfile.new('page-final')
-    command = "#{nodejs} ./bin/save-pdf.js '#{page_url}' #{orientation} #{page_size} '#{file.path}'"
+    file = Tempfile.new(['page-final', '.pdf'])
+    command = "#{nodejs} ./bin/save-pdf.js '#{page_url}' #{page_size} #{orientation} '#{file.path}'"
     Rails.logger.debug("command: #{command.inspect}")
     result = system(command)
 
-    render text: result.to_s
+    if result
+      send_pdf_file(file)
+    else
+      render plain: support_message
+    end
   end
 
   # TODO: this may change, as we decide the right URL for the Chrome to-pdf
@@ -47,5 +51,33 @@ class BwqSignFinalController < ApplicationController
 
   def nodejs
     Rails.application.config.node_executable
+  end
+
+  def support_message
+    <<~MESSAGE
+      'Sorry, that request did not succeed. If this problem persists,
+      please email: data.info@environment-agency.gov.uk'
+    MESSAGE
+  end
+
+  def send_pdf_file(file)
+    send_file(
+      file.path,
+      filename: pdf_file_name,
+      type: 'application/pdf'
+    )
+  end
+
+  def pdf_file_name
+    "bwq-sign-#{bathing_water_name_normalized}-#{page_size}-#{orientation}.pdf"
+  end
+
+  def bathing_water_name_normalized
+    BwqService.new
+              .bathing_water_by_id(params[:eubwid])
+              .name
+              .tr("'", '')
+              .gsub(/\W+/, '-')
+              .downcase
   end
 end
