@@ -62,7 +62,7 @@ class BwqSign
 
   def monitoring_statement
     start_date, end_date = bathing_water.season_dates.map { |date| date.strftime('%B') }
-    "Water quality is monitored from #{start_date} to #{end_date}"
+    "Water quality is monitored from #{start_date}&nbsp;to&nbsp;#{end_date}".html_safe
   end
 
   # The Rails view context is passed in from the controller
