@@ -16,16 +16,16 @@ class BwqSignFinalController < ApplicationController
     @view_state = BwqSign.new(options)
   end
 
-  def new
+  def new # rubocop:disable Metrics/AbcSize
     file = Tempfile.new(['page-final', '.pdf'])
-    command = "#{nodejs} ./bin/save-pdf.js '#{page_url}' #{page_size} #{orientation} '#{file.path}'"
-    Rails.logger.debug("command: #{command.inspect}")
-    failure_result = system(command)
+    Rails.logger.debug("#{nodejs} ./bin/save-pdf.js '#{page_url}' #{page_size} #{orientation} '#{file.path}'") # rubocop:disable Metrics/LineLength
+    success = system(nodejs, './bin/save-pdf.js', page_url, page_size,
+                     orientation, file.path)
 
-    if failure_result
-      render plain: support_message
-    else
+    if success
       send_pdf_file(file)
+    else
+      render plain: support_message
     end
   end
 
@@ -46,7 +46,7 @@ class BwqSignFinalController < ApplicationController
   end
 
   def page_url
-    bwq_sign_final_url(validate_params(%i[page_orientation]))
+    bwq_sign_final_url(validate_params(%i[page_orientation page_size]))
   end
 
   def nodejs
@@ -55,8 +55,8 @@ class BwqSignFinalController < ApplicationController
 
   def support_message
     <<~MESSAGE
-      'Sorry, that request did not succeed. If this problem persists,
-      please email: data.info@environment-agency.gov.uk'
+      Sorry, that request did not succeed. If this problem persists,
+      please email: data.info@environment-agency.gov.uk
     MESSAGE
   end
 
