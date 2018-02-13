@@ -13,7 +13,10 @@ const landscape = process.argv[4] === 'landscape';
 const path = process.argv[5];
 
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/chromium-browser',
+    headless: true,
+  });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle2' });
 
