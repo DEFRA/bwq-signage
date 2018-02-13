@@ -17,9 +17,7 @@ class BwqSignFinalController < ApplicationController
   end
 
   def new
-    page_url = bwq_sign_final_url(validate_params(%i[page_orientation]))
     file = Tempfile.new('page-final')
-    nodejs = Rails.application.config.node_executable
     command = "#{nodejs} ./bin/save-pdf.js '#{page_url}' #{orientation} #{page_size} '#{file.path}'"
     Rails.logger.debug("command: #{command.inspect}")
     result = system(command)
@@ -32,7 +30,7 @@ class BwqSignFinalController < ApplicationController
   def bwq_sign_final_url(params)
     port = Rails.env.development? ? 3000 : 80
     relative = Rails.application.config.relative_url_root || '/'
-    final_url(params.merge(host: HOST, port: port, script_name: relative))
+    final_url({ host: HOST, port: port, script_name: relative }.merge(params))
   end
 
   def orientation
@@ -41,5 +39,13 @@ class BwqSignFinalController < ApplicationController
 
   def page_size
     params[:page_size] || 'a4'
+  end
+
+  def page_url
+    bwq_sign_final_url(validate_params(%i[page_orientation]))
+  end
+
+  def nodejs
+    Rails.application.config.node_executable
   end
 end
