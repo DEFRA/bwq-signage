@@ -208,4 +208,11 @@ class BwqSignTest < ActiveSupport::TestCase
              .must_equal [['show-hist', 'yes']]
     end
   end
+
+  describe '#final?' do
+    it 'should return a flag when showing the final view' do
+      refute BwqSign.new({}).final?
+      assert BwqSign.new(final: true).final?
+    end
+  end
 end

@@ -113,6 +113,10 @@ class BwqSign
     params[:'show-logo'] == 'yes'
   end
 
+  def final?
+    options[:final]
+  end
+
   def bw_manager
     {
       name: params[:'bwmgr-name'],
