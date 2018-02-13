@@ -53,4 +53,12 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.node_executable = '/usr/bin/node'
+
+  # Setting these next two flags to true enables rendering of the pdf sign in
+  # dev mode, but disables hot-reloading of classes. So Rais has to be restarted
+  # each time there is a change.
+  config.cache_classes = true
+  config.eager_load = true
 end

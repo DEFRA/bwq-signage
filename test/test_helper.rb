@@ -52,6 +52,10 @@ Capybara.register_driver :headless_chrome do |app|
                                  desired_capabilities: capabilities)
 end
 
+Capybara.register_driver :rack_test do |app|
+  Capybara::RackTest::Driver.new(app, headers: { 'HTTP_USER_AGENT' => 'Capybara' })
+end
+
 # To see the Chrome window while tests are running, set this var to true
 see_visible_window_while_test_run = ENV['TEST_BROWSER_VISIBLE']
 driver = see_visible_window_while_test_run ? :chrome : :headless_chrome
