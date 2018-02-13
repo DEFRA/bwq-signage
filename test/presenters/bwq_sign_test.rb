@@ -95,7 +95,7 @@ class BwqSignTest < ActiveSupport::TestCase
       mock_bw.expects(:season_dates).returns([Date.new(2018, 5, 1), Date.new(2018, 11, 30)])
       BwqSign.new(bathing_water: mock_bw)
              .monitoring_statement
-             .must_equal('Water quality is monitored from May to November')
+             .must_equal('Water quality is monitored from May&nbsp;to&nbsp;November')
     end
   end
 
