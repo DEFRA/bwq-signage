@@ -95,4 +95,6 @@ Rails.application.configure do
 
   # Deployment path
   config.relative_url_root = '/bwq/signage'
+  
+  config.node_executable = '/usr/bin/node'
 end
