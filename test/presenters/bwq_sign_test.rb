@@ -133,32 +133,22 @@ class BwqSignTest < ActiveSupport::TestCase
   end
 
   describe '#show_prf?' do
-    it 'should return true if the BW is in PRF, and the user ticked "yes" when asked' do
+    it 'should return true if the BW is in PRF' do
       mock_flag = mock('Value')
       mock_flag.expects(:val).returns('true')
       mock_bw = mock('BathingWater')
       mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'yes')
+      params = ActionController::Parameters.new
 
       assert BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
     end
 
-    it 'should return false if the BW is not in PRF, even if the user ticked "yes" when asked' do
+    it 'should return false if the BW is not in PRF' do
       mock_flag = mock('Value')
       mock_flag.expects(:val).returns('false')
       mock_bw = mock('BathingWater')
       mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'yes')
-
-      refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
-    end
-
-    it 'should return false if the BW is in PRF, but the user ticked "no" when asked' do
-      mock_flag = mock('Value')
-      mock_flag.expects(:val).returns('true')
-      mock_bw = mock('BathingWater')
-      mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'no')
+      params = ActionController::Parameters.new
 
       refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
     end
@@ -212,7 +202,8 @@ class BwqSignTest < ActiveSupport::TestCase
 
   describe '#hidden_params' do
     it 'should return an array of the params to be hidden in a form' do
-      BwqSign.new(params: ActionController::Parameters.new('show-hist': 'yes', design: true).permit!)
+      BwqSign.new(params:
+                  ActionController::Parameters.new('show-hist': 'yes', design: true).permit!)
              .hidden_params([:design])
              .must_equal [['show-hist', 'yes']]
     end
