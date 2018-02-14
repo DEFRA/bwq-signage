@@ -115,7 +115,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                      'bwmgr-logo': 'test.png'))
       page.must_have_content('Preview and download')
       page.must_have_selector('#development-container')
     end
@@ -130,7 +131,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                      'bwmgr-logo': 'test.png'))
       page.must_have_content('change from landscape orientation')
     end
   end
@@ -139,7 +141,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                      'bwmgr-logo': 'test.png'))
       page.must_have_selector('.c-sign-layout--landscape')
       click_on('portrait orientation')
       page.must_have_content('change from portrait orientation')
@@ -151,7 +154,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                      'bwmgr-logo': 'test.png'))
       click_on('select a different bathing water')
       page.must_have_content('Which bathing water?')
     end
@@ -161,7 +165,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('traverse_workflow', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
-                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes'))
+                      'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                      'bwmgr-logo': 'test.png'))
       click_on('select a different bathing water')
       fill_in('search', with: 'blue anchor')
       click_on('Search')

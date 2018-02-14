@@ -97,6 +97,7 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
             visit(download_path(eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                                 'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'yes',
                                 'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                                'bwmgr-logo': 'test.png',
                                 page_size: 'a4', page_orientation: 'landscape',
                                 port: 3000))
 
