@@ -89,4 +89,4 @@
       - if @view_state.show_logo?
         .c-content-foot__ea-logo.o-content-unit__3-3
           .u-centered-block
-            = image_tag('ea-logo_354cmyk.svg', alt: 'EA logo')
+            = image_tag("ea-logo_354cmyk.#{@view_state.final? ? 'svg' : 'png'}", alt: 'EA logo')
