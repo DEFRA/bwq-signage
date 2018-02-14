@@ -88,33 +88,26 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should show the next step in the process when the user selects a bathing water' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000'))
-      page.must_have_content('Bathing water manager information for Clevedon Beach')
-    end
-  end
-
-  it 'selects the name of the bathing water controller by default' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000'))
-      find('#bwmgr-name').value.must_equal('North Somerset')
-    end
-  end
-
-  it 'shows the sign options with default values selected' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
-                      'bwmgr-phone': '', 'bwmgr-email': ''))
       page.must_have_content('Bathing water sign options')
-      find('legend', text: 'Include pollution risk forecast information?')
-      find(:radio_button, :'show-prf', checked: true).value.must_equal('yes')
+      find('legend', text: 'Show the history of previous')
+      find(:radio_button, :'show-hist', checked: true).value.must_equal('yes')
     end
   end
 
   it 'shows the sign options with a non-default value selected' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
-                      'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no'))
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'no'))
       page.must_have_content('Bathing water sign options')
-      find(:radio_button, :'show-prf', checked: true).value.must_equal('no')
+      find(:radio_button, :'show-hist', checked: true).value.must_equal('no')
+    end
+  end
+
+  it 'selects the name of the bathing water controller by default' do
+    VCR.use_cassette('bathing_water_clevedon_lookup') do
+      visit(root_path(design: true, eubwid: 'ukk1202-36000',
+                      'show-prf': 'yes', 'show-hist': 'yes', 'show-map': 'yes', 'show-logo': 'yes'))
+      page.must_have_content('Bathing water manager information for Clevedon Beach')
+      find('#bwmgr-name').value.must_equal('North Somerset')
     end
   end
 

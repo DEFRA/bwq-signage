@@ -62,7 +62,7 @@ class BwqSign
 
   def monitoring_statement
     start_date, end_date = bathing_water.season_dates.map { |date| date.strftime('%B') }
-    "Water quality is monitored from #{start_date} to #{end_date}"
+    "Water quality is monitored from #{start_date}&nbsp;to&nbsp;#{end_date}".html_safe
   end
 
   # The Rails view context is passed in from the controller
@@ -84,7 +84,7 @@ class BwqSign
   def classification_image_compact(uri = nil)
     classification_uri = uri || bathing_water.latest_classification.uri
     image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
-    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.svg"
+    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.#{final? ? 'svg' : 'png'}"
 
     {
       alt: image_root[:alt],
@@ -92,10 +92,9 @@ class BwqSign
     }
   end
 
-  # Only show PRF summary if the BW is in PRF programmne, and user ticked 'yes'
+  # Only show PRF summary if the BW is in PRF programmne
   def show_prf?
-    bathing_water['latestProfile.pollutionRiskForecasting'].val == 'true' &&
-      params[:'show-prf'] == 'yes'
+    bathing_water['latestProfile.pollutionRiskForecasting'].val == 'true'
   end
 
   def qr_code_url
@@ -112,6 +111,10 @@ class BwqSign
 
   def show_logo?
     params[:'show-logo'] == 'yes'
+  end
+
+  def final?
+    options[:final]
   end
 
   def bw_manager

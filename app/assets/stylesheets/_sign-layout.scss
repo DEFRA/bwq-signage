@@ -148,49 +148,68 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 /** Content specific styling - header grid */
 .c-content-header {
   display: grid;
+  display: -ms-grid;
   grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
 }
 
 .c-sign-layout--landscape {
   .c-content-header {
     grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
   }
 
   .c-content-header__title {
     grid-column: 1 / span 2;
     grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
   }
 
   .c-content-header__classification {
     grid-column: 2;
     grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
   }
 
   .c-content-header__monitoring {
     grid-column: 1;
     grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
   }
 }
 
 .c-sign-layout--portrait {
   .c-content-header {
     grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
   }
 
   .c-content-header__title {
     grid-column: 1 / span 2;
     grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
   }
 
   .c-content-header__classification {
     grid-column: 2;
     grid-row: 1 / span 2;
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     align-self: end;
   }
 
   .c-content-header__monitoring {
     grid-column: 1;
     grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
   }
 }
 
@@ -200,7 +219,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
 .c-content-header__classification {
   img {
-    height: 15rem;
+    height: 12rem;
     max-width: 100%;
   }
 
@@ -221,11 +240,25 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
 .c-content-unit__compliance-history {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
   margin-bottom: 1em;
 
   img {
     max-height: 1em;
+  }
+
+  li {
+    -ms-grid-column: 1;
+  }
+
+  li + li {
+    -ms-grid-column: 2;
+  }
+
+  li + li + li {
+    -ms-grid-column: 3;
   }
 }
 

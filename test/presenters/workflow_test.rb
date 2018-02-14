@@ -31,28 +31,36 @@ class WorkflowTest < ActiveSupport::TestCase
         Workflow.next_incomplete_step(design: true, search: 'foo').must_equal :select
       end
 
-      it 'should select the bwmgr step when the bw is selected' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123').must_equal :bwmgr
+      it 'should select the options step when the bw is selected' do
+        Workflow.next_incomplete_step(design: true, eubwid: '123').must_equal :opts
       end
 
-      it 'should select the bwmgr step unless all bw manager info is known' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-name': 'foo')
+      it 'should select the options step unless all options info is known' do
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-hist': 'no')
+                .must_equal :opts
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
+                                      'show-hist': 'no', 'show-map': 'no')
+                .must_equal :opts
+      end
+
+      it 'should select bw manager when the options information is complete' do
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
+                                      'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes')
                 .must_equal :bwmgr
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
+                                      'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
                                       'bwmgr-name': 'bar')
                 .must_equal :bwmgr
-      end
-
-      it 'should select options when the bw manager information is complete' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
-                                      'bwmgr-name': 'bar', 'bwmgr-phone': '')
-                .must_equal :opts
+        Workflow.next_incomplete_step(design: true, eubwid: '123',
+                                      'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
+                                      'bwmgr-name': 'bar', 'bwmgr-email': 'foo')
+                .must_equal :bwmgr
       end
 
       it 'should select preview when all information is complete' do
         Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
-                                      'show-hist': true, 'show-map': false, 'show-prf': true,
+                                      'show-hist': true, 'show-map': false,
                                       'show-logo': false)
                 .must_equal :preview
       end
@@ -62,7 +70,7 @@ class WorkflowTest < ActiveSupport::TestCase
       it 'should calculate a list of all of the parameters used in the workflow' do
         Workflow::ALL_PARAMS.must_include :search
         Workflow::ALL_PARAMS.must_include :'bwmgr-name'
-        Workflow::ALL_PARAMS.length.must_be :>=, 10
+        Workflow::ALL_PARAMS.length.must_be :>=, 9
         Workflow::ALL_PARAMS.wont_include :foobar
       end
     end

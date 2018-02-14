@@ -95,16 +95,16 @@ class BwqSignTest < ActiveSupport::TestCase
       mock_bw.expects(:season_dates).returns([Date.new(2018, 5, 1), Date.new(2018, 11, 30)])
       BwqSign.new(bathing_water: mock_bw)
              .monitoring_statement
-             .must_equal('Water quality is monitored from May to November')
+             .must_equal('Water quality is monitored from May&nbsp;to&nbsp;November')
     end
   end
 
   describe 'classification image' do
     it 'should return the parameters for the classifiation image' do
       mock_resource = mock('Resource')
-      mock_resource.expects(:uri).times(2).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
+      mock_resource.expects(:uri).times(3).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
       mock_bw = mock('BathingWater1')
-      mock_bw.expects(:latest_classification).times(2).returns(mock_resource)
+      mock_bw.expects(:latest_classification).times(3).returns(mock_resource)
 
       mock_view_context = Object.new
       def mock_view_context.image_path(p)
@@ -117,6 +117,9 @@ class BwqSignTest < ActiveSupport::TestCase
 
       BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context)
              .classification_image_compact[:src]
+             .must_equal('path-to-2-stars.png')
+      BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context, final: true)
+             .classification_image_compact[:src]
              .must_equal('path-to-2-stars.svg')
     end
 
@@ -128,37 +131,27 @@ class BwqSignTest < ActiveSupport::TestCase
 
       BwqSign.new(view_context: mock_view_context)
              .classification_image_compact('http://environment.data.gov.uk/def/bwq-cc-2015/3')[:src]
-             .must_equal('path-to-1-star.svg')
+             .must_equal('path-to-1-star.png')
     end
   end
 
   describe '#show_prf?' do
-    it 'should return true if the BW is in PRF, and the user ticked "yes" when asked' do
+    it 'should return true if the BW is in PRF' do
       mock_flag = mock('Value')
       mock_flag.expects(:val).returns('true')
       mock_bw = mock('BathingWater')
       mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'yes')
+      params = ActionController::Parameters.new
 
       assert BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
     end
 
-    it 'should return false if the BW is not in PRF, even if the user ticked "yes" when asked' do
+    it 'should return false if the BW is not in PRF' do
       mock_flag = mock('Value')
       mock_flag.expects(:val).returns('false')
       mock_bw = mock('BathingWater')
       mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'yes')
-
-      refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
-    end
-
-    it 'should return false if the BW is in PRF, but the user ticked "no" when asked' do
-      mock_flag = mock('Value')
-      mock_flag.expects(:val).returns('true')
-      mock_bw = mock('BathingWater')
-      mock_bw.expects(:[]).returns(mock_flag)
-      params = ActionController::Parameters.new('show-prf': 'no')
+      params = ActionController::Parameters.new
 
       refute BwqSign.new(bathing_water: mock_bw, params: params).show_prf?
     end
@@ -212,9 +205,17 @@ class BwqSignTest < ActiveSupport::TestCase
 
   describe '#hidden_params' do
     it 'should return an array of the params to be hidden in a form' do
-      BwqSign.new(params: ActionController::Parameters.new('show-hist': 'yes', design: true).permit!)
+      BwqSign.new(params:
+                  ActionController::Parameters.new('show-hist': 'yes', design: true).permit!)
              .hidden_params([:design])
              .must_equal [['show-hist', 'yes']]
+    end
+  end
+
+  describe '#final?' do
+    it 'should return a flag when showing the final view' do
+      refute BwqSign.new({}).final?
+      assert BwqSign.new(final: true).final?
     end
   end
 end
