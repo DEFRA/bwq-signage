@@ -84,7 +84,7 @@ class BwqSign
   def classification_image_compact(uri = nil)
     classification_uri = uri || bathing_water.latest_classification.uri
     image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
-    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.svg"
+    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.#{final? ? 'svg' : 'png'}"
 
     {
       alt: image_root[:alt],
