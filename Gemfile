@@ -22,9 +22,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jbuilder', '~> 2.5'
 
 # App dependencies
-gem 'carrierwave', '~> 1.0'
 gem 'faraday_middleware'
-gem 'fog-aws'
 gem 'font-awesome-rails'
 gem 'govuk_elements_rails'
 gem 'govuk_frontend_toolkit'
