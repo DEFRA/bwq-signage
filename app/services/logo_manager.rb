@@ -16,11 +16,8 @@ class LogoManager
   end
 
   def upload_and_replace(file, extn)
-    puts 'uar 1'
     remove_existing_logo
-    puts 'uar 2'
     upload_file_to_s3(file, logo_object_key(extn))
-    puts 'uar 3'
   end
 
   def logo_name_root

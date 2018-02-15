@@ -50,12 +50,9 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
           filename: 'molecule.png'
         )
 
-        puts 'before upload'
         lm.upload_and_replace(upload_fixture, 'png')
 
-        puts 'after upload'
         lm.logo_object.key.must_equal 'bwq-signage-assets/test-bw/logo.png'
-        puts 'done'
       end
     end
   end
