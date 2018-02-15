@@ -1,2 +1,51 @@
-%p
-  logo
+.o-workflow-unit.o-workflow-unit__landing
+  .o-grid-row
+    .o-grid-column__two-thirds
+
+      %h2.heading-medium
+        Add a logo for the bathing water manager
+      %p.lede
+        Add a visual indicator, such as a logo, signifying the organisation that
+        manages this bathing water. You can upload a new logo, re-use an existing image,
+        or skip this step.
+
+      = render partial: 'warning_flash'
+
+      = form_tag(root_path, method: 'get', enforce_utf8: false) do
+        - hidden = @view_state.hidden_params(%i[bwmgr-logo])
+        = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
+
+        .form-group
+          %fieldset
+            - existing_logo = @view_state.logo_manager.logo_object
+            - name = @view_state.params[:'bwmgr-name']
+            - if existing_logo
+              .multiple-choice
+                %input#bwmgr-logo-current{ type: 'radio', name: 'bwmgr-logo', value: existing_logo.key }
+                %label{ for: 'bwmgr-logo-current' }
+                  Use the currently uploaded logo for '#{name}':
+                  %img{ src: existing_logo.public_url, alt: "Logo for #{name}" }
+            - else
+              %p
+                %em No logo has been uploaded for '#{name}' yet
+
+            .multiple-choice
+              %input#bwmgr-logo-none{ type: 'radio', name: 'bwmgr-logo', value: 'no-logo' }
+              %label{ for: 'bwmgr-logo-none' }
+                Don't display a logo
+
+            .multiple-choice
+              %input#bwmgr-logo-upload{ type: 'radio', name: 'bwmgr-logo', value: 'upload' }
+              %label{ for: 'bwmgr-logo-upload' }
+                I will upload a new image below
+
+        .form-group
+          %p
+            %label{ for: 'upload-file' }
+              Upload a new image file (<code>.png</code>, <code>.jpg</code>, <code>.gif</code>):
+              %br
+            %input#upload-file{ name: 'upload-file', type: 'file', multiple: false }
+
+        .form-group
+          %p
+            = submit_tag('Next step', { class: 'button' })

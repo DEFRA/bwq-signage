@@ -131,4 +131,8 @@ class BwqSign
       .to_a
       .reject { |key, _value| omit.include?(key.to_sym) }
   end
+
+  def logo_manager
+    @logo_manager ||= LogoManager.new(params)
+  end
 end
