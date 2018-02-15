@@ -5,7 +5,11 @@
       %h2.heading-medium
         Bathing water sign options
       %p.lede
-        You can select which elements of the sign you would like to include.
+        The sign will include up-to-date information from the Environment
+        Agency
+        = link_to('bathing water profiles.', 'https://environment.data.gov.uk/bwq/profiles')
+        You can select extra elements which
+        are not required, but may enhance your sign.
 
       = render partial: 'warning_flash'
 
@@ -13,9 +17,9 @@
         - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
         = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
-        = render partial: 'yes_no_option', locals: { option_heading: 'Show the history of previous annual classifications?', option_var: 'show-hist', option_default: 'yes' }
-        = render partial: 'yes_no_option', locals: { option_heading: 'Show a map of the sampling point location?', option_var: 'show-map', option_default: 'yes' }
-        = render partial: 'yes_no_option', locals: { option_heading: 'Include the Environment Agency logo?', option_var: 'show-logo', option_default: 'yes' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Show the history of previous annual classifications?', option_var: 'show-hist', option_default: 'no' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Show a map of the sampling point location?', option_var: 'show-map', option_default: 'no' }
+        = render partial: 'yes_no_option', locals: { option_heading: 'Include the Environment Agency logo?', option_var: 'show-logo', option_default: 'no' }
 
         .form-group
           %p
