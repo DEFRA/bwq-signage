@@ -18,18 +18,20 @@
         %li
           - if existing_logo
             %p
-              = link_to("Use the already uploaded logo for '#{name}'", @view_state.with_query_params('bwmgr-logo': existing_logo.key))
+              - query_params = @view_state.with_query_params('bwmgr-logo': existing_logo.key, step: nil)
+              = link_to("Use the already uploaded logo for '#{name}'", query_params)
               %img{ src: existing_logo.public_url, alt: "Logo for #{name}" }
           - else
             %p
               %em No logo has been uploaded for '#{name}' yet
 
         %li
-          = link_to("Skip this step: I don't want to show a logo for my organisation", @view_state.with_query_params('bwmgr-logo': :none))
+          - query_params = @view_state.with_query_params('bwmgr-logo': 'none', step: nil)
+          = link_to("Skip this step: I don't want to show a logo for my organisation", query_params)
 
       %h3.heading-small Upload a new logo
       = form_tag(root_path, method: 'post', enforce_utf8: false, multipart: true) do
-        - hidden = @view_state.hidden_params(%i[bwmgr-logo])
+        - hidden = @view_state.hidden_params(%i[bwmgr-logo step])
         = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
         .form-group
