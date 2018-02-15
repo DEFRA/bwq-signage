@@ -90,7 +90,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
       visit(root_path(design: true, eubwid: 'ukk1202-36000'))
       page.must_have_content('Bathing water sign options')
       find('legend', text: 'Show the history of previous')
-      find(:radio_button, :'show-hist', checked: true).value.must_equal('yes')
+      find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('yes')
     end
   end
 
@@ -98,7 +98,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'no'))
       page.must_have_content('Bathing water sign options')
-      find(:radio_button, :'show-hist', checked: true).value.must_equal('no')
+      find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('no')
     end
   end
 

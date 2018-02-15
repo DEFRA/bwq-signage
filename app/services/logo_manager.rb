@@ -10,6 +10,19 @@ class LogoManager
     @client = client
   end
 
+  def logo_object
+    return nil unless logo_name_root
+    @logo_object ||= find_logo
+  end
+
+  def upload_and_replace(file, extn)
+    puts 'uar 1'
+    remove_existing_logo
+    puts 'uar 2'
+    upload_file_to_s3(file, logo_object_key(extn))
+    puts 'uar 3'
+  end
+
   def logo_name_root
     name = params[:'bwmgr-name']
     return nil unless name && !name.empty?
@@ -23,11 +36,6 @@ class LogoManager
       .gsub(/(^-)|(-$)/, '')
   end
 
-  def logo_object
-    return nil unless logo_name_root
-    @logo_object ||= find_logo
-  end
-
   def find_logo
     find_logo_s3('png') ||
       find_logo_s3('jpg') ||
@@ -35,8 +43,26 @@ class LogoManager
   end
 
   def find_logo_s3(extn)
-    s3_obj = env_open_data_bucket.object("bwq-signage-assets/#{logo_name_root}/logo.#{extn}")
+    s3_obj = env_open_data_bucket.object(logo_object_key(extn))
     s3_obj.exists? && s3_obj
+  end
+
+  def remove_existing_logo
+    return unless (object = find_logo)
+    object.delete
+  end
+
+  def upload_file_to_s3(file, key)
+    env_open_data_bucket.put_object(
+      key: key,
+      body: file,
+      content_type: file.content_type,
+      acl: 'public-read'
+    )
+  end
+
+  def logo_object_key(extn)
+    "bwq-signage-assets/#{logo_name_root}/logo.#{extn}"
   end
 
   def env_open_data_bucket
