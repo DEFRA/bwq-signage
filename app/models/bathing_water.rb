@@ -55,6 +55,13 @@ class BathingWater < LdaResource
     history.empty? ? [{ message: 'No prior classifications are available' }] : history
   end
 
+  def to_json
+    JSON.generate(
+      lat: self['samplingPoint.lat'],
+      long: self['samplingPoint.long']
+    )
+  end
+
   private
 
   def api

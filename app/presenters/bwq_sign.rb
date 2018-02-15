@@ -12,7 +12,7 @@ CLASSIFICATION_IMAGE_ROOTS = {
 }.freeze
 
 # Presenter for view state for bathing water signs
-class BwqSign
+class BwqSign # rubocop:disable Metrics/ClassLength
   attr_reader :options
 
   def initialize(options)

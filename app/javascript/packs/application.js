@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import Raven from 'raven-js';
 import RavenVue from 'raven-js/plugins/vue';
-import App from '../app.vue';
+import SamplingPointMap from '../components/sampling-point-map.vue';
 
 if (process.env.NODE_ENV === 'production') {
   // Sentry.io logging - captures run-time error messages
@@ -16,8 +16,8 @@ if (process.env.NODE_ENV === 'production') {
 document.addEventListener('DOMContentLoaded', () => {
   /* eslint-disable no-new */
   new Vue({
-    el: '#bwq-signage-application',
-    template: '<App/>',
-    components: { App },
+    el: '#map-container',
+    template: '<SamplingPointMap/>',
+    components: { SamplingPointMap },
   });
 });

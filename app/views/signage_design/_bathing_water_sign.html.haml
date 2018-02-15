@@ -58,8 +58,9 @@
       - if @view_state.show_map?
         .o-content-unit__box{ class: 'o-content-unit__2-2' }
           %h2 Sampling Point Location
-          .c-content-info__map
-            Placeholder for sampling point map
+          .c-content-info__map#map-data{ data: { bw: @view_state.bathing_water.to_json }}
+            #map-container
+              Placeholder for sampling point map
 
     %section.c-content-row__foot
       - foot_col_1_class = "o-content-unit__1-#{@view_state.show_logo? ? 3 : 2}"
