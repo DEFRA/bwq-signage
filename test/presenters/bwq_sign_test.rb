@@ -219,4 +219,22 @@ class BwqSignTest < ActiveSupport::TestCase
       assert BwqSign.new(final: true).final?
     end
   end
+
+  describe 'logo url' do
+    it 'should determine the logo URL if the key is given' do
+      assert BwqSign.new(params:
+                         ActionController::Parameters.new('bwmgr-logo': 'foo/bar.png').permit!)
+                    .show_bwmgr_logo?
+      refute BwqSign.new(params:
+                         ActionController::Parameters.new('bwmgr-logo': 'none').permit!)
+                    .show_bwmgr_logo?
+    end
+
+    it 'should correctly determine the S3 URL' do
+      BwqSign.new(params:
+                  ActionController::Parameters.new('bwmgr-logo': 'foo/bar.png').permit!)
+             .bwmgr_logo_url
+             .must_match(%r{^https://environment-open-data.*aws.*foo/bar.png$})
+    end
+  end
 end

@@ -135,4 +135,14 @@ class BwqSign
   def logo_manager
     @logo_manager ||= LogoManager.new(params)
   end
+
+  def show_bwmgr_logo?
+    params[:'bwmgr-logo'] &&
+      params[:'bwmgr-logo'] != 'none'
+  end
+
+  def bwmgr_logo_url
+    key = params[:'bwmgr-logo']
+    key && "https://environment-open-data.s3.eu-west-1.amazonaws.com/#{key}"
+  end
 end
