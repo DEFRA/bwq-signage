@@ -84,7 +84,8 @@
 
       .c-content-foot__bwmgr-logo{ class: foot_col_1_class }
         .u-centered-block
-          %img{:src => "tc-logo-white.png"}/
+          - if @view_state.show_bwmgr_logo?
+            %img{:src => @view_state.bwmgr_logo_url}/
 
       - if @view_state.show_logo?
         .c-content-foot__ea-logo.o-content-unit__3-3

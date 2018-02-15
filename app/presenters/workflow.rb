@@ -7,8 +7,9 @@ class Workflow
     { name: :landing, title: nil },
     { name: :search, title: 'bathing water name' },
     { name: :select, title: nil },
+    { name: :opts, title: 'sign options' },
     { name: :bwmgr, title: 'bathing water manager' },
-    { name: :opts, title: 'sign options' }
+    { name: :bwmgr_logo, title: 'bathing water manager logo' }
   ].freeze
 
   PRECONDITIONS = [
@@ -22,6 +23,8 @@ class Workflow
     { has: %i[design eubwid show-hist], missing: %i[bwmgr-name], name: :bwmgr },
     { has: %i[design eubwid show-hist], missing: %i[bwmgr-phone], name: :bwmgr },
     { has: %i[design eubwid show-hist], missing: %i[bwmgr-email], name: :bwmgr },
+
+    { has: %i[design eubwid show-hist bwmgr-name], missing: %i[bwmgr-logo], name: :bwmgr_logo },
 
     { has: %i[], missing: %i[design], name: :landing },
     { has: [], missing: [], name: :preview }

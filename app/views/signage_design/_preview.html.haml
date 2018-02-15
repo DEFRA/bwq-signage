@@ -19,10 +19,11 @@
         %li
           = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
         %li
-          = link_to('change the bathing water manager details', @view_state.with_query_params(step: :bwmgr))
-
-        %li
           = link_to('choose different sign options', @view_state.with_query_params(step: :opts))
+        %li
+          = link_to('change the bathing water manager details', @view_state.with_query_params(step: :bwmgr))
+        %li
+          = link_to('change the bathing water manager logo', @view_state.with_query_params(step: :bwmgr_logo))
 
       %p
         - a4_path = @view_state.with_query_params(page_size: :a4)
