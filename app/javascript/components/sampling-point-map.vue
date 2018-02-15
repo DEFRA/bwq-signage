@@ -60,11 +60,9 @@ function initMap(options) {
   const osMap = createMap(options);
 
   const layer = osLeisureLayer(options);
-
   osMap.addLayer(layer);
 
-  // const bwLayer = Leaflet.featureGroup();
-  // osMap.addLayer(bwLayer);
+  Leaflet.marker([options.lat, options.long]).addTo(osMap);
 
   return osMap;
 }
