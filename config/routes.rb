@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post '/', to: 'signage_design#upload'
   get '/final', to: 'bwq_sign_final#show'
   get '/download', to: 'bwq_sign_final#new'
+  get '/env', to: 'env#show'
 end
