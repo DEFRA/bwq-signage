@@ -237,4 +237,23 @@ class BwqSignTest < ActiveSupport::TestCase
              .must_match(%r{^https://environment-open-data.*aws.*foo/bar.png$})
     end
   end
+
+  describe '#next_by_controller' do
+    it 'should precess through the bws for a controller' do
+      VCR.use_cassette('precess-controller', record: :new_episodes) do
+        bw = BwqService.new.bathing_water_by_id('ukk1202-36000')
+        bw0 = BwqSign.new(bathing_water: bw).next_by_bw_controller
+        bw0.name.must_equal('Weston Main')
+
+        bw1 = BwqSign.new(bathing_water: bw0).next_by_bw_controller
+        bw1.name.must_equal('Weston-super-Mare Sand Bay')
+
+        bw2 = BwqSign.new(bathing_water: bw1).next_by_bw_controller
+        bw2.name.must_equal('Weston-super-Mare Uphill Slipway')
+
+        bw3 = BwqSign.new(bathing_water: bw2).next_by_bw_controller
+        bw3.name.must_equal('Clevedon Beach')
+      end
+    end
+  end
 end
