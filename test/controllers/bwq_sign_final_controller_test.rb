@@ -89,7 +89,7 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
     it 'should download a pdf file' do
       # don't currently have a good way to do this in CI
       unless ENV['TRAVIS']
-        VCR.use_cassette('final_layout_2', record: :new_episodes) do
+        VCR.use_cassette('final_layout_2', record: :new_episodes, preserve_exact_body_bytes: true) do
           driver = Capybara.current_driver
           begin
             Capybara.current_driver = :rack_test

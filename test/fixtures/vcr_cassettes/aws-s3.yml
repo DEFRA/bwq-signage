@@ -5,7 +5,7 @@ http_interactions:
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -16,44 +16,50 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114904Z
+      - 20180216T005421Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ddc4644be842b6ca2590cc21fb728695c62c9f66721b4c1a97909eb373f0495f
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=a64b84e73a34b3f3a9a07891549a835ea526277136221babce2e31519e1a368c
       Content-Length:
       - '0'
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
-      X-Amz-Request-Id:
-      - 286CBD1D18865C5D
       X-Amz-Id-2:
-      - QMP9ey8uE8yRnKrsM5UdBpnnOCnBd/RTEGSqrBqUO1sLYyLvUx5CZEUZMCxFg93NKPLjjzhp46Y=
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
+      - JzsUb9UXt98hdYov4WlzPRSTazudxppu9fHlPlWc6p5Lar9G9y3MY9H4izaHtmiCZPnjfylAc9c=
+      X-Amz-Request-Id:
+      - 30D10A88266CE180
       Date:
-      - Thu, 15 Feb 2018 11:49:03 GMT
+      - Fri, 16 Feb 2018 00:54:22 GMT
+      Last-Modified:
+      - Thu, 15 Feb 2018 12:04:24 GMT
+      Etag:
+      - '"09946b90ff0ae6bffc816038ebca053b"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - image/png
+      Content-Length:
+      - '5533'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:04 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
 - request:
-    method: head
-    uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.jpg
+    method: delete
+    uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -64,92 +70,40 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114904Z
+      - 20180216T005421Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=488189ad3c29d95950620db75f6a9e78db68d40177a9df743d57b3393f1bb9c3
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ce0986d03058f869d6601cedf5c32c37401975ce9782561b7f9eb24635979663
       Content-Length:
       - '0'
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 204
+      message: No Content
     headers:
-      X-Amz-Request-Id:
-      - 548E2AE4EE857A84
       X-Amz-Id-2:
-      - pqcEzSXSMAApRnjt2pSRyK7bo/7FJVbBN9TXDhvVsId7Tj1F2/qtoLQJuIOrISMduYUz7Wwi1LU=
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
+      - E5ToJez1oV9UheinwwJUyPfGShzqvJ7mQXGuYf+/I9619MDEEd9ZvZZNt7t04SqX+U+pzeSfZS8=
+      X-Amz-Request-Id:
+      - 8BAE8DA749187959
       Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
+      - Fri, 16 Feb 2018 00:54:22 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:04 GMT
-- request:
-    method: head
-    uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.gif
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Content-Type:
-      - ''
-      Accept-Encoding:
-      - ''
-      User-Agent:
-      - aws-sdk-ruby3/3.7.0 ruby/2.4.1 x86_64-linux aws-sdk-s3/1.6.0
-      Host:
-      - environment-open-data.s3.eu-west-1.amazonaws.com
-      X-Amz-Date:
-      - 20180215T114904Z
-      X-Amz-Content-Sha256:
-      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-      Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=fbfecdd4e25075ac54f344660f680a69a9963bd9d8eb925c83f3622132f355de
-      Content-Length:
-      - '0'
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      X-Amz-Request-Id:
-      - 606DF265FDB67F5E
-      X-Amz-Id-2:
-      - lZb3lrpdE3KulG+QyxHPYC9tcucv6a/cGZBTp0SiEkxCnmBxzjJ3tpf+sACSwoBBAK/RPcQmDdM=
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
-      Server:
-      - AmazonS3
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:04 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -160,12 +114,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114904Z
+      - 20180216T005421Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ddc4644be842b6ca2590cc21fb728695c62c9f66721b4c1a97909eb373f0495f
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=a64b84e73a34b3f3a9a07891549a835ea526277136221babce2e31519e1a368c
       Content-Length:
       - '0'
       Accept:
@@ -176,28 +130,28 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 3AE7E737815E9E75
+      - A54D342E351E02B9
       X-Amz-Id-2:
-      - kTNbZDRnOeOpobS5q0nQhLmXQ4n7GuVvpfilG1k8bQMpXSTv2lZbBQz2IBt0QSQX/wp+RyQTm2k=
+      - V6AOKQTC4h5SbwslwxG87IPP5MFMqaYx47MtjOChuSmrUEJiSHoYLwBOXG7zH7/8BuT3bL+lq2E=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
+      - Fri, 16 Feb 2018 00:54:21 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:04 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.jpg
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -208,12 +162,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114904Z
+      - 20180216T005421Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=488189ad3c29d95950620db75f6a9e78db68d40177a9df743d57b3393f1bb9c3
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b4739f94aae875cddd1228eb036f7f977bc7571b13fa1b03f818ad117bf1c6af
       Content-Length:
       - '0'
       Accept:
@@ -224,28 +178,28 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 523813A2307E78F9
+      - FBE0A3D912ADAB62
       X-Amz-Id-2:
-      - m9ba/YX1Uv0qVagM28dOZM0sPeW1WSw/DBFAdYHoOkIaKTuTDn0AyKIECvEZ3HlZuJ4NHbfCKmY=
+      - bgkSYmhx4lFm6T+pfX9NooAwSlE1dTQLHE1esub5Dd3557XkqUgBZMZ9CbgJmLojQWGwvrzKAJ4=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:03 GMT
+      - Fri, 16 Feb 2018 00:54:21 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:04 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.gif
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -256,12 +210,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114904Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=fbfecdd4e25075ac54f344660f680a69a9963bd9d8eb925c83f3622132f355de
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=5ee6a394cf63b871a310cc6d74764c3175c4a46c4dff15ca272396286ee5bb72
       Content-Length:
       - '0'
       Accept:
@@ -272,28 +226,28 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - A8276AD075F549ED
+      - F55DA5E0565318B0
       X-Amz-Id-2:
-      - eyRguR2nunNmkZhM2fddUQo9Kegu4aRjHbUAPB3RnY0V9KZNE9tyGVRCC5T5/dghZXxbXHylVac=
+      - U4U3ikwUAgnf6h6XltcoNxkXHrs0lWtOMBy939yz4GdsDs3vgM2H/ex+5k3zqwze3+vFz6Gwnrc=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
+      - Fri, 16 Feb 2018 00:54:22 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:05 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -304,12 +258,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114905Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=08019c79f410ee991d56caf5e3d0fd7add20efb123dcb7844c3d5a3fa6435144
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b7bc6b080091d4e213d34aef30e007a41bdf5bab7dbb3713b2bcddc4386f6e83
       Content-Length:
       - '0'
       Accept:
@@ -320,28 +274,28 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - FD42C25413C97E38
+      - AF82E768312C8F08
       X-Amz-Id-2:
-      - jHKyU+kl3/FoPYSYThqycGOnRuJ8yWsF8Gnv2EGcPDzuUsIUtYtrt3DojcOXoEYvnP2yQhnEzMo=
+      - jjvkbEsSS+rIG7cUly6i2aA7o4GpRB4oZMTgZ7c5wvzF7RbrPYOjriSftVj0+dNSDERC6XORFFg=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
+      - Fri, 16 Feb 2018 00:54:21 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:05 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.jpg
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -352,12 +306,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114905Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=da64c8bc237e80abb6114963e1d3bd93c5ad5dc5282ed6e2cea9e849eb3c9319
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=3294b6494d9e4ea64a038bc1e33a62431656b38d6033360799ec9cc2afb52312
       Content-Length:
       - '0'
       Accept:
@@ -368,28 +322,28 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - BD111847184E3F0E
+      - 3243DBA2016A6181
       X-Amz-Id-2:
-      - wIEbJhksLOQyyN2rPbqk82Ab+r8Vq4qhblw+wjAcZwrr/w6NrrGj39nWXH0lJur9Q/eAYYRsuAc=
+      - sckPWVYuWH3+QQEVS0PyaGMGu63oh/kiq+8s5ALJ2ZG3xH9N9fVO0mngB5uATj2GZ0gOK9PX0D8=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:04 GMT
+      - Fri, 16 Feb 2018 00:54:22 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:05 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.gif
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -400,12 +354,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T114905Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ba00f8d9ac41c20bc68ed45b95165848fe3eb45e89945f5b87c58172cd42b1ee
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=5ee6a394cf63b871a310cc6d74764c3175c4a46c4dff15ca272396286ee5bb72
       Content-Length:
       - '0'
       Accept:
@@ -416,29 +370,151 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 25AEF1EDB3AF2F8B
+      - 7943E793ED4AE16E
       X-Amz-Id-2:
-      - QnC6ti+2K8Q/2T+8AUkgStVfNhy456E+ZQjbivVhiPiFxOjxkJtrAv6ISwDJU1eGZ6uvbLCOXyQ=
+      - Rx7vm6pPZV0t7VZ6evzBL5lBKCiFV22anXIjBIZ8cSavmgy8gWAwn143zqQbGidouaysTISkOIE=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 15 Feb 2018 11:49:05 GMT
+      - Fri, 16 Feb 2018 00:54:21 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 11:49:05 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: put
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: UTF-8
-      string: !binary |-
-        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
+      base64_string: |
+        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
     headers:
       Content-Type:
       - image/png
@@ -455,13 +531,13 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T120422Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - 14d1c25eccbcca05c296aa0ac0799e006e092f77fc4037ad412d2aad2bf899a8
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
         SignedHeaders=content-md5;content-type;expect;host;user-agent;x-amz-acl;x-amz-content-sha256;x-amz-date,
-        Signature=969e415d8363165afdef64d9d697afe5e1c19b56b30e9536d9748ecbf8090782
+        Signature=123d82745d30c588a8b1d9cc742643e6859c37fb0857bd923e4de71d4966e9bb
       Content-Length:
       - '5533'
       Accept:
@@ -472,11 +548,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - B/5NxIi7ev4XYTrIO2aMA+QYn/AfVmDGIoNzLFlxBfDXW3+Rra3JGfeUf4ccszcAMdL+iT6IRl0=
+      - 2v5FWGJ9JKHjrjr5uEpH4BwjgJVzvrwEZOKS5QHJIqpL5vRg8U6QLf/Jw4aVbNXEDUIr7CKC94Y=
       X-Amz-Request-Id:
-      - 050B3A048A3CF0C0
+      - D9BF2E7FB0E6C389
       Date:
-      - Thu, 15 Feb 2018 12:04:24 GMT
+      - Fri, 16 Feb 2018 00:54:23 GMT
       Etag:
       - '"09946b90ff0ae6bffc816038ebca053b"'
       Content-Length:
@@ -485,15 +561,15 @@ http_interactions:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 12:04:23 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
     body:
       encoding: ASCII-8BIT
-      string: ''
+      base64_string: ''
     headers:
       Content-Type:
       - ''
@@ -504,12 +580,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180215T120423Z
+      - 20180216T005422Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180215/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=feff8e2b4c1205f7ff0f9b28deb5bd415e86f19cf531b9c3d0dd8515c8d39cac
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b7bc6b080091d4e213d34aef30e007a41bdf5bab7dbb3713b2bcddc4386f6e83
       Content-Length:
       - '0'
       Accept:
@@ -520,13 +596,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - fXbMiNGUQi/beHrx+x+LilUhmmDdOh27kbK6auaA1XZo6ak6xlIjGgF54y6VXJJNtzPtRn5PrTs=
+      - YzVMJFv7XNB4aOiZR1ErR/npzt4+n5CQfSd6sjCUIHSG/bYR/Wv2poagBf1So80D5fcroLLk2Do=
       X-Amz-Request-Id:
-      - 17FE42CCF4397515
+      - CF2C61EEE6FB04F0
       Date:
-      - Thu, 15 Feb 2018 12:04:24 GMT
+      - Fri, 16 Feb 2018 00:54:23 GMT
       Last-Modified:
-      - Thu, 15 Feb 2018 12:04:24 GMT
+      - Fri, 16 Feb 2018 00:54:23 GMT
       Etag:
       - '"09946b90ff0ae6bffc816038ebca053b"'
       Accept-Ranges:
@@ -539,7 +615,7 @@ http_interactions:
       - AmazonS3
     body:
       encoding: UTF-8
-      string: ''
+      base64_string: ''
     http_version: 
-  recorded_at: Thu, 15 Feb 2018 12:04:23 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
 recorded_with: VCR 4.0.0

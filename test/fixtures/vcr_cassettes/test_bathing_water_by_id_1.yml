@@ -21,25 +21,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '2'
+      - '3'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 Feb 2018 17:52:51 GMT
+      - Fri, 16 Feb 2018 00:54:18 GMT
       Etag:
-      - '"79ef82af052c9fa2-gzip"'
+      - '"86107d508bca8f5f-gzip"'
       Expires:
-      - Tue, 06 Feb 2018 17:55:50 GMT
+      - Fri, 16 Feb 2018 00:57:16 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '255'
+      - '101'
       Content-Length:
-      - '4205'
+      - '4208'
       Connection:
       - keep-alive
     body:
@@ -76,7 +76,7 @@ http_interactions:
                 , "signMeasuresSummary" : {"_value" : "Natural England's Catchment Sensitive Farming initiative and Scottish Environment Protection Agency (SEPA) are working to reduce diffuse pollution from agricultural sources.", "_lang" : "en"}
                 , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 13 days.", "_lang" : "en"}
                 , "signPollutionSourcesStatement" : {"_value" : "This bathing water may be affected by pollution in run off from agricultural land, urban areas, and occasional discharges from storm overflows carried by the River Tweed. During or after periods of heavy rainfall the impact from these sources of pollution can increase the risk of reduced bathing water quality.", "_lang" : "en"}
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0002", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-03600:1", "streamsRiversStatement" : {"_value" : "The Tweed Estuary discharges to the sea at the north end of the bathing water. Diffuse run off from agricultural land and upstream settlements affects the bacteriological quality of the river. After heavy rain, this can have a short-term impact on bathing water quality.  High river flows also shorten residence times in the estuary, exacerbating the impact of discharges from the sewerage system in and around Berwick.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0002", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-03600:1", "streamsRiversStatement" : {"_value" : "The Tweed Estuary discharges to the sea at the north end of the bathing water. Diffuse run off from agricultural land and upstream settlements affects the bacteriological quality of the river. After heavy rain, this can have a short-term impact on bathing water quality.  High river flows also shorten residence times in the estuary, exacerbating the impact of discharges from the sewerage system in and around Berwick.", "_lang" : "en"}
                 , "stwOutfallsStatement" : {"_value" : "Sewage from Berwick, Spittal and Tweedmouth is treated at a sewage works that discharges to the Tweed estuary to the west of the town.", "_lang" : "en"}
                 , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Spittal for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 1% of visits. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 95% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukc2102-03600_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "The catchment of the River Tweed is largely agricultural with a mixture of arable and livestock farming. During and after periods of heavy rainfall, runoff from agricultural areas will be greatly increased. The quality of the bathing water may be adversely affected as a result of such events.  The limited data collected on sources of bacteria suggests that livestock may be a significant source, particularly when river flows are high. We have engaged with the local farming community but livestock numbers in the local catchment are low suggesting a more diffuse contribution from a wider catchment.", "_lang" : "en"}
@@ -109,5 +109,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Tue, 06 Feb 2018 17:52:51 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:18 GMT
 recorded_with: VCR 4.0.0

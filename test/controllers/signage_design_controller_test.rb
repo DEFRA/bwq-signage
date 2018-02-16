@@ -71,7 +71,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   end
 
   it 'should list results for a term that matches a bathing water ID' do
-    VCR.use_cassette('bathing_waters_api') do
+    VCR.use_cassette('bathing_waters_api', preserve_exact_body_bytes: true) do
       visit(root_path(design: true, search: 'ukk1202'))
       page.must_have_content('Search results for "ukk1202"')
       find('.o-search-results__result', text: 'Clevedon Beach')
