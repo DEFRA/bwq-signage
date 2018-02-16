@@ -145,4 +145,11 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     key = params[:'bwmgr-logo']
     key && "https://environment-open-data.s3.eu-west-1.amazonaws.com/#{key}"
   end
+
+  def next_by_bw_controller
+    id_current = bathing_water.eubwid
+    controller_bws = BwqService.new.bws_in_same_controller(bathing_water)
+    i = controller_bws.find_index { |bw| bw.eubwid == id_current }
+    controller_bws[(i + 1) % controller_bws.length]
+  end
 end

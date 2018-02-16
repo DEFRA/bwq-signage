@@ -5,7 +5,7 @@ http_interactions:
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
     body:
       encoding: US-ASCII
-      string: ''
+      base64_string: ''
     headers:
       User-Agent:
       - Faraday v0.13.1
@@ -21,89 +21,328 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '102'
+      - '72'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Tue, 13 Feb 2018 15:52:56 GMT
+      - Fri, 16 Feb 2018 00:54:32 GMT
       Etag:
       - '"d3495f1c468c6fdf-gzip"'
       Expires:
-      - Tue, 13 Feb 2018 15:54:14 GMT
+      - Fri, 16 Feb 2018 00:56:20 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '20'
+      - '99'
       Content-Length:
       - '3879'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
-                  ]}
-                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
-              }
-              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
-              }
-              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000025504", "name" : {"_value" : "North Somerset", "_lang" : "en"}
-              }
-              , "http://statistics.data.gov.uk/id/statistical-geography/E06000024"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-36000:1", "label" : [{"_value" : "Map bounds for Clevedon Beach", "_lang" : "en"}
-                ]}
-              , "eubwidNotation" : "ukk1202-36000", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
-                }
-                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
-              }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "bathingWaterDescription" : {"_value" : "Clevedon Beach is on the Somerset coast overlooking the Bristol Channel. It is a sand and pebble beach, approximately 850 metres wide, backed by the promenade and the town. There is a marine lake at the beach which is filled by sea water on high tides.", "_lang" : "en"}
-                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
-                , "esoOutfallsStatement" : {"_value" : "There are two emergency/storm overflows from the Clevedon Beach pumping station, that discharge to the sea 400m and 500m northeast of the Environment Agency monitoring point respectively. The operation of the overflows can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
-                , "historyStatement" : {"_value" : "In the past this bathing water was affected by sewage from the Kingston Seymour sewage treatment works (STW) that discharged primary treated effluent. The scheme for Kingston Seymour which provides secondary treatment and ultraviolet (UV) disinfection, was completed by Wessex Water in 2000.", "_lang" : "en"}
-                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-36000/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
-                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-36000-2017", "macroAlgaeStatement" : {"_value" : "The bathing water can become covered with large amounts of seaweed, depending on tides and the weather. This bathing water has a history of large amounts of seaweed.", "_lang" : "en"}
-                , "name" : {"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
-                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
-                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n24 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Clevedon Beach bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
-                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
-                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
-                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
-                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
-                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 24 days.", "_lang" : "en"}
-                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality may reduce during or after periods of heavy rainfall due to occasional discharges from two storm overflows.", "_lang" : "en"}
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
-                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Clevedon Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was assessed as being sufficient to be objectionable for 2% of visits, with 92% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
-                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Clevedon Beach is approximately 22,600 hectares. It includes the rivers Banwell, Oldbridge, Yeo, Kenn, Blind Yeo and Land Yeo, as well as the Uphill Great Rhine, the Drove Rhine and the Portbury Ditch. These streams are characterised by having short upland reaches and long lowland reaches with very low gradients. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
-              }
-              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
-                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
-                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
-                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
-                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
-                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
-                }
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0135", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
-                  , "northing" : 171322.0}
-                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
-              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/36000/date/20160922/time/100400/recordDate/20160922", "escherichiaColiCount" : 36, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T10:04:00", "inXSDDateTime" : {"_value" : "2016-09-22T10:04:00", "_datatype" : "dateTime"}
-                }
-                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
-              }
-              , "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
-              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
-              }
-              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/clevedon-beach", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
-                , "northing" : 171322.0}
-              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
-                ]}
-              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-36000:1", "name" : {"_value" : "Zone of influence at Clevedon Beach", "_lang" : "en"}
-              }
-            }
-            , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
-        }
+      base64_string: |
+        eyAiZm9ybWF0IiA6ICJsaW5rZWQtZGF0YS1hcGkiLCAidmVyc2lvbiIgOiAi
+        MC4yIiwgInJlc3VsdCIgOiB7Il9hYm91dCIgOiAiaHR0cDovL2VhLXJid2Qt
+        c3RhZ2luZy5lcGltb3JwaGljcy5uZXQvZG9jL2JhdGhpbmctd2F0ZXIvdWtr
+        MTIwMi0zNjAwMC5qc29uP19wcm9wZXJ0aWVzPWxhdGVzdFNhbXBsZUFzc2Vz
+        c21lbnQuc2FtcGxlRGF0ZVRpbWUuaW5YU0REYXRlVGltZSUyQ2xhdGVzdFNh
+        bXBsZUFzc2Vzc21lbnQuc2FtcGxlWWVhci5vcmRpbmFsWWVhciUyQ2xhdGVz
+        dFNhbXBsZUFzc2Vzc21lbnQuZXNjaGVyaWNoaWFDb2xpQ291bnQuJTJBJTJD
+        bGF0ZXN0U2FtcGxlQXNzZXNzbWVudC5pbnRlc3RpbmFsRW50ZXJvY29jY2lD
+        b3VudC4lMkElMkNsYXRlc3RQcm9maWxlLiUyQSUyQ2xhdGVzdENvbXBsaWFu
+        Y2VBc3Nlc3NtZW50LnNhbXBsZVllYXIub3JkaW5hbFllYXIlMkNsYXRlc3RS
+        aXNrUHJlZGljdGlvbi4lMkEiLCAiZGVmaW5pdGlvbiIgOiAiaHR0cDovL2Vh
+        LXJid2Qtc3RhZ2luZy5lcGltb3JwaGljcy5uZXQvbWV0YS9kb2MvYmF0aGlu
+        Zy13YXRlci9fZXVid2lkLmpzb24/X3Byb3BlcnRpZXM9bGF0ZXN0U2FtcGxl
+        QXNzZXNzbWVudC5zYW1wbGVEYXRlVGltZS5pblhTRERhdGVUaW1lJTJDbGF0
+        ZXN0U2FtcGxlQXNzZXNzbWVudC5zYW1wbGVZZWFyLm9yZGluYWxZZWFyJTJD
+        bGF0ZXN0U2FtcGxlQXNzZXNzbWVudC5lc2NoZXJpY2hpYUNvbGlDb3VudC4l
+        MkElMkNsYXRlc3RTYW1wbGVBc3Nlc3NtZW50LmludGVzdGluYWxFbnRlcm9j
+        b2NjaUNvdW50LiUyQSUyQ2xhdGVzdFByb2ZpbGUuJTJBJTJDbGF0ZXN0Q29t
+        cGxpYW5jZUFzc2Vzc21lbnQuc2FtcGxlWWVhci5vcmRpbmFsWWVhciUyQ2xh
+        dGVzdFJpc2tQcmVkaWN0aW9uLiUyQSIsICJleHRlbmRlZE1ldGFkYXRhVmVy
+        c2lvbiIgOiAiaHR0cDovL2VhLXJid2Qtc3RhZ2luZy5lcGltb3JwaGljcy5u
+        ZXQvZG9jL2JhdGhpbmctd2F0ZXIvdWtrMTIwMi0zNjAwMC5qc29uP19wcm9w
+        ZXJ0aWVzPWxhdGVzdFNhbXBsZUFzc2Vzc21lbnQuc2FtcGxlRGF0ZVRpbWUu
+        aW5YU0REYXRlVGltZSUyQ2xhdGVzdFNhbXBsZUFzc2Vzc21lbnQuc2FtcGxl
+        WWVhci5vcmRpbmFsWWVhciUyQ2xhdGVzdFNhbXBsZUFzc2Vzc21lbnQuZXNj
+        aGVyaWNoaWFDb2xpQ291bnQuJTJBJTJDbGF0ZXN0U2FtcGxlQXNzZXNzbWVu
+        dC5pbnRlc3RpbmFsRW50ZXJvY29jY2lDb3VudC4lMkElMkNsYXRlc3RQcm9m
+        aWxlLiUyQSUyQ2xhdGVzdENvbXBsaWFuY2VBc3Nlc3NtZW50LnNhbXBsZVll
+        YXIub3JkaW5hbFllYXIlMkNsYXRlc3RSaXNrUHJlZGljdGlvbi4lMkEmX21l
+        dGFkYXRhPWFsbCIsICJwcmltYXJ5VG9waWMiIDogeyJfYWJvdXQiIDogImh0
+        dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9pZC9iYXRoaW5nLXdhdGVy
+        L3VrazEyMDItMzYwMDAiLCAiYXBwb2ludGVkU2V3ZXJhZ2VVbmRlcnRha2Vy
+        IiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vYnVzaW5lc3MuZGF0YS5nb3YudWsv
+        aWQvY29tcGFueS8wMjM2NjY0OCIsICJjb21wYW55UHJvZmlsZSIgOiB7Il9h
+        Ym91dCIgOiAiaHR0cDovL2J1c2luZXNzLmRhdGEuZ292LnVrL2NvbXBhbmll
+        cy9wcm9maWxlLzAyMzY2NjQ4IiwgImxhYmVsIiA6IFt7Il92YWx1ZSIgOiAi
+        Q29tcGFuaWVzIEhvdXNlIHByb2ZpbGUgZm9yIFdlc3NleCBXYXRlciBTZXJ2
+        aWNlcyBMaW1pdGVkIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgICAgICBdfQog
+        ICAgICAgICwgIm5hbWUiIDogeyJfdmFsdWUiIDogIldlc3NleCBXYXRlciBT
+        ZXJ2aWNlcyBMaW1pdGVkIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgIH0KICAg
+        ICAgLCAiY291bnRyeSIgOiB7Il9hYm91dCIgOiAiaHR0cDovL2RhdGEub3Jk
+        bmFuY2VzdXJ2ZXkuY28udWsvaWQvY291bnRyeS9lbmdsYW5kIiwgIm5hbWUi
+        IDogeyJfdmFsdWUiIDogIkVuZ2xhbmQiLCAiX2xhbmciIDogImVuIn0KICAg
+        ICAgfQogICAgICAsICJkaXN0cmljdCIgOiBbeyJfYWJvdXQiIDogImh0dHA6
+        Ly9kYXRhLm9yZG5hbmNlc3VydmV5LmNvLnVrL2lkLzcwMDAwMDAwMDAwMjU1
+        MDQiLCAibmFtZSIgOiB7Il92YWx1ZSIgOiAiTm9ydGggU29tZXJzZXQiLCAi
+        X2xhbmciIDogImVuIn0KICAgICAgfQogICAgICAsICJodHRwOi8vc3RhdGlz
+        dGljcy5kYXRhLmdvdi51ay9pZC9zdGF0aXN0aWNhbC1nZW9ncmFwaHkvRTA2
+        MDAwMDI0Il0sICJlbnZlbG9wZSIgOiB7Il9hYm91dCIgOiAiaHR0cDovL2xv
+        Y2F0aW9uLmRhdGEuZ292LnVrL3NvL2NvbW1vbi9FbnZlbG9wZS9id3BmLmVh
+        ZXcvdWtrMTIwMi0zNjAwMDoxIiwgImxhYmVsIiA6IFt7Il92YWx1ZSIgOiAi
+        TWFwIGJvdW5kcyBmb3IgQ2xldmVkb24gQmVhY2giLCAiX2xhbmciIDogImVu
+        In0KICAgICAgICBdfQogICAgICAsICJldWJ3aWROb3RhdGlvbiIgOiAidWtr
+        MTIwMi0zNjAwMCIsICJsYXRlc3RDb21wbGlhbmNlQXNzZXNzbWVudCIgOiB7
+        Il9hYm91dCIgOiAiaHR0cDovL2Vudmlyb25tZW50LmRhdGEuZ292LnVrL2Rh
+        dGEvYmF0aGluZy13YXRlci1xdWFsaXR5L2NvbXBsaWFuY2UtckJXRC9wb2lu
+        dC8zNjAwMC95ZWFyLzIwMTYiLCAiY29tcGxpYW5jZUNsYXNzaWZpY2F0aW9u
+        IiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vZW52aXJvbm1lbnQuZGF0YS5nb3Yu
+        dWsvZGVmL2J3cS1jYy0yMDE1LzIiLCAibmFtZSIgOiB7Il92YWx1ZSIgOiAi
+        R29vZCIsICJfbGFuZyIgOiAiZW4ifQogICAgICAgIH0KICAgICAgICAsICJz
+        YW1wbGVZZWFyIiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vcmVmZXJlbmNlLmRh
+        dGEuZ292LnVrL2lkL3llYXIvMjAxNiIsICJvcmRpbmFsWWVhciIgOiAyMDE2
+        fQogICAgICB9CiAgICAgICwgImxhdGVzdFByb2ZpbGUiIDogeyJfYWJvdXQi
+        IDogImh0dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9kYXRhL2JhdGhp
+        bmctd2F0ZXItcHJvZmlsZS91a2sxMjAyLTM2MDAwLzIwMTc6MSIsICJhcHBs
+        aWNhYmxlWWVhciIgOiAiaHR0cDovL3JlZmVyZW5jZS5kYXRhLmdvdi51ay9p
+        ZC95ZWFyLzIwMTciLCAiYmF0aGluZ1dhdGVyIiA6ICJodHRwOi8vZW52aXJv
+        bm1lbnQuZGF0YS5nb3YudWsvaWQvYmF0aGluZy13YXRlci91a2sxMjAyLTM2
+        MDAwIiwgImJhdGhpbmdXYXRlckRlc2NyaXB0aW9uIiA6IHsiX3ZhbHVlIiA6
+        ICJDbGV2ZWRvbiBCZWFjaCBpcyBvbiB0aGUgU29tZXJzZXQgY29hc3Qgb3Zl
+        cmxvb2tpbmcgdGhlIEJyaXN0b2wgQ2hhbm5lbC4gSXQgaXMgYSBzYW5kIGFu
+        ZCBwZWJibGUgYmVhY2gsIGFwcHJveGltYXRlbHkgODUwIG1ldHJlcyB3aWRl
+        LCBiYWNrZWQgYnkgdGhlIHByb21lbmFkZSBhbmQgdGhlIHRvd24uIFRoZXJl
+        IGlzIGEgbWFyaW5lIGxha2UgYXQgdGhlIGJlYWNoIHdoaWNoIGlzIGZpbGxl
+        ZCBieSBzZWEgd2F0ZXIgb24gaGlnaCB0aWRlcy4iLCAiX2xhbmciIDogImVu
+        In0KICAgICAgICAsICJjb250cm9sbGVyTmFtZSIgOiAiTm9ydGggU29tZXJz
+        ZXQiLCAiY291bnR5TmFtZSIgOiB7Il92YWx1ZSIgOiAiTm9ydGggU29tZXJz
+        ZXQiLCAiX2xhbmciIDogImVuIn0KICAgICAgICAsICJlc29PdXRmYWxsc1N0
+        YXRlbWVudCIgOiB7Il92YWx1ZSIgOiAiVGhlcmUgYXJlIHR3byBlbWVyZ2Vu
+        Y3kvc3Rvcm0gb3ZlcmZsb3dzIGZyb20gdGhlIENsZXZlZG9uIEJlYWNoIHB1
+        bXBpbmcgc3RhdGlvbiwgdGhhdCBkaXNjaGFyZ2UgdG8gdGhlIHNlYSA0MDBt
+        IGFuZCA1MDBtIG5vcnRoZWFzdCBvZiB0aGUgRW52aXJvbm1lbnQgQWdlbmN5
+        IG1vbml0b3JpbmcgcG9pbnQgcmVzcGVjdGl2ZWx5LiBUaGUgb3BlcmF0aW9u
+        IG9mIHRoZSBvdmVyZmxvd3MgY2FuIGxlYWQgdG8gYSBkcm9wIGluIGJhdGhp
+        bmcgd2F0ZXIgcXVhbGl0eS4gIFRoaXMgYmF0aGluZyB3YXRlciBpcyBpbmNs
+        dWRlZCBpbiB0aGUgU3VyZmVycyBBZ2FpbnN0IFNld2FnZSBcdTIwMWNTYWZl
+        ciBTZWFzIFNlcnZpY2VcdTIwMWQuIFRoaXMgc2VydmljZSBjYW4gYWxlcnQg
+        eW91IHRvIENvbWJpbmVkIFN0b3JtIFNld2VyIE92ZXJmbG93IGRpc2NoYXJn
+        ZXMgdmlhIGEgcGhvbmUgQXBwIGFuZCBpbiBhZGRpdGlvbiwgaXQgaW5jbHVk
+        ZXMgdGhlIEVudmlyb25tZW50IEFnZW5jeSBQb2xsdXRpb24gUmlzayBGb3Jl
+        Y2FzdCB3YXJuaW5ncyB3aGVyZSB0aGV5IGFyZSBhdmFpbGFibGUuIEZ1cnRo
+        ZXIgZGV0YWlscyBvZiB0aGUgc2VydmljZSBjYW4gYmUgZm91bmQgYXQgLSBo
+        dHRwOi8vd3d3LnNhcy5vcmcudWsvc2FmZXItc2Vhcy1zZXJ2aWNlLyIsICJf
+        bGFuZyIgOiAiZW4ifQogICAgICAgICwgImhpc3RvcnlTdGF0ZW1lbnQiIDog
+        eyJfdmFsdWUiIDogIkluIHRoZSBwYXN0IHRoaXMgYmF0aGluZyB3YXRlciB3
+        YXMgYWZmZWN0ZWQgYnkgc2V3YWdlIGZyb20gdGhlIEtpbmdzdG9uIFNleW1v
+        dXIgc2V3YWdlIHRyZWF0bWVudCB3b3JrcyAoU1RXKSB0aGF0IGRpc2NoYXJn
+        ZWQgcHJpbWFyeSB0cmVhdGVkIGVmZmx1ZW50LiBUaGUgc2NoZW1lIGZvciBL
+        aW5nc3RvbiBTZXltb3VyIHdoaWNoIHByb3ZpZGVzIHNlY29uZGFyeSB0cmVh
+        dG1lbnQgYW5kIHVsdHJhdmlvbGV0IChVVikgZGlzaW5mZWN0aW9uLCB3YXMg
+        Y29tcGxldGVkIGJ5IFdlc3NleCBXYXRlciBpbiAyMDAwLiIsICJfbGFuZyIg
+        OiAiZW4ifQogICAgICAgICwgImludGVydmFsIiA6ICJodHRwOi8vZW52aXJv
+        bm1lbnQuZGF0YS5nb3YudWsvZGF0YS9iYXRoaW5nLXdhdGVyLXByb2ZpbGUv
+        dWtrMTIwMi0zNjAwMC8yMDE3OjEvaW50ZXJ2YWxzL2ludGVydmFsIiwgImlz
+        VmVyc2lvbk9mIiA6ICJodHRwOi8vZW52aXJvbm1lbnQuZGF0YS5nb3YudWsv
+        ZGF0YS9iYXRoaW5nLXdhdGVyLXByb2ZpbGUtZW5kdXJhbnQvdWtrMTIwMi0z
+        NjAwMC8yMDE3IiwgImxhYmVsIiA6IFt7Il92YWx1ZSIgOiAiMjAxNyBCYXRo
+        aW5nIFdhdGVyIFByb2ZpbGUgZm9yIENsZXZlZG9uIEJlYWNoIiwgIl9sYW5n
+        IiA6ICJlbiJ9CiAgICAgICAgXSwgImxvY2FsQXV0aG9yaXR5IiA6ICJodHRw
+        Oi8vbG9jYXRpb24uZGF0YS5nb3YudWsvaWQvYXUvbG9jYWxBdXRob3JpdHkv
+        b25zOmdzcy9FMDYwMDAwMjQtMzYwMDAtMjAxNyIsICJtYWNyb0FsZ2FlU3Rh
+        dGVtZW50IiA6IHsiX3ZhbHVlIiA6ICJUaGUgYmF0aGluZyB3YXRlciBjYW4g
+        YmVjb21lIGNvdmVyZWQgd2l0aCBsYXJnZSBhbW91bnRzIG9mIHNlYXdlZWQs
+        IGRlcGVuZGluZyBvbiB0aWRlcyBhbmQgdGhlIHdlYXRoZXIuIFRoaXMgYmF0
+        aGluZyB3YXRlciBoYXMgYSBoaXN0b3J5IG9mIGxhcmdlIGFtb3VudHMgb2Yg
+        c2Vhd2VlZC4iLCAiX2xhbmciIDogImVuIn0KICAgICAgICAsICJuYW1lIiA6
+        IHsiX3ZhbHVlIiA6ICIyMDE3IEJhdGhpbmcgV2F0ZXIgUHJvZmlsZSBmb3Ig
+        Q2xldmVkb24gQmVhY2giLCAiX2xhbmciIDogImVuIn0KICAgICAgICAsICJw
+        aHl0b3BsYW5rdG9uU3RhdGVtZW50IiA6IHsiX3ZhbHVlIiA6ICJQaHl0b3Bs
+        YW5rdG9uIChtaWNyb3Njb3BpYyBhbGdhZSkgbmF0dXJhbGx5IGluY3JlYXNl
+        IGluIG51bWJlciBhdCBjZXJ0YWluIHRpbWVzIG9mIHRoZSB5ZWFyLiBUaGlz
+        IHByb2Nlc3MgaXMga25vd24gYXMgYSBwaHl0b3BsYW5rdG9uIGJsb29tLiBU
+        aGlzIGJhdGhpbmcgd2F0ZXIgZG9lcyBub3QgaGF2ZSBhIGhpc3Rvcnkgb2Yg
+        cGh5dG9wbGFua3RvbiBibG9vbXMuIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAg
+        ICAgLCAicG9sbHV0aW9uUmlza0ZvcmVjYXN0U3RhdGVtZW50IiA6IHsiX3Zh
+        bHVlIiA6ICJUaGlzIGJhdGhpbmcgd2F0ZXIgaXMgc3ViamVjdCB0byBzaG9y
+        dCB0ZXJtIHBvbGx1dGlvbi4gU2hvcnQgdGVybSBwb2xsdXRpb24gaXMgY2F1
+        c2VkIHdoZW4gaGVhdnkgcmFpbmZhbGwgd2FzaGVzIGZhZWNhbCBtYXRlcmlh
+        bCBpbnRvIHRoZSBzZWEgZnJvbSBsaXZlc3RvY2ssIHNld2FnZSBhbmQgdXJi
+        YW4gZHJhaW5hZ2UgdmlhIHJpdmVycyBhbmQgc3RyZWFtcy4gIEF0IHRoaXMg
+        c2l0ZSB0aGUgcmlzayBvZiBlbmNvdW50ZXJpbmcgcmVkdWNlZCB3YXRlciBx
+        dWFsaXR5IGluY3JlYXNlcyBhZnRlciByYWluZmFsbCBhbmQgdHlwaWNhbGx5
+        IHJldHVybnMgdG8gbm9ybWFsIGFmdGVyIDEtMyBkYXlzLiBUaGUgRW52aXJv
+        bm1lbnQgQWdlbmN5IG1ha2VzIGRhaWx5IHBvbGx1dGlvbiByaXNrIGZvcmVj
+        YXN0cyBiYXNlZCBvbiByYWluZmFsbCBwYXR0ZXJucyBhbmQgd2lsbCBpc3N1
+        ZSBhIHBvbGx1dGlvbiByaXNrIHdhcm5pbmcgaWYgaGVhdnkgcmFpbmZhbGwg
+        b2NjdXJzIHRvIGVuYWJsZSBiYXRoZXJzIHRvIGF2b2lkIHBlcmlvZHMgb2Yg
+        aW5jcmVhc2VkIHJpc2suIFxuVGhlIEVudmlyb25tZW50IEFnZW5jeSB3b3Jr
+        cyB0byByZWR1Y2UgdGhlIHNvdXJjZXMgb2YgdGhpcyBwb2xsdXRpb24gdGhy
+        b3VnaCBwb2xsdXRpb24gcHJldmVudGlvbiBtZWFzdXJlcywgd29yayB3aXRo
+        IGFncmljdWx0dXJlIGFuZCB3YXRlciBjb21wYW5pZXMuXG4yNCB3YXJuaW5n
+        cyBhZHZpc2luZyBhZ2FpbnN0IHN3aW1taW5nIGR1ZSB0byBhbiBpbmNyZWFz
+        ZSByaXNrIG9mIHNob3J0IHRlcm0gcG9sbHV0aW9uIHdlcmUgaXNzdWVkIGlu
+        IDIwMTYgZm9yIENsZXZlZG9uIEJlYWNoIGJhdGhpbmcgd2F0ZXIuIFRoZXNl
+        IHdhcm5pbmdzIHdlcmUgaXNzdWVkIGJlY2F1c2Ugb2YgdGhlIGVmZmVjdHMg
+        b2YgaGVhdnkgcmFpbiBvbiB0aGUgd2F0ZXIgcXVhbGl0eS4iLCAiX2xhbmci
+        IDogImVuIn0KICAgICAgICAsICJwb2xsdXRpb25SaXNrRm9yZWNhc3Rpbmci
+        IDogeyJfdmFsdWUiIDogInRydWUiLCAiX2RhdGF0eXBlIiA6ICJib29sZWFu
+        In0KICAgICAgICAsICJzYW1wbGluZ0ZyZXF1ZW5jeSIgOiAyMCwgInNlYXNv
+        bkZpbmlzaERhdGUiIDogeyJfdmFsdWUiIDogIjIwMTctMDktMzAiLCAiX2Rh
+        dGF0eXBlIiA6ICJkYXRlIn0KICAgICAgICAsICJzZWFzb25JbnRlcnZhbCIg
+        OiAiaHR0cDovL3JlZmVyZW5jZS5kYXRhLmdvdi51ay9pZC9ncmVnb3JpYW4t
+        aW50ZXJ2YWwvMjAxNy0wNS0wMVQwMDowMDowMC9QMTUyRFQyM0g1OU01OVMi
+        LCAic2Vhc29uU3RhcnREYXRlIiA6IHsiX3ZhbHVlIiA6ICIyMDE3LTA1LTAx
+        IiwgIl9kYXRhdHlwZSIgOiAiZGF0ZSJ9CiAgICAgICAgLCAic2lnbkFsZ2Fl
+        U3RhdGVtZW50IiA6IHsiX3ZhbHVlIiA6ICJUaGlzIGJhdGhpbmcgd2F0ZXIg
+        YmVhY2ggb2Z0ZW4gaGFzIHBhdGNoZXMgb2Ygc2Vhd2VlZCAobWFjcm9hbGdh
+        ZSkgYW5kIHRoZSBiYXRoaW5nIHdhdGVyIGNhbiBiZSBhZmZlY3RlZCBieSBv
+        Y2Nhc2lvbmFsIGJsb29tcyBvZiBwaHl0b3BsYW5rdG9uIChtaWNyb3Njb3Bp
+        YyBhbGdhZSkgd2hpY2ggYXJlIG5vdCBoYXJtZnVsLCBidXQgY2FuIHJlc3Vs
+        dCBpbiB0aGUgd2F0ZXIgYXBwZWFyaW5nIGRpc2NvbG91cmVkIG9yIGFzIGZv
+        YW0gZm9ybWluZyBvbiB0aGUgd2F0ZXIuIiwgIl9sYW5nIiA6ICJlbiJ9CiAg
+        ICAgICAgLCAic2lnblBSRlN1bW1hcnkiIDogeyJfdmFsdWUiIDogIlRoaXMg
+        YmF0aGluZyB3YXRlciBpcyBzdWJqZWN0IHRvIHNob3J0IHRlcm0gcG9sbHV0
+        aW9uLiBUaGUgRW52aXJvbm1lbnQgQWdlbmN5IG1ha2VzIGRhaWx5IHBvbGx1
+        dGlvbiByaXNrIGZvcmVjYXN0cyBiYXNlZCBvbiByYWluZmFsbCBwYXR0ZXJu
+        cy4gQSBwb2xsdXRpb24gcmlzayB3YXJuaW5nIGlzIGlzc3VlZCBpZiBoZWF2
+        eSByYWluZmFsbCBvY2N1cnMgdG8gZW5hYmxlIGJhdGhlcnMgdG8gYXZvaWQg
+        cGVyaW9kcyB3aGVuIGJhdGhpbmcgd2F0ZXIgcXVhbGl0eSBtYXkgYmUgcmVk
+        dWNlZC4gVGhpcyBtYXkgbGFzdCBiZXR3ZWVuIDEtMyBkYXlzLiBMYXN0IHll
+        YXIgd2FybmluZ3Mgd2VyZSBpc3N1ZWQgb24gMjQgZGF5cy4iLCAiX2xhbmci
+        IDogImVuIn0KICAgICAgICAsICJzaWduUG9sbHV0aW9uU291cmNlc1N0YXRl
+        bWVudCIgOiB7Il92YWx1ZSIgOiAiQmF0aGluZyB3YXRlciBxdWFsaXR5IG1h
+        eSByZWR1Y2UgZHVyaW5nIG9yIGFmdGVyIHBlcmlvZHMgb2YgaGVhdnkgcmFp
+        bmZhbGwgZHVlIHRvIG9jY2FzaW9uYWwgZGlzY2hhcmdlcyBmcm9tIHR3byBz
+        dG9ybSBvdmVyZmxvd3MuIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgICAgLCAi
+        c291cmNlIiA6ICJodHRwOi8vZW52aXJvbm1lbnQuZGF0YS5nb3YudWsvc291
+        cmNlcy9id3EvZWFldy9pbnB1dC9lYV9wcm9maWxlX3Byb3Bvc2FsX3dpdGhf
+        c2lnbmFnZV92Mi0yMDE4LTAyLTEyXzEwLTMzLTQyXzY2OS0wMjU1LmNzdiNy
+        b3c9MDM4NCIsICJzdGFuZGFyZExhbmd1YWdlQ29sbGVjdGlvbiIgOiAiaHR0
+        cDovL2Vudmlyb25tZW50LmRhdGEuZ292LnVrL2RhdGEvYmF0aGluZy13YXRl
+        ci1wcm9maWxlLXN0YW5kYXJkLWxhbmd1YWdlLzIwMTctMzYwMDA6MSIsICJz
+        dHdPdXRmYWxsc1N0YXRlbWVudCIgOiB7Il92YWx1ZSIgOiAiVGhlIG91dGZh
+        bGwgZnJvbSBLaW5nc3RvbiBTZXltb3VyIFNUVyBkaXNjaGFyZ2VzIHRocmVl
+        IGFuZCBhIGhhbGYga2lsb21ldHJlcyBmcm9tIENsZXZlZG9uIGJhdGhpbmcg
+        d2F0ZXIuIFRoZSBkaXNjaGFyZ2UgaXMgVVYgZGlzaW5mZWN0ZWQgYW5kIGRl
+        c2lnbmVkIHRvIHByb3RlY3QgYmF0aGluZyB3YXRlciBxdWFsaXR5LiIsICJf
+        bGFuZyIgOiAiZW4ifQogICAgICAgICwgInR5cGUiIDogWyJodHRwOi8vZW52
+        aXJvbm1lbnQuZGF0YS5nb3YudWsvZGVmL2JhdGhpbmctd2F0ZXItcHJvZmls
+        ZS9CYXRoaW5nV2F0ZXJQcm9maWxlIl0sICJ2ZXJzaW9uU3RyaW5nIiA6ICIx
+        IiwgInZpc2libGVQb2xsdXRpb25TdGF0ZW1lbnQiIDogeyJfdmFsdWUiIDog
+        IkVudmlyb25tZW50IEFnZW5jeSBzYW1wbGVycyBtYWtlIG9ic2VydmF0aW9u
+        cyBvZiBsaXR0ZXIgcHJlc2VudCBvbiB0aGUgYmVhY2ggYXQgZXZlcnkgdmlz
+        aXQsIHRoaXMgaW5jbHVkZXMgYXNzZXNzbWVudHMgb2Ygc2V3YWdlIGRlYnJp
+        cywgbGl0dGVyIGFuZCB0YXIuIEF0IENsZXZlZG9uIEJlYWNoIGZvciB0aGUg
+        Zm91ciB5ZWFyICgyMDEzLTIwMTYpIGFzc2Vzc21lbnQgcGVyaW9kIHdoZXJl
+        IGRhdGEgaXMgYXZhaWxhYmxlLCBzZXdhZ2UgZGVicmlzIHdhcyBub3QgYXNz
+        ZXNzZWQgYXMgYmVpbmcgc3VmZmljaWVudCB0byBiZSBvYmplY3Rpb25hYmxl
+        LCBidXQgd2FzIG9ic2VydmVkIGFzIGJlaW5nIHByZXNlbnQgb24gMjAlIG9m
+        IHZpc2l0cy4gTGl0dGVyIHdhcyBhc3Nlc3NlZCBhcyBiZWluZyBzdWZmaWNp
+        ZW50IHRvIGJlIG9iamVjdGlvbmFibGUgZm9yIDIlIG9mIHZpc2l0cywgd2l0
+        aCA5MiUgb2YgdmlzaXRzIG5vdGluZyB0aGUgcHJlc2VuY2Ugb2YgbGl0dGVy
+        LiBUYXJyeSByZXNpZHVlIHdhcyBub3Qgbm90ZWQgYXQgdGhpcyBzaXRlLiIs
+        ICJfbGFuZyIgOiAiZW4ifQogICAgICAgICwgIndlYlJlc0ltYWdlIiA6ICJo
+        dHRwOi8vZW52aXJvbm1lbnQuZGF0YS5nb3YudWsvbWVkaWEvaW1hZ2UvYmF0
+        aGluZy13YXRlci1wcm9maWxlL3VrazEyMDItMzYwMDBfMS13ZWJyZXMuanBn
+        IiwgInpvaURlc2NyaXB0aW9uIiA6IHsiX3ZhbHVlIiA6ICJUaGUgY2F0Y2ht
+        ZW50IHN1cnJvdW5kaW5nIENsZXZlZG9uIEJlYWNoIGlzIGFwcHJveGltYXRl
+        bHkgMjIsNjAwIGhlY3RhcmVzLiBJdCBpbmNsdWRlcyB0aGUgcml2ZXJzIEJh
+        bndlbGwsIE9sZGJyaWRnZSwgWWVvLCBLZW5uLCBCbGluZCBZZW8gYW5kIExh
+        bmQgWWVvLCBhcyB3ZWxsIGFzIHRoZSBVcGhpbGwgR3JlYXQgUmhpbmUsIHRo
+        ZSBEcm92ZSBSaGluZSBhbmQgdGhlIFBvcnRidXJ5IERpdGNoLiBUaGVzZSBz
+        dHJlYW1zIGFyZSBjaGFyYWN0ZXJpc2VkIGJ5IGhhdmluZyBzaG9ydCB1cGxh
+        bmQgcmVhY2hlcyBhbmQgbG9uZyBsb3dsYW5kIHJlYWNoZXMgd2l0aCB2ZXJ5
+        IGxvdyBncmFkaWVudHMuIFRoZSBtYWpvcml0eSBvZiB0aGUgbGFuZCBpcyB1
+        c2VkIGZvciBsYXJnZSBzY2FsZSBhZ3JpY3VsdHVyZSwgd2l0aCBtb3JlIHRo
+        YW4gNTAgZmFybXMuIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgIH0KICAgICAg
+        LCAibGF0ZXN0Umlza1ByZWRpY3Rpb24iIDogeyJfYWJvdXQiIDogImh0dHA6
+        Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9kYXRhL2JhdGhpbmctd2F0ZXIt
+        cXVhbGl0eS9zdHAtcmlzay1wcmVkaWN0aW9uL3BvaW50LzM2MDAwL2RhdGUv
+        MjAxNzEwMDYtMTQ0MDM0IiwgImNvbW1lbnQiIDogeyJfdmFsdWUiIDogIk5v
+        IHdhdGVyIHF1YWxpdHkgd2FybmluZyBpc3N1ZWQiLCAiX2xhbmciIDogImVu
+        In0KICAgICAgICAsICJkYXRhc2V0IiA6IFsiaHR0cDovL2Vudmlyb25tZW50
+        LmRhdGEuZ292LnVrL2RhdGEvYmF0aGluZy13YXRlci1xdWFsaXR5L2VhZXcv
+        c3RwLXJpc2stcHJlZGljdGlvbiIsICJodHRwOi8vZW52aXJvbm1lbnQuZGF0
+        YS5nb3YudWsvZGF0YS9iYXRoaW5nLXdhdGVyLXF1YWxpdHkvc3RwLXJpc2st
+        cHJlZGljdGlvbiJdLCAiZXhwaXJlc0F0IiA6IHsiX3ZhbHVlIiA6ICIyMDE3
+        LTEwLTA3VDA4OjI5OjAwIiwgIl9kYXRhdHlwZSIgOiAiZGF0ZVRpbWUifQog
+        ICAgICAgICwgInByZWRpY3RlZEF0IiA6IHsiX3ZhbHVlIiA6ICIyMDE3LTEw
+        LTA2VDA4OjMwOjAwIiwgIl9kYXRhdHlwZSIgOiAiZGF0ZVRpbWUifQogICAg
+        ICAgICwgInByZWRpY3RlZE9uIiA6IHsiX3ZhbHVlIiA6ICIyMDE3LTEwLTA2
+        IiwgIl9kYXRhdHlwZSIgOiAiZGF0ZSJ9CiAgICAgICAgLCAicHVibGlzaGVk
+        QXQiIDogeyJfdmFsdWUiIDogIjIwMTctMTAtMDZUMTQ6NDA6MzQiLCAiX2Rh
+        dGF0eXBlIiA6ICJkYXRlVGltZSJ9CiAgICAgICAgLCAicmlza0xldmVsIiA6
+        IHsiX2Fib3V0IiA6ICJodHRwOi8vZW52aXJvbm1lbnQuZGF0YS5nb3YudWsv
+        ZGVmL2J3cS1zdHAvbm9ybWFsIiwgIm5hbWUiIDogeyJfdmFsdWUiIDogIm5v
+        cm1hbCIsICJfbGFuZyIgOiAiZW4ifQogICAgICAgIH0KICAgICAgICAsICJz
+        b3VyY2UiIDogImh0dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9zb3Vy
+        Y2VzL2J3cS9lYWV3L2lucHV0L2ZvcmVjYXN0cy1wdWJsaXNoVGVzdGluZy0y
+        MDE3LTEwLTA2XzE0LTQwLTM0Xzc3Mi0wNTg0LmNzdiNyb3c9MDEzNSIsICJz
+        dHBfYmF0aGluZ1dhdGVyIiA6ICJodHRwOi8vZW52aXJvbm1lbnQuZGF0YS5n
+        b3YudWsvaWQvYmF0aGluZy13YXRlci91a2sxMjAyLTM2MDAwIiwgInN0cF9z
+        YW1wbGluZ1BvaW50IiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vbG9jYXRpb24u
+        ZGF0YS5nb3YudWsvc28vZWYvU2FtcGxpbmdQb2ludC9id3NwLmVhZXcvMzYw
+        MDAiLCAiZWFzdGluZyIgOiAzMzk5MTQuMCwgImxhdCIgOiA1MS40Mzc3MDA5
+        Mzk0Mjk1LCAibG9uZyIgOiAtMi44NjU4MzkyODY1OTIyOSwgIm5hbWUiIDog
+        eyJfdmFsdWUiIDogIlNhbXBsaW5nIHBvaW50IGF0IENsZXZlZG9uIEJlYWNo
+        IiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgICAgICAsICJub3J0aGluZyIgOiAx
+        NzEzMjIuMH0KICAgICAgICAsICJ0eXBlIiA6IFsiaHR0cDovL2Vudmlyb25t
+        ZW50LmRhdGEuZ292LnVrL2RlZi9id3Etc3RwL1Jpc2tQcmVkaWN0aW9uIl19
+        CiAgICAgICwgImxhdGVzdFNhbXBsZUFzc2Vzc21lbnQiIDogeyJfYWJvdXQi
+        IDogImh0dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9kYXRhL2JhdGhp
+        bmctd2F0ZXItcXVhbGl0eS9pbi1zZWFzb24vc2FtcGxlL3BvaW50LzM2MDAw
+        L2RhdGUvMjAxNjA5MjIvdGltZS8xMDA0MDAvcmVjb3JkRGF0ZS8yMDE2MDky
+        MiIsICJlc2NoZXJpY2hpYUNvbGlDb3VudCIgOiAzNiwgImludGVzdGluYWxF
+        bnRlcm9jb2NjaUNvdW50IiA6IDEwLCAic2FtcGxlRGF0ZVRpbWUiIDogeyJf
+        YWJvdXQiIDogImh0dHA6Ly9yZWZlcmVuY2UuZGF0YS5nb3YudWsvaWQvZ3Jl
+        Z29yaWFuLWluc3RhbnQvMjAxNi0wOS0yMlQxMDowNDowMCIsICJpblhTRERh
+        dGVUaW1lIiA6IHsiX3ZhbHVlIiA6ICIyMDE2LTA5LTIyVDEwOjA0OjAwIiwg
+        Il9kYXRhdHlwZSIgOiAiZGF0ZVRpbWUifQogICAgICAgIH0KICAgICAgICAs
+        ICJzYW1wbGVZZWFyIiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vcmVmZXJlbmNl
+        LmRhdGEuZ292LnVrL2lkL3llYXIvMjAxNiIsICJvcmRpbmFsWWVhciIgOiAy
+        MDE2fQogICAgICB9CiAgICAgICwgIm5hbWUiIDogeyJfdmFsdWUiIDogIkNs
+        ZXZlZG9uIEJlYWNoIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgICwgInJlZ2lv
+        bmFsT3JnYW5pemF0aW9uIiA6IHsiX2Fib3V0IiA6ICJodHRwOi8vcmVmZXJl
+        bmNlLmRhdGEuZ292LnVrL2lkL3B1YmxpYy1ib2R5L2Vudmlyb25tZW50LWFn
+        ZW5jeS91bml0L3NvdXRoLXdlc3Qtc291dGgtd2VzdC1vZmZpY2UiLCAibmFt
+        ZSIgOiB7Il92YWx1ZSIgOiAiU291dGggV2VzdCIsICJfbGFuZyIgOiAiZW4i
+        fQogICAgICB9CiAgICAgICwgInNhbWVBcyIgOiAiaHR0cDovL2Vudmlyb25t
+        ZW50LmRhdGEuZ292LnVrL2lkL2JhdGhpbmctd2F0ZXIvY2xldmVkb24tYmVh
+        Y2giLCAic2FtcGxpbmdQb2ludCIgOiB7Il9hYm91dCIgOiAiaHR0cDovL2xv
+        Y2F0aW9uLmRhdGEuZ292LnVrL3NvL2VmL1NhbXBsaW5nUG9pbnQvYndzcC5l
+        YWV3LzM2MDAwIiwgImVhc3RpbmciIDogMzM5OTE0LjAsICJsYXQiIDogNTEu
+        NDM3NzAwOTM5NDI5NSwgImxvbmciIDogLTIuODY1ODM5Mjg2NTkyMjksICJu
+        YW1lIiA6IHsiX3ZhbHVlIiA6ICJTYW1wbGluZyBwb2ludCBhdCBDbGV2ZWRv
+        biBCZWFjaCIsICJfbGFuZyIgOiAiZW4ifQogICAgICAgICwgIm5vcnRoaW5n
+        IiA6IDE3MTMyMi4wfQogICAgICAsICJzZWRpbWVudFR5cGVzUHJlc2VudCIg
+        OiBbImh0dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9kZWYvYmF0aGlu
+        Zy13YXRlci9zYW5kLXNlZGltZW50IiwgImh0dHA6Ly9lbnZpcm9ubWVudC5k
+        YXRhLmdvdi51ay9kZWYvYmF0aGluZy13YXRlci9zaGluZ2xlLXNlZGltZW50
+        Il0sICJ0eXBlIiA6IFsiaHR0cDovL2Vudmlyb25tZW50LmRhdGEuZ292LnVr
+        L2RlZi9iYXRoaW5nLXdhdGVyL0JhdGhpbmdXYXRlciIsICJodHRwOi8vZW52
+        aXJvbm1lbnQuZGF0YS5nb3YudWsvZGVmL2JhdGhpbmctd2F0ZXIvVHJhbnNp
+        dGlvbmFsQmF0aGluZ1dhdGVyIl0sICJ1cmlTZXQiIDogeyJfYWJvdXQiIDog
+        Imh0dHA6Ly9lbnZpcm9ubWVudC5kYXRhLmdvdi51ay9pZC9iYXRoaW5nLXdh
+        dGVyLyIsICJsYWJlbCIgOiBbeyJfdmFsdWUiIDogIkJhdGhpbmcgd2F0ZXJz
+        IG1vbml0b3JlZCBieSB0aGUgRW52aXJvbm1lbnQgQWdlbmN5IGZvciBFbmds
+        YW5kIGFuZCBXYWxlcy4iLCAiX2xhbmciIDogImVuIn0KICAgICAgICBdfQog
+        ICAgICAsICJ3YXRlclF1YWxpdHlJbXBhY3RlZEJ5SGVhdnlSYWluIiA6IHRy
+        dWUsICJ5ZWFyRGVzaWduYXRlZCIgOiAiaHR0cDovL3JlZmVyZW5jZS5kYXRh
+        Lmdvdi51ay9pZC95ZWFyLzE5ODgiLCAiem9uZU9mSW5mbHVlbmNlIiA6IHsi
+        X2Fib3V0IiA6ICJodHRwOi8vbG9jYXRpb24uZGF0YS5nb3YudWsvc28vZWYv
+        Wm9uZU9mSW5mbHVlbmNlL2J3em9pLmVhZXcvdWtrMTIwMi0zNjAwMDoxIiwg
+        Im5hbWUiIDogeyJfdmFsdWUiIDogIlpvbmUgb2YgaW5mbHVlbmNlIGF0IENs
+        ZXZlZG9uIEJlYWNoIiwgIl9sYW5nIiA6ICJlbiJ9CiAgICAgIH0KICAgIH0K
+        ICAgICwgInR5cGUiIDogWyJodHRwOi8vcHVybC5vcmcvbGlua2VkLWRhdGEv
+        YXBpL3ZvY2FiI0l0ZW1FbmRwb2ludCIsICJodHRwOi8vcHVybC5vcmcvbGlu
+        a2VkLWRhdGEvYXBpL3ZvY2FiI1BhZ2UiXX0KfQo=
     http_version: 
-  recorded_at: Tue, 13 Feb 2018 15:52:56 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:32 GMT
 recorded_with: VCR 4.0.0

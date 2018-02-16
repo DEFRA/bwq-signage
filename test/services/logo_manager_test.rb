@@ -26,7 +26,7 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
 
   describe '#remove_existing_logo' do
     it 'should ensure that there is no logo after remove has run' do
-      VCR.use_cassette('aws-s3', record: :new_episodes) do
+      VCR.use_cassette('aws-s3', record: :new_episodes, preserve_exact_body_bytes: true) do
         params = ActionController::Parameters.new('bwmgr-name': 'test-bw')
         lm = LogoManager.new(params)
         lm.remove_existing_logo
@@ -37,7 +37,7 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
 
   describe '#upload_and_replace' do
     it 'should allow a new logo to be uploaded' do
-      VCR.use_cassette('aws-s3', record: :new_episodes) do
+      VCR.use_cassette('aws-s3', record: :new_episodes, preserve_exact_body_bytes: true) do
         params = ActionController::Parameters.new('bwmgr-name': 'test-bw')
         lm = LogoManager.new(params)
         lm.remove_existing_logo

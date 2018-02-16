@@ -25,17 +25,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 06 Feb 2018 17:52:43 GMT
+      - Fri, 16 Feb 2018 00:54:23 GMT
       Etag:
-      - '"ccc788b3d2ae89ab-gzip"'
+      - '"d91726420e1d2e16-gzip"'
       Expires:
-      - Tue, 06 Feb 2018 17:55:42 GMT
+      - Fri, 16 Feb 2018 00:57:22 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '250'
+      - '109'
       Transfer-Encoding:
       - chunked
       Connection:
@@ -1844,7 +1844,7 @@ http_interactions:
               , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10100:1", "name" : {"_value" : "Zone of influence at Sheringham", "_lang" : "en"}
               }
             }
-            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10125", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10126", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Anglian Water Services Limited", "_lang" : "en"}
               }
@@ -1854,20 +1854,17 @@ http_interactions:
               }
               , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000007024", "name" : {"_value" : "North Norfolk", "_lang" : "en"}
               }
-              , "http://statistics.data.gov.uk/id/statistical-geography/E07000147"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukh1305-10125:1", "label" : [{"_value" : "Map bounds for West Runton", "_lang" : "en"}
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000147"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukh1305-10126:1", "label" : [{"_value" : "Map bounds for Signage Test", "_lang" : "en"}
                 ]}
-              , "eubwidNotation" : "ukh1305-10125", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/10125/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
-                }
-              }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukh1305-10125/2017:1", "controllerName" : "North Norfolk"}
-              , "latestSampleAssessment" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/10125/date/20160925/time/114200/recordDate/20160925", "name" : {"_value" : "West Runton", "_lang" : "en"}
+              , "eubwidNotation" : "ukh1305-10126", "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukh1305-10126/2017:1", "controllerName" : "North Norfolk"}
+              , "name" : {"_value" : "Signage Test", "_lang" : "en"}
               , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/anglian-anglian-office-anglian-office", "name" : {"_value" : "Anglian", "_lang" : "en"}
               }
-              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/west-runton", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/10125", "easting" : 618660.0, "lat" : 52.9416822075366, "long" : 1.25276663199985, "name" : {"_value" : "Sampling point at West Runton", "_lang" : "en"}
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/signage-test", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/10126", "easting" : 618660.0, "lat" : 52.9416822075366, "long" : 1.25276663199985, "name" : {"_value" : "Sampling point at Signage Test", "_lang" : "en"}
                 , "northing" : 343207.0}
               , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
                 ]}
-              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/2016", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10125:1", "name" : {"_value" : "Zone of influence at West Runton", "_lang" : "en"}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/2017", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10126:1", "name" : {"_value" : "Zone of influence at Signage Test", "_lang" : "en"}
               }
             }
             , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10150", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
@@ -11292,5 +11289,5 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Tue, 06 Feb 2018 17:52:43 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:23 GMT
 recorded_with: VCR 4.0.0
