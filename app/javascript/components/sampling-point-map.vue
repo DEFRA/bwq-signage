@@ -74,6 +74,7 @@ export default {
   }),
 
   mounted() {
+    console.log('sampling-point-map mounted');
     const vm = this;
 
     Axios.get(

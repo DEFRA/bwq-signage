@@ -14,6 +14,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // wait until the DOM is rendered before we initialise Vue
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('In domContentLoaded event handler', process.env.NODE_ENV === 'production');
   /* eslint-disable no-new */
   new Vue({
     el: '#map-container',
