@@ -57,11 +57,19 @@ class WorkflowTest < ActiveSupport::TestCase
                 .must_equal :bwmgr
       end
 
-      it 'should select preview when all information is complete' do
+      it 'should select logo-upload when the bwmgr is known' do
         Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
                                       'show-hist': true, 'show-map': false,
                                       'show-logo': false)
+                .must_equal :bwmgr_logo
+      end
+
+      it 'should select preview when all information is complete' do
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
+                                      'bwmgr-name': 'bar', 'bwmgr-phone': '',
+                                      'show-hist': true, 'show-map': false,
+                                      'show-logo': false, 'bwmgr-logo': 'test.png')
                 .must_equal :preview
       end
     end

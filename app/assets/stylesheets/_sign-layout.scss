@@ -265,9 +265,10 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-info__map {
   width: 100%;
   height: 90%;
-  background-color: $grey-2;
-  text-align: center;
-  padding-top: 4em;
+  #map {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .c-content-row__foot {

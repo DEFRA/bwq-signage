@@ -12,7 +12,7 @@ CLASSIFICATION_IMAGE_ROOTS = {
 }.freeze
 
 # Presenter for view state for bathing water signs
-class BwqSign
+class BwqSign # rubocop:disable Metrics/ClassLength
   attr_reader :options
 
   def initialize(options)
@@ -130,5 +130,26 @@ class BwqSign
       .to_h
       .to_a
       .reject { |key, _value| omit.include?(key.to_sym) }
+  end
+
+  def logo_manager
+    @logo_manager ||= LogoManager.new(params)
+  end
+
+  def show_bwmgr_logo?
+    params[:'bwmgr-logo'] &&
+      params[:'bwmgr-logo'] != 'none'
+  end
+
+  def bwmgr_logo_url
+    key = params[:'bwmgr-logo']
+    key && "https://environment-open-data.s3.eu-west-1.amazonaws.com/#{key}"
+  end
+
+  def next_by_bw_controller
+    id_current = bathing_water.eubwid
+    controller_bws = BwqService.new.bws_in_same_controller(bathing_water)
+    i = controller_bws.find_index { |bw| bw.eubwid == id_current }
+    controller_bws[(i + 1) % controller_bws.length]
   end
 end

@@ -89,7 +89,7 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
     it 'should download a pdf file' do
       # don't currently have a good way to do this in CI
       unless ENV['TRAVIS']
-        VCR.use_cassette('final_layout_2', record: :new_episodes) do
+        VCR.use_cassette('final_layout_2', record: :new_episodes, preserve_exact_body_bytes: true) do
           driver = Capybara.current_driver
           begin
             Capybara.current_driver = :rack_test
@@ -97,6 +97,7 @@ class BwqSignFinalControllerTest < ActionDispatch::IntegrationTest
             visit(download_path(eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                                 'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'yes',
                                 'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
+                                'bwmgr-logo': 'test.png',
                                 page_size: 'a4', page_orientation: 'landscape',
                                 port: 3000))
 

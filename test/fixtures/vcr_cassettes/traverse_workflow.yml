@@ -20,24 +20,26 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '79'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 10:49:34 GMT
+      - Fri, 16 Feb 2018 00:54:39 GMT
       Etag:
-      - '"2cb6a0e3c86e70e8-gzip"'
+      - '"d3495f1c468c6fdf-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 10:52:33 GMT
+      - Fri, 16 Feb 2018 00:56:20 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '19'
-      Transfer-Encoding:
-      - chunked
+      - '99'
+      Content-Length:
+      - '3879'
       Connection:
       - keep-alive
     body:
@@ -72,7 +74,7 @@ http_interactions:
                 , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
                 , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 24 days.", "_lang" : "en"}
                 , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality may reduce during or after periods of heavy rainfall due to occasional discharges from two storm overflows.", "_lang" : "en"}
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
                 , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Clevedon Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was assessed as being sufficient to be objectionable for 2% of visits, with 92% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Clevedon Beach is approximately 22,600 hectares. It includes the rivers Banwell, Oldbridge, Yeo, Kenn, Blind Yeo and Land Yeo, as well as the Uphill Great Rhine, the Drove Rhine and the Portbury Ditch. These streams are characterised by having short upland reaches and long lowland reaches with very low gradients. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
               }
@@ -103,7 +105,289 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 10:49:34 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:39 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&_sort=name&latestProfile.controllerName=North%20Somerset
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Age:
+      - '20'
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 16 Feb 2018 00:54:39 GMT
+      Etag:
+      - '"cd50288af582cf84-gzip"'
+      Expires:
+      - Fri, 16 Feb 2018 00:57:20 GMT
+      Server:
+      - Apache
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '108'
+      Content-Length:
+      - '8741'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_metadata=all&_sort=name", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=North+Somerset&_sort=name", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000025504", "name" : {"_value" : "North Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000024"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-36000:1", "label" : [{"_value" : "Map bounds for Clevedon Beach", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1202-36000", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "bathingWaterDescription" : {"_value" : "Clevedon Beach is on the Somerset coast overlooking the Bristol Channel. It is a sand and pebble beach, approximately 850 metres wide, backed by the promenade and the town. There is a marine lake at the beach which is filled by sea water on high tides.", "_lang" : "en"}
+                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There are two emergency/storm overflows from the Clevedon Beach pumping station, that discharge to the sea 400m and 500m northeast of the Environment Agency monitoring point respectively. The operation of the overflows can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by sewage from the Kingston Seymour sewage treatment works (STW) that discharged primary treated effluent. The scheme for Kingston Seymour which provides secondary treatment and ultraviolet (UV) disinfection, was completed by Wessex Water in 2000.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-36000/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-36000/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-36000-2017", "macroAlgaeStatement" : {"_value" : "The bathing water can become covered with large amounts of seaweed, depending on tides and the weather. This bathing water has a history of large amounts of seaweed.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Clevedon Beach", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n24 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Clevedon Beach bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 24 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality may reduce during or after periods of heavy rainfall due to occasional discharges from two storm overflows.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Clevedon Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was assessed as being sufficient to be objectionable for 2% of visits, with 92% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Clevedon Beach is approximately 22,600 hectares. It includes the rivers Banwell, Oldbridge, Yeo, Kenn, Blind Yeo and Land Yeo, as well as the Uphill Great Rhine, the Drove Rhine and the Portbury Ditch. These streams are characterised by having short upland reaches and long lowland reaches with very low gradients. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/36000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0135", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                  , "northing" : 171322.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/36000/date/20160922/time/100400/recordDate/20160922", "escherichiaColiCount" : 36, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T10:04:00", "inXSDDateTime" : {"_value" : "2016-09-22T10:04:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/clevedon-beach", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
+                , "northing" : 171322.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-36000:1", "name" : {"_value" : "Zone of influence at Clevedon Beach", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35800", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000025504", "name" : {"_value" : "North Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000024"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-35800:1", "label" : [{"_value" : "Map bounds for Weston Main", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1202-35800", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35800/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35800/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35800", "bathingWaterDescription" : {"_value" : "Weston-super-Mare Main is on the Somerset coast overlooking the Bristol Channel. It is a sandy beach, approximately two kilometres wide, close to the town.", "_lang" : "en"}
+                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency/storm overflow from the Knightstone pumping station at ST3146061880, that discharges to the sea 1.2km north of the Environment Agency monitoring point. There is an emergency/storm overflow from Weston-super-Mare STW that discharges to the sea at Black Rock two kilometres south of the Environment Agency monitoring point. The operation of the overflows can lead to a drop in bathing water quality", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by the outfall from the Weston-super-Mare sewage treatment works (STW) that discharges at Black Rock. The Wessex Water sewage treatment scheme for Weston-super-Mare, which provides secondary treatment and ultraviolet (UV) disinfection, was completed in 2000. Additional improvements were made to the sewerage system to reduce the frequency of storm and emergency overflows, particularly at the Black Rock outfall.\nThe Environment Agency are working with Wessex Water to carry out a review of sewerage performance within the Weston-super-Mare area. The Environment Agency will make recommendations for further improvements to protect and improve the bathing water quality.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35800/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "Since 2007 the Environment Agency have carried out extensive additional monitoring in the River Axe and in the Uphill Great Rhyne, alongside the routine bathing water monitoring at Weston-super-Mare. The Environment Agency has used a DNA tracing technique to identify if the sources of faecal pollution are animal or human. Results suggest that there is a contribution from human and animal sources. The animal contribution is possibly more significant in the River Axe, and the human contribution more significant in the Uphill Great Rhyne. \nBetween 2009 and 2013 the Environment Agency have walked the catchment in wet and dry weather conditions, and sampled various tributaries of the Uphill Great Rhyne.  In 2011, the Environment Agency identified a chronic sewer leak into the Uphill Great Rhyne, promptly fixed by Wessex Water. The aim of these investigations is to help pinpoint polluters and pollution problems, and improve bathing water quality. Monitoring of beach and both rivers continues and signs of contamination are investigated.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-35800/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Weston Main", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-35800-2017", "localAuthorityStatement" : {"_value" : "The urban area of Weston-super-Mare immediately behind the beach is served by a combined (surface and sewer) system. Surface water can flow into the River Axe and Uphill Great rhyne from urban areas and highway drains. This can affect bathing water quality, particularly after periods of rainfall. Wessex Water have regularly inspected and sampled surface water outfalls.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "The bathing water at Weston Main can become covered with large amounts of seaweed, depending on tides and the weather. This bathing water does not have a history of large amounts of seaweed because the beach is cleared by the local authority.", "_lang" : "en"}
+                , "misconnectionsStatement" : {"_value" : "Wrongly connected domestic waste water pipes can also affect the water quality of the River Axe and Uphill Great Rhyne and therefore the bathing water. We have checked the local sewerage system for misconnections. We will continue to work with Wessex Water to identify and rectify any problems.\nModern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Weston Main", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton increase in number at certain times of the year and this process is known as a phytoplankton bloom. These blooms can discolour the water or form as a foam on the water. The Environment Agency research shows this bathing water does not have a history of phytoplankton blooms, however, a light brown foam sometimes appears at this beach which is due to the break down of macro algae.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the River Axe and the Uphill Great Rhyne, and may reduce during or after periods of heavy rainfall due to run off from agricultural land, urban areas, and occasional discharges from storm overflows. Faeces from roosting birds can also affect the water quality.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0382", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35800:1", "streamsRiversStatement" : {"_value" : "The River Axe flows into the sea at the southern end of the beach. There are also two small drains that flow into the sea near the River Axe.  The Uphill Great Rhyne, controlled by a sluice gate, joins the River Axe approximately 500m before it reaches the sea. The Environment Agency has monitored the water quality of the Uphill Great Rhyne and the River Axe since 2007. During and after periods of heavy rainfall, agricultural and urban runoff to the River Axe and the Uphill Great Rhyne increases, impacting bathing water quality at Weston Main.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfall from Weston-super-Mare STW discharges to the sea at Black Rock two kilometres south of the Environment Agency monitoring point. This discharge is disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Weston Main for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 9% of visits. Litter was assessed as being sufficient to be objectionable for 1% of visits, with 86% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35800_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "There are more than 50 farms in the bathing water catchment. During and after periods of heavy rainfall, runoff from agricultural land is greatly increased, and the quality of the bathing water can be reduced. \nThe Environment Agency are working with Natural England and farmers on Catchment Sensitive Farming programmes to encourage better farming practices and improve water quality in the surrounding areas.", "_lang" : "en"}
+                , "workingWithIndustryStatement" : {"_value" : "The Uphill Great Rhyne flows (mostly underground) through a large commercial estate which includes some light industry. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible.", "_lang" : "en"}
+                , "workingWithPrivateOwnersStatement" : {"_value" : "There are caravan parks and houses that are not on the main sewerage system and have private sewage treatment arrangements. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Weston Main is approximately 24,000 hectares, and includes the River Axe and its tributaries the Cheddar Yeo and Lox Yeo. These watercourses rise from limestone springs on the Mendip Hills at Wookey Hole Caves, and flow through the Somerset Levels and Moors to the sea in Weston Bay just north of Brean Down. \nThe rivers are interconnected in several places by drainage channels (known locally as rhynes) controlled by sluices, forming a very complex artificial drainage system. The River Axe is also controlled by a sluice gate approximately 2.7km from the Bristol Channel. The sluices affect the amount of freshwater entering the sea from the River Axe. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35800/date/20141002-083021", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2014-10-03T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2014-10-02T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2014-10-02", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2014-10-02T08:30:21", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/stp-ReportForEpimorphics-20141002-20141002-073021-8.csv#line=000128", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35800", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35800", "easting" : 331600.0, "lat" : 51.3412612902028, "long" : -2.98338221074795, "name" : {"_value" : "Sampling point at Weston Main", "_lang" : "en"}
+                  , "northing" : 160700.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35800/date/20160922/time/110700/recordDate/20160922", "escherichiaColiCount" : 45, "intestinalEnterococciCount" : 45, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T11:07:00", "inXSDDateTime" : {"_value" : "2016-09-22T11:07:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Weston Main", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/weston-main", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35800", "easting" : 331600.0, "lat" : 51.3412612902028, "long" : -2.98338221074795, "name" : {"_value" : "Sampling point at Weston Main", "_lang" : "en"}
+                , "northing" : 160700.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-35800:1", "name" : {"_value" : "Zone of influence at Weston Main", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000025504", "name" : {"_value" : "North Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000024"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-35900:1", "label" : [{"_value" : "Map bounds for Weston-super-Mare Sand Bay", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1202-35900", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35900/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestOpenIncident" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/12341000-23032017-164200/recordDateTime/20170803092201", "expectedEndOfIncident" : {"_value" : "2017-04-13", "_datatype" : "date"}
+                , "incidentNotation" : "12341000-23032017-164200", "incidentType" : {"_about" : "http://environment.data.gov.uk/def/incident-type/013", "label" : [{"_value" : "decaying marine life on beach", "_lang" : "en"}
+                  ]}
+                , "nirsRef" : "12341000", "som_recordDateTime" : {"_value" : "2017-08-03T09:22:01", "_datatype" : "dateTime"}
+                , "startOfIncident" : {"_value" : "2017-03-23T16:42:00", "_datatype" : "dateTime"}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35900/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35900", "bathingWaterDescription" : {"_value" : "Weston-super-Mare Sand Bay is on the Somerset coast overlooking the Bristol Channel. It is a sand and shingle beach resort, approximately five kilometres wide, backed by sand dunes. There is a saltmarsh at the northern end, and Sand Point Headland is a Site of Special Scientific Interest (SSSI).", "_lang" : "en"}
+                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by sewage discharges from the Weston-super-Mare sewage treatment works (STW) at the Black Rock outfall, and from Avonmouth STW. The Wessex Water sewage treatment scheme for Weston-super-Mare, which provides secondary treatment and ultraviolet (UV) disinfection, was completed in 2000. Additional improvements were made to the sewerage system to reduce the frequency of storm and emergency overflows, most recently in 2013. Secondary treatment was provided at Avonmouth STW in 2000. Thirteen storm overflows discharging to the Avon Estuary were improved in early 2003, and increased secondary treatment capacity and storm storage was provided at Avonmouth STW by March 2004.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35900/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-35900/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Weston-super-Mare Sand Bay", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-35900-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Weston-super-Mare Sand Bay", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0383", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35900:1", "stwOutfallsStatement" : {"_value" : "The outfall from Weston-super-Mare STW discharges to the sea at Black Rock five kilometres south of Sand Bay. This discharge is disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Weston-super-Mare Sand Bay for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 93% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35900_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Weston-super-Mare Sand Bay is approximately 24,300 hectares, and includes the River Axe and its tributaries the Cheddar Yeo and Lox Yeo. These streams rise from limestone springs on the Mendip Hills at Wookey Hole Caves, and flow through the Somerset Levels and Moors to the sea in Weston Bay just north of Brean Down. \nThe rivers are interconnected in several places by drainage channels (known locally as rhynes) controlled by sluices, forming a very complex artificial drainage system. The River Axe is also controlled by a sluice gate. The sluices affect the amount of freshwater entering the sea from the River Axe. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35900/date/20160922/time/104500/recordDate/20160922", "escherichiaColiCount" : 45, "intestinalEnterococciCount" : 64, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T10:45:00", "inXSDDateTime" : {"_value" : "2016-09-22T10:45:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Weston-super-Mare Sand Bay", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/weston-super-mare-sand-bay", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35900", "easting" : 332838.0, "lat" : 51.3644875606138, "long" : -2.96609706624921, "name" : {"_value" : "Sampling point at Weston-super-Mare Sand Bay", "_lang" : "en"}
+                , "northing" : 163267.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-35900:1", "name" : {"_value" : "Zone of influence at Weston-super-Mare Sand Bay", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35700", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000025504", "name" : {"_value" : "North Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E06000024"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1202-35700:1", "label" : [{"_value" : "Map bounds for Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1202-35700", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35700/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35700/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35700", "bathingWaterDescription" : {"_value" : "Weston-super-Mare Uphill Slipway is on the Somerset coast overlooking the Bristol Channel. It is a sandy beach resort approximately 1.2 kilometres wide, next to the mouth of the River Axe. The Bristol Channel has a large tidal range and at low water mud can become exposed.", "_lang" : "en"}
+                , "controllerName" : "North Somerset", "countyName" : {"_value" : "North Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency/storm overflow from Weston-super-Mare STW pumping station, that discharges to the sea at Black Rock 540m from the Environment Agency monitoring point. The operation of the overflow can lead to a drop in water quality in the sea around Weston-super-Mare. The increased storm water storage capacity at the sewage works, completed in April 2013, should reduce the number of times this overflow spills in the bathing season.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by the outfall from the Weston-super-Mare sewage treatment works (STW) that discharges at Black Rock. The Wessex Water sewage treatment scheme for Weston-super-Mare, which provides secondary treatment and ultraviolet (UV) disinfection, was completed in 2000. Additional improvements were made to the sewerage system to reduce the frequency of storm and emergency overflows, particularly at the Black Rock outfall. Further improvements in sewage treatment standards and a large increase in storm water storage capacity at Weston-super-Mare were completed in April in 2013. \nThe Environment Agency work with Wessex Water to carry out a review of sewerage performance within the Weston-super-Mare area, and will continue to make recommendations for further improvements to protect and improve the bathing water quality.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1202-35700/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "Since 2007 the Environment Agency have carried out extensive additional monitoring in the River Axe at Brean Cross sluice and in the Uphill Great Rhyne at Uphill sluice alongside the Environment Agency routine bathing water monitoring at Weston-super-Mare. The Environment Agency have used a DNA tracing technique to identify if sources of faecal pollution are animal or human. Results suggest that there is a contribution from human and animal sources. The animal contribution is possibly more significant in the River Axe, and the human contribution more significant in the Uphill Great Rhyne. \nBetween 2009 and 2013 the Environment Agency have walked the catchment in wet and dry weather conditions, and sampled various tributaries of the Uphill Great Rhyne.  In 2011, the Environment Agency identified a chronic sewer leak into the Uphill Great Rhyne, promptly fixed by Wessex Water. The aim of these investigations is to help pinpoint polluters and pollution problems, and improve bathing water quality. Monitoring of both rivers continues and signs of contamination are investigated.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1202-35700/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E06000024-35700-2017", "localAuthorityStatement" : {"_value" : "Weston-super-Mare is served by a combined (surface and sewer) system. Surface water can flow into the River Axe and Uphill Great Rhyne from urban areas and highway drains. This can affect bathing water quality, particularly after periods of rainfall. Wessex Water have regularly inspected and sampled surface water outfalls.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "The bathing water can have some seaweed on the beach, depending on tide and the weather.", "_lang" : "en"}
+                , "misconnectionsStatement" : {"_value" : "Wrongly connected domestic waste water pipes can also affect the water quality of the River Axe and Uphill Great Rhyne and therefore the bathing water. We have checked the local sewerage system for misconnections. We will continue to work with Wessex Water to identify and rectify any problems.\nModern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton increase in number at certain times of the year and this process is known as a phytoplankton bloom. These blooms can discolour the water or form as a foam on the water. The Environment Agency research shows this bathing water does not have a history of phytoplankton blooms, however, a light brown foam sometimes appears at this beach which is due to the break down of macro algae.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n41 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Weston-super-Mare Uphill Slipway bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 41 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the River Axe and Uphill Great Rhyne, and may reduce during or after periods of heavy rainfall due to run-off from agricultural land, urban areas, and occasional discharges from a storm overflow.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0381", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35700:1", "stepChangeStatement" : {"_value" : "A step change  improvement in water quality has been indentified in 2013 from 30/04/2013 at Weston-super-Mare Uphill Slipway due to improvements made to Water plc assets. Any monitoring samples collected prior to this date shall not be used for classification.", "_lang" : "en"}
+                , "streamsRiversStatement" : {"_value" : "The River Axe flows into the sea at the southern end of the beach. There are also two small drains that flow into the sea near the River Axe.  The Uphill Great Rhyne, controlled by a sluice gate, joins the River Axe approximately 500m before it reaches the sea. The Environment Agency has monitored the water quality of the Uphill Great Rhyne and the River Axe since 2007. During and after periods of heavy rainfall, agricultural and urban runoff to the River Axe and the Uphill Great Rhyne increases, impacting bathing water quality at Uphill Slipway.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfall from Weston-super-Mare STW, discharges to the sea at Black Rock 540 metres (m) from the Environment Agency monitoring point. This discharge is disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Weston-super-Mare Uphill Slipway for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 4% of visits. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 81% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-35700_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "There are more than 50 farms in the bathing water catchment. During and after periods of heavy rainfall, runoff from agricultural land is greatly increased, and the quality of the bathing water can be reduced. \nThe Environment Agency are working with Natural England and farmers on Catchment Sensitive Farming programmes to encourage better farming practices and improve water quality in the surrounding areas.", "_lang" : "en"}
+                , "workingWithIndustryStatement" : {"_value" : "The Uphill Great Rhyne flows (mostly underground) through a large commercial estate which includes some light industry. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible.", "_lang" : "en"}
+                , "workingWithPrivateOwnersStatement" : {"_value" : "There are caravan parks and houses that are not on the main sewerage system and have private sewage treatment arrangements. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Weston-super-Mare Uphill Slipway is approximately 24,000 hectares, and includes the River Axe and its tributaries the Cheddar Yeo and Lox Yeo. These watercourses rise from limestone springs on the Mendip Hills at Wookey Hole Caves, and flow through the Somerset Levels and Moors to the sea in Weston Bay just north of Brean Down. \nThe rivers are interconnected in several places by drainage channels (known locally as rhynes) controlled by sluices, forming a very complex artificial drainage system. The River Axe is also controlled by a sluice gate approximately 2.7km from the bathing water. The sluices affect the amount of freshwater entering the sea from the River Axe. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35700/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0134", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-35700", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35700", "easting" : 331092.0, "lat" : 51.3247204685577, "long" : -2.99031890971833, "name" : {"_value" : "Sampling point at Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+                  , "northing" : 158867.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35700/date/20160922/time/112500/recordDate/20161005", "escherichiaColiCount" : 136, "intestinalEnterococciCount" : 82, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T11:25:00", "inXSDDateTime" : {"_value" : "2016-09-22T11:25:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/weston-super-mare-uphill-slipway", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35700", "easting" : 331092.0, "lat" : 51.3247204685577, "long" : -2.99031890971833, "name" : {"_value" : "Sampling point at Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+                , "northing" : 158867.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/mud-sediment", "http://environment.data.gov.uk/def/bathing-water/sand-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/TransitionalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1202-35700:1", "name" : {"_value" : "Zone of influence at Weston-super-Mare Uphill Slipway", "_lang" : "en"}
+              }
+            }
+            ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Fri, 16 Feb 2018 00:54:39 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=3&_sort=-sampleYear.ordinalYear
@@ -124,24 +408,26 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '1251'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 10:49:34 GMT
+      - Fri, 16 Feb 2018 00:54:40 GMT
       Etag:
       - '"62fe700de0098084-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 11:49:34 GMT
+      - Fri, 16 Feb 2018 01:33:49 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '20'
-      Transfer-Encoding:
-      - chunked
+      - '89'
+      Content-Length:
+      - '1123'
       Connection:
       - keep-alive
     body:
@@ -196,7 +482,7 @@ http_interactions:
             ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 10:49:34 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:40 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
@@ -218,25 +504,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '0'
+      - '80'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 10:49:34 GMT
+      - Fri, 16 Feb 2018 00:54:40 GMT
       Etag:
-      - '"2cb6a0e3c86e70e8-gzip"'
+      - '"d3495f1c468c6fdf-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 10:52:33 GMT
+      - Fri, 16 Feb 2018 00:56:20 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '19'
+      - '99'
       Content-Length:
-      - '3839'
+      - '3879'
       Connection:
       - keep-alive
     body:
@@ -271,7 +557,7 @@ http_interactions:
                 , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
                 , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 24 days.", "_lang" : "en"}
                 , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality may reduce during or after periods of heavy rainfall due to occasional discharges from two storm overflows.", "_lang" : "en"}
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0384", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-36000:1", "stwOutfallsStatement" : {"_value" : "The outfall from Kingston Seymour STW discharges three and a half kilometres from Clevedon bathing water. The discharge is UV disinfected and designed to protect bathing water quality.", "_lang" : "en"}
                 , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Clevedon Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 20% of visits. Litter was assessed as being sufficient to be objectionable for 2% of visits, with 92% of visits noting the presence of litter. Tarry residue was not noted at this site.", "_lang" : "en"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1202-36000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Clevedon Beach is approximately 22,600 hectares. It includes the rivers Banwell, Oldbridge, Yeo, Kenn, Blind Yeo and Land Yeo, as well as the Uphill Great Rhine, the Drove Rhine and the Portbury Ditch. These streams are characterised by having short upland reaches and long lowland reaches with very low gradients. The majority of the land is used for large scale agriculture, with more than 50 farms.", "_lang" : "en"}
               }
@@ -302,7 +588,7 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 10:49:34 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:40 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestProfile.controllerName
@@ -323,24 +609,26 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '19'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestProfile.controllerName
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 10:49:36 GMT
+      - Fri, 16 Feb 2018 00:54:40 GMT
       Etag:
-      - '"ccc788b3d2ae89ab-gzip"'
+      - '"d91726420e1d2e16-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 10:52:34 GMT
+      - Fri, 16 Feb 2018 00:57:22 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '21'
-      Transfer-Encoding:
-      - chunked
+      - '109'
+      Content-Length:
+      - '58833'
       Connection:
       - keep-alive
     body:
@@ -2147,7 +2435,7 @@ http_interactions:
               , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10100:1", "name" : {"_value" : "Zone of influence at Sheringham", "_lang" : "en"}
               }
             }
-            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10125", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10126", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
                   ]}
                 , "name" : {"_value" : "Anglian Water Services Limited", "_lang" : "en"}
               }
@@ -2157,20 +2445,17 @@ http_interactions:
               }
               , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000007024", "name" : {"_value" : "North Norfolk", "_lang" : "en"}
               }
-              , "http://statistics.data.gov.uk/id/statistical-geography/E07000147"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukh1305-10125:1", "label" : [{"_value" : "Map bounds for West Runton", "_lang" : "en"}
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000147"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukh1305-10126:1", "label" : [{"_value" : "Map bounds for Signage Test", "_lang" : "en"}
                 ]}
-              , "eubwidNotation" : "ukh1305-10125", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/10125/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
-                }
-              }
-              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukh1305-10125/2017:1", "controllerName" : "North Norfolk"}
-              , "latestSampleAssessment" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/10125/date/20160925/time/114200/recordDate/20160925", "name" : {"_value" : "West Runton", "_lang" : "en"}
+              , "eubwidNotation" : "ukh1305-10126", "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukh1305-10126/2017:1", "controllerName" : "North Norfolk"}
+              , "name" : {"_value" : "Signage Test", "_lang" : "en"}
               , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/anglian-anglian-office-anglian-office", "name" : {"_value" : "Anglian", "_lang" : "en"}
               }
-              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/west-runton", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/10125", "easting" : 618660.0, "lat" : 52.9416822075366, "long" : 1.25276663199985, "name" : {"_value" : "Sampling point at West Runton", "_lang" : "en"}
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/signage-test", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/10126", "easting" : 618660.0, "lat" : 52.9416822075366, "long" : 1.25276663199985, "name" : {"_value" : "Sampling point at Signage Test", "_lang" : "en"}
                 , "northing" : 343207.0}
               , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
                 ]}
-              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/2016", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10125:1", "name" : {"_value" : "Zone of influence at West Runton", "_lang" : "en"}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/2017", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukh1305-10126:1", "name" : {"_value" : "Zone of influence at Signage Test", "_lang" : "en"}
               }
             }
             , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukh1305-10150", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366656", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366656", "label" : [{"_value" : "Companies House profile for Anglian Water Services Limited", "_lang" : "en"}
@@ -11595,7 +11880,7 @@ http_interactions:
             ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 10:49:36 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:40 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2305-35200?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
@@ -11621,17 +11906,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 10:49:36 GMT
+      - Fri, 16 Feb 2018 00:54:41 GMT
       Etag:
-      - '"dba2ac6b57f9d169-gzip"'
+      - '"245d5394d91bc196-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 10:52:36 GMT
+      - Fri, 16 Feb 2018 00:57:41 GMT
       Server:
       - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '22'
+      - '110'
       Transfer-Encoding:
       - chunked
       Connection:
@@ -11677,7 +11962,7 @@ http_interactions:
                 , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
                 , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 4 days.", "_lang" : "en"}
                 , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the Carhampton stream and the Pill River, and may reduce during or after periods of heavy rainfall due to run off from agricultural land, urban areas, and occasional discharges from a storm overflow.", "_lang" : "en"}
-                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage-2018-02-01_13-07-43_788-0269.csv#row=0377", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35200:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. The Pill River and Carhampton Stream flow across the beach at this bathing water and can affect water quality after heavy rainfall.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0377", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35200:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. The Pill River and Carhampton Stream flow across the beach at this bathing water and can affect water quality after heavy rainfall.", "_lang" : "en"}
                 , "stwOutfallsStatement" : {"_value" : "The outfalls from Minehead and Watchet STWs discharge four and a half kilometres west and east of the Environment Agency monitoring point respectively. These discharges are treated and designed to protect bathing water quality.", "_lang" : "en"}
                 , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Blue Anchor West for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 76% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
                 , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35200_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "Since 2008, the Environment Agency have been working with Natural England and farmers on Catchment Sensitive Farming (CSF) programmes to encourage better farming practices and improve water quality in the surrounding areas. CSF activity has included educational events for farmers, services and advice to farmers and land managers, farm visits and surveys of the area to identify pollution risks.", "_lang" : "en"}
@@ -11711,7 +11996,289 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 10:49:36 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:41 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&_sort=name&latestProfile.controllerName=West%20Somerset
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 16 Feb 2018 00:54:41 GMT
+      Etag:
+      - '"def0edf045b29ac3-gzip"'
+      Expires:
+      - Fri, 16 Feb 2018 00:57:41 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '111'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_metadata=all&_sort=name", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=West+Somerset&_sort=name", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35200", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35200:1", "label" : [{"_value" : "Map bounds for Blue Anchor West", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35200", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35200/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/3", "name" : {"_value" : "Sufficient", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestOpenIncident" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/pollution-incident/12345678-20170803-115000/recordDateTime/20170803115350", "incidentNotation" : "12345678-20170803-115000", "incidentType" : {"_about" : "http://environment.data.gov.uk/def/incident-type/020", "label" : [{"_value" : "other", "_lang" : "en"}
+                  ]}
+                , "nirsRef" : "12345678", "som_recordDateTime" : {"_value" : "2017-08-03T11:53:50", "_datatype" : "dateTime"}
+                , "startOfIncident" : {"_value" : "2017-08-03T11:50:00", "_datatype" : "dateTime"}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35200/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35200", "bathingWaterDescription" : {"_value" : "Blue Anchor is on the coast of Somerset overlooking the Bristol Channel. The beach is shingle and sand, and the water has a naturally cloudy colour. The beach has a shallow slope and a very large tidal range so that it can be up to half a kilometre to the sea at low tide. The Pill River enters the sea to the right of the Environment Agency monitoring point. The Carhampton Stream also drains to the beach to the left of the Environment Agency monitoring point.", "_lang" : "en"}
+                , "controllerName" : "West Somerset", "countyName" : {"_value" : "Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency/storm overflow from the Blue Anchor pumping station that discharges into the Pill River at the bathing water. The operation of the overflow can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "The Wessex Water sewage treatment scheme for Minehead, which provides secondary treatment and ultraviolet disinfection, was completed in October 1999. Improvements were also made to the sewerage system to reduce the frequency of overflows at that time. \nWatchet sewage treatment works (STW) discharges four and a half kilometres east of the Environment Agency monitoring point at Blue Anchor. Emergency overflows and storm overflows in Watchet were improved by the end of 2001, and secondary treatment was installed at Watchet STW by the end of 2002. The storm outfall at Bilbrook was also improved at that time.\nThe Environment Agency are working with Wessex Water to carry out a review of sewerage performance within the Blue Anchor area. The Environment Agency will make recommendations for further improvements to protect and improve the bathing water quality.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35200/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "In 2009 and 2010, the Environment Agency carried out extensive additional catchment monitoring in the Pill River alongside the routine bathing water monitoring. DNA tracing techniques helped identify the sources of faecal pollution as being a mixture of animal and human sources. The contribution from animals is greater when faecal levels at the bathing water are higher. This has helped us target further investigations to pinpoint pollution problems and improve the bathing water quality. The Environment Agency have also walked up the catchment to identify potential sources of pollution including misconnections, poorly maintained private sewerage systems, leaking sewers and unsuitable farming practices.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2305-35200/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Blue Anchor West", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000191-35200-2017", "localAuthorityStatement" : {"_value" : "There are outfalls along the beach which drain surface water from the road and surrounding area.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "misconnectionsStatement" : {"_value" : "Wrongly connected domestic waste water pipes can also affect the bathing water quality. We have checked the local sewerage systems at Bilbrook, Carhampton, Old Cleeve and other areas in the lower catchment for misconnections. We have worked with Somerset County Council and Wessex Water to identify and rectify any problems.\nModern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Blue Anchor West", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n4 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Blue Anchor West bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 4 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the Carhampton stream and the Pill River, and may reduce during or after periods of heavy rainfall due to run off from agricultural land, urban areas, and occasional discharges from a storm overflow.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0377", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35200:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. The Pill River and Carhampton Stream flow across the beach at this bathing water and can affect water quality after heavy rainfall.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfalls from Minehead and Watchet STWs discharge four and a half kilometres west and east of the Environment Agency monitoring point respectively. These discharges are treated and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Blue Anchor West for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 76% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35200_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "Since 2008, the Environment Agency have been working with Natural England and farmers on Catchment Sensitive Farming (CSF) programmes to encourage better farming practices and improve water quality in the surrounding areas. CSF activity has included educational events for farmers, services and advice to farmers and land managers, farm visits and surveys of the area to identify pollution risks.", "_lang" : "en"}
+                , "workingWithPrivateOwnersStatement" : {"_value" : "There are homes in the Blue Anchor catchment that are not on the main sewerage system and have private sewage treatment arrangements including septic tanks. Poorly maintained systems may result in sewage leaking though the soil to the river to the bathing water. The Environment Agency are working with private owners to ensure their sewerage arrangements adequately protect the bathing water quality. If any concerns arise, the Environment Agency will investigate and request immediate remedial action from those responsible.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Blue Anchor West is approximately 2,200 hectares. The Pill River and the Carhampton Stream enter the sea at the beach. The upper areas of the catchment are steeply sloping, whereas the lower areas north of the A39 are flatter. The steep catchment means rain runs off rapidly into the river and stream. Land use is mainly agricultural, including mixed livestock and a small amount of arable. There is also domestic and recreational land, small villages, and caravan parks.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35200/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0130", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35200", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35200", "easting" : 302161.0, "lat" : 51.1824184866261, "long" : -3.40119891207819, "name" : {"_value" : "Sampling point at Blue Anchor West", "_lang" : "en"}
+                  , "northing" : 143509.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35200/date/20160921/time/120600/recordDate/20160921", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 36, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T12:06:00", "inXSDDateTime" : {"_value" : "2016-09-21T12:06:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Blue Anchor West", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/blue-anchor-west", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35200", "easting" : 302161.0, "lat" : 51.1824184866261, "long" : -3.40119891207819, "name" : {"_value" : "Sampling point at Blue Anchor West", "_lang" : "en"}
+                , "northing" : 143509.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35200:1", "name" : {"_value" : "Zone of influence at Blue Anchor West", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35100", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35100:1", "label" : [{"_value" : "Map bounds for Dunster North West", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35100", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35100/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35100/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35100", "bathingWaterDescription" : {"_value" : "Dunster is on the Somerset coast overlooking the Bristol Channel. It is a sand and pebble beach resort, approximately 2.6 kilometres wide, backed by beach chalets.", "_lang" : "en"}
+                , "controllerName" : "West Somerset", "countyName" : {"_value" : "Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency overflow from the Dunster Beach pumping station, that discharges to the sea 200m from the Environment Agency monitoring point. The operation of the overflow can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by a continuous discharge of sewage from Minehead sewage treatment works (STW), which was treated to a primary standard with disinfection by chlorination during the bathing season. The Wessex Water sewage treatment scheme for Minehead, which provides secondary treatment and ultraviolet disinfection, was completed in October 1999. Improvements were also made to the sewerage system to reduce the frequency of overflows at that time. The emergency overflow at Blenheim Road was improved by March 2002.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35100/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2305-35100/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Dunster North West", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000191-35100-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Dunster North West", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n17 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Dunster North West bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 17 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the River Avill and the Avill Spillway flood relief channel, and may reduce during or after periods of heavy rainfall due to run off from agricultural land, and occasional discharges from a storm overflow.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0376", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35100:1", "streamsRiversStatement" : {"_value" : "The River Avill enters the sea 200 metres (m) southeast of the Environment Agency monitoring point. The Environment Agency have monitored the River Avill between 1995 and 2007, and found that it can affect bathing water quality after heavy rainfall. The Avill Spillway flood relief channel enters the sea 1.4km southeast of the Environment Agency monitoring point and can also affect water quality after heavy rainfall.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfall from Minehead STW, discharges to the sea 1.3km from the Environment Agency monitoring point. This discharge is disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Dunster North West for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 76% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35100_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Dunster North West is approximately 5,500 hectares. The River Avill is approximately 13km long and rises on the eastern slopes of Dunkery Beacon on the northern edge of Exmoor National Park. The river flows north through Timberscombe and Dunster and enters the Bristol Channel at Dunster Beach. The catchment is mostly agricultural, with 20 to 30 farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35100/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0129", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35100", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35100", "easting" : 299707.0, "lat" : 51.2012114263057, "long" : -3.43689503673983, "name" : {"_value" : "Sampling point at Dunster North West", "_lang" : "en"}
+                  , "northing" : 145647.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35100/date/20160921/time/113900/recordDate/20160921", "escherichiaColiCount" : 27, "intestinalEnterococciCount" : 36, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T11:39:00", "inXSDDateTime" : {"_value" : "2016-09-21T11:39:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Dunster North West", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/dunster-north-west", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35100", "easting" : 299707.0, "lat" : 51.2012114263057, "long" : -3.43689503673983, "name" : {"_value" : "Sampling point at Dunster North West", "_lang" : "en"}
+                , "northing" : 145647.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35100:1", "name" : {"_value" : "Zone of influence at Dunster North West", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-35000:1", "label" : [{"_value" : "Map bounds for Minehead Terminus", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-35000", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/35000/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35000/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35000", "bathingWaterDescription" : {"_value" : "Minehead Terminus is on the Somerset coast overlooking the Bristol Channel. It is a sand and shingle beach resort, approximately 2.6 kilometres wide, close to the town.", "_lang" : "en"}
+                , "controllerName" : "West Somerset", "countyName" : {"_value" : "Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency/storm overflow from the Quay West pumping station, that discharges to the sea north of the harbour wall. There are storm overflows from the Blenheim Road and the Green Spot CSOs, that discharge through the same outfall to the sea north of the harbour wall.\nThere is an emergency/storm overflow from the Minehead STW pumping station, that discharges to the sea two kilometres from the beach.\nThe operation of the overflows can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by a continuous discharge of sewage from Minehead sewage treatment works (STW), which was treated to a primary standard with disinfection by chlorination during the bathing season. The Wessex Water sewage treatment scheme for Minehead, which provides secondary treatment and ultraviolet disinfection, was completed in October 1999. Improvements were also made to the sewerage system to reduce the frequency of overflows at that time. Watchet sewage treatment works (STW) discharges four and a half kilometres east of the Environment Agency monitoring point at Blue Anchor. Emergency overflows and storm overflows in Watchet were improved by the end of 2001, and secondary treatment was installed at Watchet STW by the end of 2002. The storm outfall at Bilbrook was also improved at that time. The emergency overflows at Blenheim Road and Green Spot were improved by March 2002. The Environment Agency worked with Wessex Water to carry out a review of sewerage performance within the Blue Anchor area. Subsequent repairs and improvements to the sewerage infrastructure in 2010 have helped to further improve the bathing water quality.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-35000/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2305-35000/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Minehead Terminus", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000191-35000-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Minehead Terminus", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n7 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Minehead Terminus bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 7 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the Park, the Summerwest and the Duckpond streams, and may reduce during or after periods of heavy rainfall due to occasional discharges from three storm overflows.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0375", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-35000:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. There are three streams which flow out to sea in the area. The Park Stream discharges 200 metres (m) west of the Environment Agency monitoring point, and the Summerwest and Duckpond streams discharge 700m to the east the Environment Agency monitoring point. The Environment Agency have monitored the Park and Duck Pond streams between 1995 and 2006, and found that water quality is worse during and after heavy rainfall.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfall from Minehead STW, discharges to the sea two kilometres from the beach. This discharge is disinfected and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Minehead Terminus for the four year (2013-2016) assessment period where data is available, sewage debris was not assessed as being sufficient to be objectionable, but was observed as being present on 4% of visits. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 63% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-35000_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Minehead Terminus is approximately 1,150 hectares. The Park, Summerwest and Duckpond streams enter the sea at the beach. The largest of the three streams is the Park Stream which is channelled underground through the town of Minehead, and branches out into the catchment for approximately five kilometres. The catchment is mostly agricultural, with less than five farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/35000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0128", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-35000", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35000", "easting" : 297614.0, "lat" : 51.207581440661, "long" : -3.46705613745907, "name" : {"_value" : "Sampling point at Minehead Terminus", "_lang" : "en"}
+                  , "northing" : 146397.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/35000/date/20160921/time/111600/recordDate/20160921", "escherichiaColiCount" : 55, "intestinalEnterococciCount" : 55, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T11:16:00", "inXSDDateTime" : {"_value" : "2016-09-21T11:16:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Minehead Terminus", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/minehead-terminus", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/35000", "easting" : 297614.0, "lat" : 51.207581440661, "long" : -3.46705613745907, "name" : {"_value" : "Sampling point at Minehead Terminus", "_lang" : "en"}
+                , "northing" : 146397.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-35000:1", "name" : {"_value" : "Zone of influence at Minehead Terminus", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-34900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010578", "name" : {"_value" : "Somerset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000010687", "name" : {"_value" : "West Somerset", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000191"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2305-34900:1", "label" : [{"_value" : "Map bounds for Porlock Weir", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2305-34900", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/34900/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-34900/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2305-34900", "bathingWaterDescription" : {"_value" : "Porlock Bay is between Hurlestone Point and Porlock Weir in Somerset overlooking the Bristol Channel. Porlock Weir is a small settlement with a harbour about two and a half kilometres west of the village of Porlock. It has a pebble beach, approximately one kilometre wide, backed by Porlock Ridge and Saltmarsh to the east.", "_lang" : "en"}
+                , "controllerName" : "West Somerset", "countyName" : {"_value" : "Somerset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There is an emergency overflow from Porlock Weir pumping station that discharges to the bathing water 230m from the Environment Agency monitoring point. The operation of the overflow can lead to a drop in bathing water quality.  This bathing water is included in the Surfers Against Sewage \u201cSafer Seas Service\u201d. This service can alert you to Combined Storm Sewer Overflow discharges via a phone App and in addition, it includes the Environment Agency Pollution Risk Forecast warnings where they are available. Further details of the service can be found at - http://www.sas.org.uk/safer-seas-service/", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "In the past this bathing water was affected by continuous water company discharges of untreated sewage from Porlock Weir, Porlock, and Bossington. The Wessex Water sewage treatment scheme for the Porlock area was completed between 1995 and 2000. The scheme included a sewage treatment works (STW) at Porlock which provides secondary treatment and microfiltration. The Porlock Weir, Porlock, and Bossington discharges were transferred to Porlock STW in 1998, and the outfalls retained as pumping station emergency overflows/combined sewer overflows.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2305-34900/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2305-34900/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Porlock Weir", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000191-34900-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Porlock Weir", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 6, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the Hawkcombe stream, and may reduce during or after periods of heavy rainfall due to occasional discharges from a storm overflow.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0374", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-34900:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. The Hawkcombe Stream enters the sea near this beach, and does not affect the bathing water quality.", "_lang" : "en"}
+                , "stwOutfallsStatement" : {"_value" : "The outfall from Porlock STW discharges to the sea 1.9km from the shore of this bathing water. This discharge is treated using microfiltration and designed to protect bathing water quality.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Porlock Weir for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 66% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2305-34900_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Porlock Weir is approximately 5,700 hectares. The Hawkcombe Stream is approximately seven and a half kilometres long. It flows through a steep sided wooded valley, through the village of Porlock and enters the sea at the eastern end of the beach. \nThe rivers Horner and Aller are approximately eight and a half kilometres and six and a half kilometres long respectively, and rise as several small streams on the northern edge of Exmoor National Park. The rivers meet in the village of Bossington before entering Porlock Bay near Hurlestone point approximately 2.7km to the east of the Environment Agency monitoring point. The catchment is agricultural, with around 20 farms.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/34900/date/20160921/time/103400/recordDate/20160921", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 18, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-21T10:34:00", "inXSDDateTime" : {"_value" : "2016-09-21T10:34:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Porlock Weir", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/porlock-weir", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/34900", "easting" : 286521.0, "lat" : 51.2190192938815, "long" : -3.6262649577776, "name" : {"_value" : "Sampling point at Porlock Weir", "_lang" : "en"}
+                , "northing" : 147903.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/shingle-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2305-34900:1", "name" : {"_value" : "Zone of influence at Porlock Weir", "_lang" : "en"}
+              }
+            }
+            ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Fri, 16 Feb 2018 00:54:41 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk2305-35200?_pageSize=3&_sort=-sampleYear.ordinalYear
@@ -11732,26 +12299,24 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
-      Age:
-      - '77'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk2305-35200.json?_pageSize=3&_sort=-sampleYear.ordinalYear
       Content-Type:
       - application/json
       Date:
-      - Fri, 09 Feb 2018 12:17:02 GMT
+      - Fri, 16 Feb 2018 00:54:41 GMT
       Etag:
       - '"344341c859b61249-gzip"'
       Expires:
-      - Fri, 09 Feb 2018 13:15:45 GMT
+      - Fri, 16 Feb 2018 01:54:41 GMT
       Server:
-      - Apache
+      - Server
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '31'
+      - '112'
       Content-Length:
-      - '1138'
+      - '1131'
       Connection:
       - keep-alive
     body:
@@ -11806,5 +12371,5 @@ http_interactions:
             ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk2305-35200.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 09 Feb 2018 12:17:02 GMT
+  recorded_at: Fri, 16 Feb 2018 00:54:41 GMT
 recorded_with: VCR 4.0.0

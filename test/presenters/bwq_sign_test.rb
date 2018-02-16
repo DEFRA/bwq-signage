@@ -51,7 +51,8 @@ class BwqSignTest < ActiveSupport::TestCase
       base = {
         design: true, eubwid: '123', 'bwmgr-email': 'foo',
         'bwmgr-name': 'bar', 'bwmgr-phone': '',
-        'show-hist': true, 'show-map': false, 'show-prf': true
+        'show-hist': true, 'show-map': false, 'show-prf': true,
+        'bwmgr-logo': 'test.png'
       }
       refute BwqSign.new(params: ActionController::Parameters.new(base).permit!).show_preview?
 
@@ -216,6 +217,43 @@ class BwqSignTest < ActiveSupport::TestCase
     it 'should return a flag when showing the final view' do
       refute BwqSign.new({}).final?
       assert BwqSign.new(final: true).final?
+    end
+  end
+
+  describe 'logo url' do
+    it 'should determine the logo URL if the key is given' do
+      assert BwqSign.new(params:
+                         ActionController::Parameters.new('bwmgr-logo': 'foo/bar.png').permit!)
+                    .show_bwmgr_logo?
+      refute BwqSign.new(params:
+                         ActionController::Parameters.new('bwmgr-logo': 'none').permit!)
+                    .show_bwmgr_logo?
+    end
+
+    it 'should correctly determine the S3 URL' do
+      BwqSign.new(params:
+                  ActionController::Parameters.new('bwmgr-logo': 'foo/bar.png').permit!)
+             .bwmgr_logo_url
+             .must_match(%r{^https://environment-open-data.*aws.*foo/bar.png$})
+    end
+  end
+
+  describe '#next_by_controller' do
+    it 'should precess through the bws for a controller' do
+      VCR.use_cassette('precess-controller', record: :new_episodes) do
+        bw = BwqService.new.bathing_water_by_id('ukk1202-36000')
+        bw0 = BwqSign.new(bathing_water: bw).next_by_bw_controller
+        bw0.name.must_equal('Weston Main')
+
+        bw1 = BwqSign.new(bathing_water: bw0).next_by_bw_controller
+        bw1.name.must_equal('Weston-super-Mare Sand Bay')
+
+        bw2 = BwqSign.new(bathing_water: bw1).next_by_bw_controller
+        bw2.name.must_equal('Weston-super-Mare Uphill Slipway')
+
+        bw3 = BwqSign.new(bathing_water: bw2).next_by_bw_controller
+        bw3.name.must_equal('Clevedon Beach')
+      end
     end
   end
 end

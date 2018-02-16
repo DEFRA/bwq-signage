@@ -112,6 +112,15 @@ class BwqService < LdaApi
     api_get_resources(BathingWater.endpoint_all, LdaApi::ALL_PAGES, BathingWater, options)
   end
 
+  # Return an array of the bathing waters in a given locale URI
+  def bws_in_same_controller(bathing_water)
+    options = { _pageSize: 600,
+                'latestProfile.controllerName' => bathing_water.controller_name,
+                _properties: DETAILED_BW_PROPERTIES,
+                _sort: 'name' }
+    api_get_resources(BathingWater.endpoint_all, LdaApi::ALL_PAGES, BathingWater, options)
+  end
+
   # Return the bathing water sites in JSON format
   def bathing_water_names_json
     locations_as_json(all_bathing_waters.map { |bw| { label: bw.name, uri: bw.uri } })
