@@ -6,7 +6,8 @@
           %h1
             = @view_state.bathing_water.name
         .c-content-header__classification
-          %img{ @view_state.classification_image_full }/
+          - unless @view_state.classifications.omit_classification_image?
+            %img{ @view_state.classifications.image_full }/
         .c-content-header__monitoring
           %p
             = @view_state.monitoring_statement
@@ -38,7 +39,7 @@
               %li
                 - if classification.respond_to?(:uri)
                   = classification.year
-                  - image_description = @view_state.classification_image_compact(classification.complianceClassification&.uri)
+                  - image_description = @view_state.classifications.image_compact(classification.complianceClassification&.uri)
                   = image_tag(image_description[:src], alt: image_description[:alt])
                   = classification.complianceClassification.name
                 - else
