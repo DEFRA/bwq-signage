@@ -8,9 +8,10 @@
         .c-content-header__classification
           - unless @view_state.classifications.omit_classification_image?
             %img{ @view_state.classifications.image_full }/
-        .c-content-header__monitoring
-          %p
-            = @view_state.monitoring_statement
+        - unless @view_state.bathing_water.closed?
+          .c-content-header__monitoring
+            %p
+              = @view_state.monitoring_statement
 
     %section.c-content-row__about
       - pollution_sources_cls = @view_state.show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'

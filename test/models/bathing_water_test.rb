@@ -78,5 +78,11 @@ class BathingWaterTest < ActiveSupport::TestCase
         end
       end
     end
+
+    describe '#closed?' do
+      it 'should report true if the bathing water is currently closed' do
+        refute BathingWater.new(bw_fixture).closed?
+      end
+    end
   end
 end
