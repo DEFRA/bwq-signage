@@ -9,7 +9,7 @@
           - unless @view_state.classifications.omit_classification_image?
             %img{ @view_state.classifications.image_full }/
         - unless @view_state.bathing_water.closed?
-          .c-content-header__monitoring
+          %div{ class: "c-content-header__monitoring#{ @view_state.classifications.omit_classification_image? ? '-only' : '' }" }
             %p
               = @view_state.monitoring_statement
 
