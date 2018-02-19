@@ -1,6 +1,7 @@
 # frozen-string-literal: true
 
 # Unit tests on Workflow presenter
+# rubocop:disable Metrics/LineLength
 class WorkflowTest < ActiveSupport::TestCase
   describe 'Workflow' do
     describe '#nominated_step' do
@@ -31,34 +32,38 @@ class WorkflowTest < ActiveSupport::TestCase
         Workflow.next_incomplete_step(design: true, search: 'foo').must_equal :select
       end
 
+      it 'should select the sign-design step when the bw is selected' do
+        Workflow.next_incomplete_step(design: true, eubwid: '123').must_equal :signplus
+      end
+
       it 'should select the options step when the bw is selected' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123').must_equal :opts
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete').must_equal :opts
       end
 
       it 'should select the options step unless all options info is known' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'show-hist': 'no')
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete', 'show-hist': 'no')
                 .must_equal :opts
-        Workflow.next_incomplete_step(design: true, eubwid: '123',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete',
                                       'show-hist': 'no', 'show-map': 'no')
                 .must_equal :opts
       end
 
       it 'should select bw manager when the options information is complete' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes')
                 .must_equal :bwmgr
-        Workflow.next_incomplete_step(design: true, eubwid: '123',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
                                       'bwmgr-name': 'bar')
                 .must_equal :bwmgr
-        Workflow.next_incomplete_step(design: true, eubwid: '123',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete',
                                       'show-hist': 'no', 'show-map': 'no', 'show-logo': 'yes',
                                       'bwmgr-name': 'bar', 'bwmgr-email': 'foo')
                 .must_equal :bwmgr
       end
 
       it 'should select logo-upload when the bwmgr is known' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo', 'sign-plus': 'complete',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
                                       'show-hist': true, 'show-map': false,
                                       'show-logo': false)
@@ -66,7 +71,7 @@ class WorkflowTest < ActiveSupport::TestCase
       end
 
       it 'should select preview when all information is complete' do
-        Workflow.next_incomplete_step(design: true, eubwid: '123', 'bwmgr-email': 'foo',
+        Workflow.next_incomplete_step(design: true, eubwid: '123', 'sign-plus': 'complete', 'bwmgr-email': 'foo',
                                       'bwmgr-name': 'bar', 'bwmgr-phone': '',
                                       'show-hist': true, 'show-map': false,
                                       'show-logo': false, 'bwmgr-logo': 'test.png')
@@ -84,3 +89,4 @@ class WorkflowTest < ActiveSupport::TestCase
     end
   end
 end
+# rubocop:enable Metrics/LineLength

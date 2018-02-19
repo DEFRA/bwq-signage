@@ -52,7 +52,7 @@ class BwqSignTest < ActiveSupport::TestCase
         design: true, eubwid: '123', 'bwmgr-email': 'foo',
         'bwmgr-name': 'bar', 'bwmgr-phone': '',
         'show-hist': true, 'show-map': false, 'show-prf': true,
-        'bwmgr-logo': 'test.png'
+        'bwmgr-logo': 'test.png', 'sign-plus': 'complete'
       }
       refute BwqSign.new(params: ActionController::Parameters.new(base).permit!).show_preview?
 
