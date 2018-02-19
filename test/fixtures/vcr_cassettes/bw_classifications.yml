@@ -21,23 +21,23 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '1231'
+      - '3578'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Feb 2018 00:54:20 GMT
+      - Mon, 19 Feb 2018 11:32:54 GMT
       Etag:
       - '"62fe700de0098084-gzip"'
       Expires:
-      - Fri, 16 Feb 2018 01:33:49 GMT
+      - Mon, 19 Feb 2018 11:33:16 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '89'
+      - '72'
       Content-Length:
       - '1123'
       Connection:
@@ -94,5 +94,5 @@ http_interactions:
             ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:20 GMT
+  recorded_at: Mon, 19 Feb 2018 11:32:54 GMT
 recorded_with: VCR 4.0.0

@@ -180,6 +180,14 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     -ms-grid-column: 1;
     -ms-grid-row: 2;
   }
+
+  .c-content-header__monitoring-only {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 2;
+  }
 }
 
 .c-sign-layout--portrait {
@@ -215,6 +223,10 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
 .c-content-header__monitoring {
   font-size: 2.5rem;
+
+  &-only {
+    font-size: 2.5rem;
+  }
 }
 
 .c-content-header__classification {
