@@ -5,25 +5,22 @@
       %h2.heading-medium
         Which type of sign do you want for #{@view_state.bathing_water.name}?
 
-      %p.lede
-        There are two variants to consider
-
   .o-grid-row
-    .o-grid-column__half
-      %h3.heading-small Complete sign
-      %p
-        Contains additional information that may be useful for bathing-water users
-      %p
-        =image_tag('bwq-sign-sample-full-400.png', alt: 'example of full bathing water sign')
-      %p
-        = link_to('Create complete sign', root_path(@view_state.with_query_params('sign-plus': 'complete')), class: 'button')
-
     .o-grid-column__half
       %h3.heading-small Simple sign
       %p
-        Contains only the information required by regulation
+        You can produce a simple sign meeting all regulatory requirements
       %p
         =image_tag('bwq-sign-sample-minimal-400.png', alt: 'example of minimal bathing water sign')
       %p
         - params = {'sign-plus': 'simple', 'show-map': 'no', 'show-hist': 'no', 'show-logo': 'no', 'bwmgr-name': '', 'bwmgr-phone': '', 'bwmgr-email': '', 'bwmgr-logo': 'none'}
         = link_to('Create simple sign', root_path(@view_state.with_query_params(params)), class: 'button')
+
+    .o-grid-column__half
+      %h3.heading-small Enhanced sign
+      %p
+        You can produce an enhanced sign meeting regulatory requirements, with extra optional features
+      %p
+        =image_tag('bwq-sign-sample-full-400.png', alt: 'example of full bathing water sign')
+      %p
+        = link_to('Create enhanced sign', root_path(@view_state.with_query_params('sign-plus': 'complete')), class: 'button')
