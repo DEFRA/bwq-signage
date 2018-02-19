@@ -33,7 +33,7 @@
       - web_info_cls = @view_state.show_map? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
 
       .o-content-unit__box.c-content-unit__web-links{ class: web_info_cls }
-        - if @view_state.show_history?
+        - if @view_state.show_history? && !@view_state.bathing_water.classification_history&.length.zero?
           %h2 Previous annual water-quality classifications
           %ul.c-content-unit__compliance-history
             - @view_state.bathing_water.classification_history.each do |classification|

@@ -59,8 +59,7 @@ class BathingWater < LdaResource
   end
 
   def classification_history
-    history = api.annual_compliance(eubwid, MAX_HISTORY_YEARS)
-    history.empty? ? [{ message: 'No prior classifications are available' }] : history
+    api.annual_compliance(eubwid, MAX_HISTORY_YEARS)
   end
 
   def to_json
