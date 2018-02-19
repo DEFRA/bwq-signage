@@ -48,6 +48,23 @@ class ClassificationsTest < ActiveSupport::TestCase
                .image_compact('http://environment.data.gov.uk/def/bwq-cc-2015/3')[:src]
                .must_equal('path-to-1-star.png')
       end
+
+      it 'should omit the classification image for closed bathing waters' do
+        resource = mock('Resource')
+        resource.expects(:uri).returns('http://environment.data.gov.uk/def/bwq-cc-2015/11')
+
+        bw = mock('BathingWater')
+        bw.expects(:latest_classification).returns(resource)
+
+        assert Classifications.new(bw).omit_classification_image?
+      end
+
+      it 'should omit the classification image for newly-designated bathing waters' do
+        bw = mock('BathingWater')
+        bw.expects(:latest_classification).returns(nil)
+
+        assert Classifications.new(bw).omit_classification_image?
+      end
     end
   end
 end

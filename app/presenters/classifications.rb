@@ -25,11 +25,12 @@ class Classifications
   end
 
   def classification_uri(uri = nil)
-    uri || bathing_water.latest_classification.uri
+    uri || bathing_water.latest_classification&.uri
   end
 
   def omit_classification_image?(uri = nil)
-    !CLASSIFICATION_IMAGES.key?(classification_uri(uri))
+    class_uri = classification_uri(uri)
+    !class_uri || !CLASSIFICATION_IMAGES.key?(class_uri)
   end
 
   def image_full(uri = nil)
