@@ -25,15 +25,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Feb 2018 00:54:16 GMT
+      - Mon, 19 Feb 2018 11:33:07 GMT
       Expires:
-      - Fri, 16 Feb 2018 01:54:16 GMT
+      - Mon, 19 Feb 2018 12:33:08 GMT
       Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Server:
       - Server
       X-Response-Id:
-      - '100'
+      - '95'
       Content-Length:
       - '0'
       Connection:
@@ -42,7 +42,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:16 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:08 GMT
 - request:
     method: get
     uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
@@ -63,24 +63,26 @@ http_interactions:
     headers:
       Access-Control-Allow-Origin:
       - "*"
+      Age:
+      - '4'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukc2102-03600.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Fri, 16 Feb 2018 00:54:16 GMT
+      - Mon, 19 Feb 2018 11:33:08 GMT
       Etag:
       - '"86107d508bca8f5f-gzip"'
       Expires:
-      - Fri, 16 Feb 2018 00:57:16 GMT
+      - Mon, 19 Feb 2018 11:36:04 GMT
       Server:
-      - Server
+      - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '101'
-      Transfer-Encoding:
-      - chunked
+      - '89'
+      Content-Length:
+      - '4207'
       Connection:
       - keep-alive
     body:
@@ -150,5 +152,5 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:16 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:08 GMT
 recorded_with: VCR 4.0.0

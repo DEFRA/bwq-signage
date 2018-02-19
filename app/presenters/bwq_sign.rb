@@ -1,18 +1,7 @@
 # frozen-string-literal: true
 
-CLASSIFICATION_IMAGE_ROOTS = {
-  'http://environment.data.gov.uk/def/bwq-cc-2015/1' =>
-      { src: 'baignade-3-stars', alt: 'excellent water quality' },
-  'http://environment.data.gov.uk/def/bwq-cc-2015/2' =>
-      { src: 'baignade-2-stars', alt: 'good water quality' },
-  'http://environment.data.gov.uk/def/bwq-cc-2015/3' =>
-      { src: 'baignade-1-star', alt: 'sufficient water quality' },
-  'http://environment.data.gov.uk/def/bwq-cc-2015/4' =>
-      { src: 'baignade-no-stars-no-bathing', alt: 'poor water quality' }
-}.freeze
-
 # Presenter for view state for bathing water signs
-class BwqSign # rubocop:disable Metrics/ClassLength
+class BwqSign
   attr_reader :options
 
   def initialize(options)
@@ -68,28 +57,6 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   # The Rails view context is passed in from the controller
   def view_context
     options[:view_context]
-  end
-
-  def classification_image_full(uri = nil)
-    classification_uri = uri || bathing_water.latest_classification.uri
-    image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
-
-    {
-      alt: image_root[:alt],
-      src: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.png",
-      srcset: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.svg"
-    }
-  end
-
-  def classification_image_compact(uri = nil)
-    classification_uri = uri || bathing_water.latest_classification.uri
-    image_root = CLASSIFICATION_IMAGE_ROOTS[classification_uri]
-    svg_image = "#{image_root[:src].gsub(/baignade-/, '')}.#{final? ? 'svg' : 'png'}"
-
-    {
-      alt: image_root[:alt],
-      src: view_context.image_path(svg_image)
-    }
   end
 
   # Only show PRF summary if the BW is in PRF programmne
@@ -151,5 +118,9 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     controller_bws = BwqService.new.bws_in_same_controller(bathing_water)
     i = controller_bws.find_index { |bw| bw.eubwid == id_current }
     controller_bws[(i + 1) % controller_bws.length]
+  end
+
+  def classifications(bw = nil)
+    @classifications ||= Classifications.new(bw || bathing_water, view_context, final?)
   end
 end

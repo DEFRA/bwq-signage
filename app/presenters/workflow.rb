@@ -12,23 +12,27 @@ class Workflow
     { name: :bwmgr_logo, title: 'bathing water manager logo' }
   ].freeze
 
+  # rubocop:disable Metrics/LineLength
   PRECONDITIONS = [
     { has: %i[design], missing: %i[search eubwid], name: :search },
     { has: %i[design search], missing: %i[eubwid], name: :select },
 
-    { has: %i[design eubwid], missing: %i[show-map], name: :opts },
-    { has: %i[design eubwid], missing: %i[show-hist], name: :opts },
-    { has: %i[design eubwid], missing: %i[show-logo], name: :opts },
+    { has: %i[design eubwid], missing: %i[sign-plus], name: :signplus },
 
-    { has: %i[design eubwid show-hist], missing: %i[bwmgr-name], name: :bwmgr },
-    { has: %i[design eubwid show-hist], missing: %i[bwmgr-phone], name: :bwmgr },
-    { has: %i[design eubwid show-hist], missing: %i[bwmgr-email], name: :bwmgr },
+    { has: %i[design eubwid sign-plus], missing: %i[show-map], name: :opts },
+    { has: %i[design eubwid sign-plus], missing: %i[show-hist], name: :opts },
+    { has: %i[design eubwid sign-plus], missing: %i[show-logo], name: :opts },
 
-    { has: %i[design eubwid show-hist bwmgr-name], missing: %i[bwmgr-logo], name: :bwmgr_logo },
+    { has: %i[design eubwid show-hist sign-plus], missing: %i[bwmgr-name], name: :bwmgr },
+    { has: %i[design eubwid show-hist sign-plus], missing: %i[bwmgr-phone], name: :bwmgr },
+    { has: %i[design eubwid show-hist sign-plus], missing: %i[bwmgr-email], name: :bwmgr },
+
+    { has: %i[design eubwid show-hist bwmgr-name sign-plus], missing: %i[bwmgr-logo], name: :bwmgr_logo },
 
     { has: %i[], missing: %i[design], name: :landing },
     { has: [], missing: [], name: :preview }
   ].freeze
+  # rubocop:enable Metrics/LineLength
 
   # Calculate all of the parameters that may be mentioned in the workflow
   ALL_PARAMS = PRECONDITIONS.map { |precond| [precond[:has], precond[:missing]] }
