@@ -16,7 +16,7 @@
       %p
         =image_tag('bwq-sign-sample-full-400.png', alt: 'example of full bathing water sign')
       %p
-        = link_to('Create complete sign', root_path(@view_state.with_query_params(signplus: 'complete')), class: 'button')
+        = link_to('Create complete sign', root_path(@view_state.with_query_params('sign-plus': 'complete')), class: 'button')
 
     .o-grid-column__half
       %h3.heading-small Simple sign
@@ -25,4 +25,5 @@
       %p
         =image_tag('bwq-sign-sample-minimal-400.png', alt: 'example of minimal bathing water sign')
       %p
-        = link_to('Create simple sign', root_path(@view_state.with_query_params(signplus: 'simple')), class: 'button')
+        - params = {'sign-plus': 'simple', 'show-map': 'no', 'show-hist': 'no', 'show-logo': 'no', 'bwmgr-name': '', 'bwmgr-phone': '', 'bwmgr-email': '', 'bwmgr-logo': 'none'}
+        = link_to('Create simple sign', root_path(@view_state.with_query_params(params)), class: 'button')
