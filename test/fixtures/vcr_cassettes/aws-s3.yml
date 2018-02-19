@@ -16,12 +16,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005421Z
+      - 20180219T113302Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=a64b84e73a34b3f3a9a07891549a835ea526277136221babce2e31519e1a368c
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2139e5565f24315875d6d809dcd1d98032c1af7653ac387f0650582adfc20769
       Content-Length:
       - '0'
       Accept:
@@ -32,13 +32,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - JzsUb9UXt98hdYov4WlzPRSTazudxppu9fHlPlWc6p5Lar9G9y3MY9H4izaHtmiCZPnjfylAc9c=
+      - OJPFsSnQcSJESFok6YUA6KrXXDWDV+fXgSJzZQWLCbf5qdmFQHFA1soE7OIOItRHrcMVhMUqaZ8=
       X-Amz-Request-Id:
-      - 30D10A88266CE180
+      - 279A29F6AED4ED26
       Date:
-      - Fri, 16 Feb 2018 00:54:22 GMT
+      - Mon, 19 Feb 2018 11:33:04 GMT
       Last-Modified:
-      - Thu, 15 Feb 2018 12:04:24 GMT
+      - Fri, 16 Feb 2018 00:54:23 GMT
       Etag:
       - '"09946b90ff0ae6bffc816038ebca053b"'
       Accept-Ranges:
@@ -53,7 +53,7 @@ http_interactions:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:03 GMT
 - request:
     method: delete
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
@@ -70,12 +70,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005421Z
+      - 20180219T113303Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ce0986d03058f869d6601cedf5c32c37401975ce9782561b7f9eb24635979663
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=4ab017f54a8f8665fe1f02b676a17240d6b5d4737833c6096848a25c222d80ea
       Content-Length:
       - '0'
       Accept:
@@ -86,18 +86,18 @@ http_interactions:
       message: No Content
     headers:
       X-Amz-Id-2:
-      - E5ToJez1oV9UheinwwJUyPfGShzqvJ7mQXGuYf+/I9619MDEEd9ZvZZNt7t04SqX+U+pzeSfZS8=
+      - "/UGYBrodK9YavVjxCed1GB+Iy1F+VmjKQAUvCn5umbwZiusARJtYiHGDn56rvv4nHApBJOYFqA4="
       X-Amz-Request-Id:
-      - 8BAE8DA749187959
+      - D98B80475E992ADA
       Date:
-      - Fri, 16 Feb 2018 00:54:22 GMT
+      - Mon, 19 Feb 2018 11:33:04 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:03 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
@@ -114,12 +114,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005421Z
+      - 20180219T113303Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=a64b84e73a34b3f3a9a07891549a835ea526277136221babce2e31519e1a368c
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2114bf28c8c9a123043f9b09c283ff0e9896b9f7a4c5a063d0ed4bf8c0e85521
       Content-Length:
       - '0'
       Accept:
@@ -130,22 +130,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - A54D342E351E02B9
+      - 96E69CDDEF5E8552
       X-Amz-Id-2:
-      - V6AOKQTC4h5SbwslwxG87IPP5MFMqaYx47MtjOChuSmrUEJiSHoYLwBOXG7zH7/8BuT3bL+lq2E=
+      - jfSYSsHSGLofkiWeVmqW/2X/LrXK8aWhZ+KefxkGAth2gyTTTvsB5hi5D2yRn0gtCvFxGQSvw2M=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:21 GMT
+      - Mon, 19 Feb 2018 11:33:02 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:21 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:03 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.jpg
@@ -162,12 +162,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005421Z
+      - 20180219T113303Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b4739f94aae875cddd1228eb036f7f977bc7571b13fa1b03f818ad117bf1c6af
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b8334320901c69ee1f40be33fcb75df9eb87f8e22755b3fd9b86d649b6f7ab07
       Content-Length:
       - '0'
       Accept:
@@ -178,22 +178,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - FBE0A3D912ADAB62
+      - 2FD847AF71315902
       X-Amz-Id-2:
-      - bgkSYmhx4lFm6T+pfX9NooAwSlE1dTQLHE1esub5Dd3557XkqUgBZMZ9CbgJmLojQWGwvrzKAJ4=
+      - 6tTJsU1hyvGASyQiYVF3O2e6+CUhn6qYDrLI4nZBkitjXmRFq42R2QrdlowbzbL5LpOhI7aYQiI=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:21 GMT
+      - Mon, 19 Feb 2018 11:33:03 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:03 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.gif
@@ -210,12 +210,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113303Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=5ee6a394cf63b871a310cc6d74764c3175c4a46c4dff15ca272396286ee5bb72
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=4834ad12c377d3c9813185355ff560c1fd91d12b65da8c953730990c8bc04c03
       Content-Length:
       - '0'
       Accept:
@@ -226,22 +226,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - F55DA5E0565318B0
+      - ED91C5BB5DAF74BB
       X-Amz-Id-2:
-      - U4U3ikwUAgnf6h6XltcoNxkXHrs0lWtOMBy939yz4GdsDs3vgM2H/ex+5k3zqwze3+vFz6Gwnrc=
+      - AEBzFKF/t431AykbNbsSKf6+8DZeCy6guOGmr/C03muwqwK7Pe02V2wgclJedGCL9M5KWZ3hVOk=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:22 GMT
+      - Mon, 19 Feb 2018 11:33:03 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:03 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
@@ -258,12 +258,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113303Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b7bc6b080091d4e213d34aef30e007a41bdf5bab7dbb3713b2bcddc4386f6e83
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2114bf28c8c9a123043f9b09c283ff0e9896b9f7a4c5a063d0ed4bf8c0e85521
       Content-Length:
       - '0'
       Accept:
@@ -274,22 +274,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - AF82E768312C8F08
+      - 229013E46310DA4D
       X-Amz-Id-2:
-      - jjvkbEsSS+rIG7cUly6i2aA7o4GpRB4oZMTgZ7c5wvzF7RbrPYOjriSftVj0+dNSDERC6XORFFg=
+      - zbnLGNY7kKUZVujSUNYXnBIURWxrFuDbUB4b8L6+6ueHaV62uOWHiv3QgkVnZkEcLgT9LUSdQ3c=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:21 GMT
+      - Mon, 19 Feb 2018 11:33:03 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:04 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.jpg
@@ -306,12 +306,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113304Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=3294b6494d9e4ea64a038bc1e33a62431656b38d6033360799ec9cc2afb52312
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=bb09163c6dc9a40b8653b86cff4f4418f63a7d94aa4e6515c94548667932cb00
       Content-Length:
       - '0'
       Accept:
@@ -322,22 +322,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 3243DBA2016A6181
+      - 2487E5E343B7B9F3
       X-Amz-Id-2:
-      - sckPWVYuWH3+QQEVS0PyaGMGu63oh/kiq+8s5ALJ2ZG3xH9N9fVO0mngB5uATj2GZ0gOK9PX0D8=
+      - 2/3jgrtC4b89HK8VRIFdlwBnVhc4qgEOBB/8JigMy5aWjuiUDOVpM2ZnpKZ667z8gINW8iaeVJo=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:22 GMT
+      - Mon, 19 Feb 2018 11:33:03 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:04 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.gif
@@ -354,12 +354,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113304Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=5ee6a394cf63b871a310cc6d74764c3175c4a46c4dff15ca272396286ee5bb72
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c17a8c8fa57fd1e0b9f1068fb6cf0d6f955dd382cfbf8e71659bd55a2b2812fa
       Content-Length:
       - '0'
       Accept:
@@ -370,22 +370,22 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 7943E793ED4AE16E
+      - 54BE37CAD5830AB7
       X-Amz-Id-2:
-      - Rx7vm6pPZV0t7VZ6evzBL5lBKCiFV22anXIjBIZ8cSavmgy8gWAwn143zqQbGidouaysTISkOIE=
+      - uPawhd+E3dqB5jj4QFpTrgjLtMHT21Ne9u+tXLVBjmTvPjhZ8MO7fAjO/GYY+HhNmyfThT7eAJE=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 16 Feb 2018 00:54:21 GMT
+      - Mon, 19 Feb 2018 11:33:04 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:04 GMT
 - request:
     method: put
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
@@ -531,13 +531,13 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113304Z
       X-Amz-Content-Sha256:
       - 14d1c25eccbcca05c296aa0ac0799e006e092f77fc4037ad412d2aad2bf899a8
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
         SignedHeaders=content-md5;content-type;expect;host;user-agent;x-amz-acl;x-amz-content-sha256;x-amz-date,
-        Signature=123d82745d30c588a8b1d9cc742643e6859c37fb0857bd923e4de71d4966e9bb
+        Signature=f0e66906ec991bb9f827ebba90371aea43df9812c22bb4a1679a59a646c0b9a0
       Content-Length:
       - '5533'
       Accept:
@@ -548,11 +548,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - 2v5FWGJ9JKHjrjr5uEpH4BwjgJVzvrwEZOKS5QHJIqpL5vRg8U6QLf/Jw4aVbNXEDUIr7CKC94Y=
+      - SvpEI2uu83JdRc/KVf8Pso71rqCXKQa/WcjOzcAbbQ/xvP9M49+Yfm8rlxFqRNeW0uRmTfFTwus=
       X-Amz-Request-Id:
-      - D9BF2E7FB0E6C389
+      - 531E0761654F470F
       Date:
-      - Fri, 16 Feb 2018 00:54:23 GMT
+      - Mon, 19 Feb 2018 11:33:05 GMT
       Etag:
       - '"09946b90ff0ae6bffc816038ebca053b"'
       Content-Length:
@@ -563,7 +563,7 @@ http_interactions:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:04 GMT
 - request:
     method: head
     uri: https://environment-open-data.s3.eu-west-1.amazonaws.com/bwq-signage-assets/test-bw/logo.png
@@ -580,12 +580,12 @@ http_interactions:
       Host:
       - environment-open-data.s3.eu-west-1.amazonaws.com
       X-Amz-Date:
-      - 20180216T005422Z
+      - 20180219T113304Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180216/eu-west-1/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b7bc6b080091d4e213d34aef30e007a41bdf5bab7dbb3713b2bcddc4386f6e83
+      - AWS4-HMAC-SHA256 Credential=AKIAJUATN7D2SVOY3ZSA/20180219/eu-west-1/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=52989d633bbc5915f5d47422131c887639b633a0c95c03e1f691bb65c05c2173
       Content-Length:
       - '0'
       Accept:
@@ -596,13 +596,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - YzVMJFv7XNB4aOiZR1ErR/npzt4+n5CQfSd6sjCUIHSG/bYR/Wv2poagBf1So80D5fcroLLk2Do=
+      - 2gv4wGBVIa1gz+2EdXWcloD/87gIb0+P/1fec16wuzxMnB2bMRF1zWRZcSx/Nz3+8A75pcUcH7o=
       X-Amz-Request-Id:
-      - CF2C61EEE6FB04F0
+      - 4E730C60FFD911EE
       Date:
-      - Fri, 16 Feb 2018 00:54:23 GMT
+      - Mon, 19 Feb 2018 11:33:05 GMT
       Last-Modified:
-      - Fri, 16 Feb 2018 00:54:23 GMT
+      - Mon, 19 Feb 2018 11:33:05 GMT
       Etag:
       - '"09946b90ff0ae6bffc816038ebca053b"'
       Accept-Ranges:
@@ -617,5 +617,5 @@ http_interactions:
       encoding: UTF-8
       base64_string: ''
     http_version: 
-  recorded_at: Fri, 16 Feb 2018 00:54:22 GMT
+  recorded_at: Mon, 19 Feb 2018 11:33:04 GMT
 recorded_with: VCR 4.0.0
