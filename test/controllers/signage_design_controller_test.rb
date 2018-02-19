@@ -87,7 +87,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
 
   it 'should show the next step in the process when the user selects a bathing water' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000'))
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete'))
       page.must_have_content('Bathing water sign options')
       find('legend', text: 'Show the history of previous')
       find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('no')
@@ -96,7 +96,8 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
 
   it 'shows the sign options with a non-default value selected' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'yes'))
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'yes',
+                      'sign-plus': 'complete'))
       page.must_have_content('Bathing water sign options')
       find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('yes')
     end
@@ -104,7 +105,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
 
   it 'selects the name of the bathing water controller by default' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000',
+      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete',
                       'show-prf': 'yes', 'show-hist': 'yes', 'show-map': 'yes', 'show-logo': 'yes'))
       page.must_have_content('Bathing water manager information for Clevedon Beach')
       find('#bwmgr-name').value.must_equal('')
@@ -114,6 +115,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should show the preview page once the user has selected all options' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
                       'bwmgr-logo': 'test.png'))
@@ -130,6 +132,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should show the preview page in landscape mode by default' do
     VCR.use_cassette('bathing_water_clevedon_lookup') do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
                       'bwmgr-logo': 'test.png'))
@@ -140,6 +143,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should show the switch to portrait orientation on demand' do
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
                       'bwmgr-logo': 'test.png'))
@@ -153,6 +157,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should navigate back to a previous step when requested' do
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
                       'bwmgr-logo': 'test.png'))
@@ -164,6 +169,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should return to the preview after navigating back to an earlier point in the workflow' do
     VCR.use_cassette('traverse_workflow', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
+                      'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
                       'show-hist': 'yes', 'show-logo': 'yes', 'show-map': 'yes',
                       'bwmgr-logo': 'test.png'))
