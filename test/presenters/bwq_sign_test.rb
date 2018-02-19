@@ -100,42 +100,6 @@ class BwqSignTest < ActiveSupport::TestCase
     end
   end
 
-  describe 'classification image' do
-    it 'should return the parameters for the classifiation image' do
-      mock_resource = mock('Resource')
-      mock_resource.expects(:uri).times(3).returns('http://environment.data.gov.uk/def/bwq-cc-2015/2')
-      mock_bw = mock('BathingWater1')
-      mock_bw.expects(:latest_classification).times(3).returns(mock_resource)
-
-      mock_view_context = Object.new
-      def mock_view_context.image_path(p)
-        "path-to-#{p}"
-      end
-
-      BwqSign.new(bathing_water: mock_bw)
-             .classification_image_full[:alt]
-             .must_equal('good water quality')
-
-      BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context)
-             .classification_image_compact[:src]
-             .must_equal('path-to-2-stars.png')
-      BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context, final: true)
-             .classification_image_compact[:src]
-             .must_equal('path-to-2-stars.svg')
-    end
-
-    it 'should return the parameters for the image for a given classification resource' do
-      mock_view_context = Object.new
-      def mock_view_context.image_path(p)
-        "path-to-#{p}"
-      end
-
-      BwqSign.new(view_context: mock_view_context)
-             .classification_image_compact('http://environment.data.gov.uk/def/bwq-cc-2015/3')[:src]
-             .must_equal('path-to-1-star.png')
-    end
-  end
-
   describe '#show_prf?' do
     it 'should return true if the BW is in PRF' do
       mock_flag = mock('Value')

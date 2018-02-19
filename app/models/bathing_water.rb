@@ -23,11 +23,19 @@ class BathingWater < LdaResource
     self['latestProfile.controllerName']
   end
 
+  def closed?
+    latest_compliance_assessment.closed?
+  end
+
   def season_dates
     [
       Date.parse(val('latestProfile.seasonStartDate')),
       Date.parse(val('latestProfile.seasonFinishDate'))
     ]
+  end
+
+  def latest_compliance_assessment
+    ComplianceAssessment.new(self['latestComplianceAssessment'])
   end
 
   def latest_classification
@@ -51,8 +59,7 @@ class BathingWater < LdaResource
   end
 
   def classification_history
-    history = api.annual_compliance(eubwid, MAX_HISTORY_YEARS)
-    history.empty? ? [{ message: 'No prior classifications are available' }] : history
+    api.annual_compliance(eubwid, MAX_HISTORY_YEARS)
   end
 
   def to_json
