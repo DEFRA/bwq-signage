@@ -21,10 +21,6 @@
         %li
           = link_to('choose different sign options', @view_state.with_query_params(step: :opts))
         %li
-          = link_to('change the bathing water manager details', @view_state.with_query_params(step: :bwmgr))
-        %li
-          = link_to('change the bathing water manager logo', @view_state.with_query_params(step: :bwmgr_logo))
-        %li
           - bw_next = @view_state.next_by_bw_controller
           go to the next bathing water for  #{@view_state.bathing_water.controller_name} &ndash;
           = link_to(bw_next.name, @view_state.with_query_params(eubwid: bw_next.eubwid))

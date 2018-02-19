@@ -14,7 +14,7 @@
 
   = render partial: 'warning_flash'
 
-  = form_tag(root_path, method: 'get', enforce_utf8: false, class: 'c-options') do
+  = form_tag(root_path, method: 'post', enforce_utf8: false, multipart: true, class: 'c-options') do
     - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
     = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
@@ -46,7 +46,7 @@
         %h3.heading-small You can add a logo or other identifying image
 
         .multiple-choice
-          = radio_button_tag(:'bwmgr-logo', 'none', params[:'bwmgr-logo'] == 'none')
+          = radio_button_tag(:'bwmgr-logo', 'none', params[:'bwmgr-logo'] == 'none' || !params[:'bwmgr-logo'])
           = label_tag(:'bwmgr-logo_none', 'No logo')
 
         - if existing_logo

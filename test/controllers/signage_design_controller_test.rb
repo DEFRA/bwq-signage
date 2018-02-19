@@ -86,16 +86,16 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   end
 
   it 'should show the next step in the process when the user selects a bathing water' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete'))
       page.must_have_content('Bathing water sign options')
-      find('legend', text: 'Show the history of previous')
+      find('legend', text: 'The history of previous')
       find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('no')
     end
   end
 
   it 'shows the sign options with a non-default value selected' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'yes',
                       'sign-plus': 'complete'))
       page.must_have_content('Bathing water sign options')
@@ -104,7 +104,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   end
 
   it 'selects the name of the bathing water controller by default' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete',
                       'show-prf': 'yes', 'show-hist': 'yes', 'show-map': 'yes', 'show-logo': 'yes'))
       page.must_have_content('Bathing water manager information for Clevedon Beach')
@@ -113,7 +113,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   end
 
   it 'should show the preview page once the user has selected all options' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
@@ -130,7 +130,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   end
 
   it 'should show the preview page in landscape mode by default' do
-    VCR.use_cassette('bathing_water_clevedon_lookup') do
+    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
                       'sign-plus': 'complete',
                       'bwmgr-phone': '', 'bwmgr-email': '', 'show-prf': 'no',
