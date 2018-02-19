@@ -1,26 +1,66 @@
-.o-workflow-unit.o-workflow-unit__landing
+- existing_logo = @view_state.logo_manager.logo_object
+- name = @view_state.params[:'bwmgr-name']
+
+.o-workflow-unit.o-workflow-unit__options
   .o-grid-row
     .o-grid-column__two-thirds
 
       %h2.heading-medium
-        Bathing water sign options
-      %p.lede
-        The sign will include up-to-date information from the Environment
-        Agency
-        = link_to('bathing water profiles.', 'https://environment.data.gov.uk/bwq/profiles')
-        You can select extra elements which
-        are not required, but may enhance your sign.
+        Bathing water sign options for #{@view_state.bathing_water.name}
 
-      = render partial: 'warning_flash'
+  %p.lede
+    Your sign will meet all regulatory requirements. It can also include any of the
+    following options:
 
-      = form_tag(root_path, method: 'get', enforce_utf8: false) do
-        - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
-        = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
+  = render partial: 'warning_flash'
 
-        = render partial: 'yes_no_option', locals: { option_heading: 'Show the history of previous annual classifications?', option_var: 'show-hist', option_default: 'no' }
-        = render partial: 'yes_no_option', locals: { option_heading: 'Show a map of the sampling point location?', option_var: 'show-map', option_default: 'no' }
-        = render partial: 'yes_no_option', locals: { option_heading: 'Include the Environment Agency logo?', option_var: 'show-logo', option_default: 'no' }
+  = form_tag(root_path, method: 'post', enforce_utf8: false, multipart: true, class: 'c-options') do
+    - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
+    = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
-        .form-group
-          %p
-            = submit_tag('Next step', { class: 'button' })
+    = render partial: 'yes_no_option', locals: { option_heading: 'The history of previous annual classifications?', option_var: 'show-hist', option_default: 'no' }
+    = render partial: 'yes_no_option', locals: { option_heading: 'A map of the sampling point location?', option_var: 'show-map', option_default: 'no' }
+    = render partial: 'yes_no_option', locals: { option_heading: 'The Environment Agency logo?', option_var: 'show-logo', option_default: 'no' }
+
+    %h3.heading-medium Contact information
+    %p
+      You can include extra information to tell members of the public how they can get in touch if needed.
+
+    .form-group
+      - mgr_name = @view_state.params[:'bwmgr-name']
+      = label_tag(:'bwmgr-name', 'Contact details', { class: 'form-label-bold' })
+      = text_field_tag(:'bwmgr-name', mgr_name, { class: 'form-control-2-3' })
+
+    .form-group
+      - mgr_email = @view_state.params[:'bwmgr-email']
+      = label_tag(:'bwmgr-email', 'Contact email address', { class: 'form-label-bold' })
+      = email_field_tag(:'bwmgr-email', mgr_email, { class: 'form-control-2-3' })
+
+    .form-group
+      - mgr_phone = @view_state.params[:'bwmgr-phone']
+      = label_tag(:'bwmgr-phone', 'Contact phone number', { class: 'form-label-bold' })
+      = telephone_field_tag(:'bwmgr-phone', mgr_phone, { class: 'form-control-2-3' })
+
+    .fieldset
+      %legend
+        %h3.heading-small You can add a logo or other identifying image
+
+        .multiple-choice
+          = radio_button_tag(:'bwmgr-logo', 'none', params[:'bwmgr-logo'] == 'none' || !params[:'bwmgr-logo'])
+          = label_tag(:'bwmgr-logo_none', 'No logo')
+
+        - if existing_logo
+          .multiple-choice
+            = radio_button_tag(:'bwmgr-logo', existing_logo.key, true)
+            = label_tag(:'bwmgr-logo_none') do
+              %img{ src: existing_logo.public_url, alt: "Logo for #{name}" }
+
+        .multiple-choice
+          = radio_button_tag(:'bwmgr-logo', :upload)
+          = label_tag(:'bwmgr-logo_upload', 'Upload a logo file')
+
+          %input#upload-file.c-options__upload-image{ name: 'logo-file', type: 'file', multiple: false }
+
+    .form-group
+      %p
+        = submit_tag('Next step', { class: 'button' })

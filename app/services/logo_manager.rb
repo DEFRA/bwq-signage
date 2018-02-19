@@ -5,9 +5,9 @@ class LogoManager
   attr_reader :params
   ENV_OPEN_DATA_BUCKET = 'environment-open-data'
 
-  def initialize(params, client = nil)
+  def initialize(params, options = nil)
     @params = params
-    @client = client
+    @options = options
   end
 
   def logo_object
@@ -21,16 +21,17 @@ class LogoManager
   end
 
   def logo_name_root
-    name = params[:'bwmgr-name']
-    return nil unless name && !name.empty?
+    bwid = params[:eubwid]
+    return nil unless bwid && !bwid.empty?
 
-    @logo_name_root ||=
-      name
-      .downcase
-      .strip
-      .gsub(/\W/, '-')
-      .gsub(/-+/, '-')
-      .gsub(/(^-)|(-$)/, '')
+    @logo_name_root ||= api
+                        .bathing_water_by_id(bwid)
+                        .controller_name
+                        .downcase
+                        .strip
+                        .gsub(/\W/, '-')
+                        .gsub(/-+/, '-')
+                        .gsub(/(^-)|(-$)/, '')
   end
 
   def find_logo
@@ -67,7 +68,11 @@ class LogoManager
   end
 
   def s3
-    client = @client || Aws::S3::Client.new(region: 'eu-west-1')
+    client = @options&.fetch(:client, nil) || Aws::S3::Client.new(region: 'eu-west-1')
     @s3 ||= Aws::S3::Resource.new(client: client)
+  end
+
+  def api
+    @options&.fetch(:api, nil) || BwqService.new
   end
 end
