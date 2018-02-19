@@ -17,9 +17,16 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
       end
 
       it 'should return the normalised name of the bathing water as the image root' do
-        params = ActionController::Parameters.new('bwmgr-name': "Dun Roamin' (north) ")
-        lm = LogoManager.new(params)
-        lm.logo_name_root.must_equal 'dun-roamin-north'
+        VCR.use_cassette('aws-s3', record: :new_episodes, preserve_exact_body_bytes: true) do
+          bw = mock('BathingWater')
+          bw.expects(:controller_name).returns("Dun Roamin' (north)")
+          api = mock('BwqService')
+          api.expects(:bathing_water_by_id).with('test-bw').returns(bw)
+          params = ActionController::Parameters.new(eubwid: 'test-bw')
+
+          lm = LogoManager.new(params, api: api)
+          lm.logo_name_root.must_equal 'dun-roamin-north'
+        end
       end
     end
   end
@@ -38,8 +45,13 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
   describe '#upload_and_replace' do
     it 'should allow a new logo to be uploaded' do
       VCR.use_cassette('aws-s3', record: :new_episodes, preserve_exact_body_bytes: true) do
-        params = ActionController::Parameters.new('bwmgr-name': 'test-bw')
-        lm = LogoManager.new(params)
+        bw = mock('BathingWater')
+        bw.expects(:controller_name).returns('test-controller')
+        api = mock('BwqService')
+        api.expects(:bathing_water_by_id).with('test-bw').returns(bw)
+        params = ActionController::Parameters.new('eubwid': 'test-bw')
+
+        lm = LogoManager.new(params, api: api)
         lm.remove_existing_logo
         refute lm.logo_object
 
@@ -52,7 +64,7 @@ class BathingWaterSearchTest < ActiveSupport::TestCase
 
         lm.upload_and_replace(upload_fixture, 'png')
 
-        lm.logo_object.key.must_equal 'bwq-signage-assets/test-bw/logo.png'
+        lm.logo_object.key.must_equal 'bwq-signage-assets/test-controller/logo.png'
       end
     end
   end

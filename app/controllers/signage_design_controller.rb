@@ -19,8 +19,8 @@ class SignageDesignController < ApplicationController
     @view_state = BwqSign.new(options)
   end
 
-  def upload
-    if (upload_file = validate_upload_params)
+  def update
+    if (upload_file = validate_upload_params) && params[:'bwmgr-logo'] == 'upload'
       upload_image_to_s3(upload_file)
     end
 
@@ -33,7 +33,7 @@ class SignageDesignController < ApplicationController
 
     validate_has_upload?(upload_file) &&
       validate_acceptable_file_type?(upload_file) &&
-      validate_has_bwmgr_name? &&
+      validate_has_eubwid? &&
       upload_file
   end
 
@@ -58,10 +58,10 @@ class SignageDesignController < ApplicationController
     true
   end
 
-  def validate_has_bwmgr_name?
-    if !params[:'bwmgr-name'] || params[:'bwmgr-name'].empty?
+  def validate_has_eubwid?
+    if !params[:eubwid] || params[:eubwid].empty?
       flash[:title] = 'Something went wrong'
-      flash[:message] = 'Bathing water manager name must not be empty'
+      flash[:message] = 'Bathing water must be selected first'
       return nil
     end
 
