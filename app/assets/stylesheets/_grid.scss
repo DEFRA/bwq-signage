@@ -14,4 +14,8 @@
   .o-grid-column__two-thirds {
     @include grid-column( 2/3 );
   }
+
+  .o-grid-column__half {
+    @include grid-column( 1/2 );
+  }
 }
