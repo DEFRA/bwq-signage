@@ -1,8 +1,3 @@
-<template lang='html'>
-  <div id='map'></div>
-</template>
-
-<script>
 import Leaflet from 'leaflet';
 import 'proj4leaflet';
 import Axios from 'axios';
@@ -20,9 +15,6 @@ const crs = new Leaflet.Proj.CRS(
       0.875, 0.4375, 0.21875, 0.109375],
   },
 );
-
-  // proj4.defs('osgb', crs); // Define OSGB projection transform function
-  // proj4.defs('epsg27700', epsg27700); // Define OSGB projection transform function
 
 function osLeisureLayer(options) {
   return new Leaflet.TileLayer(MAP_SERVICE, {
@@ -56,7 +48,7 @@ function createMap(options) {
   return osMap;
 }
 
-function initMap(options) {
+function drawMap(options) {
   const osMap = createMap(options);
 
   const layer = osLeisureLayer(options);
@@ -67,16 +59,19 @@ function initMap(options) {
   return osMap;
 }
 
-export default {
-  data: () => ({
-    bwData: {},
-    env: {},
-  }),
+function constructMap(env) {
+  const src = document.querySelector('#map-data').getAttribute('data-bw');
+  const bwData = JSON.parse(src);
 
-  mounted() {
-    console.log('sampling-point-map mounted');
-    const vm = this;
+  bwData.zoom = 8;
+  bwData.key = env.map_api;
+  bwData.mapId = 'map';
 
+  drawMap(bwData);
+}
+
+export default function initialiseMap() {
+  if (document.querySelector('#map-data')) {
     Axios.get(
       'env',
       {
@@ -85,25 +80,7 @@ export default {
         },
       },
     ).then((response) => {
-      vm.env = response.data;
-      vm.initialiseMap();
+      constructMap(response.data);
     });
-  },
-
-  methods: {
-    initialiseMap() {
-      const src = document.querySelector('#map-data').getAttribute('data-bw');
-      this.bwData = JSON.parse(src);
-
-      this.bwData.zoom = 8;
-      this.bwData.key = this.env.map_api;
-      this.bwData.mapId = 'map';
-
-      initMap(this.bwData);
-    },
-  },
-};
-</script>
-
-<style lang='scss'>
-</style>
+  }
+}
