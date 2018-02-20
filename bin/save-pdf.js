@@ -41,6 +41,9 @@ fs.appendFile(
     process.exit(0);
   })
   .catch((e) => {
-    console.log('Puppeteer failed with: ', e); // eslint-disable-line no-console
+    fs.appendFile(
+      'log/save-pdf.log',
+      `'Puppeteer failed with: ${e}\n`,
+    );
     process.exit(1);
   });
