@@ -310,8 +310,18 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     font-weight: bold;
   }
 
+  h1.u-long-title {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
   h2 {
     font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  h2.u-long-title {
+    font-size: 1.1rem;
     font-weight: bold;
   }
 }

@@ -1,9 +1,11 @@
 # frozen-string-literal: true
 
 # Presenter for view state for bathing water signs
-class BwqSign
+class BwqSign # rubocop:disable Metrics/ClassLength
   # No. of description chars before we drop the font-size to make it fit
   LONG_DESCRIPTION_LIMIT = 400
+
+  LONG_TITLE_LIMIT = 25
 
   attr_reader :options
 
@@ -53,7 +55,9 @@ class BwqSign
   end
 
   def monitoring_statement
+    # rubocop:disable Style/FormatStringToken
     start_date, end_date = bathing_water.season_dates.map { |date| date.strftime('%B') }
+    # rubocop:enable Style/FormatStringToken
     "Water quality is monitored from #{start_date}&nbsp;to&nbsp;#{end_date}".html_safe
   end
 
@@ -130,5 +134,9 @@ class BwqSign
   def pollution_sources_css_class
     base = show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
     bathing_water.long_pollution_description?(LONG_DESCRIPTION_LIMIT) ? "#{base} u-long-text" : base
+  end
+
+  def title_css_class
+    bathing_water.name.length >= LONG_TITLE_LIMIT ? 'u-long-title' : ''
   end
 end

@@ -3,7 +3,7 @@
     %section.c-content-row__head
       .o-content-unit__1-1.c-content-header
         .c-content-header__title
-          %h1
+          %h1{ class: @view_state.title_css_class }
             = @view_state.bathing_water.name
         .c-content-header__classification
           - unless @view_state.classifications.omit_classification_image?
@@ -15,7 +15,7 @@
 
     %section.c-content-row__about
       .o-content-unit__box{ class: @view_state.pollution_sources_css_class() }
-        %h2
+        %h2{ class: @view_state.title_css_class }
           Water quality at
           = @view_state.bathing_water.name
         - @view_state.bathing_water.pollution_source_statements.each do |stmt|
