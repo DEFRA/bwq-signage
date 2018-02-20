@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
 
 const url = process.argv[2];
 const format = process.argv[3];
-const landscape = process.argv[4] === 'landscape';
+const isLandscape = process.argv[4] === 'landscape';
 const path = process.argv[5];
 
 (async () => {
@@ -23,7 +23,7 @@ const path = process.argv[5];
   await page.pdf({
     path,
     format,
-    landscape,
+    isLandscape,
     printBackground: true,
   });
 
