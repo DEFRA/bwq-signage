@@ -239,6 +239,8 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   img {
     height: 75pt;
     width: 166pt;
+    border: 1px solid red;
+    margin-right: 10px;
   }
 }
 
