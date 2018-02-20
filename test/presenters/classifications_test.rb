@@ -24,12 +24,14 @@ class ClassificationsTest < ActiveSupport::TestCase
           "path-to-#{p}"
         end
 
-        BwqSign.new(bathing_water: mock_bw)
-               .classifications.image_full[:alt]
+        BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context)
+               .classifications
+               .image_full[:alt]
                .must_equal('good water quality')
 
         BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context)
-               .classifications.image_compact[:src]
+               .classifications
+               .image_compact[:src]
                .must_equal('path-to-2-stars.png')
         BwqSign.new(bathing_water: mock_bw, view_context: mock_view_context, final: true)
                .classifications
