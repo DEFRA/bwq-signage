@@ -13,18 +13,12 @@ const landscape = process.argv[4] === 'landscape';
 const path = process.argv[5];
 
 (async () => {
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
   const browser = await puppeteer.launch({
     executablePath: '/usr/bin/chromium-browser',
     headless: true,
   });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle0' });
-
-  await sleep(5000);
 
   await page.pdf({
     path,

@@ -24,8 +24,7 @@ class SignageDesignController < ApplicationController
       upload_image_to_s3(upload_file)
     end
 
-    show
-    render template: 'signage_design/show'
+    redirect_to({ action: :show }.merge(validate_params(%i[page_orientation])))
   end
 
   def validate_upload_params
