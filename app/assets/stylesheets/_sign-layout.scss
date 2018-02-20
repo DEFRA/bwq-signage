@@ -47,7 +47,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   }
 }
 
-@media print {
+.c-bwq-sign-final {
   #development-container {
     font-size: 12pt;
   }
@@ -232,6 +232,12 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-header__classification {
   img {
     height: 11rem;
+  }
+}
+
+.c-bwq-sign-final .c-content-header__classification {
+  img {
+    height: 10rem;
   }
 }
 
