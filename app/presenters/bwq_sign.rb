@@ -2,6 +2,9 @@
 
 # Presenter for view state for bathing water signs
 class BwqSign
+  # No. of description chars before we drop the font-size to make it fit
+  LONG_DESCRIPTION_LIMIT = 400
+
   attr_reader :options
 
   def initialize(options)
@@ -122,5 +125,10 @@ class BwqSign
 
   def classifications(bw = nil)
     @classifications ||= Classifications.new(bw || bathing_water, view_context, final?)
+  end
+
+  def pollution_sources_css_class
+    base = show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
+    bathing_water.long_pollution_description?(LONG_DESCRIPTION_LIMIT) ? "#{base} u-long-text" : base
   end
 end

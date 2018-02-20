@@ -54,6 +54,10 @@ class BathingWater < LdaResource
     stmts
   end
 
+  def long_pollution_description?(limit)
+    pollution_source_statements.map(&:length).sum >= limit
+  end
+
   def prf_statement
     self['latestProfile.signPRFSummary'].val
   end

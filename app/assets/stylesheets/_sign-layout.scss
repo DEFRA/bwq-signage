@@ -315,3 +315,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     font-weight: bold;
   }
 }
+
+.u-long-text p {
+  font-size: 85%;
+}

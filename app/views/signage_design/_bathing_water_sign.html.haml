@@ -14,8 +14,7 @@
               = @view_state.monitoring_statement
 
     %section.c-content-row__about
-      - pollution_sources_cls = @view_state.show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
-      .o-content-unit__box{ class: pollution_sources_cls }
+      .o-content-unit__box{ class: @view_state.pollution_sources_css_class() }
         %h2
           Water quality at
           = @view_state.bathing_water.name
