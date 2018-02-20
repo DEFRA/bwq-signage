@@ -18,7 +18,7 @@ const path = process.argv[5];
     headless: true,
   });
   const page = await browser.newPage();
-  await page.goto(url, { waitUntil: 'networkidle2', timeout: 5000 });
+  await page.goto(url, { waitUntil: 'networkidle0' });
 
   await page.pdf({
     path,
