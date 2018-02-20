@@ -18,7 +18,7 @@ const path = process.argv[5];
     headless: true,
   });
   const page = await browser.newPage();
-  await page.goto(url, { waitUntil: 'networkidle2' });
+  await page.goto(url, { waitUntil: 'networkidle2', timeout: 5000 });
 
   await page.pdf({
     path,
@@ -33,6 +33,6 @@ const path = process.argv[5];
     process.exit(0);
   })
   .catch((e) => {
-    console.log('Puppeteer failed with: ', e);
+    console.log('Puppeteer failed with: ', e); // eslint-disable-line no-console
     process.exit(1);
   });
