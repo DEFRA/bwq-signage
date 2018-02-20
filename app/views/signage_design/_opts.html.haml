@@ -18,9 +18,9 @@
     - hidden = @view_state.hidden_params(%i[show-prf show-hist show-map show-logo step search])
     = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
-    = render partial: 'yes_no_option', locals: { option_heading: 'The history of previous annual classifications?', option_var: 'show-hist', option_default: 'no' }
-    = render partial: 'yes_no_option', locals: { option_heading: 'A map of the sampling point location?', option_var: 'show-map', option_default: 'no' }
-    = render partial: 'yes_no_option', locals: { option_heading: 'The Environment Agency logo?', option_var: 'show-logo', option_default: 'no' }
+    = render partial: 'yes_no_option', locals: { option_heading: 'Previous annual classifications', option_var: 'show-hist', option_default: 'no' }
+    = render partial: 'yes_no_option', locals: { option_heading: 'A map of the sampling point location', option_var: 'show-map', option_default: 'no' }
+    = render partial: 'yes_no_option', locals: { option_heading: 'The Environment Agency logo', option_var: 'show-logo', option_default: 'no' }
 
     %h3.heading-medium Contact information
     %p

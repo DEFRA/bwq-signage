@@ -34,7 +34,7 @@
 
       .o-content-unit__box.c-content-unit__web-links{ class: web_info_cls }
         - if @view_state.show_history? && !@view_state.bathing_water.classification_history&.length.zero?
-          %h2 Previous annual water-quality classifications
+          %h2 Previous annual classifications
           %ul.c-content-unit__compliance-history
             - @view_state.bathing_water.classification_history.each do |classification|
               %li
@@ -59,7 +59,7 @@
 
       - if @view_state.show_map?
         .o-content-unit__box{ class: 'o-content-unit__2-2' }
-          %h2 Sampling Point Location
+          %h2 Sampling point location
           .c-content-info__map#map-data{ data: { bw: @view_state.bathing_water.to_json }}
             #map
 
@@ -73,7 +73,7 @@
           - unless bw_mgr[:name].empty? && bw_mgr[:phone].empty? && bw_mgr[:email].empty?
             %ul
               %li
-                For more information, contact:
+                Bathing water contact information
                 %br
                   %strong
                     = bw_mgr[:name]
