@@ -15,11 +15,6 @@ const format = argv[3];
 const isLandscape = argv[4] === 'landscape';
 const path = argv[5];
 
-fs.appendFile(
-  'log/save-pdf.log',
-  `${new Date().toISOString()} :: ${url} :: format ${format} :: is-landscape ${isLandscape} :: to ${path}\n`,
-);
-
 (async () => {
   const browser = await puppeteer.launch({
     executablePath: '/usr/bin/chromium-browser',
@@ -41,9 +36,5 @@ fs.appendFile(
     process.exit(0);
   })
   .catch((e) => {
-    fs.appendFile(
-      'log/save-pdf.log',
-      `'Puppeteer failed with: ${e}\n`,
-    );
     process.exit(1);
   });
