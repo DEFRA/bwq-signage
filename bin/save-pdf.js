@@ -4,13 +4,21 @@
  * Options:
  *   node save-pdf.js <url> [a3|a4] [landscape|portrait] <output-file>
  */
+const fs = require('fs');
+
+const { argv } = process;
 
 const puppeteer = require('puppeteer');
 
-const url = process.argv[2];
-const format = process.argv[3];
-const isLandscape = process.argv[4] === 'landscape';
-const path = process.argv[5];
+const url = argv[2];
+const format = argv[3];
+const isLandscape = argv[4] === 'landscape';
+const path = argv[5];
+
+fs.appendFile(
+  'log/save-pdf.log',
+  `${new Date().toISOString()} :: ${url} :: format ${format} :: is-landscape ${isLandscape} :: to ${path}\n`,
+);
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -23,7 +31,7 @@ const path = process.argv[5];
   await page.pdf({
     path,
     format,
-    isLandscape,
+    landscape: isLandscape,
     printBackground: true,
   });
 
