@@ -38,8 +38,7 @@ class Classifications
 
     {
       alt: image_root[:alt],
-      src: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.png",
-      srcset: "https://environment.data.gov.uk/bwq/profiles/images/#{image_root[:src]}.svg"
+      src: view_context.image_path("#{image_root[:src]}.svg")
     }
   end
 
