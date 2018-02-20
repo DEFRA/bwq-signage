@@ -241,11 +241,9 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   }
 }
 
-@media print {
-  .c-sign-layout--landscape .c-content-header__classification {
-    img {
-      height: 10rem;
-    }
+.c-bwq-sign-final .c-sign-layout--landscape .c-content-header__classification {
+  img {
+    height: 10rem;
   }
 }
 
