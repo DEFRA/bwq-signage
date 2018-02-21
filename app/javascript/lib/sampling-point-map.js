@@ -29,9 +29,9 @@ function osLeisureLayer(options) {
 }
 
 function createMap(options) {
-  const attribution = Leaflet.control.attribution();
+  const attribution = Leaflet.control.attribution({ prefix: false });
   attribution.setPosition('bottomright');
-  attribution.addAttribution('Crown Copyright, terms and conditions apply');
+  attribution.addAttribution('Contains OS data © Crown copyright and database right (2018)');
 
   const mapConfig = {
     center: Leaflet.latLng(options.lat, options.long),
@@ -44,7 +44,7 @@ function createMap(options) {
 
   const osMap = new Leaflet.Map(options.mapId, mapConfig);
 
-  // attribution.addTo(osMap);
+  attribution.addTo(osMap);
   return osMap;
 }
 
