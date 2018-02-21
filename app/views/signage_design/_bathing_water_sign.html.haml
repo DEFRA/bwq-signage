@@ -66,10 +66,8 @@
           - unless bw_mgr[:name].empty? && bw_mgr[:phone].empty? && bw_mgr[:email].empty?
             %ul
               %li
-                Bathing water contact information
-                %br
-                  %strong
-                    = bw_mgr[:name]
+                %strong
+                  = bw_mgr[:name]
               - unless bw_mgr[:phone].empty?
                 %li
                   = bw_mgr[:phone]
