@@ -219,5 +219,13 @@ class BwqSignTest < ActiveSupport::TestCase
         bw3.name.must_equal('Clevedon Beach')
       end
     end
+
+    it 'should prevent precessing for controllers with only one bathing water' do
+      VCR.use_cassette('precess-controller', record: :new_episodes) do
+        # BW ukk1302-11760 is the Cotswold Country Park
+        bw = BwqService.new.bathing_water_by_id('ukk1302-11760')
+        BwqSign.new(bathing_water: bw).next_by_bw_controller.must_be_nil
+      end
+    end
   end
 end

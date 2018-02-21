@@ -1234,4 +1234,191 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 19 Feb 2018 11:33:10 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1302-11760?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1302-11760.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Feb 2018 14:55:18 GMT
+      Etag:
+      - '"67cbf4d5abec9a21-gzip"'
+      Expires:
+      - Wed, 21 Feb 2018 14:58:17 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '88'
+      Content-Length:
+      - '3135'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1302-11760.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1302-11760.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1302-11760", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366661", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366661", "label" : [{"_value" : "Companies House profile for Thames Water Utilities Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Thames Water Utilities Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000020616", "name" : {"_value" : "Gloucestershire", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000020224", "name" : {"_value" : "Cotswold", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000079"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1302-11760:1", "label" : [{"_value" : "Map bounds for Cotswold Country Park and Beach", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1302-11760", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/11760/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1302-11760/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1302-11760", "bathingWaterDescription" : {"_value" : "The bathing water is in Keynes Lake 32 in the Cotswolds Water Park near Somerford Keynes. The beach is 140 metres long with 6080 square metres of water set aside for bathing. The gradient of the beach is very shallow and the maximum depth of water is approximately 1.5 metres in the bathing season. The entire lake has a gravel base and the beach is covered with soft yellow sand.", "_lang" : "en"}
+                , "controllerName" : "Cotswold", "countyName" : {"_value" : "Gloucestershire", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1302-11760/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "The Environment Agency have carried out an investigation to identify sources of pollution into the bathing water. The Environment Agency identified geese living on the lake and a nearby toilet block as potential issues, which have now been addressed.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1302-11760/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Cotswold Country Park and Beach", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000079-11760-2017", "misconnectionsStatement" : {"_value" : "Modern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Cotswold Country Park and Beach", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) increase in number at certain times of the year. This process is known as a phytoplankton bloom. The Environment Agency research suggests this bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0097", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-11760:1", "streamsRiversStatement" : {"_value" : "The lake is predominantly groundwater fed with no inputs from streams or rivers.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Cotswold Country Park and Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 1% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1302-11760_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "The main farming undertaken in the area is arable. Current farming practices are not thought to pose a risk to the quality of the bathing water.", "_lang" : "en"}
+                , "workingWithPrivateOwnersStatement" : {"_value" : "Following the Environment Agency investigation, the owner\u2019s actions addressed the potential problems the Environment Agency identified with the geese population and the toilet block. However, should any further bathing water quality concerns arise, the Environment Agency will work with the owner to investigate and remediate the issues.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The lake is a disused gravel pit which has filled in with groundwater. The lake is connected to another lake to the north by a pipe designed to control the water levels. There are no other nearby areas of surface water within the catchment area which are thought to be a source of pollution. The majority of the land in the catchment is agricultural, with several small villages in the immediate area. As well as having a bathing beach, the lake is also used for sailing and fishing.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/11760/date/20160920/time/111500/recordDate/20160920", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-20T11:15:00", "inXSDDateTime" : {"_value" : "2016-09-20T11:15:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Cotswold Country Park and Beach", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-east-south-east-office", "name" : {"_value" : "South East", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/cotswold-country-park-and-beach", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/11760", "easting" : 402800.0, "lat" : 51.6609853223097, "long" : -1.96093036014707, "name" : {"_value" : "Sampling point at Cotswold Country Park and Beach", "_lang" : "en"}
+                , "northing" : 195800.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/LakeBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1998", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1302-11760:1", "name" : {"_value" : "Zone of influence at Cotswold Country Park and Beach", "_lang" : "en"}
+              }
+            }
+            , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 21 Feb 2018 14:55:18 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&_sort=name&latestProfile.controllerName=Cotswold
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Feb 2018 14:55:18 GMT
+      Etag:
+      - '"47517c5633996595-gzip"'
+      Expires:
+      - Wed, 21 Feb 2018 14:58:18 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '89'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_metadata=all&_sort=name", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Cotswold&_sort=name", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1302-11760", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366661", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366661", "label" : [{"_value" : "Companies House profile for Thames Water Utilities Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Thames Water Utilities Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000020616", "name" : {"_value" : "Gloucestershire", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000020224", "name" : {"_value" : "Cotswold", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000079"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk1302-11760:1", "label" : [{"_value" : "Map bounds for Cotswold Country Park and Beach", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk1302-11760", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/11760/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1302-11760/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk1302-11760", "bathingWaterDescription" : {"_value" : "The bathing water is in Keynes Lake 32 in the Cotswolds Water Park near Somerford Keynes. The beach is 140 metres long with 6080 square metres of water set aside for bathing. The gradient of the beach is very shallow and the maximum depth of water is approximately 1.5 metres in the bathing season. The entire lake has a gravel base and the beach is covered with soft yellow sand.", "_lang" : "en"}
+                , "controllerName" : "Cotswold", "countyName" : {"_value" : "Gloucestershire", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk1302-11760/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "The Environment Agency have carried out an investigation to identify sources of pollution into the bathing water. The Environment Agency identified geese living on the lake and a nearby toilet block as potential issues, which have now been addressed.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk1302-11760/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Cotswold Country Park and Beach", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000079-11760-2017", "misconnectionsStatement" : {"_value" : "Modern sewerage systems have two separate systems, one takes foul sewage to sewage treatment, the other takes rainwater runoff through surface water drains to rivers, lakes and the sea. Misconnections occur when waste water pipes are plumbed into surface water drains instead of the foul water sewerage system. This can give rise to pollution when the waste water is discharged directly to the environment through the surface water drain. For example, a washing machine or toilet may be incorrectly plumbed so that it discharges to the surface drain rather than the foul sewage drain.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Cotswold Country Park and Beach", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) increase in number at certain times of the year. This process is known as a phytoplankton bloom. The Environment Agency research suggests this bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0097", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-11760:1", "streamsRiversStatement" : {"_value" : "The lake is predominantly groundwater fed with no inputs from streams or rivers.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Cotswold Country Park and Beach for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 1% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk1302-11760_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "The main farming undertaken in the area is arable. Current farming practices are not thought to pose a risk to the quality of the bathing water.", "_lang" : "en"}
+                , "workingWithPrivateOwnersStatement" : {"_value" : "Following the Environment Agency investigation, the owner\u2019s actions addressed the potential problems the Environment Agency identified with the geese population and the toilet block. However, should any further bathing water quality concerns arise, the Environment Agency will work with the owner to investigate and remediate the issues.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The lake is a disused gravel pit which has filled in with groundwater. The lake is connected to another lake to the north by a pipe designed to control the water levels. There are no other nearby areas of surface water within the catchment area which are thought to be a source of pollution. The majority of the land in the catchment is agricultural, with several small villages in the immediate area. As well as having a bathing beach, the lake is also used for sailing and fishing.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/11760/date/20160920/time/111500/recordDate/20160920", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-20T11:15:00", "inXSDDateTime" : {"_value" : "2016-09-20T11:15:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Cotswold Country Park and Beach", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-east-south-east-office", "name" : {"_value" : "South East", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/cotswold-country-park-and-beach", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/11760", "easting" : 402800.0, "lat" : 51.6609853223097, "long" : -1.96093036014707, "name" : {"_value" : "Sampling point at Cotswold Country Park and Beach", "_lang" : "en"}
+                , "northing" : 195800.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/LakeBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1998", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk1302-11760:1", "name" : {"_value" : "Zone of influence at Cotswold Country Park and Beach", "_lang" : "en"}
+              }
+            }
+            ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Wed, 21 Feb 2018 14:55:18 GMT
 recorded_with: VCR 4.0.0
