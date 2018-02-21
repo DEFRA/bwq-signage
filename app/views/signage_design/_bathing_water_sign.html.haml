@@ -37,13 +37,7 @@
           %ul.c-content-unit__compliance-history
             - @view_state.bathing_water.classification_history.each do |classification|
               %li
-                - if classification.respond_to?(:uri)
-                  = classification.year
-                  - image_description = @view_state.classifications.image_compact(classification.complianceClassification&.uri)
-                  = image_tag(image_description[:src], alt: image_description[:alt])
-                  = classification.complianceClassification.name
-                - else
-                  = classification[:message]
+                = @view_state.classifications.show_compact(classification).html_safe
 
         %h2 For more information
         .c-content-info__qr-code

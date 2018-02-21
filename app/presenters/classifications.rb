@@ -51,4 +51,17 @@ class Classifications
       src: view_context.image_path(svg_image)
     }
   end
+
+  def closed?(uri)
+    uri.match?(%r{/11$})
+  end
+
+  # How would we present a classification in the history summary?
+  def show_compact(classification)
+    curi = classification.complianceClassification.uri
+    image_description = image_compact(curi) if CLASSIFICATION_IMAGES.key?(curi)
+    image = image_description &&
+            "<img src='#{image_description[:src]}' alt='#{image_description[:alt]}'></img>"
+    "#{classification.year} #{image} #{classification.complianceClassification.name}"
+  end
 end
