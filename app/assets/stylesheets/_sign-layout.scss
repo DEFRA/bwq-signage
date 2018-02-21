@@ -71,7 +71,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 @mixin flexbox-fallback {
@@ -129,11 +129,18 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .o-content-unit__2-2 { margin-left: 0.5em; }
 
 /** row of three blocks */
-.o-content-unit__1-3, .o-content-unit__2-3, .o-content-unit__3-3 {
+.o-content-unit__1-3, .o-content-unit__3-3 {
   max-height: 100%;
-  width: 33.3%;
+  width: 40%;
   margin: 0;
-  padding: 1em;
+  padding: 0;
+  @include flexbox-fallback;
+}
+.o-content-unit__2-3 {
+  max-height: 100%;
+  width: 20%;
+  margin: 0;
+  padding: 0;
   @include flexbox-fallback;
 }
 .o-content-unit__1-3, .o-content-unit__2-3 { margin-right: 0.5em; }
@@ -300,7 +307,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 }
 
 .c-content-foot__bwmgr-contact {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 // titles
