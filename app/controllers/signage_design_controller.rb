@@ -11,7 +11,7 @@ class SignageDesignController < ApplicationController
   }.freeze
 
   def show
-    options = { params: validate_params(%i[page_orientation step]) }
+    options = { params: validate_params(%i[page_orientation page_size step]) }
     options[:search] = search if params[:search]
     options[:bathing_water] = load_bathing_water(params[:eubwid]) if params[:eubwid]
     options[:view_context] = view_context
@@ -24,7 +24,7 @@ class SignageDesignController < ApplicationController
       upload_image_to_s3(upload_file)
     end
 
-    redirect_to({ action: :show }.merge(validate_params(%i[page_orientation])))
+    redirect_to({ action: :show }.merge(validate_params(%i[page_orientation page_size])))
   end
 
   def validate_upload_params

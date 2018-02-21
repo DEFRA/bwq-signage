@@ -41,6 +41,10 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     params[:page_orientation] != 'portrait'
   end
 
+  def a3_page?
+    params[:page_size] == 'a3'
+  end
+
   def page_orientation
     {
       current: landscape? ? 'landscape' : 'portrait',

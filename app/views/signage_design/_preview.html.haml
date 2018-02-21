@@ -31,5 +31,5 @@
         - a4_path = @view_state.with_query_params(page_size: :a4)
         = link_to('download pdf (A4 page)', download_path(a4_path), { class: 'button' })
 
-        -# - a3_path = @view_state.with_query_params(page_size: :a3)
-        -# = link_to('download pdf (A3 page)', download_path(a3_path), { class: 'button' })
+        - a3_path = @view_state.with_query_params(page_size: :a3)
+        = link_to('download pdf (A3 page)', download_path(a3_path), { class: 'button' })

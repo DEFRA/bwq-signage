@@ -8,7 +8,7 @@ class BwqSignFinalController < ApplicationController
   HOST = 'localhost'
 
   def show
-    options = { params: validate_params(%i[page_orientation]) }
+    options = { params: validate_params(%i[page_orientation page_size]) }
     options[:search] = search if params[:search]
     options[:bathing_water] = load_bathing_water(params[:eubwid]) if params[:eubwid]
     options[:view_context] = view_context

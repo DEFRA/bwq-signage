@@ -1,5 +1,6 @@
 %article#development-container.c-sign-preview
-  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]}" }
+  - a3_cls = "c-sign-layout--#{@view_state.a3_page? ? 'a3' : 'a4'}"
+  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]} #{a3_cls}" }
     %section.c-content-row__head
       .o-content-unit__1-1.c-content-header
         .c-content-header__title
