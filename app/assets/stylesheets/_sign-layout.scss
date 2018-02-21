@@ -336,3 +336,9 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .u-long-text p {
   font-size: 85%;
 }
+
+// GDS stylesheet fix
+.multiple-choice [type=radio] + label::before {
+  top: 2px;
+  left: 2px;
+}
