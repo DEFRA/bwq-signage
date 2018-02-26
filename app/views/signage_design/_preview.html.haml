@@ -19,12 +19,12 @@
         %li
           = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
         %li
-          = link_to('choose different sign options', @view_state.with_query_params(step: :opts))
+          = link_to('choose different extra optional features', @view_state.with_query_params(step: :opts))
 
         - bw_next = @view_state.next_by_bw_controller
         - if bw_next
           %li
-            go to the next bathing water for  #{@view_state.bathing_water.controller_name} &ndash;
+            go to the next bathing water for local authority #{@view_state.bathing_water.controller_name} &ndash;
             = link_to(bw_next.name, @view_state.with_query_params(eubwid: bw_next.eubwid))
 
       %p
