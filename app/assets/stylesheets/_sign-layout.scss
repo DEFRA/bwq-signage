@@ -236,8 +236,8 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     grid-column: 2;
     grid-row: 1 / span 2;
     -ms-grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     align-self: end;
   }
 
