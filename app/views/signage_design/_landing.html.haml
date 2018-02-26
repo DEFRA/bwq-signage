@@ -18,3 +18,11 @@
 
       %p
         = link_to('Start now', root_path(design: true), class: 'button button-start')
+
+      %p &nbsp;
+      
+      %h2.heading-small Help and feedback
+      %p
+        If you have any questions or comments about this application, please contact us
+        at
+        = mail_to('data.info@environment-agency.gov.uk', 'data.info@environment-agency.gov.uk', subject: 'Bathing water site-signage application')
