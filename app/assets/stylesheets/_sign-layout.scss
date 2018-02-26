@@ -249,6 +249,11 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
   }
 }
 
+.c-content-header__title {
+  line-height: 1.25;
+  margin-bottom: 0.25em;
+}
+
 .c-content-header__monitoring {
   font-size: 1.5em;
 
