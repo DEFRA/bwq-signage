@@ -283,6 +283,10 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-info__qr-code {
   display: inline;
   float: right;
+
+  img {
+    margin-top: -25px;
+  }
 }
 
 .c-content-unit__compliance-history {
