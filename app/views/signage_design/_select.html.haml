@@ -44,9 +44,11 @@
     - unless controller_results.empty?
       .o-grid-column__one-third
         %h3.heading-small
-          Matching controller names
+          Matching local authority names
 
         %ul.o-search-results
           - controller_results.each do |bw|
             %li.o-search-results__result
               = link_to("#{bw.name} (#{bw.controller_name})", root_path(@view_state.with_query_params(eubwid: bw.eubwid)))
+
+  %p &nbsp;

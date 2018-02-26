@@ -5,8 +5,8 @@
       %h2.heading-medium
         Which bathing water?
       %p.lede
-        Search for a bathing water by name, by bathing-water ID or by the name
-        of the bathing water controller.
+        Search for a bathing water by name, by bathing water ID or by the name
+        of the local authority.
 
       = render partial: 'warning_flash'
 
@@ -15,7 +15,7 @@
         = render partial: 'keep_existing_choices', locals: { hidden_params: hidden }
 
         .form-group
-          = label_tag(:search, 'Bathing water name, bathing water ID, or controller name', { class: 'form-label-bold' })
+          = label_tag(:search, 'Bathing water name, bathing water ID, or local authority name', { class: 'form-label-bold' })
           = search_field_tag(:search, nil, { class: 'form-control-2-3' })
 
         .form-group
