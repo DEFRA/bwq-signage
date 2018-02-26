@@ -4,8 +4,6 @@
  * Options:
  *   node save-pdf.js <url> [a3|a4] [landscape|portrait] <output-file>
  */
-const fs = require('fs');
-
 const { argv } = process;
 
 const puppeteer = require('puppeteer');
@@ -28,6 +26,7 @@ const path = argv[5];
     format,
     landscape: isLandscape,
     printBackground: true,
+    pageRanges: '1',
   });
 
   await browser.close();
@@ -35,6 +34,6 @@ const path = argv[5];
   .then(() => {
     process.exit(0);
   })
-  .catch((e) => {
+  .catch(() => {
     process.exit(1);
   });
