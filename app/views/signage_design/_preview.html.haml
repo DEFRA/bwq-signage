@@ -19,7 +19,7 @@
         %li
           = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
         %li
-          = link_to('choose different extra optional features', @view_state.with_query_params(step: :opts))
+          = link_to('choose different extra features', @view_state.with_query_params(step: :opts))
 
         - bw_next = @view_state.next_by_bw_controller
         - if bw_next
