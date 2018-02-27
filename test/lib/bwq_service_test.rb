@@ -113,4 +113,15 @@ class BwqServiceTest < Minitest::Test
       bws.map(&:name) .include?('Trebarwith Strand')
     end
   end
+
+  def test_bws_in_same_controller
+    VCR.use_cassette('test_bws_in_same_controller') do
+      bw = @bws.bw_by_uri('http://environment.data.gov.uk/id/bathing-water/ukk2204-19900')
+      bws = @bws.bws_in_same_controller(bw)
+
+      assert bws.size >= 6
+      bws.map(&:name).include?('Durdle Door West')
+      bws.map(&:name).include?('Durdle Door East')
+    end
+  end
 end

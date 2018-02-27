@@ -45,6 +45,15 @@ class LdaResourceTest < Minitest::Test
     assert_nil r['county.name.not_here']
   end
 
+  def test_p_assign
+    r = LdaResource.new(@resource_data)
+    n = r['samplingPoint']
+    assert_equal 587_900.0, n['northing']
+
+    n['northing'] = 42
+    assert_equal 42, n['northing']
+  end
+
   def test_label_1
     r = LdaResource.new(@resource_data)
     assert_equal 'Newbiggin North', r.name
@@ -71,5 +80,21 @@ class LdaResourceTest < Minitest::Test
       'England, my England',
       LdaResource.new(@resource_data)['country'].label { |n| "#{n}, my #{n}" }
     )
+  end
+
+  def test_val
+    r = LdaResource.new(@resource_data)
+    assert_equal('Northumberland', r.val('district.label'))
+  end
+
+  def test_date
+    r = LdaResource.new(test_date: { _value: '2018-02-01' })
+    assert_equal(Date.new(2018, 2, 1), r.date('test_date'))
+  end
+
+  def test_empty?
+    assert LdaResource.new({}).empty?
+    assert LdaResource.new(nil).empty?
+    refute LdaResource.new(a: { _value: 1 }).empty?
   end
 end

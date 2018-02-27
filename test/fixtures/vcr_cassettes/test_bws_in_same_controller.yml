@@ -1,0 +1,494 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/id/bathing-water/ukk2204-19900?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 303
+      message: See Other
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 27 Feb 2018 17:41:08 GMT
+      Expires:
+      - Tue, 27 Feb 2018 18:41:08 GMT
+      Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Server:
+      - Server
+      X-Response-Id:
+      - '18'
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 27 Feb 2018 17:41:08 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 27 Feb 2018 17:41:08 GMT
+      Etag:
+      - '"f013a40dd15ae0f3-gzip"'
+      Expires:
+      - Tue, 27 Feb 2018 17:44:08 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '19'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water/_eubwid.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk2204-19900.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&_metadata=all", "primaryTopic" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-19900:1", "label" : [{"_value" : "Map bounds for Kimmeridge Bay", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-19900", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/19900/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "bathingWaterDescription" : {"_value" : "Kimmeridge Bay is on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a remote, sheltered bay of cobbles and pebbles, approximately one kilometre wide, with rock flats backed by cliffs.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "The village of Kimmeridge was originally unsewered with local homes discharging to the Kimmeridge Stream. The Wessex Water first time rural sewerage scheme for Kimmeridge was completed in 2002. Sewage is pumped to Corfe sewage treatment works which provides secondary treatment.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "Investigations to identify and address sources of contamination of the streams that enter the sea at Kimmeridge Bay are ongoing. Dye tracing studies by the Environment Agency have demonstrated that the input from the Kimmeridge Stream is likely to be the main cause of poor bathing water quality. Further work is needed to understand the importance of the large accumulations of seaweed on the beach at Kimmeridge Bay. Previous studies have shown that accumulations of seaweed can contribute to bathing water quality problems.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-19900/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Kimmeridge Bay", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-19900-2017", "localAuthorityStatement" : {"_value" : "Surface water can flow into the Kimmeridge streams from outfalls and highway drains. This can affect stream water quality, particularly after periods of rainfall.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "This bathing water has a history of large amounts of seaweed (macro algae), particularly towards the end of September.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Kimmeridge Bay", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n12 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Kimmeridge Bay bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 12 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Kimmeridge Bay bathing water quality is influenced by the Kimmeridge New Barn stream and the Kimmeridge stream, and may reduce during or after periods of heavy rainfall due to run off from agricultural land and urban areas.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0135", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-19900:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. Two small streams enter the sea at Kimmeridge Bay. The Kimmeridge Stream enters the sea very close to the bathing water monitoring point. The Environment Agency has monitored water quality in these streams since 1994 and found that water quality in both watercourses deteriorates following heavy rainfall.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Kimmeridge Bay for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 84% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-19900_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "During and after periods of heavy rainfall, runoff from agricultural areas is greatly increased, and the quality of the bathing water may be adversely affected. The Environment Agency are working with farmers to encourage better farming practices and improve water quality in the surrounding areas.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Kimmeridge Bay is approximately 310 hectares. There are two streams which enter the sea at Kimmeridge Bay. The Kimmeridge Stream is approximately 1.2 kilometres long and flows from the village of Kimmeridge through farmland to the beach. The Kimmeridge New Barn Stream is approximately two kilometres long and flows across the eastern side of the catchment entering the sea at the eastern end of the bay. The catchment is mostly agricultural with two farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/19900/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0063", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19900", "easting" : 390798.0, "lat" : 50.6114938804878, "long" : -2.13142387605586, "name" : {"_value" : "Sampling point at Kimmeridge Bay", "_lang" : "en"}
+                  , "northing" : 79094.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/19900/date/20160922/time/134100/recordDate/20160922", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T13:41:00", "inXSDDateTime" : {"_value" : "2016-09-22T13:41:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Kimmeridge Bay", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/kimmeridge-bay", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19900", "easting" : 390798.0, "lat" : 50.6114938804878, "long" : -2.13142387605586, "name" : {"_value" : "Sampling point at Kimmeridge Bay", "_lang" : "en"}
+                , "northing" : 79094.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/rock-sediment", "http://environment.data.gov.uk/def/bathing-water/sand-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-19900:1", "name" : {"_value" : "Zone of influence at Kimmeridge Bay", "_lang" : "en"}
+              }
+            }
+            , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Tue, 27 Feb 2018 17:41:08 GMT
+- request:
+    method: get
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime,latestSampleAssessment.sampleYear.ordinalYear,latestSampleAssessment.escherichiaColiCount.*,latestSampleAssessment.intestinalEnterococciCount.*,latestProfile.*,latestComplianceAssessment.sampleYear.ordinalYear,latestRiskPrediction.*&_sort=name&latestProfile.controllerName=Purbeck
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Location:
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 27 Feb 2018 17:41:08 GMT
+      Etag:
+      - '"9234acdd1c77e898-gzip"'
+      Expires:
+      - Tue, 27 Feb 2018 17:44:08 GMT
+      Server:
+      - Server
+      Vary:
+      - Accept,Accept-Encoding
+      X-Response-Id:
+      - '20'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_metadata=all&_sort=name", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_page=0&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water.json?_pageSize=600&_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A&latestProfile.controllerName=Purbeck&_sort=name", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+            , "items" : [{"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20100", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-20100:1", "label" : [{"_value" : "Map bounds for Durdle Door East", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-20100", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/20100/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20100/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20100", "bathingWaterDescription" : {"_value" : "Durdle Door East is on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a fairly remote beach of sand and shingle, approximately 580 metres wide, and backed by high cliffs.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20100/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-20100/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Durdle Door East", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-20100-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Durdle Door East", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0137", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-20100:1", "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Durdle Door East for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 83% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-20100_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Durdle Door East is approximately 10 hectares. Land use is rural and there are no streams which drain directly to the beach.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/20100/date/20160922/time/120900/recordDate/20160922", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T12:09:00", "inXSDDateTime" : {"_value" : "2016-09-22T12:09:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Durdle Door East", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/durdle-door-east", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/20100", "easting" : 380703.0, "lat" : 50.6220094769958, "long" : -2.27415859053492, "name" : {"_value" : "Sampling point at Durdle Door East", "_lang" : "en"}
+                , "northing" : 80291.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-20100:1", "name" : {"_value" : "Zone of influence at Durdle Door East", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20200", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-20200:1", "label" : [{"_value" : "Map bounds for Durdle Door West", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-20200", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/20200/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20200/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20200", "bathingWaterDescription" : {"_value" : "Durdle Door West is on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a fairly remote beach of sand and shingle, approximately 750 metres wide, and backed by high cliffs.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20200/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-20200/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Durdle Door West", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-20200-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Durdle Door West", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0138", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-20200:1", "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Durdle Door West for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 84% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-20200_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Durdle Door West is approximately 52 hectares. Land use is rural and there are no streams which drain directly to the beach.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/20200/date/20160922/time/115900/recordDate/20160922", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T11:59:00", "inXSDDateTime" : {"_value" : "2016-09-22T11:59:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Durdle Door West", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/durdle-door-west", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/20200", "easting" : 380493.0, "lat" : 50.6219484895418, "long" : -2.27712684482216, "name" : {"_value" : "Sampling point at Durdle Door West", "_lang" : "en"}
+                , "northing" : 80285.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-20200:1", "name" : {"_value" : "Zone of influence at Durdle Door West", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-19900:1", "label" : [{"_value" : "Map bounds for Kimmeridge Bay", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-19900", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/19900/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "bathingWaterDescription" : {"_value" : "Kimmeridge Bay is on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a remote, sheltered bay of cobbles and pebbles, approximately one kilometre wide, with rock flats backed by cliffs.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "The village of Kimmeridge was originally unsewered with local homes discharging to the Kimmeridge Stream. The Wessex Water first time rural sewerage scheme for Kimmeridge was completed in 2002. Sewage is pumped to Corfe sewage treatment works which provides secondary treatment.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19900/2017:1/intervals/interval", "investigationsStatement" : {"_value" : "Investigations to identify and address sources of contamination of the streams that enter the sea at Kimmeridge Bay are ongoing. Dye tracing studies by the Environment Agency have demonstrated that the input from the Kimmeridge Stream is likely to be the main cause of poor bathing water quality. Further work is needed to understand the importance of the large accumulations of seaweed on the beach at Kimmeridge Bay. Previous studies have shown that accumulations of seaweed can contribute to bathing water quality problems.", "_lang" : "en"}
+                , "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-19900/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Kimmeridge Bay", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-19900-2017", "localAuthorityStatement" : {"_value" : "Surface water can flow into the Kimmeridge streams from outfalls and highway drains. This can affect stream water quality, particularly after periods of rainfall.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "This bathing water has a history of large amounts of seaweed (macro algae), particularly towards the end of September.", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Kimmeridge Bay", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n12 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Kimmeridge Bay bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signAlgaeStatement" : {"_value" : "This bathing water beach often has patches of seaweed (macroalgae) and the bathing water can be affected by occasional blooms of phytoplankton (microscopic algae) which are not harmful, but can result in the water appearing discoloured or as foam forming on the water.", "_lang" : "en"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 12 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Kimmeridge Bay bathing water quality is influenced by the Kimmeridge New Barn stream and the Kimmeridge stream, and may reduce during or after periods of heavy rainfall due to run off from agricultural land and urban areas.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0135", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-19900:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. Two small streams enter the sea at Kimmeridge Bay. The Kimmeridge Stream enters the sea very close to the bathing water monitoring point. The Environment Agency has monitored water quality in these streams since 1994 and found that water quality in both watercourses deteriorates following heavy rainfall.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Kimmeridge Bay for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 84% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-19900_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "During and after periods of heavy rainfall, runoff from agricultural areas is greatly increased, and the quality of the bathing water may be adversely affected. The Environment Agency are working with farmers to encourage better farming practices and improve water quality in the surrounding areas.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Kimmeridge Bay is approximately 310 hectares. There are two streams which enter the sea at Kimmeridge Bay. The Kimmeridge Stream is approximately 1.2 kilometres long and flows from the village of Kimmeridge through farmland to the beach. The Kimmeridge New Barn Stream is approximately two kilometres long and flows across the eastern side of the catchment entering the sea at the eastern end of the bay. The catchment is mostly agricultural with two farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/19900/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0063", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19900", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19900", "easting" : 390798.0, "lat" : 50.6114938804878, "long" : -2.13142387605586, "name" : {"_value" : "Sampling point at Kimmeridge Bay", "_lang" : "en"}
+                  , "northing" : 79094.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/19900/date/20160922/time/134100/recordDate/20160922", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T13:41:00", "inXSDDateTime" : {"_value" : "2016-09-22T13:41:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Kimmeridge Bay", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/kimmeridge-bay", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19900", "easting" : 390798.0, "lat" : 50.6114938804878, "long" : -2.13142387605586, "name" : {"_value" : "Sampling point at Kimmeridge Bay", "_lang" : "en"}
+                , "northing" : 79094.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/rock-sediment", "http://environment.data.gov.uk/def/bathing-water/sand-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-19900:1", "name" : {"_value" : "Zone of influence at Kimmeridge Bay", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20000", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-20000:1", "label" : [{"_value" : "Map bounds for Lulworth Cove", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-20000", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/20000/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "name" : {"_value" : "Good", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20000/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20000", "bathingWaterDescription" : {"_value" : "Lulworth Cove is on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a sand and pebble resort bay, approximately 800 metres wide, backed by cliffs.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "esoOutfallsStatement" : {"_value" : "There are emergency/storm overflows from the West Lulworth Beach and West Lulworth Hanbury Farm pumping stations. The discharge is to the sea west of Lulworth Cove. The operation of the overflow can lead to a drop in bathing water quality.", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "The Wessex Water sewage treatment scheme for Lulworth was partially completed in 1995. The scheme included a fine screening plant at Lulworth sewage treatment works (STW), and resewerage work to reduce overflows to the stream. An enhanced STW scheme was completed in early 2005. Sewage from Lulworth STW is now pumped to Wool STW, which provides secondary treatment and phosphorus removal.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-20000/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-20000/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Lulworth Cove", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-20000-2017", "localAuthorityStatement" : {"_value" : "Surface water can flow into the Lulworth Stream from highway drains. This can affect stream water quality, particularly after periods of rainfall.", "_lang" : "en"}
+                , "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Lulworth Cove", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecastStatement" : {"_value" : "This bathing water is subject to short term pollution. Short term pollution is caused when heavy rainfall washes faecal material into the sea from livestock, sewage and urban drainage via rivers and streams.  At this site the risk of encountering reduced water quality increases after rainfall and typically returns to normal after 1-3 days. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns and will issue a pollution risk warning if heavy rainfall occurs to enable bathers to avoid periods of increased risk. \nThe Environment Agency works to reduce the sources of this pollution through pollution prevention measures, work with agriculture and water companies.\n4 warnings advising against swimming due to an increase risk of short term pollution were issued in 2016 for Lulworth Cove bathing water. These warnings were issued because of the effects of heavy rain on the water quality.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "true", "_datatype" : "boolean"}
+                , "samplingFrequency" : 20, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPRFSummary" : {"_value" : "This bathing water is subject to short term pollution. The Environment Agency makes daily pollution risk forecasts based on rainfall patterns. A pollution risk warning is issued if heavy rainfall occurs to enable bathers to avoid periods when bathing water quality may be reduced. This may last between 1-3 days. Last year warnings were issued on 4 days.", "_lang" : "en"}
+                , "signPollutionSourcesStatement" : {"_value" : "Bathing water quality is influenced by the Lulworth stream, and may reduce during or after periods of heavy rainfall due to run off from agricultural land, urban areas, and occasional discharges from two storm overflows.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0136", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-20000:1", "streamsRiversStatement" : {"_value" : "The Lulworth Stream flows across the beach at this bathing water. The Environment Agency have monitored the stream most years since 1994. Bathing water quality can be worse during or after heavy rainfall.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Lulworth Cove for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 51% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-20000_1-webres.jpg", "workingWithFarmersStatement" : {"_value" : "During and after periods of heavy rainfall, runoff from agricultural areas is greatly increased, and the quality of the bathing water may be adversely affected.", "_lang" : "en"}
+                , "zoiDescription" : {"_value" : "The catchment surrounding Lulworth Cove is approximately 410 hectares. The Lulworth stream is approximately one and a half kilometres long and flows through West Lulworth village and onto the beach. The catchment is mostly agricultural with just one or two farms.", "_lang" : "en"}
+              }
+              , "latestRiskPrediction" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction/point/20000/date/20171006-144034", "comment" : {"_value" : "No water quality warning issued", "_lang" : "en"}
+                , "dataset" : ["http://environment.data.gov.uk/data/bathing-water-quality/eaew/stp-risk-prediction", "http://environment.data.gov.uk/data/bathing-water-quality/stp-risk-prediction"], "expiresAt" : {"_value" : "2017-10-07T08:29:00", "_datatype" : "dateTime"}
+                , "predictedAt" : {"_value" : "2017-10-06T08:30:00", "_datatype" : "dateTime"}
+                , "predictedOn" : {"_value" : "2017-10-06", "_datatype" : "date"}
+                , "publishedAt" : {"_value" : "2017-10-06T14:40:34", "_datatype" : "dateTime"}
+                , "riskLevel" : {"_about" : "http://environment.data.gov.uk/def/bwq-stp/normal", "name" : {"_value" : "normal", "_lang" : "en"}
+                }
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/forecasts-publishTesting-2017-10-06_14-40-34_772-0584.csv#row=0064", "stp_bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-20000", "stp_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/20000", "easting" : 382457.0, "lat" : 50.6189357765588, "long" : -2.24934733320746, "name" : {"_value" : "Sampling point at Lulworth Cove", "_lang" : "en"}
+                  , "northing" : 79943.0}
+                , "type" : ["http://environment.data.gov.uk/def/bwq-stp/RiskPrediction"]}
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/20000/date/20160922/time/125400/recordDate/20160922", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 36, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-22T12:54:00", "inXSDDateTime" : {"_value" : "2016-09-22T12:54:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Lulworth Cove", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/lulworth-cove", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/20000", "easting" : 382457.0, "lat" : 50.6189357765588, "long" : -2.24934733320746, "name" : {"_value" : "Sampling point at Lulworth Cove", "_lang" : "en"}
+                , "northing" : 79943.0}
+              , "sedimentTypesPresent" : ["http://environment.data.gov.uk/def/bathing-water/sand-sediment", "http://environment.data.gov.uk/def/bathing-water/shingle-sediment"], "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-20000:1", "name" : {"_value" : "Zone of influence at Lulworth Cove", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19600", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-19600:1", "label" : [{"_value" : "Map bounds for Shell Bay North", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-19600", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/19600/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19600/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19600", "bathingWaterDescription" : {"_value" : "Shell Bay North is at the mouth of Poole Harbour on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a quiet sandy beach, approximately 660 metres wide, backed by sand dunes. A stream flows across the northern end of the beach.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19600/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-19600/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Shell Bay North", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-19600-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Shell Bay North", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "signPollutionSourcesStatement" : {"_value" : "There is a stream that flows from Studland Heath through Little Sea Lake to the beach. This stream is not known to affect bathing water compliance.", "_lang" : "en"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0132", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-19600:1", "streamsRiversStatement" : {"_value" : "Streams and rivers are typically affected by human sewage, animal slurry and runoff from roads. The affect on the water quality at Shell Bay North from the Poole Harbour catchment is limited. There is a small stream which flows onto the beach. This stream does not affect the bathing water.", "_lang" : "en"}
+                , "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Shell Bay North for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 85% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-19600_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Shell Bay North is approximately 450 hectares. There is a stream approximately 4.2 kilometres (km) long that flows from Studland Heath through Little Sea Lake to the beach 70m south of the Environment Agency monitoring point. The catchment is in the Dorset Heath Special Area of Conservation (SAC), Special Protection Area (SPA), and Site of Special Scientific Interest (SSSI).", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/19600/date/20160926/time/121800/recordDate/20160926", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-26T12:18:00", "inXSDDateTime" : {"_value" : "2016-09-26T12:18:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Shell Bay North", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/shell-bay-north", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19600", "easting" : 403714.0, "lat" : 50.6784546277685, "long" : -1.94880889880762, "name" : {"_value" : "Sampling point at Shell Bay North", "_lang" : "en"}
+                , "northing" : 86533.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : true, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-19600:1", "name" : {"_value" : "Zone of influence at Shell Bay North", "_lang" : "en"}
+              }
+            }
+            , {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19700", "appointedSewerageUndertaker" : {"_about" : "http://business.data.gov.uk/id/company/02366648", "companyProfile" : {"_about" : "http://business.data.gov.uk/companies/profile/02366648", "label" : [{"_value" : "Companies House profile for Wessex Water Services Limited", "_lang" : "en"}
+                  ]}
+                , "name" : {"_value" : "Wessex Water Services Limited", "_lang" : "en"}
+              }
+              , "country" : {"_about" : "http://data.ordnancesurvey.co.uk/id/country/england", "name" : {"_value" : "England", "_lang" : "en"}
+              }
+              , "county" : {"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014362", "name" : {"_value" : "Dorset", "_lang" : "en"}
+              }
+              , "district" : [{"_about" : "http://data.ordnancesurvey.co.uk/id/7000000000014363", "name" : {"_value" : "Purbeck", "_lang" : "en"}
+              }
+              , "http://statistics.data.gov.uk/id/statistical-geography/E07000051"], "envelope" : {"_about" : "http://location.data.gov.uk/so/common/Envelope/bwpf.eaew/ukk2204-19700:1", "label" : [{"_value" : "Map bounds for Studland Knoll House", "_lang" : "en"}
+                ]}
+              , "eubwidNotation" : "ukk2204-19700", "latestComplianceAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/19700/year/2016", "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/1", "name" : {"_value" : "Excellent", "_lang" : "en"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "latestProfile" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19700/2017:1", "applicableYear" : "http://reference.data.gov.uk/id/year/2017", "bathingWater" : "http://environment.data.gov.uk/id/bathing-water/ukk2204-19700", "bathingWaterDescription" : {"_value" : "Studland Knoll House is within Studland Bay on the Dorset coast, and is part of the Purbeck Heritage Coast. It is a sandy beach resort, approximately one kilometre wide, backed by sand dunes and a nature reserve.", "_lang" : "en"}
+                , "controllerName" : "Purbeck", "countyName" : {"_value" : "Dorset", "_lang" : "en"}
+                , "historyStatement" : {"_value" : "The storm overflow from Studland Combe pumping station was improved by Wessex Water in April 2002. The overflow is 850m south of the Environment Agency monitoring point.", "_lang" : "en"}
+                , "interval" : "http://environment.data.gov.uk/data/bathing-water-profile/ukk2204-19700/2017:1/intervals/interval", "isVersionOf" : "http://environment.data.gov.uk/data/bathing-water-profile-endurant/ukk2204-19700/2017", "label" : [{"_value" : "2017 Bathing Water Profile for Studland Knoll House", "_lang" : "en"}
+                ], "localAuthority" : "http://location.data.gov.uk/id/au/localAuthority/ons:gss/E07000051-19700-2017", "macroAlgaeStatement" : {"_value" : "This bathing water does not have a history of large amounts of seaweed (macro algae).", "_lang" : "en"}
+                , "name" : {"_value" : "2017 Bathing Water Profile for Studland Knoll House", "_lang" : "en"}
+                , "phytoplanktonStatement" : {"_value" : "Phytoplankton (microscopic algae) naturally increase in number at certain times of the year. This process is known as a phytoplankton bloom. This bathing water does not have a history of phytoplankton blooms.", "_lang" : "en"}
+                , "pollutionRiskForecasting" : {"_value" : "false", "_datatype" : "boolean"}
+                , "samplingFrequency" : 5, "seasonFinishDate" : {"_value" : "2017-09-30", "_datatype" : "date"}
+                , "seasonInterval" : "http://reference.data.gov.uk/id/gregorian-interval/2017-05-01T00:00:00/P152DT23H59M59S", "seasonStartDate" : {"_value" : "2017-05-01", "_datatype" : "date"}
+                , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_profile_proposal_with_signage_v2-2018-02-12_10-33-42_669-0255.csv#row=0133", "standardLanguageCollection" : "http://environment.data.gov.uk/data/bathing-water-profile-standard-language/2017-19700:1", "type" : ["http://environment.data.gov.uk/def/bathing-water-profile/BathingWaterProfile"], "versionString" : "1", "visiblePollutionStatement" : {"_value" : "Environment Agency samplers make observations of litter present on the beach at every visit, this includes assessments of sewage debris, litter and tar. At Studland Knoll House for the four year (2013-2016) assessment period where data is available, sewage debris was not noted at this site. Litter was not assessed as being sufficient to be objectionable, but was observed as being present on 64% of visits. Tarry residue was not noted at this site.", "_lang" : "en"}
+                , "webResImage" : "http://environment.data.gov.uk/media/image/bathing-water-profile/ukk2204-19700_1-webres.jpg", "zoiDescription" : {"_value" : "The catchment surrounding Studland Knoll House is approximately 16 hectares. There are no streams which drain directly to the beach.", "_lang" : "en"}
+              }
+              , "latestSampleAssessment" : {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/in-season/sample/point/19700/date/20160926/time/123700/recordDate/20160926", "escherichiaColiCount" : 10, "intestinalEnterococciCount" : 10, "sampleDateTime" : {"_about" : "http://reference.data.gov.uk/id/gregorian-instant/2016-09-26T12:37:00", "inXSDDateTime" : {"_value" : "2016-09-26T12:37:00", "_datatype" : "dateTime"}
+                }
+                , "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2016", "ordinalYear" : 2016}
+              }
+              , "name" : {"_value" : "Studland Knoll House", "_lang" : "en"}
+              , "regionalOrganization" : {"_about" : "http://reference.data.gov.uk/id/public-body/environment-agency/unit/south-west-south-west-office", "name" : {"_value" : "South West", "_lang" : "en"}
+              }
+              , "sameAs" : "http://environment.data.gov.uk/id/bathing-water/studland-knoll-house", "samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/19700", "easting" : 403430.0, "lat" : 50.6520985551084, "long" : -1.95285461153164, "name" : {"_value" : "Sampling point at Studland Knoll House", "_lang" : "en"}
+                , "northing" : 83602.0}
+              , "sedimentTypesPresent" : "http://environment.data.gov.uk/def/bathing-water/sand-sediment", "type" : ["http://environment.data.gov.uk/def/bathing-water/BathingWater", "http://environment.data.gov.uk/def/bathing-water/CoastalBathingWater"], "uriSet" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/", "label" : [{"_value" : "Bathing waters monitored by the Environment Agency for England and Wales.", "_lang" : "en"}
+                ]}
+              , "waterQualityImpactedByHeavyRain" : false, "yearDesignated" : "http://reference.data.gov.uk/id/year/1988", "zoneOfInfluence" : {"_about" : "http://location.data.gov.uk/so/ef/ZoneOfInfluence/bwzoi.eaew/ukk2204-19700:1", "name" : {"_value" : "Zone of influence at Studland Knoll House", "_lang" : "en"}
+              }
+            }
+            ], "itemsPerPage" : 600, "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+        }
+    http_version: 
+  recorded_at: Tue, 27 Feb 2018 17:41:08 GMT
+recorded_with: VCR 4.0.0
