@@ -1,0 +1,83 @@
+{
+  "format": "linked-data-api",
+  "version": "0.2",
+  "result": {
+    "_about": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016.json",
+    "definition": "http://environment.data.gov.uk/meta/data/bathing-water-quality/compliance-_regime/point/_bwspid/year/_year.json",
+    "extendedMetadataVersion": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016.json?_metadata=all",
+    "primaryTopic": {
+      "_about": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016",
+      "assessmentQualifier": {
+        "_about": "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment",
+        "name": {
+          "_value": "actual assessment",
+          "_lang": "en"
+        }
+      },
+      "assessmentRegime": {
+        "_about": "http://environment.data.gov.uk/def/bathing-water-quality/rBWD",
+        "name": {
+          "_value": "rBWD",
+          "_lang": "en"
+        }
+      },
+      "bwq_bathingWater": {
+        "_about": "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000",
+        "eubwidNotation": "ukk1202-36000",
+        "name": {
+          "_value": "Clevedon Beach",
+          "_lang": "en"
+        }
+      },
+      "bwq_samplingPoint": {
+        "_about": "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000",
+        "easting": 339914,
+        "lat": 51.4377009394295,
+        "long": -2.86583928659229,
+        "name": {
+          "_value": "Sampling point at Clevedon Beach",
+          "_lang": "en"
+        },
+        "northing": 171322,
+        "samplePointNotation": "36000"
+      },
+      "complianceClassification": {
+        "_about": "http://environment.data.gov.uk/def/bwq-cc-2015/2",
+        "complianceCodeNotation": "2",
+        "name": {
+          "_value": "Good",
+          "_lang": "en"
+        }
+      },
+      "escherichiaColiStats": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/escherichiaColiStats",
+      "finalSampleDate": {
+        "_value": "2016-09-22",
+        "_datatype": "date"
+      },
+      "firstSampleDate": {
+        "_value": "2013-05-01",
+        "_datatype": "date"
+      },
+      "intestinalEnterococciStats": "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016/intestinalEnterococciStats",
+      "label": [
+        {
+          "_value": "2016 compliance assessment for Clevedon Beach",
+          "_lang": "en"
+        }
+      ],
+      "sampleYear": {
+        "_about": "http://reference.data.gov.uk/id/year/2016",
+        "ordinalYear": 2016
+      },
+      "source": "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2016-2016-11-04_11-36-35_987-0233.csv#row=000384",
+      "type": [
+        "http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment",
+        "http://purl.org/linked-data/cube#Observation"
+      ]
+    },
+    "type": [
+      "http://purl.org/linked-data/api/vocab#ItemEndpoint",
+      "http://purl.org/linked-data/api/vocab#Page"
+    ]
+  }
+}

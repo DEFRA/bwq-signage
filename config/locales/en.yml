@@ -1,2 +1,15 @@
 en:
   global_proposition_header: "Create a bathing water sign"
+
+  compliance_assessment:
+    excellent: "excellent"
+    excellent_description: "excellent water quality"
+    good: "good"
+    good_description: "good water quality"
+    sufficient: "sufficient"
+    sufficient_description: "sufficient water quality"
+    poor: "poor"
+    poor_description: "poor water quality"
+    insufficient_samples: "insufficient samples"
+    no_classification: "no classification"
+    closed: "closed"
