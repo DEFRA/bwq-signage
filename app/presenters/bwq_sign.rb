@@ -62,7 +62,7 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     # rubocop:disable Style/FormatStringToken
     start_date, end_date = bathing_water.season_dates.map { |date| date.strftime('%B') }
     # rubocop:enable Style/FormatStringToken
-    "Water quality is monitored from #{start_date}&nbsp;to&nbsp;#{end_date}".html_safe
+    "Water quality is monitored by the Environment&nbsp;Agency from #{start_date}&nbsp;to&nbsp;#{end_date}".html_safe
   end
 
   # The Rails view context is passed in from the controller
