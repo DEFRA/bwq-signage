@@ -81,6 +81,18 @@ class BwqSignTest < ActiveSupport::TestCase
     end
   end
 
+  describe 'page size' do
+    it 'should return false if the page is not a3' do
+      params = ActionController::Parameters.new({}).permit!
+      refute BwqSign.new(params: params).a3_page?
+    end
+
+    it 'should return true for a3 pages' do
+      params = ActionController::Parameters.new(page_size: 'a3').permit!
+      assert BwqSign.new(params: params).a3_page?
+    end
+  end
+
   describe '#with_query_params' do
     it 'should merge the given params with the current query params' do
       params = ActionController::Parameters.new(page_orientation: 'portrait', design: true).permit!
@@ -226,6 +238,79 @@ class BwqSignTest < ActiveSupport::TestCase
         bw = BwqService.new.bathing_water_by_id('ukk1302-11760')
         BwqSign.new(bathing_water: bw).next_by_bw_controller.must_be_nil
       end
+    end
+  end
+
+  describe '#logo_manager' do
+    it 'should return the logo manager instance' do
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params)
+      logo_mgr = bwq_sign.logo_manager
+      logo_mgr.wont_be_nil
+      bwq_sign.logo_manager.must_be_same_as(logo_mgr)
+    end
+  end
+
+  describe '#pollution_sources_css_clas' do
+    it 'should return the correct class for bw with a short name and PRF' do
+      value = mock('Value')
+      value.expects(:val).returns('true')
+      bw = mock('BathingWater')
+      bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
+      bw.expects(:long_pollution_description?).with(400).returns(false)
+
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params, bathing_water: bw)
+
+      bwq_sign.pollution_sources_css_class.must_equal('o-content-unit__1-2')
+    end
+
+    it 'should return the correct class for bw with a short name and no PRF' do
+      value = mock('Value')
+      value.expects(:val).returns('false')
+      bw = mock('BathingWater')
+      bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
+      bw.expects(:long_pollution_description?).with(400).returns(false)
+
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params, bathing_water: bw)
+
+      bwq_sign.pollution_sources_css_class.must_equal('o-content-unit__1-1c')
+    end
+
+    it 'should return the correct class for bw with a long name and PRF' do
+      value = mock('Value')
+      value.expects(:val).returns('true')
+      bw = mock('BathingWater')
+      bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
+      bw.expects(:long_pollution_description?).with(400).returns(true)
+
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params, bathing_water: bw)
+
+      bwq_sign.pollution_sources_css_class.must_equal('o-content-unit__1-2 u-long-text')
+    end
+  end
+
+  describe '#title_css_class' do
+    it 'should return the correct class for bw with a short title' do
+      bw = mock('BathingWater')
+      bw.expects(:name).returns('not a long name')
+
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params, bathing_water: bw)
+
+      bwq_sign.title_css_class.must_equal('')
+    end
+
+    it 'should return the correct class for bw with a long title' do
+      bw = mock('BathingWater')
+      bw.expects(:name).returns('a long name indeed, possibly too long')
+
+      params = ActionController::Parameters.new({}).permit!
+      bwq_sign = BwqSign.new(params: params, bathing_water: bw)
+
+      bwq_sign.title_css_class.must_equal('u-long-title')
     end
   end
 end

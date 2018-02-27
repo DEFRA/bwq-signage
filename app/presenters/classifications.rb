@@ -52,10 +52,6 @@ class Classifications
     }
   end
 
-  def closed?(uri)
-    uri.match?(%r{/11$})
-  end
-
   # How would we present a classification in the history summary?
   def show_compact(classification)
     curi = classification.complianceClassification.uri
