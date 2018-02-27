@@ -88,7 +88,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
   it 'should show the next step in the process when the user selects a bathing water' do
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete'))
-      page.must_have_content('Bathing water sign options')
+      page.must_have_content('Extra sign features')
       find('legend', text: 'Previous')
       find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('no')
     end
@@ -98,7 +98,7 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'show-hist': 'yes',
                       'sign-plus': 'complete'))
-      page.must_have_content('Bathing water sign options')
+      page.must_have_content('Extra sign features')
       find(:radio_button, :'show-hist', checked: true, visible: false).value.must_equal('yes')
     end
   end
