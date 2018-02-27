@@ -4,7 +4,7 @@ $oneToRootTwoAspectRatioMarginHalf: $oneToRootTwoAspectRatio / 2;
 
 // row heights
 $rowHeightHead: 25%;
-$rowHeightAbout: 35%;
+$rowHeightAbout: 37%;
 $rowHeightInfo: 27%;
 $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
@@ -200,6 +200,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     grid-row: 2;
     -ms-grid-column: 2;
     -ms-grid-row: 2;
+    margin: auto;
   }
 
   .c-content-header__monitoring {
@@ -207,6 +208,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-row: 2;
+    margin: auto;
   }
 
   .c-content-header__monitoring-only {
@@ -234,11 +236,11 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
   .c-content-header__classification {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 2;
     -ms-grid-column: 2;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
-    align-self: end;
+    margin: auto;
   }
 
   .c-content-header__monitoring {
@@ -246,6 +248,7 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
     grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-row: 2;
+    margin: auto;
   }
 }
 
