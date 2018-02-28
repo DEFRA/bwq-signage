@@ -3,7 +3,7 @@
 # Encapsulates a single bathing water, with access to the profile data from
 # the bathing water API.
 class BathingWater < LdaResource
-  MAX_HISTORY_YEARS = 3
+  MAX_HISTORY_YEARS = 2
 
   RDFS_CLASS = 'http://environment.data.gov.uk/def/bathing-water/BathingWater'
 

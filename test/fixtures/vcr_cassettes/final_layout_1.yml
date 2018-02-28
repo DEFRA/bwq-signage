@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.13.1
+      - Faraday v0.14.0
       Accept:
       - application/json
       Accept-Encoding:
@@ -21,25 +21,25 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '13'
+      - '126'
       Content-Location:
       - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water/ukk1202-36000.json?_properties=latestSampleAssessment.sampleDateTime.inXSDDateTime%2ClatestSampleAssessment.sampleYear.ordinalYear%2ClatestSampleAssessment.escherichiaColiCount.%2A%2ClatestSampleAssessment.intestinalEnterococciCount.%2A%2ClatestProfile.%2A%2ClatestComplianceAssessment.sampleYear.ordinalYear%2ClatestRiskPrediction.%2A
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Feb 2018 11:33:09 GMT
+      - Wed, 28 Feb 2018 13:37:56 GMT
       Etag:
       - '"d3495f1c468c6fdf-gzip"'
       Expires:
-      - Mon, 19 Feb 2018 11:35:56 GMT
+      - Wed, 28 Feb 2018 13:38:50 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '83'
+      - '18'
       Content-Length:
-      - '3879'
+      - '3844'
       Connection:
       - keep-alive
     body:
@@ -105,16 +105,16 @@ http_interactions:
             , "type" : ["http://purl.org/linked-data/api/vocab#ItemEndpoint", "http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Mon, 19 Feb 2018 11:33:09 GMT
+  recorded_at: Wed, 28 Feb 2018 13:37:56 GMT
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=3&_sort=-sampleYear.ordinalYear
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=2&_sort=-sampleYear.ordinalYear
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.13.1
+      - Faraday v0.14.0
       Accept:
       - application/json
       Accept-Encoding:
@@ -127,31 +127,31 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '3593'
+      - '138'
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Feb 2018 11:33:09 GMT
+      - Wed, 28 Feb 2018 13:37:57 GMT
       Etag:
-      - '"62fe700de0098084-gzip"'
+      - '"b6d894fcbc8a13d2-gzip"'
       Expires:
-      - Mon, 19 Feb 2018 11:33:16 GMT
+      - Wed, 28 Feb 2018 14:35:40 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '72'
+      - '16'
       Content-Length:
-      - '1123'
+      - '1027'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
             , "items" : [{"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
               }
               , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
@@ -182,34 +182,19 @@ http_interactions:
               , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/intestinalEnterococciStats", "label" : [{"_value" : "2015 compliance assessment for Clevedon Beach", "_lang" : "en"}
               ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2015", "ordinalYear" : 2015}
               , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2015_20160513-2016-05-13_15-59-54_301-0247.csv#row=000215", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
-            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/projected-assessment", "name" : {"_value" : "projected-assessment", "_lang" : "en"}
-              }
-              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
-              }
-              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
-              }
-              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
-                , "northing" : 171322.0, "samplePointNotation" : "36000"}
-              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
-              }
-              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/escherichiaColiStats", "finalSampleDate" : {"_value" : "2014-09-26", "_datatype" : "date"}
-              , "firstSampleDate" : {"_value" : "2011-05-06", "_datatype" : "date"}
-              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/intestinalEnterococciStats", "label" : [{"_value" : "2014 compliance assessment for Clevedon Beach", "_lang" : "en"}
-              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2014", "ordinalYear" : 2014}
-              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_proj_rBWD_pre_2015_v2-2016-01-13_15-01-01_699-0447.csv#row=004178", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
-            ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+            ], "itemsPerPage" : 2, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Mon, 19 Feb 2018 11:33:09 GMT
+  recorded_at: Wed, 28 Feb 2018 13:37:58 GMT
 - request:
     method: get
-    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=3&_sort=-sampleYear.ordinalYear
+    uri: http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000?_pageSize=2&_sort=-sampleYear.ordinalYear
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.13.1
+      - Faraday v0.14.0
       Accept:
       - application/json
       Accept-Encoding:
@@ -222,31 +207,31 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '3594'
+      - '138'
       Content-Location:
-      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear
+      - http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear
       Content-Type:
       - application/json
       Date:
-      - Mon, 19 Feb 2018 11:33:09 GMT
+      - Wed, 28 Feb 2018 13:37:58 GMT
       Etag:
-      - '"62fe700de0098084-gzip"'
+      - '"b6d894fcbc8a13d2-gzip"'
       Expires:
-      - Mon, 19 Feb 2018 11:33:16 GMT
+      - Wed, 28 Feb 2018 14:35:40 GMT
       Server:
       - Apache
       Vary:
       - Accept,Accept-Encoding
       X-Response-Id:
-      - '72'
+      - '16'
       Content-Length:
-      - '1123'
+      - '1027'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: |
-        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
+        { "format" : "linked-data-api", "version" : "0.2", "result" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "extendedMetadataVersion" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_metadata=all&_sort=-sampleYear.ordinalYear", "first" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_page=0&_sort=-sampleYear.ordinalYear", "isPartOf" : {"_about" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_sort=-sampleYear.ordinalYear", "definition" : "http://ea-rbwd-staging.epimorphics.net/meta/doc/bathing-water-quality/compliance-_regime/bathing-water/_eubwid.json?_sort=-sampleYear.ordinalYear", "hasPart" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_sort=-sampleYear.ordinalYear", "type" : ["http://purl.org/linked-data/api/vocab#ListEndpoint"]}
             , "items" : [{"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2016", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/actual-assessment", "name" : {"_value" : "actual assessment", "_lang" : "en"}
               }
               , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
@@ -277,23 +262,8 @@ http_interactions:
               , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2015/intestinalEnterococciStats", "label" : [{"_value" : "2015 compliance assessment for Clevedon Beach", "_lang" : "en"}
               ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2015", "ordinalYear" : 2015}
               , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_2015_20160513-2016-05-13_15-59-54_301-0247.csv#row=000215", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
-            , {"_about" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014", "assessmentQualifier" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/projected-assessment", "name" : {"_value" : "projected-assessment", "_lang" : "en"}
-              }
-              , "assessmentRegime" : {"_about" : "http://environment.data.gov.uk/def/bathing-water-quality/rBWD", "name" : {"_value" : "rBWD", "_lang" : "en"}
-              }
-              , "bwq_bathingWater" : {"_about" : "http://environment.data.gov.uk/id/bathing-water/ukk1202-36000", "eubwidNotation" : "ukk1202-36000", "name" : {"_value" : "Clevedon Beach", "_lang" : "en"}
-              }
-              , "bwq_samplingPoint" : {"_about" : "http://location.data.gov.uk/so/ef/SamplingPoint/bwsp.eaew/36000", "easting" : 339914.0, "lat" : 51.4377009394295, "long" : -2.86583928659229, "name" : {"_value" : "Sampling point at Clevedon Beach", "_lang" : "en"}
-                , "northing" : 171322.0, "samplePointNotation" : "36000"}
-              , "complianceClassification" : {"_about" : "http://environment.data.gov.uk/def/bwq-cc-2015/2", "complianceCodeNotation" : "2", "name" : {"_value" : "Good", "_lang" : "en"}
-              }
-              , "escherichiaColiStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/escherichiaColiStats", "finalSampleDate" : {"_value" : "2014-09-26", "_datatype" : "date"}
-              , "firstSampleDate" : {"_value" : "2011-05-06", "_datatype" : "date"}
-              , "intestinalEnterococciStats" : "http://environment.data.gov.uk/data/bathing-water-quality/compliance-rBWD/point/36000/year/2014/intestinalEnterococciStats", "label" : [{"_value" : "2014 compliance assessment for Clevedon Beach", "_lang" : "en"}
-              ], "sampleYear" : {"_about" : "http://reference.data.gov.uk/id/year/2014", "ordinalYear" : 2014}
-              , "source" : "http://environment.data.gov.uk/sources/bwq/eaew/input/ea_bw_compliance_proj_rBWD_pre_2015_v2-2016-01-13_15-01-01_699-0447.csv#row=004178", "type" : ["http://environment.data.gov.uk/def/bathing-water-quality/ComplianceAssessment", "http://purl.org/linked-data/cube#Observation"]}
-            ], "itemsPerPage" : 3, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=3&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
+            ], "itemsPerPage" : 2, "next" : "http://ea-rbwd-staging.epimorphics.net/doc/bathing-water-quality/compliance-rBWD/bathing-water/ukk1202-36000.json?_pageSize=2&_page=1&_sort=-sampleYear.ordinalYear", "page" : 0, "startIndex" : 1, "type" : ["http://purl.org/linked-data/api/vocab#Page"]}
         }
     http_version: 
-  recorded_at: Mon, 19 Feb 2018 11:33:10 GMT
+  recorded_at: Wed, 28 Feb 2018 13:37:58 GMT
 recorded_with: VCR 4.0.0
