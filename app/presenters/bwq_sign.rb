@@ -154,15 +154,11 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   end
 
   def web_info_css_class
-    Rails.logger.debug('web_info_css_class')
     if show_map?
-      Rails.logger.debug("web_info_css_class - 1 #{show_map?} ")
       'o-content-unit__2-2'
     elsif !show_map? && bathing_water.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT)
-      Rails.logger.debug('web_info_css_class - 2')
       'o-content-unit__2-2 o-content-unit__right-column'
     else
-      Rails.logger.debug('web_info_css_class - 3')
       'o-content-unit__1-1c'
     end
   end
