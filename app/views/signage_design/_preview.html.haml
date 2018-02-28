@@ -1,35 +1,42 @@
 - page_orientation = @view_state.page_orientation
 .o-page-container
-  .o-grid-row
-    .o-grid-column__two-thirds
-      %h1.heading-large
-        Preview and download
+  .o-help-feedback-message
+    %strong
+      %i.fa.fa-info-circle
+      Help and feedback
+    %p
+      If you have any questions or comments about this application,
+      please
+      = mail_to('data.info@environment-agency.gov.uk', 'contact us')
 
-      %p
-        See a preview of your sign below. You can also:
-      %ul
-        %li
-          change from #{page_orientation[:current]} orientation
-          %i.fa{ class: page_orientation[:current_icon] }
-          to
-          = link_to(@view_state.with_query_params(page_orientation: page_orientation[:alt])) do
-            #{page_orientation[:alt]} orientation
-            %i.fa{ class: page_orientation[:alt_icon] }
+  %h1.heading-large
+    Preview and download
 
-        %li
-          = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
-        %li
-          = link_to('choose different extra features', @view_state.with_query_params(step: :opts))
+  %p
+    See a preview of your sign below. You can also:
+  %ul
+    %li
+      change from #{page_orientation[:current]} orientation
+      %i.fa{ class: page_orientation[:current_icon] }
+      to
+      = link_to(@view_state.with_query_params(page_orientation: page_orientation[:alt])) do
+        #{page_orientation[:alt]} orientation
+        %i.fa{ class: page_orientation[:alt_icon] }
 
-        - bw_next = @view_state.next_by_bw_controller
-        - if bw_next
-          %li
-            go to the next bathing water for local authority #{@view_state.bathing_water.controller_name} &ndash;
-            = link_to(bw_next.name, @view_state.with_query_params(eubwid: bw_next.eubwid))
+    %li
+      = link_to('select a different bathing water', @view_state.with_query_params(step: :search))
+    %li
+      = link_to('choose different extra features', @view_state.with_query_params(step: :opts))
 
-      %p
-        - a4_path = @view_state.with_query_params(page_size: :a4)
-        = link_to('download pdf (A4 page)', download_path(a4_path), { class: 'button' })
+    - bw_next = @view_state.next_by_bw_controller
+    - if bw_next
+      %li
+        go to the next bathing water for local authority #{@view_state.bathing_water.controller_name} &ndash;
+        = link_to(bw_next.name, @view_state.with_query_params(eubwid: bw_next.eubwid))
 
-        - a3_path = @view_state.with_query_params(page_size: :a3)
-        = link_to('download pdf (A3 page)', download_path(a3_path), { class: 'button' })
+  %p
+    - a4_path = @view_state.with_query_params(page_size: :a4)
+    = link_to('download pdf (A4 page)', download_path(a4_path), { class: 'button' })
+
+    - a3_path = @view_state.with_query_params(page_size: :a3)
+    = link_to('download pdf (A3 page)', download_path(a3_path), { class: 'button' })
