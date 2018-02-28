@@ -257,7 +257,7 @@ class BwqSignTest < ActiveSupport::TestCase
       value.expects(:val).returns('true')
       bw = mock('BathingWater')
       bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
-      bw.expects(:long_pollution_description?).with(400).returns(false)
+      bw.expects(:long_pollution_description?).twice.returns(false, false)
 
       params = ActionController::Parameters.new({}).permit!
       bwq_sign = BwqSign.new(params: params, bathing_water: bw)
@@ -270,7 +270,7 @@ class BwqSignTest < ActiveSupport::TestCase
       value.expects(:val).returns('false')
       bw = mock('BathingWater')
       bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
-      bw.expects(:long_pollution_description?).with(400).returns(false)
+      bw.expects(:long_pollution_description?).twice.returns(false, false)
 
       params = ActionController::Parameters.new({}).permit!
       bwq_sign = BwqSign.new(params: params, bathing_water: bw)
@@ -283,7 +283,7 @@ class BwqSignTest < ActiveSupport::TestCase
       value.expects(:val).returns('true')
       bw = mock('BathingWater')
       bw.expects(:'[]').with('latestProfile.pollutionRiskForecasting').returns(value)
-      bw.expects(:long_pollution_description?).with(400).returns(true)
+      bw.expects(:long_pollution_description?).twice.returns(true, false)
 
       params = ActionController::Parameters.new({}).permit!
       bwq_sign = BwqSign.new(params: params, bathing_water: bw)

@@ -51,6 +51,9 @@ class BathingWater < LdaResource
     alg_stmt = self['latestProfile.signAlgaeStatement']
     stmts << alg_stmt.val if alg_stmt
 
+    measures_stmt = self['latestProfile.signMeasuresSummary']
+    stmts << measures_stmt.val if measures_stmt
+
     stmts
   end
 

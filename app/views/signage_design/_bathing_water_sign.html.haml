@@ -1,6 +1,6 @@
 %article#development-container.c-sign-preview
   - a3_cls = "c-sign-layout--#{@view_state.a3_page? ? 'a3' : 'a4'}"
-  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]} #{a3_cls}" }
+  %div.c-sign-layout{ class: "c-sign-layout--#{@view_state.page_orientation[:current]} #{a3_cls} " }
     %section.c-content-row__head
       .o-content-unit__1-1.c-content-header
         .c-content-header__title
@@ -30,9 +30,13 @@
             = @view_state.bathing_water.prf_statement
 
     %section.c-content-row__info
-      - web_info_cls = @view_state.show_map? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
+      - if @view_state.show_map?
+        .o-content-unit__box{ class: 'o-content-unit__1-2' }
+          %h2 Sampling point location
+          .c-content-info__map#map-data{ data: { bw: @view_state.bathing_water.to_json }}
+            #map
 
-      .o-content-unit__box.c-content-unit__web-links{ class: web_info_cls }
+      .o-content-unit__box.c-content-unit__web-links{ class: @view_state.web_info_css_class }
         - if @view_state.show_history? && !@view_state.bathing_water.classification_history&.length.zero?
           %h2 Previous annual classifications
           %ul.c-content-unit__compliance-history
@@ -50,12 +54,6 @@
           %br
           %a{ href: 'https://environment.data.gov.uk/bwq/profiles' }
             https://environment.data.gov.uk/bwq/profiles
-
-      - if @view_state.show_map?
-        .o-content-unit__box{ class: 'o-content-unit__2-2' }
-          %h2 Sampling point location
-          .c-content-info__map#map-data{ data: { bw: @view_state.bathing_water.to_json }}
-            #map
 
     %section.c-content-row__foot
       - foot_col_1_class = "o-content-unit__1-#{@view_state.show_logo? ? 3 : 2}"

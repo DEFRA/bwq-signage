@@ -5,6 +5,9 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   # No. of description chars before we drop the font-size to make it fit
   LONG_DESCRIPTION_LIMIT = 400
 
+  # over this length, and we take over the map's space
+  VERY_LONG_DESCRIPTION_LIMIT = 750
+
   LONG_TITLE_LIMIT = 25
 
   attr_reader :options
@@ -80,7 +83,8 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   end
 
   def show_map?
-    params[:'show-map'] == 'yes'
+    params[:'show-map'] == 'yes' &&
+      !bathing_water&.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT)
   end
 
   def show_history?
@@ -138,11 +142,28 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   end
 
   def pollution_sources_css_class
+    # rubocop:disable Metrics/LineLength
     base = show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
-    bathing_water.long_pollution_description?(LONG_DESCRIPTION_LIMIT) ? "#{base} u-long-text" : base
+    base = bathing_water.long_pollution_description?(LONG_DESCRIPTION_LIMIT) ? "#{base} u-long-text" : base
+    bathing_water.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT) ? "#{base} u-very-long-text" : base
+    # rubocop:enable Metrics/LineLength
   end
 
   def title_css_class
     bathing_water.name.length >= LONG_TITLE_LIMIT ? 'u-long-title' : ''
+  end
+
+  def web_info_css_class
+    Rails.logger.debug('web_info_css_class')
+    if show_map?
+      Rails.logger.debug("web_info_css_class - 1 #{show_map?} ")
+      'o-content-unit__2-2'
+    elsif !show_map? && bathing_water.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT)
+      Rails.logger.debug('web_info_css_class - 2')
+      'o-content-unit__2-2 o-content-unit__right-column'
+    else
+      Rails.logger.debug('web_info_css_class - 3')
+      'o-content-unit__1-1c'
+    end
   end
 end

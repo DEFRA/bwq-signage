@@ -149,6 +149,10 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .o-content-unit__1-2 { margin-right: 0.5em; }
 .o-content-unit__2-2 { margin-left: 0.5em; }
 
+.o-content-unit__2-2.o-content-unit__right-column {
+  margin-left: 51%;
+}
+
 /** row of three blocks */
 .o-content-unit__1-3, .o-content-unit__3-3 {
   max-height: 100%;
@@ -368,6 +372,10 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 
 .u-long-text p {
   font-size: 85%;
+}
+
+.u-very-long-text {
+  border: 0;
 }
 
 // GDS stylesheet fix
