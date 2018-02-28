@@ -299,8 +299,8 @@ $rowHeightFoot: 100% - ($rowHeightHead + $rowHeightAbout + $rowHeightInfo);
 .c-content-unit__compliance-history {
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
   margin-bottom: 1em;
 
   img {
