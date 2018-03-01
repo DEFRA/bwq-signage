@@ -103,15 +103,6 @@ class SignageDesignControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it 'selects the name of the bathing water controller by default' do
-    VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
-      visit(root_path(design: true, eubwid: 'ukk1202-36000', 'sign-plus': 'complete',
-                      'show-prf': 'yes', 'show-hist': 'yes', 'show-map': 'yes', 'show-logo': 'yes'))
-      page.must_have_content('Bathing water manager information for Clevedon Beach')
-      find('#bwmgr-name').value.must_equal('')
-    end
-  end
-
   it 'should show the preview page once the user has selected all options' do
     VCR.use_cassette('bathing_water_clevedon_lookup', record: :new_episodes) do
       visit(root_path(design: true, eubwid: 'ukk1202-36000', 'bwmgr-name': 'North Somerset',
