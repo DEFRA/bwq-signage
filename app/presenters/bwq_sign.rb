@@ -83,8 +83,7 @@ class BwqSign # rubocop:disable Metrics/ClassLength
   end
 
   def show_map?
-    params[:'show-map'] == 'yes' &&
-      !bathing_water&.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT)
+    params[:'show-map'] == 'yes' && !very_long_pollution_sources_description?
   end
 
   def show_history?
@@ -145,7 +144,7 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     # rubocop:disable Metrics/LineLength
     base = show_prf? ? 'o-content-unit__1-2' : 'o-content-unit__1-1c'
     base = bathing_water.long_pollution_description?(LONG_DESCRIPTION_LIMIT) ? "#{base} u-long-text" : base
-    bathing_water.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT) ? "#{base} u-very-long-text" : base
+    very_long_pollution_sources_description? ? "#{base} u-very-long-text" : base
     # rubocop:enable Metrics/LineLength
   end
 
@@ -161,5 +160,12 @@ class BwqSign # rubocop:disable Metrics/ClassLength
     else
       'o-content-unit__1-1c'
     end
+  end
+
+  # In some cases of very long descriptions we need to be a bit radical about the sign layout,
+  # but if the bw is not in PRF it should be OK because we have more space.
+  def very_long_pollution_sources_description?
+    bathing_water&.long_pollution_description?(VERY_LONG_DESCRIPTION_LIMIT) &&
+      show_prf?
   end
 end
