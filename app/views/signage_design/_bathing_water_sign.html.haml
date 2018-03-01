@@ -35,6 +35,11 @@
           %h2 Sampling point location
           .c-content-info__map#map-data{ data: { bw: @view_state.bathing_water.to_json }}
             #map
+      - elsif @view_state.very_long_pollution_sources_description? & !@view_state.final?
+        .c-no-map-warning
+          %i.fa.fa-exclamation-circle
+          We have omitted the map to allow more space for the additional text in
+          the water quality statement. This note will not appear on the printed sign.
 
       .o-content-unit__box.c-content-unit__web-links{ class: @view_state.web_info_css_class }
         - if @view_state.show_history? && !@view_state.bathing_water.classification_history&.length.zero?
