@@ -17,15 +17,18 @@ class BwqSignFinalController < ApplicationController
     @view_state = BwqSign.new(options)
   end
 
-  def new # rubocop:disable Metrics/AbcSize
+  def new # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
     file = Tempfile.new(['page-final', '.pdf'])
-    Rails.logger.debug("#{nodejs} ./bin/save-pdf.js '#{page_url}' #{page_size} #{orientation} '#{file.path}'") # rubocop:disable Metrics/LineLength
-    success = system(nodejs, './bin/save-pdf.js', page_url, page_size,
+    localhost_url = page_url.gsub(/https/, 'http')
+    Rails.logger.debug("#{nodejs} ./bin/save-pdf.js '#{localhost_url}' #{page_size} #{orientation} '#{file.path}'") # rubocop:disable Metrics/LineLength
+    success = system(nodejs, './bin/save-pdf.js', localhost_url, page_size,
                      orientation, file.path)
 
     if success
       send_pdf_file(file)
     else
+      Raven.capture_message('Failed to generate PDF file', localhost_url,
+                            page_size, orientation, file.path)
       render plain: support_message
     end
   end
