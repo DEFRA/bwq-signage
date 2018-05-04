@@ -6,8 +6,7 @@ rvm:
  - 2.4
 before_script:
   - yarn install
-  - ls -l ./node_modules
+  - RAILS_ENV=test bin/webpack --output-path=public/packs-test
 script:
-  - bin/webpack
   - RAILS_ENV=test bundle exec rails test
   - yarn test
