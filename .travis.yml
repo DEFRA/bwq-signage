@@ -6,6 +6,7 @@ rvm:
  - 2.4
 before_script:
   - yarn install
+  - bundle exec rails webpacker:binstubs
   - ruby ./bin/webpack
 script:
   - RAILS_ENV=test bundle exec rails test
