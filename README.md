@@ -44,3 +44,9 @@ Note that the PDF download test currently requires the application to be running
 `localhost`, as the test uses Chrome headless to visit the page and convert rendered HTML
 to PDF. This test is disabled in Travis. To run during development, ensure that
 `rails server` is running in another terminal.
+
+## Logo management
+
+Local authority logos are cached in S3. See `services/logo_manager.rb` for details. AWS
+credentials are managed via `config/initializers/aws.rb`. Currently, production AWS
+credentials are configured separately via the deployment automation scripts.
